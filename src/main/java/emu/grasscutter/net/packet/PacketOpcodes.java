@@ -52,6 +52,7 @@ public final class PacketOpcodes {
     public static final int SceneTransToPointReq = 28479;
     public static final int MarkMapReq = 9954;
     public static final int SetUpAvatarTeamReq = 24152;
+    public static final int SetUpAvatarTeamRsp = 897;
     public static final int ChangeAvatarReq = 21461;
     public static final int SetPlayerSignatureReq = 25315;
     public static final int SetPlayerSignatureRsp = 23156;
@@ -136,7 +137,6 @@ public final class PacketOpcodes {
     public static final int EvtAvatarLockChairReq = 709;
     public static final int EvtAvatarLockChairRsp = 9256;
     public static final int EvtAvatarStandUpNotify = 29783;
-    public static final int SetUpAvatarTeamRsp = 897;
     public static final int MarkMapRsp = 23656;
     public static final int UNKNOWN1 = 2682;
     public static final int UNKNOWN2 = 24710;
