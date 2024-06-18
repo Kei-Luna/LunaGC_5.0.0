@@ -49,7 +49,7 @@ public final class FetterDataOuterClass {
   }
   /**
    * <pre>
-   * Obf: JFCHMJKBMBL
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code FetterData}
@@ -410,7 +410,7 @@ public final class FetterDataOuterClass {
     }
     /**
      * <pre>
-     * Obf: JFCHMJKBMBL
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code FetterData}

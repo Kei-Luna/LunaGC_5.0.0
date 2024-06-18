@@ -16,7 +16,7 @@ public final class FriendEnterHomeOptionOuterClass {
   }
   /**
    * <pre>
-   * Obf: LDBJAIDJNMO
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code FriendEnterHomeOption}

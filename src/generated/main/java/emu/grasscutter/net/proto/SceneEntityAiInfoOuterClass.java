@@ -19,22 +19,38 @@ public final class SceneEntityAiInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>bool is_ai_open = 1;</code>
      * @return The isAiOpen.
      */
     boolean getIsAiOpen();
 
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      * @return Whether the bornPos field is set.
      */
     boolean hasBornPos();
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      * @return The bornPos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getBornPos();
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getBornPosOrBuilder();
@@ -170,7 +186,7 @@ public final class SceneEntityAiInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: NGIAJBBLFGD
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SceneEntityAiInfo}
@@ -349,6 +365,10 @@ public final class SceneEntityAiInfoOuterClass {
     public static final int IS_AI_OPEN_FIELD_NUMBER = 1;
     private boolean isAiOpen_;
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>bool is_ai_open = 1;</code>
      * @return The isAiOpen.
      */
@@ -360,6 +380,10 @@ public final class SceneEntityAiInfoOuterClass {
     public static final int BORN_POS_FIELD_NUMBER = 2;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector bornPos_;
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      * @return Whether the bornPos field is set.
      */
@@ -368,6 +392,10 @@ public final class SceneEntityAiInfoOuterClass {
       return bornPos_ != null;
     }
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      * @return The bornPos.
      */
@@ -376,6 +404,10 @@ public final class SceneEntityAiInfoOuterClass {
       return bornPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : bornPos_;
     }
     /**
+     * <pre>
+     *Delete
+     * </pre>
+     *
      * <code>.Vector born_pos = 2;</code>
      */
     @java.lang.Override
@@ -953,7 +985,7 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: NGIAJBBLFGD
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SceneEntityAiInfo}
@@ -1191,6 +1223,10 @@ public final class SceneEntityAiInfoOuterClass {
 
       private boolean isAiOpen_ ;
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>bool is_ai_open = 1;</code>
        * @return The isAiOpen.
        */
@@ -1199,6 +1235,10 @@ public final class SceneEntityAiInfoOuterClass {
         return isAiOpen_;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>bool is_ai_open = 1;</code>
        * @param value The isAiOpen to set.
        * @return This builder for chaining.
@@ -1210,6 +1250,10 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>bool is_ai_open = 1;</code>
        * @return This builder for chaining.
        */
@@ -1224,6 +1268,10 @@ public final class SceneEntityAiInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> bornPosBuilder_;
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        * @return Whether the bornPos field is set.
        */
@@ -1231,6 +1279,10 @@ public final class SceneEntityAiInfoOuterClass {
         return bornPosBuilder_ != null || bornPos_ != null;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        * @return The bornPos.
        */
@@ -1242,6 +1294,10 @@ public final class SceneEntityAiInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public Builder setBornPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1258,6 +1314,10 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public Builder setBornPos(
@@ -1272,6 +1332,10 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public Builder mergeBornPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
@@ -1290,6 +1354,10 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public Builder clearBornPos() {
@@ -1304,6 +1372,10 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getBornPosBuilder() {
@@ -1312,6 +1384,10 @@ public final class SceneEntityAiInfoOuterClass {
         return getBornPosFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getBornPosOrBuilder() {
@@ -1323,6 +1399,10 @@ public final class SceneEntityAiInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       *Delete
+       * </pre>
+       *
        * <code>.Vector born_pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

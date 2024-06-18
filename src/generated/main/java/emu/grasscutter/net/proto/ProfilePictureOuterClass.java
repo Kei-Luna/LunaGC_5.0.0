@@ -29,10 +29,16 @@ public final class ProfilePictureOuterClass {
      * @return The costumeId.
      */
     int getCostumeId();
+
+    /**
+     * <code>uint32 head_image_id = 3;</code>
+     * @return The headImageId.
+     */
+    int getHeadImageId();
   }
   /**
    * <pre>
-   * Obf: FEKJLPEAOJI
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ProfilePicture}
@@ -89,6 +95,11 @@ public final class ProfilePictureOuterClass {
               costumeId_ = input.readUInt32();
               break;
             }
+            case 24: {
+
+              headImageId_ = input.readUInt32();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -143,6 +154,17 @@ public final class ProfilePictureOuterClass {
       return costumeId_;
     }
 
+    public static final int HEAD_IMAGE_ID_FIELD_NUMBER = 3;
+    private int headImageId_;
+    /**
+     * <code>uint32 head_image_id = 3;</code>
+     * @return The headImageId.
+     */
+    @java.lang.Override
+    public int getHeadImageId() {
+      return headImageId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -163,6 +185,9 @@ public final class ProfilePictureOuterClass {
       if (costumeId_ != 0) {
         output.writeUInt32(2, costumeId_);
       }
+      if (headImageId_ != 0) {
+        output.writeUInt32(3, headImageId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -179,6 +204,10 @@ public final class ProfilePictureOuterClass {
       if (costumeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, costumeId_);
+      }
+      if (headImageId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, headImageId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -199,6 +228,8 @@ public final class ProfilePictureOuterClass {
           != other.getAvatarId()) return false;
       if (getCostumeId()
           != other.getCostumeId()) return false;
+      if (getHeadImageId()
+          != other.getHeadImageId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -214,6 +245,8 @@ public final class ProfilePictureOuterClass {
       hash = (53 * hash) + getAvatarId();
       hash = (37 * hash) + COSTUME_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCostumeId();
+      hash = (37 * hash) + HEAD_IMAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHeadImageId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -311,7 +344,7 @@ public final class ProfilePictureOuterClass {
     }
     /**
      * <pre>
-     * Obf: FEKJLPEAOJI
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ProfilePicture}
@@ -355,6 +388,8 @@ public final class ProfilePictureOuterClass {
 
         costumeId_ = 0;
 
+        headImageId_ = 0;
+
         return this;
       }
 
@@ -383,6 +418,7 @@ public final class ProfilePictureOuterClass {
         emu.grasscutter.net.proto.ProfilePictureOuterClass.ProfilePicture result = new emu.grasscutter.net.proto.ProfilePictureOuterClass.ProfilePicture(this);
         result.avatarId_ = avatarId_;
         result.costumeId_ = costumeId_;
+        result.headImageId_ = headImageId_;
         onBuilt();
         return result;
       }
@@ -436,6 +472,9 @@ public final class ProfilePictureOuterClass {
         }
         if (other.getCostumeId() != 0) {
           setCostumeId(other.getCostumeId());
+        }
+        if (other.getHeadImageId() != 0) {
+          setHeadImageId(other.getHeadImageId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -527,6 +566,37 @@ public final class ProfilePictureOuterClass {
         onChanged();
         return this;
       }
+
+      private int headImageId_ ;
+      /**
+       * <code>uint32 head_image_id = 3;</code>
+       * @return The headImageId.
+       */
+      @java.lang.Override
+      public int getHeadImageId() {
+        return headImageId_;
+      }
+      /**
+       * <code>uint32 head_image_id = 3;</code>
+       * @param value The headImageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeadImageId(int value) {
+        
+        headImageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 head_image_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeadImageId() {
+        
+        headImageId_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -594,9 +664,10 @@ public final class ProfilePictureOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024ProfilePicture.proto\"7\n\016ProfilePicture" +
-      "\022\021\n\tavatar_id\030\001 \001(\r\022\022\n\ncostume_id\030\002 \001(\rB" +
-      "\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\n\024ProfilePicture.proto\"N\n\016ProfilePicture" +
+      "\022\021\n\tavatar_id\030\001 \001(\r\022\022\n\ncostume_id\030\002 \001(\r\022" +
+      "\025\n\rhead_image_id\030\003 \001(\rB\033\n\031emu.grasscutte" +
+      "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -607,7 +678,7 @@ public final class ProfilePictureOuterClass {
     internal_static_ProfilePicture_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProfilePicture_descriptor,
-        new java.lang.String[] { "AvatarId", "CostumeId", });
+        new java.lang.String[] { "AvatarId", "CostumeId", "HeadImageId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

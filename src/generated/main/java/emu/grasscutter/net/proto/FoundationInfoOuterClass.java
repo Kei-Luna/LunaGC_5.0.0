@@ -60,7 +60,7 @@ public final class FoundationInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: HJBPIEDJHAP
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code FoundationInfo}
@@ -457,7 +457,7 @@ public final class FoundationInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: HJBPIEDJHAP
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code FoundationInfo}

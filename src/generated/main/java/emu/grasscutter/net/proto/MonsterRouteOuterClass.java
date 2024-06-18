@@ -59,10 +59,22 @@ public final class MonsterRouteOuterClass {
      * @return The arriveRange.
      */
     float getArriveRange();
+
+    /**
+     * <code>bool GGOMEGCENEL = 5;</code>
+     * @return The gGOMEGCENEL.
+     */
+    boolean getGGOMEGCENEL();
+
+    /**
+     * <code>bool DCCIPKJBIEI = 6;</code>
+     * @return The dCCIPKJBIEI.
+     */
+    boolean getDCCIPKJBIEI();
   }
   /**
    * <pre>
-   * Obf: OKAKLDGDFDP
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code MonsterRoute}
@@ -133,6 +145,16 @@ public final class MonsterRouteOuterClass {
             case 37: {
 
               arriveRange_ = input.readFloat();
+              break;
+            }
+            case 40: {
+
+              gGOMEGCENEL_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              dCCIPKJBIEI_ = input.readBool();
               break;
             }
             default: {
@@ -243,6 +265,28 @@ public final class MonsterRouteOuterClass {
       return arriveRange_;
     }
 
+    public static final int GGOMEGCENEL_FIELD_NUMBER = 5;
+    private boolean gGOMEGCENEL_;
+    /**
+     * <code>bool GGOMEGCENEL = 5;</code>
+     * @return The gGOMEGCENEL.
+     */
+    @java.lang.Override
+    public boolean getGGOMEGCENEL() {
+      return gGOMEGCENEL_;
+    }
+
+    public static final int DCCIPKJBIEI_FIELD_NUMBER = 6;
+    private boolean dCCIPKJBIEI_;
+    /**
+     * <code>bool DCCIPKJBIEI = 6;</code>
+     * @return The dCCIPKJBIEI.
+     */
+    @java.lang.Override
+    public boolean getDCCIPKJBIEI() {
+      return dCCIPKJBIEI_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -269,6 +313,12 @@ public final class MonsterRouteOuterClass {
       if (arriveRange_ != 0F) {
         output.writeFloat(4, arriveRange_);
       }
+      if (gGOMEGCENEL_ != false) {
+        output.writeBool(5, gGOMEGCENEL_);
+      }
+      if (dCCIPKJBIEI_ != false) {
+        output.writeBool(6, dCCIPKJBIEI_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -294,6 +344,14 @@ public final class MonsterRouteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, arriveRange_);
       }
+      if (gGOMEGCENEL_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, gGOMEGCENEL_);
+      }
+      if (dCCIPKJBIEI_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, dCCIPKJBIEI_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -318,6 +376,10 @@ public final class MonsterRouteOuterClass {
       if (java.lang.Float.floatToIntBits(getArriveRange())
           != java.lang.Float.floatToIntBits(
               other.getArriveRange())) return false;
+      if (getGGOMEGCENEL()
+          != other.getGGOMEGCENEL()) return false;
+      if (getDCCIPKJBIEI()
+          != other.getDCCIPKJBIEI()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -340,6 +402,12 @@ public final class MonsterRouteOuterClass {
       hash = (37 * hash) + ARRIVE_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getArriveRange());
+      hash = (37 * hash) + GGOMEGCENEL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGGOMEGCENEL());
+      hash = (37 * hash) + DCCIPKJBIEI_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDCCIPKJBIEI());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -437,7 +505,7 @@ public final class MonsterRouteOuterClass {
     }
     /**
      * <pre>
-     * Obf: OKAKLDGDFDP
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code MonsterRoute}
@@ -490,6 +558,10 @@ public final class MonsterRouteOuterClass {
 
         arriveRange_ = 0F;
 
+        gGOMEGCENEL_ = false;
+
+        dCCIPKJBIEI_ = false;
+
         return this;
       }
 
@@ -529,6 +601,8 @@ public final class MonsterRouteOuterClass {
         result.speedLevel_ = speedLevel_;
         result.routeType_ = routeType_;
         result.arriveRange_ = arriveRange_;
+        result.gGOMEGCENEL_ = gGOMEGCENEL_;
+        result.dCCIPKJBIEI_ = dCCIPKJBIEI_;
         onBuilt();
         return result;
       }
@@ -611,6 +685,12 @@ public final class MonsterRouteOuterClass {
         }
         if (other.getArriveRange() != 0F) {
           setArriveRange(other.getArriveRange());
+        }
+        if (other.getGGOMEGCENEL() != false) {
+          setGGOMEGCENEL(other.getGGOMEGCENEL());
+        }
+        if (other.getDCCIPKJBIEI() != false) {
+          setDCCIPKJBIEI(other.getDCCIPKJBIEI());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -974,6 +1054,68 @@ public final class MonsterRouteOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean gGOMEGCENEL_ ;
+      /**
+       * <code>bool GGOMEGCENEL = 5;</code>
+       * @return The gGOMEGCENEL.
+       */
+      @java.lang.Override
+      public boolean getGGOMEGCENEL() {
+        return gGOMEGCENEL_;
+      }
+      /**
+       * <code>bool GGOMEGCENEL = 5;</code>
+       * @param value The gGOMEGCENEL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGGOMEGCENEL(boolean value) {
+        
+        gGOMEGCENEL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool GGOMEGCENEL = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGGOMEGCENEL() {
+        
+        gGOMEGCENEL_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean dCCIPKJBIEI_ ;
+      /**
+       * <code>bool DCCIPKJBIEI = 6;</code>
+       * @return The dCCIPKJBIEI.
+       */
+      @java.lang.Override
+      public boolean getDCCIPKJBIEI() {
+        return dCCIPKJBIEI_;
+      }
+      /**
+       * <code>bool DCCIPKJBIEI = 6;</code>
+       * @param value The dCCIPKJBIEI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDCCIPKJBIEI(boolean value) {
+        
+        dCCIPKJBIEI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool DCCIPKJBIEI = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDCCIPKJBIEI() {
+        
+        dCCIPKJBIEI_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1041,11 +1183,12 @@ public final class MonsterRouteOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022MonsterRoute.proto\032\020RoutePoint.proto\"p" +
-      "\n\014MonsterRoute\022!\n\014route_points\030\001 \003(\0132\013.R" +
-      "outePoint\022\023\n\013speed_level\030\002 \001(\r\022\022\n\nroute_" +
-      "type\030\003 \001(\r\022\024\n\014arrive_range\030\004 \001(\002B\033\n\031emu." +
-      "grasscutter.net.protob\006proto3"
+      "\n\022MonsterRoute.proto\032\020RoutePoint.proto\"\232" +
+      "\001\n\014MonsterRoute\022!\n\014route_points\030\001 \003(\0132\013." +
+      "RoutePoint\022\023\n\013speed_level\030\002 \001(\r\022\022\n\nroute" +
+      "_type\030\003 \001(\r\022\024\n\014arrive_range\030\004 \001(\002\022\023\n\013GGO" +
+      "MEGCENEL\030\005 \001(\010\022\023\n\013DCCIPKJBIEI\030\006 \001(\010B\033\n\031e" +
+      "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1057,7 +1200,7 @@ public final class MonsterRouteOuterClass {
     internal_static_MonsterRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MonsterRoute_descriptor,
-        new java.lang.String[] { "RoutePoints", "SpeedLevel", "RouteType", "ArriveRange", });
+        new java.lang.String[] { "RoutePoints", "SpeedLevel", "RouteType", "ArriveRange", "GGOMEGCENEL", "DCCIPKJBIEI", });
     emu.grasscutter.net.proto.RoutePointOuterClass.getDescriptor();
   }
 

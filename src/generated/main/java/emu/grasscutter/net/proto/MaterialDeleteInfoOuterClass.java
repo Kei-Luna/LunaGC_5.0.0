@@ -73,7 +73,7 @@ public final class MaterialDeleteInfoOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code MaterialDeleteInfo}
@@ -2732,7 +2732,7 @@ public final class MaterialDeleteInfoOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code MaterialDeleteInfo}

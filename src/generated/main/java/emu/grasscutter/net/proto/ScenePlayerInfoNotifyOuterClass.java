@@ -44,8 +44,8 @@ public final class ScenePlayerInfoNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 4358
+   * 4.7.0
+   * CmdId: 21623
    * </pre>
    *
    * Protobuf type {@code ScenePlayerInfoNotify}
@@ -337,8 +337,8 @@ public final class ScenePlayerInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 4358
+     * 4.7.0
+     * CmdId: 21623
      * </pre>
      *
      * Protobuf type {@code ScenePlayerInfoNotify}

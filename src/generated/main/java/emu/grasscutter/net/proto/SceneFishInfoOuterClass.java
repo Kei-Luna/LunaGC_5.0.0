@@ -59,7 +59,7 @@ public final class SceneFishInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: HNLLCGHHGFM
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SceneFishInfo}
@@ -447,7 +447,7 @@ public final class SceneFishInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: HNLLCGHHGFM
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SceneFishInfo}

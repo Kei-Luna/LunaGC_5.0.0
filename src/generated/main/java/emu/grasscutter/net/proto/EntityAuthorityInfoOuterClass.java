@@ -119,7 +119,7 @@ public final class EntityAuthorityInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: DHLPFKPHPNF
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code EntityAuthorityInfo}
@@ -686,7 +686,7 @@ public final class EntityAuthorityInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: DHLPFKPHPNF
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code EntityAuthorityInfo}

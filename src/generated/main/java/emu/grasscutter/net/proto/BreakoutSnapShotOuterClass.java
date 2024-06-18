@@ -295,7 +295,7 @@ public final class BreakoutSnapShotOuterClass {
   }
   /**
    * <pre>
-   * Obf: OLKOKCBEABM
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code BreakoutSnapShot}
@@ -1430,7 +1430,7 @@ public final class BreakoutSnapShotOuterClass {
     }
     /**
      * <pre>
-     * Obf: OLKOKCBEABM
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code BreakoutSnapShot}

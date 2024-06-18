@@ -55,13 +55,13 @@ public class PacketPlayerLoginRsp extends BasePacket {
                         //.setIsUseAbilityHash(true) // true
                         //.setAbilityHashCode(1844674) // 1844674
                         .setGameBiz("hk4e_global")
-                        .setClientDataVersion(info.getClientDataVersion())
+                        //.setClientDataVersion(info.getClientDataVersion())
                         //.setClientSilenceDataVersion(info.getClientSilenceDataVersion())
                         //.setClientMd5(info.getClientDataMd5())
                         //.setClientSilenceMd5(info.getClientSilenceDataMd5())
                         .setResVersionConfig(info.getResVersionConfig())
-                        .setClientVersionSuffix(info.getClientVersionSuffix())
-                        .setClientSilenceVersionSuffix(info.getClientSilenceVersionSuffix())
+                        //.setClientVersionSuffix(info.getClientVersionSuffix())
+                        //.setClientSilenceVersionSuffix(info.getClientSilenceVersionSuffix())
                         // .setIsScOpen(false)
                         // .setScInfo(ByteString.copyFrom(new byte[] {}))
                         // .setRegisterCps("mihoyo")

@@ -19,7 +19,7 @@ public final class SyncTeamEntityNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 13;</code>
      * @return The sceneId.
      */
     int getSceneId();
@@ -50,8 +50,8 @@ public final class SyncTeamEntityNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 569
+   * 4.7.0
+   * CmdId: 5280
    * </pre>
    *
    * Protobuf type {@code SyncTeamEntityNotify}
@@ -100,7 +100,7 @@ public final class SyncTeamEntityNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 104: {
 
               sceneId_ = input.readUInt32();
               break;
@@ -149,10 +149,10 @@ public final class SyncTeamEntityNotifyOuterClass {
               emu.grasscutter.net.proto.SyncTeamEntityNotifyOuterClass.SyncTeamEntityNotify.class, emu.grasscutter.net.proto.SyncTeamEntityNotifyOuterClass.SyncTeamEntityNotify.Builder.class);
     }
 
-    public static final int SCENE_ID_FIELD_NUMBER = 1;
+    public static final int SCENE_ID_FIELD_NUMBER = 13;
     private int sceneId_;
     /**
-     * <code>uint32 scene_id = 1;</code>
+     * <code>uint32 scene_id = 13;</code>
      * @return The sceneId.
      */
     @java.lang.Override
@@ -215,7 +215,7 @@ public final class SyncTeamEntityNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (sceneId_ != 0) {
-        output.writeUInt32(1, sceneId_);
+        output.writeUInt32(13, sceneId_);
       }
       for (int i = 0; i < teamEntityInfoList_.size(); i++) {
         output.writeMessage(14, teamEntityInfoList_.get(i));
@@ -231,7 +231,7 @@ public final class SyncTeamEntityNotifyOuterClass {
       size = 0;
       if (sceneId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, sceneId_);
+          .computeUInt32Size(13, sceneId_);
       }
       for (int i = 0; i < teamEntityInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -370,8 +370,8 @@ public final class SyncTeamEntityNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 569
+     * 4.7.0
+     * CmdId: 5280
      * </pre>
      *
      * Protobuf type {@code SyncTeamEntityNotify}
@@ -566,7 +566,7 @@ public final class SyncTeamEntityNotifyOuterClass {
 
       private int sceneId_ ;
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @return The sceneId.
        */
       @java.lang.Override
@@ -574,7 +574,7 @@ public final class SyncTeamEntityNotifyOuterClass {
         return sceneId_;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @param value The sceneId to set.
        * @return This builder for chaining.
        */
@@ -585,7 +585,7 @@ public final class SyncTeamEntityNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 scene_id = 1;</code>
+       * <code>uint32 scene_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneId() {
@@ -903,7 +903,7 @@ public final class SyncTeamEntityNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032SyncTeamEntityNotify.proto\032\024TeamEntity" +
       "Info.proto\"X\n\024SyncTeamEntityNotify\022\020\n\010sc" +
-      "ene_id\030\001 \001(\r\022.\n\025team_entity_info_list\030\016 " +
+      "ene_id\030\r \001(\r\022.\n\025team_entity_info_list\030\016 " +
       "\003(\0132\017.TeamEntityInfoB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };

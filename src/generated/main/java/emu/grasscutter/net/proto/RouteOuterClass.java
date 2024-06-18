@@ -50,7 +50,7 @@ public final class RouteOuterClass {
   }
   /**
    * <pre>
-   * Obf: GPFODIPKJPN
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code Route}
@@ -369,7 +369,7 @@ public final class RouteOuterClass {
     }
     /**
      * <pre>
-     * Obf: GPFODIPKJPN
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code Route}

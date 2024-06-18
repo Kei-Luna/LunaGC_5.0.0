@@ -101,7 +101,7 @@ public class PacketPlayerEnterSceneNotify extends BasePacket {
 
         // Apply the dungeon ID to the packet if it's a dungeon.
         if (teleportProperties.getDungeonId() != 0) {
-            proto.setDungeonId(teleportProperties.getDungeonId());
+            //proto.setDungeonId(teleportProperties.getDungeonId());
         }
 
         this.setData(proto);

@@ -32,7 +32,7 @@ public final class ServantInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: CILIBMDMDLK
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ServantInfo}
@@ -311,7 +311,7 @@ public final class ServantInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: CILIBMDMDLK
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ServantInfo}

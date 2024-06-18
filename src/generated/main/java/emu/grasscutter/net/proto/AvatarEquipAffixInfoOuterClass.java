@@ -32,7 +32,7 @@ public final class AvatarEquipAffixInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: CFINPAOKBJN
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AvatarEquipAffixInfo}
@@ -311,7 +311,7 @@ public final class AvatarEquipAffixInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: CFINPAOKBJN
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AvatarEquipAffixInfo}

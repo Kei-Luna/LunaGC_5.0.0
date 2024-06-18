@@ -271,10 +271,28 @@ public final class SocialDetailOuterClass {
      */
     com.google.protobuf.ByteString
         getIpCodeBytes();
+
+    /**
+     * <code>uint32 FPBKNPMLEPC = 27;</code>
+     * @return The fPBKNPMLEPC.
+     */
+    int getFPBKNPMLEPC();
+
+    /**
+     * <code>uint32 BNBFADNNNNA = 28;</code>
+     * @return The bNBFADNNNNA.
+     */
+    int getBNBFADNNNNA();
+
+    /**
+     * <code>uint32 NHFIPHHHOEF = 32;</code>
+     * @return The nHFIPHHHOEF.
+     */
+    int getNHFIPHHHOEF();
   }
   /**
    * <pre>
-   * Obf: NBNCHDGBFEC
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SocialDetail}
@@ -519,6 +537,21 @@ public final class SocialDetailOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               ipCode_ = s;
+              break;
+            }
+            case 216: {
+
+              fPBKNPMLEPC_ = input.readUInt32();
+              break;
+            }
+            case 224: {
+
+              bNBFADNNNNA_ = input.readUInt32();
+              break;
+            }
+            case 256: {
+
+              nHFIPHHHOEF_ = input.readUInt32();
               break;
             }
             default: {
@@ -1092,6 +1125,39 @@ public final class SocialDetailOuterClass {
       }
     }
 
+    public static final int FPBKNPMLEPC_FIELD_NUMBER = 27;
+    private int fPBKNPMLEPC_;
+    /**
+     * <code>uint32 FPBKNPMLEPC = 27;</code>
+     * @return The fPBKNPMLEPC.
+     */
+    @java.lang.Override
+    public int getFPBKNPMLEPC() {
+      return fPBKNPMLEPC_;
+    }
+
+    public static final int BNBFADNNNNA_FIELD_NUMBER = 28;
+    private int bNBFADNNNNA_;
+    /**
+     * <code>uint32 BNBFADNNNNA = 28;</code>
+     * @return The bNBFADNNNNA.
+     */
+    @java.lang.Override
+    public int getBNBFADNNNNA() {
+      return bNBFADNNNNA_;
+    }
+
+    public static final int NHFIPHHHOEF_FIELD_NUMBER = 32;
+    private int nHFIPHHHOEF_;
+    /**
+     * <code>uint32 NHFIPHHHOEF = 32;</code>
+     * @return The nHFIPHHHOEF.
+     */
+    @java.lang.Override
+    public int getNHFIPHHHOEF() {
+      return nHFIPHHHOEF_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1192,6 +1258,15 @@ public final class SocialDetailOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 26, ipCode_);
+      }
+      if (fPBKNPMLEPC_ != 0) {
+        output.writeUInt32(27, fPBKNPMLEPC_);
+      }
+      if (bNBFADNNNNA_ != 0) {
+        output.writeUInt32(28, bNBFADNNNNA_);
+      }
+      if (nHFIPHHHOEF_ != 0) {
+        output.writeUInt32(32, nHFIPHHHOEF_);
       }
       unknownFields.writeTo(output);
     }
@@ -1321,6 +1396,18 @@ public final class SocialDetailOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, ipCode_);
       }
+      if (fPBKNPMLEPC_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(27, fPBKNPMLEPC_);
+      }
+      if (bNBFADNNNNA_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(28, bNBFADNNNNA_);
+      }
+      if (nHFIPHHHOEF_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(32, nHFIPHHHOEF_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1392,6 +1479,12 @@ public final class SocialDetailOuterClass {
       }
       if (!getIpCode()
           .equals(other.getIpCode())) return false;
+      if (getFPBKNPMLEPC()
+          != other.getFPBKNPMLEPC()) return false;
+      if (getBNBFADNNNNA()
+          != other.getBNBFADNNNNA()) return false;
+      if (getNHFIPHHHOEF()
+          != other.getNHFIPHHHOEF()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1470,6 +1563,12 @@ public final class SocialDetailOuterClass {
       }
       hash = (37 * hash) + IP_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getIpCode().hashCode();
+      hash = (37 * hash) + FPBKNPMLEPC_FIELD_NUMBER;
+      hash = (53 * hash) + getFPBKNPMLEPC();
+      hash = (37 * hash) + BNBFADNNNNA_FIELD_NUMBER;
+      hash = (53 * hash) + getBNBFADNNNNA();
+      hash = (37 * hash) + NHFIPHHHOEF_FIELD_NUMBER;
+      hash = (53 * hash) + getNHFIPHHHOEF();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1567,7 +1666,7 @@ public final class SocialDetailOuterClass {
     }
     /**
      * <pre>
-     * Obf: NBNCHDGBFEC
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SocialDetail}
@@ -1672,6 +1771,12 @@ public final class SocialDetailOuterClass {
         }
         ipCode_ = "";
 
+        fPBKNPMLEPC_ = 0;
+
+        bNBFADNNNNA_ = 0;
+
+        nHFIPHHHOEF_ = 0;
+
         return this;
       }
 
@@ -1749,6 +1854,9 @@ public final class SocialDetailOuterClass {
           result.profilePicture_ = profilePictureBuilder_.build();
         }
         result.ipCode_ = ipCode_;
+        result.fPBKNPMLEPC_ = fPBKNPMLEPC_;
+        result.bNBFADNNNNA_ = bNBFADNNNNA_;
+        result.nHFIPHHHOEF_ = nHFIPHHHOEF_;
         onBuilt();
         return result;
       }
@@ -1916,6 +2024,15 @@ public final class SocialDetailOuterClass {
         if (!other.getIpCode().isEmpty()) {
           ipCode_ = other.ipCode_;
           onChanged();
+        }
+        if (other.getFPBKNPMLEPC() != 0) {
+          setFPBKNPMLEPC(other.getFPBKNPMLEPC());
+        }
+        if (other.getBNBFADNNNNA() != 0) {
+          setBNBFADNNNNA(other.getBNBFADNNNNA());
+        }
+        if (other.getNHFIPHHHOEF() != 0) {
+          setNHFIPHHHOEF(other.getNHFIPHHHOEF());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3504,6 +3621,99 @@ public final class SocialDetailOuterClass {
         onChanged();
         return this;
       }
+
+      private int fPBKNPMLEPC_ ;
+      /**
+       * <code>uint32 FPBKNPMLEPC = 27;</code>
+       * @return The fPBKNPMLEPC.
+       */
+      @java.lang.Override
+      public int getFPBKNPMLEPC() {
+        return fPBKNPMLEPC_;
+      }
+      /**
+       * <code>uint32 FPBKNPMLEPC = 27;</code>
+       * @param value The fPBKNPMLEPC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFPBKNPMLEPC(int value) {
+        
+        fPBKNPMLEPC_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 FPBKNPMLEPC = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFPBKNPMLEPC() {
+        
+        fPBKNPMLEPC_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bNBFADNNNNA_ ;
+      /**
+       * <code>uint32 BNBFADNNNNA = 28;</code>
+       * @return The bNBFADNNNNA.
+       */
+      @java.lang.Override
+      public int getBNBFADNNNNA() {
+        return bNBFADNNNNA_;
+      }
+      /**
+       * <code>uint32 BNBFADNNNNA = 28;</code>
+       * @param value The bNBFADNNNNA to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBNBFADNNNNA(int value) {
+        
+        bNBFADNNNNA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 BNBFADNNNNA = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBNBFADNNNNA() {
+        
+        bNBFADNNNNA_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int nHFIPHHHOEF_ ;
+      /**
+       * <code>uint32 NHFIPHHHOEF = 32;</code>
+       * @return The nHFIPHHHOEF.
+       */
+      @java.lang.Override
+      public int getNHFIPHHHOEF() {
+        return nHFIPHHHOEF_;
+      }
+      /**
+       * <code>uint32 NHFIPHHHOEF = 32;</code>
+       * @param value The nHFIPHHHOEF to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNHFIPHHHOEF(int value) {
+        
+        nHFIPHHHOEF_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 NHFIPHHHOEF = 32;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNHFIPHHHOEF() {
+        
+        nHFIPHHHOEF_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3574,7 +3784,7 @@ public final class SocialDetailOuterClass {
       "\n\022SocialDetail.proto\032\016Birthday.proto\032\027Fr" +
       "iendOnlineState.proto\032\032SocialShowAvatarI" +
       "nfo.proto\032\033FriendEnterHomeOption.proto\032\024" +
-      "ProfilePicture.proto\"\301\005\n\014SocialDetail\022\013\n" +
+      "ProfilePicture.proto\"\200\006\n\014SocialDetail\022\013\n" +
       "\003uid\030\001 \001(\r\022\020\n\010nickname\030\002 \001(\t\022\r\n\005level\030\003 " +
       "\001(\r\022\021\n\tavatar_id\030\004 \001(\r\022\021\n\tsignature\030\005 \001(" +
       "\t\022\033\n\010birthday\030\006 \001(\0132\t.Birthday\022\023\n\013world_" +
@@ -3592,8 +3802,9 @@ public final class SocialDetailOuterClass {
       "_list\030\027 \003(\r\0228\n\030friend_enter_home_option\030" +
       "\030 \001(\0162\026.FriendEnterHomeOption\022(\n\017profile" +
       "_picture\030\031 \001(\0132\017.ProfilePicture\022\017\n\007ip_co" +
-      "de\030\032 \001(\tB\033\n\031emu.grasscutter.net.protob\006p" +
-      "roto3"
+      "de\030\032 \001(\t\022\023\n\013FPBKNPMLEPC\030\033 \001(\r\022\023\n\013BNBFADN" +
+      "NNNA\030\034 \001(\r\022\023\n\013NHFIPHHHOEF\030  \001(\rB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3609,7 +3820,7 @@ public final class SocialDetailOuterClass {
     internal_static_SocialDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SocialDetail_descriptor,
-        new java.lang.String[] { "Uid", "Nickname", "Level", "AvatarId", "Signature", "Birthday", "WorldLevel", "ReservedList", "OnlineState", "Param", "IsFriend", "IsMpModeAvailable", "OnlineId", "NameCardId", "IsInBlacklist", "IsChatNoDisturb", "RemarkName", "FinishAchievementNum", "TowerFloorIndex", "TowerLevelIndex", "IsShowAvatar", "ShowAvatarInfoList", "ShowNameCardIdList", "FriendEnterHomeOption", "ProfilePicture", "IpCode", });
+        new java.lang.String[] { "Uid", "Nickname", "Level", "AvatarId", "Signature", "Birthday", "WorldLevel", "ReservedList", "OnlineState", "Param", "IsFriend", "IsMpModeAvailable", "OnlineId", "NameCardId", "IsInBlacklist", "IsChatNoDisturb", "RemarkName", "FinishAchievementNum", "TowerFloorIndex", "TowerLevelIndex", "IsShowAvatar", "ShowAvatarInfoList", "ShowNameCardIdList", "FriendEnterHomeOption", "ProfilePicture", "IpCode", "FPBKNPMLEPC", "BNBFADNNNNA", "NHFIPHHHOEF", });
     emu.grasscutter.net.proto.BirthdayOuterClass.getDescriptor();
     emu.grasscutter.net.proto.FriendOnlineStateOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.getDescriptor();

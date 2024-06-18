@@ -319,7 +319,7 @@ public final class SceneEntityInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: DGPPPPBJILO
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SceneEntityInfo}
@@ -1598,7 +1598,7 @@ public final class SceneEntityInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: DGPPPPBJILO
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SceneEntityInfo}

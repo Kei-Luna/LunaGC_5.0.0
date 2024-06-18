@@ -38,7 +38,7 @@ public final class AbilityGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: AHHOEHNNEIN
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AbilityGadgetInfo}
@@ -344,7 +344,7 @@ public final class AbilityGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: AHHOEHNNEIN
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AbilityGadgetInfo}

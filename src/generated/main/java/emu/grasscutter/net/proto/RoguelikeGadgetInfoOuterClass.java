@@ -44,7 +44,7 @@ public final class RoguelikeGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: FFNNBKHJJDP
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code RoguelikeGadgetInfo}
@@ -377,7 +377,7 @@ public final class RoguelikeGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: FFNNBKHJJDP
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code RoguelikeGadgetInfo}

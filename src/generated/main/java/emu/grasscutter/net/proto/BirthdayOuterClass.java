@@ -32,7 +32,7 @@ public final class BirthdayOuterClass {
   }
   /**
    * <pre>
-   * Obf: PJENMAMNPEI
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code Birthday}
@@ -311,7 +311,7 @@ public final class BirthdayOuterClass {
     }
     /**
      * <pre>
-     * Obf: PJENMAMNPEI
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code Birthday}

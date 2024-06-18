@@ -66,23 +66,41 @@ public final class GadgetPlayInfoOuterClass {
     int getProgress();
 
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      * @return Whether the crucibleInfo field is set.
      */
     boolean hasCrucibleInfo();
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      * @return The crucibleInfo.
      */
     emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo getCrucibleInfo();
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      */
     emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfoOrBuilder getCrucibleInfoOrBuilder();
   }
   /**
    * <pre>
-   * Obf: LJJODNPIMAI
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code GadgetPlayInfo}
@@ -312,6 +330,12 @@ public final class GadgetPlayInfoOuterClass {
     public static final int CRUCIBLE_INFO_FIELD_NUMBER = 21;
     private emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo crucibleInfo_;
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      * @return Whether the crucibleInfo field is set.
      */
@@ -320,6 +344,12 @@ public final class GadgetPlayInfoOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      * @return The crucibleInfo.
      */
@@ -328,6 +358,12 @@ public final class GadgetPlayInfoOuterClass {
       return crucibleInfo_ == null ? emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo.getDefaultInstance() : crucibleInfo_;
     }
     /**
+     * <pre>
+     *oneof play_info {
+     *	GadgetCrucibleInfo crucible_info = 21;
+     *}
+     * </pre>
+     *
      * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
      */
     @java.lang.Override
@@ -580,7 +616,7 @@ public final class GadgetPlayInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: LJJODNPIMAI
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code GadgetPlayInfo}
@@ -1030,6 +1066,12 @@ public final class GadgetPlayInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo, emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo.Builder, emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfoOrBuilder> crucibleInfoBuilder_;
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        * @return Whether the crucibleInfo field is set.
        */
@@ -1037,6 +1079,12 @@ public final class GadgetPlayInfoOuterClass {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        * @return The crucibleInfo.
        */
@@ -1048,6 +1096,12 @@ public final class GadgetPlayInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public Builder setCrucibleInfo(emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo value) {
@@ -1064,6 +1118,12 @@ public final class GadgetPlayInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public Builder setCrucibleInfo(
@@ -1078,6 +1138,12 @@ public final class GadgetPlayInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public Builder mergeCrucibleInfo(emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo value) {
@@ -1098,6 +1164,12 @@ public final class GadgetPlayInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public Builder clearCrucibleInfo() {
@@ -1111,6 +1183,12 @@ public final class GadgetPlayInfoOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfo.Builder getCrucibleInfoBuilder() {
@@ -1119,6 +1197,12 @@ public final class GadgetPlayInfoOuterClass {
         return getCrucibleInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       public emu.grasscutter.net.proto.GadgetCrucibleInfoOuterClass.GadgetCrucibleInfoOrBuilder getCrucibleInfoOrBuilder() {
@@ -1130,6 +1214,12 @@ public final class GadgetPlayInfoOuterClass {
         }
       }
       /**
+       * <pre>
+       *oneof play_info {
+       *	GadgetCrucibleInfo crucible_info = 21;
+       *}
+       * </pre>
+       *
        * <code>optional .GadgetCrucibleInfo crucible_info = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

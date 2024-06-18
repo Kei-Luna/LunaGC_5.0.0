@@ -16,7 +16,7 @@ public final class MpSettingTypeOuterClass {
   }
   /**
    * <pre>
-   * Obf: BICPJCKHOPA
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code MpSettingType}

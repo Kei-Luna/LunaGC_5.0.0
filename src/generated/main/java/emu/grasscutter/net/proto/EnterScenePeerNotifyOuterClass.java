@@ -19,41 +19,33 @@ public final class EnterScenePeerNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 dest_scene_id = 1;</code>
+     * <code>uint32 dest_scene_id = 15;</code>
      * @return The destSceneId.
      */
     int getDestSceneId();
 
     /**
-     * <code>uint32 enter_scene_token = 9;</code>
-     * @return The enterSceneToken.
+     * <code>uint32 host_peer_id = 6;</code>
+     * @return The hostPeerId.
      */
-    int getEnterSceneToken();
+    int getHostPeerId();
 
     /**
-     * <pre>
-     *11 or 3
-     * </pre>
-     *
-     * <code>uint32 peer_id = 11;</code>
+     * <code>uint32 peer_id = 10;</code>
      * @return The peerId.
      */
     int getPeerId();
 
     /**
-     * <pre>
-     *11 or 3
-     * </pre>
-     *
-     * <code>uint32 host_peer_id = 3;</code>
-     * @return The hostPeerId.
+     * <code>uint32 enter_scene_token = 1;</code>
+     * @return The enterSceneToken.
      */
-    int getHostPeerId();
+    int getEnterSceneToken();
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 20243
+   * 4.7.0
+   * CmdId: 20926
    * </pre>
    *
    * Protobuf type {@code EnterScenePeerNotify}
@@ -102,22 +94,22 @@ public final class EnterScenePeerNotifyOuterClass {
               break;
             case 8: {
 
-              destSceneId_ = input.readUInt32();
+              enterSceneToken_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 48: {
 
               hostPeerId_ = input.readUInt32();
               break;
             }
-            case 72: {
-
-              enterSceneToken_ = input.readUInt32();
-              break;
-            }
-            case 88: {
+            case 80: {
 
               peerId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              destSceneId_ = input.readUInt32();
               break;
             }
             default: {
@@ -152,10 +144,10 @@ public final class EnterScenePeerNotifyOuterClass {
               emu.grasscutter.net.proto.EnterScenePeerNotifyOuterClass.EnterScenePeerNotify.class, emu.grasscutter.net.proto.EnterScenePeerNotifyOuterClass.EnterScenePeerNotify.Builder.class);
     }
 
-    public static final int DEST_SCENE_ID_FIELD_NUMBER = 1;
+    public static final int DEST_SCENE_ID_FIELD_NUMBER = 15;
     private int destSceneId_;
     /**
-     * <code>uint32 dest_scene_id = 1;</code>
+     * <code>uint32 dest_scene_id = 15;</code>
      * @return The destSceneId.
      */
     @java.lang.Override
@@ -163,25 +155,21 @@ public final class EnterScenePeerNotifyOuterClass {
       return destSceneId_;
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 9;
-    private int enterSceneToken_;
+    public static final int HOST_PEER_ID_FIELD_NUMBER = 6;
+    private int hostPeerId_;
     /**
-     * <code>uint32 enter_scene_token = 9;</code>
-     * @return The enterSceneToken.
+     * <code>uint32 host_peer_id = 6;</code>
+     * @return The hostPeerId.
      */
     @java.lang.Override
-    public int getEnterSceneToken() {
-      return enterSceneToken_;
+    public int getHostPeerId() {
+      return hostPeerId_;
     }
 
-    public static final int PEER_ID_FIELD_NUMBER = 11;
+    public static final int PEER_ID_FIELD_NUMBER = 10;
     private int peerId_;
     /**
-     * <pre>
-     *11 or 3
-     * </pre>
-     *
-     * <code>uint32 peer_id = 11;</code>
+     * <code>uint32 peer_id = 10;</code>
      * @return The peerId.
      */
     @java.lang.Override
@@ -189,19 +177,15 @@ public final class EnterScenePeerNotifyOuterClass {
       return peerId_;
     }
 
-    public static final int HOST_PEER_ID_FIELD_NUMBER = 3;
-    private int hostPeerId_;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 1;
+    private int enterSceneToken_;
     /**
-     * <pre>
-     *11 or 3
-     * </pre>
-     *
-     * <code>uint32 host_peer_id = 3;</code>
-     * @return The hostPeerId.
+     * <code>uint32 enter_scene_token = 1;</code>
+     * @return The enterSceneToken.
      */
     @java.lang.Override
-    public int getHostPeerId() {
-      return hostPeerId_;
+    public int getEnterSceneToken() {
+      return enterSceneToken_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -218,17 +202,17 @@ public final class EnterScenePeerNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (destSceneId_ != 0) {
-        output.writeUInt32(1, destSceneId_);
+      if (enterSceneToken_ != 0) {
+        output.writeUInt32(1, enterSceneToken_);
       }
       if (hostPeerId_ != 0) {
-        output.writeUInt32(3, hostPeerId_);
-      }
-      if (enterSceneToken_ != 0) {
-        output.writeUInt32(9, enterSceneToken_);
+        output.writeUInt32(6, hostPeerId_);
       }
       if (peerId_ != 0) {
-        output.writeUInt32(11, peerId_);
+        output.writeUInt32(10, peerId_);
+      }
+      if (destSceneId_ != 0) {
+        output.writeUInt32(15, destSceneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -239,21 +223,21 @@ public final class EnterScenePeerNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (destSceneId_ != 0) {
+      if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, destSceneId_);
+          .computeUInt32Size(1, enterSceneToken_);
       }
       if (hostPeerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, hostPeerId_);
-      }
-      if (enterSceneToken_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, enterSceneToken_);
+          .computeUInt32Size(6, hostPeerId_);
       }
       if (peerId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, peerId_);
+          .computeUInt32Size(10, peerId_);
+      }
+      if (destSceneId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, destSceneId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -272,12 +256,12 @@ public final class EnterScenePeerNotifyOuterClass {
 
       if (getDestSceneId()
           != other.getDestSceneId()) return false;
-      if (getEnterSceneToken()
-          != other.getEnterSceneToken()) return false;
-      if (getPeerId()
-          != other.getPeerId()) return false;
       if (getHostPeerId()
           != other.getHostPeerId()) return false;
+      if (getPeerId()
+          != other.getPeerId()) return false;
+      if (getEnterSceneToken()
+          != other.getEnterSceneToken()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -291,12 +275,12 @@ public final class EnterScenePeerNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEST_SCENE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDestSceneId();
-      hash = (37 * hash) + ENTER_SCENE_TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getEnterSceneToken();
-      hash = (37 * hash) + PEER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPeerId();
       hash = (37 * hash) + HOST_PEER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getHostPeerId();
+      hash = (37 * hash) + PEER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPeerId();
+      hash = (37 * hash) + ENTER_SCENE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getEnterSceneToken();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -394,8 +378,8 @@ public final class EnterScenePeerNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 20243
+     * 4.7.0
+     * CmdId: 20926
      * </pre>
      *
      * Protobuf type {@code EnterScenePeerNotify}
@@ -437,11 +421,11 @@ public final class EnterScenePeerNotifyOuterClass {
         super.clear();
         destSceneId_ = 0;
 
-        enterSceneToken_ = 0;
+        hostPeerId_ = 0;
 
         peerId_ = 0;
 
-        hostPeerId_ = 0;
+        enterSceneToken_ = 0;
 
         return this;
       }
@@ -470,9 +454,9 @@ public final class EnterScenePeerNotifyOuterClass {
       public emu.grasscutter.net.proto.EnterScenePeerNotifyOuterClass.EnterScenePeerNotify buildPartial() {
         emu.grasscutter.net.proto.EnterScenePeerNotifyOuterClass.EnterScenePeerNotify result = new emu.grasscutter.net.proto.EnterScenePeerNotifyOuterClass.EnterScenePeerNotify(this);
         result.destSceneId_ = destSceneId_;
-        result.enterSceneToken_ = enterSceneToken_;
-        result.peerId_ = peerId_;
         result.hostPeerId_ = hostPeerId_;
+        result.peerId_ = peerId_;
+        result.enterSceneToken_ = enterSceneToken_;
         onBuilt();
         return result;
       }
@@ -524,14 +508,14 @@ public final class EnterScenePeerNotifyOuterClass {
         if (other.getDestSceneId() != 0) {
           setDestSceneId(other.getDestSceneId());
         }
-        if (other.getEnterSceneToken() != 0) {
-          setEnterSceneToken(other.getEnterSceneToken());
+        if (other.getHostPeerId() != 0) {
+          setHostPeerId(other.getHostPeerId());
         }
         if (other.getPeerId() != 0) {
           setPeerId(other.getPeerId());
         }
-        if (other.getHostPeerId() != 0) {
-          setHostPeerId(other.getHostPeerId());
+        if (other.getEnterSceneToken() != 0) {
+          setEnterSceneToken(other.getEnterSceneToken());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -564,7 +548,7 @@ public final class EnterScenePeerNotifyOuterClass {
 
       private int destSceneId_ ;
       /**
-       * <code>uint32 dest_scene_id = 1;</code>
+       * <code>uint32 dest_scene_id = 15;</code>
        * @return The destSceneId.
        */
       @java.lang.Override
@@ -572,7 +556,7 @@ public final class EnterScenePeerNotifyOuterClass {
         return destSceneId_;
       }
       /**
-       * <code>uint32 dest_scene_id = 1;</code>
+       * <code>uint32 dest_scene_id = 15;</code>
        * @param value The destSceneId to set.
        * @return This builder for chaining.
        */
@@ -583,7 +567,7 @@ public final class EnterScenePeerNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 dest_scene_id = 1;</code>
+       * <code>uint32 dest_scene_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearDestSceneId() {
@@ -593,87 +577,9 @@ public final class EnterScenePeerNotifyOuterClass {
         return this;
       }
 
-      private int enterSceneToken_ ;
-      /**
-       * <code>uint32 enter_scene_token = 9;</code>
-       * @return The enterSceneToken.
-       */
-      @java.lang.Override
-      public int getEnterSceneToken() {
-        return enterSceneToken_;
-      }
-      /**
-       * <code>uint32 enter_scene_token = 9;</code>
-       * @param value The enterSceneToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnterSceneToken(int value) {
-        
-        enterSceneToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 enter_scene_token = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnterSceneToken() {
-        
-        enterSceneToken_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int peerId_ ;
-      /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 peer_id = 11;</code>
-       * @return The peerId.
-       */
-      @java.lang.Override
-      public int getPeerId() {
-        return peerId_;
-      }
-      /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 peer_id = 11;</code>
-       * @param value The peerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPeerId(int value) {
-        
-        peerId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 peer_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPeerId() {
-        
-        peerId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int hostPeerId_ ;
       /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 host_peer_id = 3;</code>
+       * <code>uint32 host_peer_id = 6;</code>
        * @return The hostPeerId.
        */
       @java.lang.Override
@@ -681,11 +587,7 @@ public final class EnterScenePeerNotifyOuterClass {
         return hostPeerId_;
       }
       /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 host_peer_id = 3;</code>
+       * <code>uint32 host_peer_id = 6;</code>
        * @param value The hostPeerId to set.
        * @return This builder for chaining.
        */
@@ -696,16 +598,74 @@ public final class EnterScenePeerNotifyOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *11 or 3
-       * </pre>
-       *
-       * <code>uint32 host_peer_id = 3;</code>
+       * <code>uint32 host_peer_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearHostPeerId() {
         
         hostPeerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int peerId_ ;
+      /**
+       * <code>uint32 peer_id = 10;</code>
+       * @return The peerId.
+       */
+      @java.lang.Override
+      public int getPeerId() {
+        return peerId_;
+      }
+      /**
+       * <code>uint32 peer_id = 10;</code>
+       * @param value The peerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPeerId(int value) {
+        
+        peerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 peer_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPeerId() {
+        
+        peerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int enterSceneToken_ ;
+      /**
+       * <code>uint32 enter_scene_token = 1;</code>
+       * @return The enterSceneToken.
+       */
+      @java.lang.Override
+      public int getEnterSceneToken() {
+        return enterSceneToken_;
+      }
+      /**
+       * <code>uint32 enter_scene_token = 1;</code>
+       * @param value The enterSceneToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnterSceneToken(int value) {
+        
+        enterSceneToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 enter_scene_token = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnterSceneToken() {
+        
+        enterSceneToken_ = 0;
         onChanged();
         return this;
       }
@@ -777,9 +737,9 @@ public final class EnterScenePeerNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032EnterScenePeerNotify.proto\"o\n\024EnterSce" +
-      "nePeerNotify\022\025\n\rdest_scene_id\030\001 \001(\r\022\031\n\021e" +
-      "nter_scene_token\030\t \001(\r\022\017\n\007peer_id\030\013 \001(\r\022" +
-      "\024\n\014host_peer_id\030\003 \001(\rB\033\n\031emu.grasscutter" +
+      "nePeerNotify\022\025\n\rdest_scene_id\030\017 \001(\r\022\024\n\014h" +
+      "ost_peer_id\030\006 \001(\r\022\017\n\007peer_id\030\n \001(\r\022\031\n\021en" +
+      "ter_scene_token\030\001 \001(\rB\033\n\031emu.grasscutter" +
       ".net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -791,7 +751,7 @@ public final class EnterScenePeerNotifyOuterClass {
     internal_static_EnterScenePeerNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EnterScenePeerNotify_descriptor,
-        new java.lang.String[] { "DestSceneId", "EnterSceneToken", "PeerId", "HostPeerId", });
+        new java.lang.String[] { "DestSceneId", "HostPeerId", "PeerId", "EnterSceneToken", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

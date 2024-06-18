@@ -16,7 +16,7 @@ public final class VisionTypeOuterClass {
   }
   /**
    * <pre>
-   * Obf: IFLKBEFDMPH
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code VisionType}

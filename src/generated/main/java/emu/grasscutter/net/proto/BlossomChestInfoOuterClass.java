@@ -78,7 +78,7 @@ public final class BlossomChestInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: OGDABNFHACL
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code BlossomChestInfo}
@@ -573,7 +573,7 @@ public final class BlossomChestInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: OGDABNFHACL
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code BlossomChestInfo}

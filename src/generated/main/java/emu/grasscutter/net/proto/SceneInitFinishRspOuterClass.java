@@ -20,18 +20,18 @@ public final class SceneInitFinishRspOuterClass {
 
     /**
      * <pre>
-     *int32 retcode = ?;
+     * int32 retcode = 65535;
      * </pre>
      *
-     * <code>uint32 enter_scene_token = 11;</code>
+     * <code>uint32 enter_scene_token = 10;</code>
      * @return The enterSceneToken.
      */
     int getEnterSceneToken();
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 6717
+   * 4.7.0
+   * CmdId: 3099
    * </pre>
    *
    * Protobuf type {@code SceneInitFinishRsp}
@@ -78,7 +78,7 @@ public final class SceneInitFinishRspOuterClass {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 80: {
 
               enterSceneToken_ = input.readUInt32();
               break;
@@ -115,14 +115,14 @@ public final class SceneInitFinishRspOuterClass {
               emu.grasscutter.net.proto.SceneInitFinishRspOuterClass.SceneInitFinishRsp.class, emu.grasscutter.net.proto.SceneInitFinishRspOuterClass.SceneInitFinishRsp.Builder.class);
     }
 
-    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 11;
+    public static final int ENTER_SCENE_TOKEN_FIELD_NUMBER = 10;
     private int enterSceneToken_;
     /**
      * <pre>
-     *int32 retcode = ?;
+     * int32 retcode = 65535;
      * </pre>
      *
-     * <code>uint32 enter_scene_token = 11;</code>
+     * <code>uint32 enter_scene_token = 10;</code>
      * @return The enterSceneToken.
      */
     @java.lang.Override
@@ -145,7 +145,7 @@ public final class SceneInitFinishRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (enterSceneToken_ != 0) {
-        output.writeUInt32(11, enterSceneToken_);
+        output.writeUInt32(10, enterSceneToken_);
       }
       unknownFields.writeTo(output);
     }
@@ -158,7 +158,7 @@ public final class SceneInitFinishRspOuterClass {
       size = 0;
       if (enterSceneToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, enterSceneToken_);
+          .computeUInt32Size(10, enterSceneToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -287,8 +287,8 @@ public final class SceneInitFinishRspOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 6717
+     * 4.7.0
+     * CmdId: 3099
      * </pre>
      *
      * Protobuf type {@code SceneInitFinishRsp}
@@ -440,10 +440,10 @@ public final class SceneInitFinishRspOuterClass {
       private int enterSceneToken_ ;
       /**
        * <pre>
-       *int32 retcode = ?;
+       * int32 retcode = 65535;
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 11;</code>
+       * <code>uint32 enter_scene_token = 10;</code>
        * @return The enterSceneToken.
        */
       @java.lang.Override
@@ -452,10 +452,10 @@ public final class SceneInitFinishRspOuterClass {
       }
       /**
        * <pre>
-       *int32 retcode = ?;
+       * int32 retcode = 65535;
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 11;</code>
+       * <code>uint32 enter_scene_token = 10;</code>
        * @param value The enterSceneToken to set.
        * @return This builder for chaining.
        */
@@ -467,10 +467,10 @@ public final class SceneInitFinishRspOuterClass {
       }
       /**
        * <pre>
-       *int32 retcode = ?;
+       * int32 retcode = 65535;
        * </pre>
        *
-       * <code>uint32 enter_scene_token = 11;</code>
+       * <code>uint32 enter_scene_token = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearEnterSceneToken() {
@@ -547,7 +547,7 @@ public final class SceneInitFinishRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030SceneInitFinishRsp.proto\"/\n\022SceneInitF" +
-      "inishRsp\022\031\n\021enter_scene_token\030\013 \001(\rB\033\n\031e" +
+      "inishRsp\022\031\n\021enter_scene_token\030\n \001(\rB\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

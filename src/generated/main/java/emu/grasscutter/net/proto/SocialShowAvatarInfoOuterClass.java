@@ -38,7 +38,7 @@ public final class SocialShowAvatarInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: OGKHFCINDJP
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SocialShowAvatarInfo}
@@ -344,7 +344,7 @@ public final class SocialShowAvatarInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: OGKHFCINDJP
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SocialShowAvatarInfo}

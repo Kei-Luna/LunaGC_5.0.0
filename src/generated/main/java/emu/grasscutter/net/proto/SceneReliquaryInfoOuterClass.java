@@ -44,7 +44,7 @@ public final class SceneReliquaryInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: HEMALDBEKEL
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SceneReliquaryInfo}
@@ -378,7 +378,7 @@ public final class SceneReliquaryInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: HEMALDBEKEL
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SceneReliquaryInfo}

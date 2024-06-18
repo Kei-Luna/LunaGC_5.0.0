@@ -60,7 +60,7 @@ public final class MpPlayRewardInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: BGGFBNKFLHN
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code MpPlayRewardInfo}
@@ -474,7 +474,7 @@ public final class MpPlayRewardInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: BGGFBNKFLHN
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code MpPlayRewardInfo}

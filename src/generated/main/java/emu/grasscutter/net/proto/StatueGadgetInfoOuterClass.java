@@ -37,7 +37,7 @@ public final class StatueGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: MAIBEHDCKJL
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code StatueGadgetInfo}
@@ -344,7 +344,7 @@ public final class StatueGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: MAIBEHDCKJL
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code StatueGadgetInfo}

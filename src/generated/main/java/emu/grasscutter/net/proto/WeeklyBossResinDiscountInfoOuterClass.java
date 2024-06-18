@@ -44,7 +44,7 @@ public final class WeeklyBossResinDiscountInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: PABMLHHIDDM
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code WeeklyBossResinDiscountInfo}
@@ -377,7 +377,7 @@ public final class WeeklyBossResinDiscountInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: PABMLHHIDDM
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code WeeklyBossResinDiscountInfo}

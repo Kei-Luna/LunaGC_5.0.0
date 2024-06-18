@@ -16,7 +16,7 @@ public final class EnterTypeOuterClass {
   }
   /**
    * <pre>
-   * Obf: NMCABLGJJEK
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code EnterType}

@@ -2,7 +2,7 @@ use super::{MhyContext, MhyModule, ModuleType};
 use anyhow::Result;
 use ilhook::x64::Registers;
 
-const IL2CPP_ARRAY_NEW: usize = 0x00553C10;
+const IL2CPP_ARRAY_NEW: usize = 0x0060eec0;
 const KEY_SIGN_CHECK: usize = 0x000041C5;
 
 const KEY_SIZE: u64 = 272;

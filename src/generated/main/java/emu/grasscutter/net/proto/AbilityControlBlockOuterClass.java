@@ -44,7 +44,7 @@ public final class AbilityControlBlockOuterClass {
   }
   /**
    * <pre>
-   * Obf: GGPHMELJCOL
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AbilityControlBlock}
@@ -336,7 +336,7 @@ public final class AbilityControlBlockOuterClass {
     }
     /**
      * <pre>
-     * Obf: GGPHMELJCOL
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AbilityControlBlock}

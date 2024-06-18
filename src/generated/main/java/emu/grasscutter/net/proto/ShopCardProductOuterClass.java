@@ -73,23 +73,41 @@ public final class ShopCardProductOuterClass {
     int getCardProductType();
 
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      * @return Whether the resinCard field is set.
      */
     boolean hasResinCard();
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      * @return The resinCard.
      */
     emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard getResinCard();
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      */
     emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder getResinCardOrBuilder();
   }
   /**
    * <pre>
-   * Obf: LJJFPCDLGIJ
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ShopCardProduct}
@@ -274,10 +292,6 @@ public final class ShopCardProductOuterClass {
           int index);
     }
     /**
-     * <pre>
-     * Obf: JIBALNEIBIK
-     * </pre>
-     *
      * Protobuf type {@code ShopCardProduct.ResinCard}
      */
     public static final class ResinCard extends
@@ -632,10 +646,6 @@ public final class ShopCardProductOuterClass {
         return builder;
       }
       /**
-       * <pre>
-       * Obf: JIBALNEIBIK
-       * </pre>
-       *
        * Protobuf type {@code ShopCardProduct.ResinCard}
        */
       public static final class Builder extends
@@ -1529,6 +1539,12 @@ public final class ShopCardProductOuterClass {
     public static final int RESIN_CARD_FIELD_NUMBER = 101;
     private emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard resinCard_;
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      * @return Whether the resinCard field is set.
      */
@@ -1537,6 +1553,12 @@ public final class ShopCardProductOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      * @return The resinCard.
      */
@@ -1545,6 +1567,12 @@ public final class ShopCardProductOuterClass {
       return resinCard_ == null ? emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.getDefaultInstance() : resinCard_;
     }
     /**
+     * <pre>
+     *oneof NCLJBPBPGCH {
+     *	ResinCard resin_card = 101;
+     *}
+     * </pre>
+     *
      * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
      */
     @java.lang.Override
@@ -1789,7 +1817,7 @@ public final class ShopCardProductOuterClass {
     }
     /**
      * <pre>
-     * Obf: LJJFPCDLGIJ
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ShopCardProduct}
@@ -2309,6 +2337,12 @@ public final class ShopCardProductOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder, emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder> resinCardBuilder_;
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        * @return Whether the resinCard field is set.
        */
@@ -2316,6 +2350,12 @@ public final class ShopCardProductOuterClass {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        * @return The resinCard.
        */
@@ -2327,6 +2367,12 @@ public final class ShopCardProductOuterClass {
         }
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public Builder setResinCard(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard value) {
@@ -2343,6 +2389,12 @@ public final class ShopCardProductOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public Builder setResinCard(
@@ -2357,6 +2409,12 @@ public final class ShopCardProductOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public Builder mergeResinCard(emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard value) {
@@ -2377,6 +2435,12 @@ public final class ShopCardProductOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public Builder clearResinCard() {
@@ -2390,6 +2454,12 @@ public final class ShopCardProductOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCard.Builder getResinCardBuilder() {
@@ -2398,6 +2468,12 @@ public final class ShopCardProductOuterClass {
         return getResinCardFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       public emu.grasscutter.net.proto.ShopCardProductOuterClass.ShopCardProduct.ResinCardOrBuilder getResinCardOrBuilder() {
@@ -2409,6 +2485,12 @@ public final class ShopCardProductOuterClass {
         }
       }
       /**
+       * <pre>
+       *oneof NCLJBPBPGCH {
+       *	ResinCard resin_card = 101;
+       *}
+       * </pre>
+       *
        * <code>optional .ShopCardProduct.ResinCard resin_card = 101;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

@@ -100,7 +100,7 @@ public final class BossChestInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: CBKAOHFJIND
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code BossChestInfo}
@@ -669,7 +669,7 @@ public final class BossChestInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: CBKAOHFJIND
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code BossChestInfo}

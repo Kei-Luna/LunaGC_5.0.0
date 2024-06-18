@@ -65,7 +65,7 @@ public final class TrialAvatarInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: FMNJAFCPNPD
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code TrialAvatarInfo}
@@ -439,7 +439,7 @@ public final class TrialAvatarInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: FMNJAFCPNPD
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code TrialAvatarInfo}

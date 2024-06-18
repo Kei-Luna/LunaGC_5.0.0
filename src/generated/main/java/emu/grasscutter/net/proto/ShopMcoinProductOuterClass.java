@@ -74,7 +74,7 @@ public final class ShopMcoinProductOuterClass {
   }
   /**
    * <pre>
-   * Obf: BNMNBLNCBIG
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ShopMcoinProduct}
@@ -545,7 +545,7 @@ public final class ShopMcoinProductOuterClass {
     }
     /**
      * <pre>
-     * Obf: BNMNBLNCBIG
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ShopMcoinProduct}

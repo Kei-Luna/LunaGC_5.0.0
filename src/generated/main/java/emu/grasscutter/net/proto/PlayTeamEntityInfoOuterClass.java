@@ -59,7 +59,7 @@ public final class PlayTeamEntityInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: EHPIOEOLPIA
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code PlayTeamEntityInfo}
@@ -447,7 +447,7 @@ public final class PlayTeamEntityInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: EHPIOEOLPIA
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code PlayTeamEntityInfo}

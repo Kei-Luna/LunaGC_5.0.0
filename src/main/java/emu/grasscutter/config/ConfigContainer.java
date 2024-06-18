@@ -174,6 +174,8 @@ public class ConfigContainer {
         /* Enabling this will generate a unique packet encryption key for each player. */
         public boolean useUniquePacketKey = true;
 
+        public boolean useXorEncryption = false;
+
         /* Entities within a certain range will be loaded for the player */
         public int loadEntitiesForPlayerRange = 300;
         /* Start in 'unstable-quests', Lua scripts will be enabled by default. */
@@ -360,11 +362,11 @@ public class ConfigContainer {
 
     public static class JoinOptions {
         public int[] welcomeEmotes = {2007, 1002, 4010};
-        public String welcomeMessage = "Welcome to a LunaGC 4.6.0";
+        public String welcomeMessage = "Welcome to a LunaGC 4.7.0";
         public JoinOptions.Mail welcomeMail = new JoinOptions.Mail();
 
         public static class Mail {
-            public String title = "Welcome to a LunaGC 4.6.0";
+            public String title = "Welcome to a LunaGC 4.7.0";
             public String content = """
                     Hi there!\r
                     First of all, welcome to Grasscutter. If you have any issues, please let us know so that Lawnmower can help you! \r

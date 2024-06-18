@@ -26,8 +26,8 @@ public final class SceneInitFinishReqOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 2089
+   * 4.7.0
+   * CmdId: 21370
    * </pre>
    *
    * Protobuf type {@code SceneInitFinishReq}
@@ -279,8 +279,8 @@ public final class SceneInitFinishReqOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 2089
+     * 4.7.0
+     * CmdId: 21370
      * </pre>
      *
      * Protobuf type {@code SceneInitFinishReq}

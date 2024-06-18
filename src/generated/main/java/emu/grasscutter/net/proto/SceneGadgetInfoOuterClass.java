@@ -518,9 +518,7 @@ public final class SceneGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   *import "GDGKKLFMJKH.proto";
-   *import "OMBIJJLAHFB.proto";
-   *import "BDOCPDNCIEF.proto";
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code SceneGadgetInfo}
@@ -2787,9 +2785,7 @@ public final class SceneGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     *import "GDGKKLFMJKH.proto";
-     *import "OMBIJJLAHFB.proto";
-     *import "BDOCPDNCIEF.proto";
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code SceneGadgetInfo}

@@ -144,7 +144,10 @@ public class GameSession implements GameSessionManager.KcpChannel {
                 packet = event.getPacket();
                 var bytes = packet.build();
                 if (packet.shouldEncrypt) {
-                    Crypto.xor(bytes, packet.useDispatchKey() ? Crypto.DISPATCH_KEY : this.encryptKey);
+                    //Crypto.xor(bytes, packet.useDispatchKey() ? Crypto.DISPATCH_KEY : this.encryptKey);
+                    if (Grasscutter.getConfig().server.game.useXorEncryption) {
+                        Crypto.xor(bytes, packet.useDispatchKey() ? Crypto.DISPATCH_KEY : this.encryptKey);
+                    }
                 }
                 tunnel.writeData(bytes);
             } catch (Exception ignored) {
@@ -162,7 +165,10 @@ public class GameSession implements GameSessionManager.KcpChannel {
     @Override
     public void handleReceive(byte[] bytes) {
         // Decrypt and turn back into a packet
-        Crypto.xor(bytes, useSecretKey() ? this.encryptKey : Crypto.DISPATCH_KEY);
+        //Crypto.xor(bytes, useSecretKey() ? this.encryptKey : Crypto.DISPATCH_KEY);
+        if (Grasscutter.getConfig().server.game.useXorEncryption) {
+            Crypto.xor(bytes, useSecretKey() ? this.encryptKey : Crypto.DISPATCH_KEY);
+        }
         ByteBuf packet = Unpooled.wrappedBuffer(bytes);
 
         // Log

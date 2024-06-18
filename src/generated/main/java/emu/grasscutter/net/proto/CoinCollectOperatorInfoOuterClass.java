@@ -26,7 +26,7 @@ public final class CoinCollectOperatorInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: NFEECFHHDLJ
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code CoinCollectOperatorInfo}
@@ -278,7 +278,7 @@ public final class CoinCollectOperatorInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: NFEECFHHDLJ
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code CoinCollectOperatorInfo}

@@ -32,7 +32,7 @@ public final class EntityEnvironmentInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: FDGMLNKHDKB
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code EntityEnvironmentInfo}
@@ -311,7 +311,7 @@ public final class EntityEnvironmentInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: FDGMLNKHDKB
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code EntityEnvironmentInfo}

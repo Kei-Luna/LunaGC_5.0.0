@@ -5,7 +5,7 @@ use crate::marshal;
 use anyhow::Result;
 use ilhook::x64::Registers;
 
-const UNITY_WEB_REQUEST_SET_URL: usize = 0x0D9442D0;
+const UNITY_WEB_REQUEST_SET_URL: usize = 0xd91e4f0;
 
 pub struct Http;
 

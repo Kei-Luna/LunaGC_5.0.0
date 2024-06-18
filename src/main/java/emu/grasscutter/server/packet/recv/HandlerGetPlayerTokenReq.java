@@ -54,7 +54,7 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
                 exists.onLogout(); // must save immediately , or the below will load old data
                 existsSession.close();
                 Grasscutter.getLogger()
-                        .warn("Player {} was kicked due to duplicated login", account.getUsername());
+                    .warn("Player {} was kicked due to duplicated login", account.getUsername());
                 kicked = true;
             }
         }
@@ -65,7 +65,7 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
         if (!kicked) {
             // Max players limit
             if (ACCOUNT.maxPlayer > -1
-                    && Grasscutter.getGameServer().getPlayers().size() >= ACCOUNT.maxPlayer) {
+                && Grasscutter.getGameServer().getPlayers().size() >= ACCOUNT.maxPlayer) {
                 session.close();
                 return;
             }
@@ -80,11 +80,11 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
 
         if (player == null) {
             var nextPlayerUid =
-                    DatabaseHelper.getNextPlayerId(session.getAccount().getReservedPlayerUid());
+                DatabaseHelper.getNextPlayerId(session.getAccount().getReservedPlayerUid());
 
             // Create player instance from event.
             player =
-                    event.getPlayerClass().getDeclaredConstructor(GameSession.class).newInstance(session);
+                event.getPlayerClass().getDeclaredConstructor(GameSession.class).newInstance(session);
 
             // Save to db
             DatabaseHelper.generatePlayerUid(player, nextPlayerUid);
@@ -97,54 +97,63 @@ public class HandlerGetPlayerTokenReq extends PacketHandler {
         if (session.getAccount().isBanned()) {
             session.setState(SessionState.ACCOUNT_BANNED);
             session.send(
-                    new PacketGetPlayerTokenRsp(
-                            session, 21, "FORBID_CHEATING_PLUGINS", session.getAccount().getBanEndTime()));
+                new PacketGetPlayerTokenRsp(
+                    session, 21, "FORBID_CHEATING_PLUGINS", session.getAccount().getBanEndTime()));
             return;
         }
 
         // Load player from database
         player.loadFromDatabase();
 
-        // Set session state
-        session.setUseSecretKey(true);
-        session.setState(SessionState.WAITING_FOR_LOGIN);
+        if (Grasscutter.getConfig().server.game.useXorEncryption) {
+            // Set session state
+            session.setUseSecretKey(true);
+            session.setState(SessionState.WAITING_FOR_LOGIN);
 
-        // Only >= 2.7.50 has this
-        if (req.getKeyId() > 0) {
-            var encryptSeed = session.getEncryptSeed();
-            try {
-                var cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-                cipher.init(Cipher.DECRYPT_MODE, Crypto.CUR_SIGNING_KEY);
+            // Only >= 2.7.50 has this
+            if (req.getKeyId() > 0) {
+                var encryptSeed = session.getEncryptSeed();
+                try {
+                    var cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+                    cipher.init(Cipher.DECRYPT_MODE, Crypto.CUR_SIGNING_KEY);
 
-                var clientSeedEncrypted = Utils.base64Decode(req.getClientRandKey());
-                var clientSeed = ByteBuffer.wrap(cipher.doFinal(clientSeedEncrypted)).getLong();
+                    var clientSeedEncrypted = Utils.base64Decode(req.getClientRandKey());
+                    var clientSeed = ByteBuffer.wrap(cipher.doFinal(clientSeedEncrypted)).getLong();
 
-                var seedBytes = ByteBuffer.wrap(new byte[8]).putLong(encryptSeed ^ clientSeed).array();
+                    var seedBytes = ByteBuffer.wrap(new byte[8]).putLong(encryptSeed ^ clientSeed).array();
 
-                cipher.init(Cipher.ENCRYPT_MODE, Crypto.EncryptionKeys.get(req.getKeyId()));
-                var seedEncrypted = cipher.doFinal(seedBytes);
+                    cipher.init(Cipher.ENCRYPT_MODE, Crypto.EncryptionKeys.get(req.getKeyId()));
+                    var seedEncrypted = cipher.doFinal(seedBytes);
 
-                var privateSignature = Signature.getInstance("SHA256withRSA");
-                privateSignature.initSign(Crypto.CUR_SIGNING_KEY);
-                privateSignature.update(seedBytes);
+                    var privateSignature = Signature.getInstance("SHA256withRSA");
+                    privateSignature.initSign(Crypto.CUR_SIGNING_KEY);
+                    privateSignature.update(seedBytes);
 
-                session.send(
+                    session.send(
                         new PacketGetPlayerTokenRsp(
-                                session,
-                                Utils.base64Encode(seedEncrypted),
-                                Utils.base64Encode(privateSignature.sign())));
-            } catch (Exception ignored) {
-                // Only UA Patch users will have exception
-                var clientBytes = Utils.base64Decode(req.getClientRandKey());
-                var seed = ByteHelper.longToBytes(encryptSeed);
-                Crypto.xor(clientBytes, seed);
+                            session,
+                            Utils.base64Encode(seedEncrypted),
+                            Utils.base64Encode(privateSignature.sign()),
+                            req.getKeyId()));
+                } catch (Exception ignored) {
+                    // Only UA Patch users will have exception
+                    var clientBytes = Utils.base64Decode(req.getClientRandKey());
+                    var seed = ByteHelper.longToBytes(encryptSeed);
+                    Crypto.xor(clientBytes, seed);
 
-                var base64str = Utils.base64Encode(clientBytes);
-                session.send(new PacketGetPlayerTokenRsp(session, base64str, "bm90aGluZyBoZXJl"));
+                    var base64str = Utils.base64Encode(clientBytes);
+                    session.send(new PacketGetPlayerTokenRsp(session, base64str, "bm90aGluZyBoZXJl", req.getKeyId()));
+                }
+            } else {
+                // Send packet
+                session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
             }
         } else {
-            // Send packet
-            session.send(new PacketGetPlayerTokenRsp(session));
+            // Set session state
+            // session.setUseSecretKey(true);
+            session.setState(SessionState.WAITING_FOR_LOGIN);
+
+            session.send(new PacketGetPlayerTokenRsp(session, req.getKeyId()));
         }
     }
 }

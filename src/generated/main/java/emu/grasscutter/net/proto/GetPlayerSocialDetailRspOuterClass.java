@@ -19,7 +19,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 1;</code>
      * @return The retcode.
      */
     int getRetcode();
@@ -41,8 +41,8 @@ public final class GetPlayerSocialDetailRspOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 323
+   * 4.7.0
+   * CmdId: 1804
    * </pre>
    *
    * Protobuf type {@code GetPlayerSocialDetailRsp}
@@ -89,7 +89,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 8: {
 
               retcode_ = input.readInt32();
               break;
@@ -139,10 +139,10 @@ public final class GetPlayerSocialDetailRspOuterClass {
               emu.grasscutter.net.proto.GetPlayerSocialDetailRspOuterClass.GetPlayerSocialDetailRsp.class, emu.grasscutter.net.proto.GetPlayerSocialDetailRspOuterClass.GetPlayerSocialDetailRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 9;
+    public static final int RETCODE_FIELD_NUMBER = 1;
     private int retcode_;
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 1;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -191,7 +191,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(9, retcode_);
+        output.writeInt32(1, retcode_);
       }
       if (detailData_ != null) {
         output.writeMessage(13, getDetailData());
@@ -207,7 +207,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, retcode_);
+          .computeInt32Size(1, retcode_);
       }
       if (detailData_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -349,8 +349,8 @@ public final class GetPlayerSocialDetailRspOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 323
+     * 4.7.0
+     * CmdId: 1804
      * </pre>
      *
      * Protobuf type {@code GetPlayerSocialDetailRsp}
@@ -515,7 +515,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 1;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -523,7 +523,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 1;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -534,7 +534,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -731,7 +731,7 @@ public final class GetPlayerSocialDetailRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036GetPlayerSocialDetailRsp.proto\032\022Social" +
       "Detail.proto\"O\n\030GetPlayerSocialDetailRsp" +
-      "\022\017\n\007retcode\030\t \001(\005\022\"\n\013detail_data\030\r \001(\0132\r" +
+      "\022\017\n\007retcode\030\001 \001(\005\022\"\n\013detail_data\030\r \001(\0132\r" +
       ".SocialDetailB\033\n\031emu.grasscutter.net.pro" +
       "tob\006proto3"
     };

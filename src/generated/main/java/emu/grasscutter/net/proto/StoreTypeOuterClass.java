@@ -16,7 +16,7 @@ public final class StoreTypeOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code StoreType}

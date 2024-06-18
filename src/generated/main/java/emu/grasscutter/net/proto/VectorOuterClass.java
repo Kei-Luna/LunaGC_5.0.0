@@ -38,7 +38,7 @@ public final class VectorOuterClass {
   }
   /**
    * <pre>
-   * Obf: FMFHHKCONCE
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code Vector}
@@ -350,7 +350,7 @@ public final class VectorOuterClass {
     }
     /**
      * <pre>
-     * Obf: FMFHHKCONCE
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code Vector}

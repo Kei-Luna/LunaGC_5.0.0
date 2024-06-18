@@ -431,7 +431,7 @@ public final class AvatarInfoOuterClass {
   }
   /**
    * <pre>
-   *import "JCDPOCOOGCI.proto";
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AvatarInfo}
@@ -2255,7 +2255,7 @@ public final class AvatarInfoOuterClass {
     }
     /**
      * <pre>
-     *import "JCDPOCOOGCI.proto";
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AvatarInfo}

@@ -32,7 +32,7 @@ public final class GatherGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: IHPBLNPFECK
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code GatherGadgetInfo}
@@ -312,7 +312,7 @@ public final class GatherGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: IHPBLNPFECK
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code GatherGadgetInfo}

@@ -61,7 +61,7 @@ public final class AnimatorParameterValueInfoOuterClass {
   }
   /**
    * <pre>
-   * Obf: IGGDJDFNMAG
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AnimatorParameterValueInfo}
@@ -497,7 +497,7 @@ public final class AnimatorParameterValueInfoOuterClass {
     }
     /**
      * <pre>
-     * Obf: IGGDJDFNMAG
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AnimatorParameterValueInfo}

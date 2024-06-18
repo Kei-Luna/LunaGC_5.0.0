@@ -133,14 +133,14 @@ public final class AbilityAppliedModifierOuterClass {
     boolean getIsServerbuffModifier();
 
     /**
-     * <code>bool IAPDOPJIGFF = 14;</code>
-     * @return The iAPDOPJIGFF.
+     * <code>bool IILBHFODNKJ = 14;</code>
+     * @return The iILBHFODNKJ.
      */
-    boolean getIAPDOPJIGFF();
+    boolean getIILBHFODNKJ();
   }
   /**
    * <pre>
-   * 4.6.0
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AbilityAppliedModifier}
@@ -286,7 +286,7 @@ public final class AbilityAppliedModifierOuterClass {
             }
             case 112: {
 
-              iAPDOPJIGFF_ = input.readBool();
+              iILBHFODNKJ_ = input.readBool();
               break;
             }
             default: {
@@ -524,15 +524,15 @@ public final class AbilityAppliedModifierOuterClass {
       return isServerbuffModifier_;
     }
 
-    public static final int IAPDOPJIGFF_FIELD_NUMBER = 14;
-    private boolean iAPDOPJIGFF_;
+    public static final int IILBHFODNKJ_FIELD_NUMBER = 14;
+    private boolean iILBHFODNKJ_;
     /**
-     * <code>bool IAPDOPJIGFF = 14;</code>
-     * @return The iAPDOPJIGFF.
+     * <code>bool IILBHFODNKJ = 14;</code>
+     * @return The iILBHFODNKJ.
      */
     @java.lang.Override
-    public boolean getIAPDOPJIGFF() {
-      return iAPDOPJIGFF_;
+    public boolean getIILBHFODNKJ() {
+      return iILBHFODNKJ_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -588,8 +588,8 @@ public final class AbilityAppliedModifierOuterClass {
       if (isServerbuffModifier_ != false) {
         output.writeBool(13, isServerbuffModifier_);
       }
-      if (iAPDOPJIGFF_ != false) {
-        output.writeBool(14, iAPDOPJIGFF_);
+      if (iILBHFODNKJ_ != false) {
+        output.writeBool(14, iILBHFODNKJ_);
       }
       unknownFields.writeTo(output);
     }
@@ -652,9 +652,9 @@ public final class AbilityAppliedModifierOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, isServerbuffModifier_);
       }
-      if (iAPDOPJIGFF_ != false) {
+      if (iILBHFODNKJ_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(14, iAPDOPJIGFF_);
+          .computeBoolSize(14, iILBHFODNKJ_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -710,8 +710,8 @@ public final class AbilityAppliedModifierOuterClass {
           != other.getSbuffUid()) return false;
       if (getIsServerbuffModifier()
           != other.getIsServerbuffModifier()) return false;
-      if (getIAPDOPJIGFF()
-          != other.getIAPDOPJIGFF()) return false;
+      if (getIILBHFODNKJ()
+          != other.getIILBHFODNKJ()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -760,9 +760,9 @@ public final class AbilityAppliedModifierOuterClass {
       hash = (37 * hash) + IS_SERVERBUFF_MODIFIER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsServerbuffModifier());
-      hash = (37 * hash) + IAPDOPJIGFF_FIELD_NUMBER;
+      hash = (37 * hash) + IILBHFODNKJ_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIAPDOPJIGFF());
+          getIILBHFODNKJ());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -860,7 +860,7 @@ public final class AbilityAppliedModifierOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AbilityAppliedModifier}
@@ -942,7 +942,7 @@ public final class AbilityAppliedModifierOuterClass {
 
         isServerbuffModifier_ = false;
 
-        iAPDOPJIGFF_ = false;
+        iILBHFODNKJ_ = false;
 
         return this;
       }
@@ -999,7 +999,7 @@ public final class AbilityAppliedModifierOuterClass {
         }
         result.sbuffUid_ = sbuffUid_;
         result.isServerbuffModifier_ = isServerbuffModifier_;
-        result.iAPDOPJIGFF_ = iAPDOPJIGFF_;
+        result.iILBHFODNKJ_ = iILBHFODNKJ_;
         onBuilt();
         return result;
       }
@@ -1087,8 +1087,8 @@ public final class AbilityAppliedModifierOuterClass {
         if (other.getIsServerbuffModifier() != false) {
           setIsServerbuffModifier(other.getIsServerbuffModifier());
         }
-        if (other.getIAPDOPJIGFF() != false) {
-          setIAPDOPJIGFF(other.getIAPDOPJIGFF());
+        if (other.getIILBHFODNKJ() != false) {
+          setIILBHFODNKJ(other.getIILBHFODNKJ());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1874,33 +1874,33 @@ public final class AbilityAppliedModifierOuterClass {
         return this;
       }
 
-      private boolean iAPDOPJIGFF_ ;
+      private boolean iILBHFODNKJ_ ;
       /**
-       * <code>bool IAPDOPJIGFF = 14;</code>
-       * @return The iAPDOPJIGFF.
+       * <code>bool IILBHFODNKJ = 14;</code>
+       * @return The iILBHFODNKJ.
        */
       @java.lang.Override
-      public boolean getIAPDOPJIGFF() {
-        return iAPDOPJIGFF_;
+      public boolean getIILBHFODNKJ() {
+        return iILBHFODNKJ_;
       }
       /**
-       * <code>bool IAPDOPJIGFF = 14;</code>
-       * @param value The iAPDOPJIGFF to set.
+       * <code>bool IILBHFODNKJ = 14;</code>
+       * @param value The iILBHFODNKJ to set.
        * @return This builder for chaining.
        */
-      public Builder setIAPDOPJIGFF(boolean value) {
+      public Builder setIILBHFODNKJ(boolean value) {
         
-        iAPDOPJIGFF_ = value;
+        iILBHFODNKJ_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool IAPDOPJIGFF = 14;</code>
+       * <code>bool IILBHFODNKJ = 14;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIAPDOPJIGFF() {
+      public Builder clearIILBHFODNKJ() {
         
-        iAPDOPJIGFF_ = false;
+        iILBHFODNKJ_ = false;
         onChanged();
         return this;
       }
@@ -1986,7 +1986,7 @@ public final class AbilityAppliedModifierOuterClass {
       "arent_ability\030\n \001(\010\0220\n\023modifier_durabili" +
       "ty\030\013 \001(\0132\023.ModifierDurability\022\021\n\tsbuff_u" +
       "id\030\014 \001(\r\022\036\n\026is_serverbuff_modifier\030\r \001(\010" +
-      "\022\023\n\013IAPDOPJIGFF\030\016 \001(\010B\033\n\031emu.grasscutter" +
+      "\022\023\n\013IILBHFODNKJ\030\016 \001(\010B\033\n\031emu.grasscutter" +
       ".net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -2001,7 +2001,7 @@ public final class AbilityAppliedModifierOuterClass {
     internal_static_AbilityAppliedModifier_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AbilityAppliedModifier_descriptor,
-        new java.lang.String[] { "ModifierLocalId", "ParentAbilityEntityId", "ParentAbilityName", "ParentAbilityOverride", "InstancedAbilityId", "InstancedModifierId", "ExistDuration", "AttachedInstancedModifier", "ApplyEntityId", "IsAttachedParentAbility", "ModifierDurability", "SbuffUid", "IsServerbuffModifier", "IAPDOPJIGFF", });
+        new java.lang.String[] { "ModifierLocalId", "ParentAbilityEntityId", "ParentAbilityName", "ParentAbilityOverride", "InstancedAbilityId", "InstancedModifierId", "ExistDuration", "AttachedInstancedModifier", "ApplyEntityId", "IsAttachedParentAbility", "ModifierDurability", "SbuffUid", "IsServerbuffModifier", "IILBHFODNKJ", });
     emu.grasscutter.net.proto.AbilityStringOuterClass.getDescriptor();
     emu.grasscutter.net.proto.AbilityAttachedModifierOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ModifierDurabilityOuterClass.getDescriptor();
