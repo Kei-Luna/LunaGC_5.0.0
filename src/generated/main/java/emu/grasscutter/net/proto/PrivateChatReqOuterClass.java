@@ -19,35 +19,35 @@ public final class PrivateChatReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 target_uid = 6;</code>
+     * <code>uint32 target_uid = 15;</code>
      * @return The targetUid.
      */
     int getTargetUid();
 
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return The text.
      */
     java.lang.String getText();
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
-     * <code>uint32 icon = 7;</code>
+     * <code>uint32 icon = 4;</code>
      * @return Whether the icon field is set.
      */
     boolean hasIcon();
     /**
-     * <code>uint32 icon = 7;</code>
+     * <code>uint32 icon = 4;</code>
      * @return The icon.
      */
     int getIcon();
@@ -56,8 +56,8 @@ public final class PrivateChatReqOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 3342
+   * 4.7.0
+   * CmdId: 583
    * </pre>
    *
    * Protobuf type {@code PrivateChatReq}
@@ -104,20 +104,20 @@ public final class PrivateChatReqOuterClass {
             case 0:
               done = true;
               break;
-            case 48: {
-
-              targetUid_ = input.readUInt32();
-              break;
-            }
-            case 56: {
-              contentCase_ = 7;
+            case 32: {
+              contentCase_ = 4;
               content_ = input.readUInt32();
               break;
             }
-            case 82: {
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              contentCase_ = 10;
+              contentCase_ = 7;
               content_ = s;
+              break;
+            }
+            case 120: {
+
+              targetUid_ = input.readUInt32();
               break;
             }
             default: {
@@ -157,8 +157,8 @@ public final class PrivateChatReqOuterClass {
     public enum ContentCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      TEXT(10),
-      ICON(7),
+      TEXT(7),
+      ICON(4),
       CONTENT_NOT_SET(0);
       private final int value;
       private ContentCase(int value) {
@@ -176,8 +176,8 @@ public final class PrivateChatReqOuterClass {
 
       public static ContentCase forNumber(int value) {
         switch (value) {
-          case 10: return TEXT;
-          case 7: return ICON;
+          case 7: return TEXT;
+          case 4: return ICON;
           case 0: return CONTENT_NOT_SET;
           default: return null;
         }
@@ -193,10 +193,10 @@ public final class PrivateChatReqOuterClass {
           contentCase_);
     }
 
-    public static final int TARGET_UID_FIELD_NUMBER = 6;
+    public static final int TARGET_UID_FIELD_NUMBER = 15;
     private int targetUid_;
     /**
-     * <code>uint32 target_uid = 6;</code>
+     * <code>uint32 target_uid = 15;</code>
      * @return The targetUid.
      */
     @java.lang.Override
@@ -204,21 +204,21 @@ public final class PrivateChatReqOuterClass {
       return targetUid_;
     }
 
-    public static final int TEXT_FIELD_NUMBER = 10;
+    public static final int TEXT_FIELD_NUMBER = 7;
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return Whether the text field is set.
      */
     public boolean hasText() {
-      return contentCase_ == 10;
+      return contentCase_ == 7;
     }
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return The text.
      */
     public java.lang.String getText() {
       java.lang.Object ref = "";
-      if (contentCase_ == 10) {
+      if (contentCase_ == 7) {
         ref = content_;
       }
       if (ref instanceof java.lang.String) {
@@ -227,27 +227,27 @@ public final class PrivateChatReqOuterClass {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           content_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>string text = 10;</code>
+     * <code>string text = 7;</code>
      * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = "";
-      if (contentCase_ == 10) {
+      if (contentCase_ == 7) {
         ref = content_;
       }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           content_ = b;
         }
         return b;
@@ -256,22 +256,22 @@ public final class PrivateChatReqOuterClass {
       }
     }
 
-    public static final int ICON_FIELD_NUMBER = 7;
+    public static final int ICON_FIELD_NUMBER = 4;
     /**
-     * <code>uint32 icon = 7;</code>
+     * <code>uint32 icon = 4;</code>
      * @return Whether the icon field is set.
      */
     @java.lang.Override
     public boolean hasIcon() {
-      return contentCase_ == 7;
+      return contentCase_ == 4;
     }
     /**
-     * <code>uint32 icon = 7;</code>
+     * <code>uint32 icon = 4;</code>
      * @return The icon.
      */
     @java.lang.Override
     public int getIcon() {
-      if (contentCase_ == 7) {
+      if (contentCase_ == 4) {
         return (java.lang.Integer) content_;
       }
       return 0;
@@ -291,15 +291,15 @@ public final class PrivateChatReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (targetUid_ != 0) {
-        output.writeUInt32(6, targetUid_);
+      if (contentCase_ == 4) {
+        output.writeUInt32(
+            4, (int)((java.lang.Integer) content_));
       }
       if (contentCase_ == 7) {
-        output.writeUInt32(
-            7, (int)((java.lang.Integer) content_));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, content_);
       }
-      if (contentCase_ == 10) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, content_);
+      if (targetUid_ != 0) {
+        output.writeUInt32(15, targetUid_);
       }
       unknownFields.writeTo(output);
     }
@@ -310,17 +310,17 @@ public final class PrivateChatReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (targetUid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, targetUid_);
-      }
-      if (contentCase_ == 7) {
+      if (contentCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(
-              7, (int)((java.lang.Integer) content_));
+              4, (int)((java.lang.Integer) content_));
       }
-      if (contentCase_ == 10) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, content_);
+      if (contentCase_ == 7) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, content_);
+      }
+      if (targetUid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, targetUid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -341,11 +341,11 @@ public final class PrivateChatReqOuterClass {
           != other.getTargetUid()) return false;
       if (!getContentCase().equals(other.getContentCase())) return false;
       switch (contentCase_) {
-        case 10:
+        case 7:
           if (!getText()
               .equals(other.getText())) return false;
           break;
-        case 7:
+        case 4:
           if (getIcon()
               != other.getIcon()) return false;
           break;
@@ -366,11 +366,11 @@ public final class PrivateChatReqOuterClass {
       hash = (37 * hash) + TARGET_UID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetUid();
       switch (contentCase_) {
-        case 10:
+        case 7:
           hash = (37 * hash) + TEXT_FIELD_NUMBER;
           hash = (53 * hash) + getText().hashCode();
           break;
-        case 7:
+        case 4:
           hash = (37 * hash) + ICON_FIELD_NUMBER;
           hash = (53 * hash) + getIcon();
           break;
@@ -474,8 +474,8 @@ public final class PrivateChatReqOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 3342
+     * 4.7.0
+     * CmdId: 583
      * </pre>
      *
      * Protobuf type {@code PrivateChatReq}
@@ -546,10 +546,10 @@ public final class PrivateChatReqOuterClass {
       public emu.grasscutter.net.proto.PrivateChatReqOuterClass.PrivateChatReq buildPartial() {
         emu.grasscutter.net.proto.PrivateChatReqOuterClass.PrivateChatReq result = new emu.grasscutter.net.proto.PrivateChatReqOuterClass.PrivateChatReq(this);
         result.targetUid_ = targetUid_;
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           result.content_ = content_;
         }
-        if (contentCase_ == 7) {
+        if (contentCase_ == 4) {
           result.content_ = content_;
         }
         result.contentCase_ = contentCase_;
@@ -606,7 +606,7 @@ public final class PrivateChatReqOuterClass {
         }
         switch (other.getContentCase()) {
           case TEXT: {
-            contentCase_ = 10;
+            contentCase_ = 7;
             content_ = other.content_;
             onChanged();
             break;
@@ -665,7 +665,7 @@ public final class PrivateChatReqOuterClass {
 
       private int targetUid_ ;
       /**
-       * <code>uint32 target_uid = 6;</code>
+       * <code>uint32 target_uid = 15;</code>
        * @return The targetUid.
        */
       @java.lang.Override
@@ -673,7 +673,7 @@ public final class PrivateChatReqOuterClass {
         return targetUid_;
       }
       /**
-       * <code>uint32 target_uid = 6;</code>
+       * <code>uint32 target_uid = 15;</code>
        * @param value The targetUid to set.
        * @return This builder for chaining.
        */
@@ -684,7 +684,7 @@ public final class PrivateChatReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 target_uid = 6;</code>
+       * <code>uint32 target_uid = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetUid() {
@@ -695,28 +695,28 @@ public final class PrivateChatReqOuterClass {
       }
 
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @return Whether the text field is set.
        */
       @java.lang.Override
       public boolean hasText() {
-        return contentCase_ == 10;
+        return contentCase_ == 7;
       }
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @return The text.
        */
       @java.lang.Override
       public java.lang.String getText() {
         java.lang.Object ref = "";
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           ref = content_;
         }
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          if (contentCase_ == 10) {
+          if (contentCase_ == 7) {
             content_ = s;
           }
           return s;
@@ -725,21 +725,21 @@ public final class PrivateChatReqOuterClass {
         }
       }
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @return The bytes for text.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
           getTextBytes() {
         java.lang.Object ref = "";
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           ref = content_;
         }
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          if (contentCase_ == 10) {
+          if (contentCase_ == 7) {
             content_ = b;
           }
           return b;
@@ -748,7 +748,7 @@ public final class PrivateChatReqOuterClass {
         }
       }
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @param value The text to set.
        * @return This builder for chaining.
        */
@@ -757,17 +757,17 @@ public final class PrivateChatReqOuterClass {
         if (value == null) {
     throw new NullPointerException();
   }
-  contentCase_ = 10;
+  contentCase_ = 7;
         content_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        if (contentCase_ == 10) {
+        if (contentCase_ == 7) {
           contentCase_ = 0;
           content_ = null;
           onChanged();
@@ -775,7 +775,7 @@ public final class PrivateChatReqOuterClass {
         return this;
       }
       /**
-       * <code>string text = 10;</code>
+       * <code>string text = 7;</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
        */
@@ -785,46 +785,46 @@ public final class PrivateChatReqOuterClass {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        contentCase_ = 10;
+        contentCase_ = 7;
         content_ = value;
         onChanged();
         return this;
       }
 
       /**
-       * <code>uint32 icon = 7;</code>
+       * <code>uint32 icon = 4;</code>
        * @return Whether the icon field is set.
        */
       public boolean hasIcon() {
-        return contentCase_ == 7;
+        return contentCase_ == 4;
       }
       /**
-       * <code>uint32 icon = 7;</code>
+       * <code>uint32 icon = 4;</code>
        * @return The icon.
        */
       public int getIcon() {
-        if (contentCase_ == 7) {
+        if (contentCase_ == 4) {
           return (java.lang.Integer) content_;
         }
         return 0;
       }
       /**
-       * <code>uint32 icon = 7;</code>
+       * <code>uint32 icon = 4;</code>
        * @param value The icon to set.
        * @return This builder for chaining.
        */
       public Builder setIcon(int value) {
-        contentCase_ = 7;
+        contentCase_ = 4;
         content_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 icon = 7;</code>
+       * <code>uint32 icon = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIcon() {
-        if (contentCase_ == 7) {
+        if (contentCase_ == 4) {
           contentCase_ = 0;
           content_ = null;
           onChanged();
@@ -899,8 +899,8 @@ public final class PrivateChatReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024PrivateChatReq.proto\"O\n\016PrivateChatReq" +
-      "\022\022\n\ntarget_uid\030\006 \001(\r\022\016\n\004text\030\n \001(\tH\000\022\016\n\004" +
-      "icon\030\007 \001(\rH\000B\t\n\007contentB\033\n\031emu.grasscutt" +
+      "\022\022\n\ntarget_uid\030\017 \001(\r\022\016\n\004text\030\007 \001(\tH\000\022\016\n\004" +
+      "icon\030\004 \001(\rH\000B\t\n\007contentB\033\n\031emu.grasscutt" +
       "er.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

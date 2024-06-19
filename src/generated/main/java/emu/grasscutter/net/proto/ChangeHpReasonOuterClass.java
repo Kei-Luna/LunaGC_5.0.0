@@ -16,7 +16,7 @@ public final class ChangeHpReasonOuterClass {
   }
   /**
    * <pre>
-   *obf: MKHKMLCFAAJ
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code ChangeHpReason}
@@ -112,14 +112,6 @@ public final class ChangeHpReasonOuterClass {
      */
     CHANGE_HP_REASON_SUB_UGC(21),
     /**
-     * <code>CHANGE_HP_REASON_SUB_DIRTY_WATER_EROSION = 22;</code>
-     */
-    CHANGE_HP_REASON_SUB_DIRTY_WATER_EROSION(22),
-    /**
-     * <code>CHANGE_HP_REASON_SUB_DESTROY_SELF = 23;</code>
-     */
-    CHANGE_HP_REASON_SUB_DESTROY_SELF(23),
-    /**
      * <code>CHANGE_HP_REASON_BY_LUA = 51;</code>
      */
     CHANGE_HP_REASON_BY_LUA(51),
@@ -156,9 +148,9 @@ public final class ChangeHpReasonOuterClass {
      */
     CHANGE_HP_REASON_ADD_TRIAL_AVATAR_ACTIVITY(108),
     /**
-     * <code>CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING = 109;</code>
+     * <code>CHANGE_HP_REASON_ADD_ROGUELIKE_SPRING = 109;</code>
      */
-    CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING(109),
+    CHANGE_HP_REASON_ADD_ROGUELIKE_SPRING(109),
     /**
      * <code>CHANGE_HP_REASON_ADD_EFFIGY_CHALLENGE_V5 = 110;</code>
      */
@@ -255,14 +247,6 @@ public final class ChangeHpReasonOuterClass {
      */
     public static final int CHANGE_HP_REASON_SUB_UGC_VALUE = 21;
     /**
-     * <code>CHANGE_HP_REASON_SUB_DIRTY_WATER_EROSION = 22;</code>
-     */
-    public static final int CHANGE_HP_REASON_SUB_DIRTY_WATER_EROSION_VALUE = 22;
-    /**
-     * <code>CHANGE_HP_REASON_SUB_DESTROY_SELF = 23;</code>
-     */
-    public static final int CHANGE_HP_REASON_SUB_DESTROY_SELF_VALUE = 23;
-    /**
      * <code>CHANGE_HP_REASON_BY_LUA = 51;</code>
      */
     public static final int CHANGE_HP_REASON_BY_LUA_VALUE = 51;
@@ -299,9 +283,9 @@ public final class ChangeHpReasonOuterClass {
      */
     public static final int CHANGE_HP_REASON_ADD_TRIAL_AVATAR_ACTIVITY_VALUE = 108;
     /**
-     * <code>CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING = 109;</code>
+     * <code>CHANGE_HP_REASON_ADD_ROGUELIKE_SPRING = 109;</code>
      */
-    public static final int CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING_VALUE = 109;
+    public static final int CHANGE_HP_REASON_ADD_ROGUELIKE_SPRING_VALUE = 109;
     /**
      * <code>CHANGE_HP_REASON_ADD_EFFIGY_CHALLENGE_V5 = 110;</code>
      */
@@ -354,8 +338,6 @@ public final class ChangeHpReasonOuterClass {
         case 19: return CHANGE_HP_REASON_ATTACK_BY_RECYCLE;
         case 20: return CHANGE_HP_REASON_SUB_PLAYER_BACK;
         case 21: return CHANGE_HP_REASON_SUB_UGC;
-        case 22: return CHANGE_HP_REASON_SUB_DIRTY_WATER_EROSION;
-        case 23: return CHANGE_HP_REASON_SUB_DESTROY_SELF;
         case 51: return CHANGE_HP_REASON_BY_LUA;
         case 101: return CHANGE_HP_REASON_ADD_ABILITY;
         case 102: return CHANGE_HP_REASON_ADD_ITEM;
@@ -365,7 +347,7 @@ public final class ChangeHpReasonOuterClass {
         case 106: return CHANGE_HP_REASON_ADD_BACKGROUND;
         case 107: return CHANGE_HP_REASON_ADD_GM;
         case 108: return CHANGE_HP_REASON_ADD_TRIAL_AVATAR_ACTIVITY;
-        case 109: return CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING;
+        case 109: return CHANGE_HP_REASON_ADD_ROGUELIKE_SPRING;
         case 110: return CHANGE_HP_REASON_ADD_EFFIGY_CHALLENGE_V5;
         default: return null;
       }
@@ -432,7 +414,7 @@ public final class ChangeHpReasonOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024ChangeHpReason.proto*\356\t\n\016ChangeHpReaso" +
+      "\n\024ChangeHpReason.proto*\230\t\n\016ChangeHpReaso" +
       "n\022\031\n\025CHANGE_HP_REASON_NONE\020\000\022\037\n\033CHANGE_H" +
       "P_REASON_SUB_AVATAR\020\001\022 \n\034CHANGE_HP_REASO" +
       "N_SUB_MONSTER\020\002\022\035\n\031CHANGE_HP_REASON_SUB_" +
@@ -452,20 +434,17 @@ public final class ChangeHpReasonOuterClass {
       "TACK_BY_ENERGY\020\022\022&\n\"CHANGE_HP_REASON_ATT" +
       "ACK_BY_RECYCLE\020\023\022$\n CHANGE_HP_REASON_SUB" +
       "_PLAYER_BACK\020\024\022\034\n\030CHANGE_HP_REASON_SUB_U" +
-      "GC\020\025\022,\n(CHANGE_HP_REASON_SUB_DIRTY_WATER" +
-      "_EROSION\020\026\022%\n!CHANGE_HP_REASON_SUB_DESTR" +
-      "OY_SELF\020\027\022\033\n\027CHANGE_HP_REASON_BY_LUA\0203\022 " +
-      "\n\034CHANGE_HP_REASON_ADD_ABILITY\020e\022\035\n\031CHAN" +
-      "GE_HP_REASON_ADD_ITEM\020f\022\037\n\033CHANGE_HP_REA" +
-      "SON_ADD_REVIVE\020g\022 \n\034CHANGE_HP_REASON_ADD" +
-      "_UPGRADE\020h\022\037\n\033CHANGE_HP_REASON_ADD_STATU" +
-      "E\020i\022#\n\037CHANGE_HP_REASON_ADD_BACKGROUND\020j" +
-      "\022\033\n\027CHANGE_HP_REASON_ADD_GM\020k\022.\n*CHANGE_" +
-      "HP_REASON_ADD_TRIAL_AVATAR_ACTIVITY\020l\022*\n" +
-      "&CHANGE_HP_REASON_ADD_ROUGUELIKE_SPRING\020" +
-      "m\022,\n(CHANGE_HP_REASON_ADD_EFFIGY_CHALLEN" +
-      "GE_V5\020nB\033\n\031emu.grasscutter.net.protob\006pr" +
-      "oto3"
+      "GC\020\025\022\033\n\027CHANGE_HP_REASON_BY_LUA\0203\022 \n\034CHA" +
+      "NGE_HP_REASON_ADD_ABILITY\020e\022\035\n\031CHANGE_HP" +
+      "_REASON_ADD_ITEM\020f\022\037\n\033CHANGE_HP_REASON_A" +
+      "DD_REVIVE\020g\022 \n\034CHANGE_HP_REASON_ADD_UPGR" +
+      "ADE\020h\022\037\n\033CHANGE_HP_REASON_ADD_STATUE\020i\022#" +
+      "\n\037CHANGE_HP_REASON_ADD_BACKGROUND\020j\022\033\n\027C" +
+      "HANGE_HP_REASON_ADD_GM\020k\022.\n*CHANGE_HP_RE" +
+      "ASON_ADD_TRIAL_AVATAR_ACTIVITY\020l\022)\n%CHAN" +
+      "GE_HP_REASON_ADD_ROGUELIKE_SPRING\020m\022,\n(C" +
+      "HANGE_HP_REASON_ADD_EFFIGY_CHALLENGE_V5\020" +
+      "nB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

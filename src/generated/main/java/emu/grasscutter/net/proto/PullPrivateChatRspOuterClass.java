@@ -43,16 +43,15 @@ public final class PullPrivateChatRspOuterClass {
         int index);
 
     /**
-     * <code>int32 retcode = 2;</code>
+     * <code>int32 retcode = 9;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   *sus
-   * 4.6.0
-   * CmdId: 26010
+   * 4.7.0
+   * CmdId: 23154
    * </pre>
    *
    * Protobuf type {@code PullPrivateChatRsp}
@@ -110,7 +109,7 @@ public final class PullPrivateChatRspOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.ChatInfoOuterClass.ChatInfo.parser(), extensionRegistry));
               break;
             }
-            case 16: {
+            case 72: {
 
               retcode_ = input.readInt32();
               break;
@@ -190,10 +189,10 @@ public final class PullPrivateChatRspOuterClass {
       return chatInfo_.get(index);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 2;
+    public static final int RETCODE_FIELD_NUMBER = 9;
     private int retcode_;
     /**
-     * <code>int32 retcode = 2;</code>
+     * <code>int32 retcode = 9;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -219,7 +218,7 @@ public final class PullPrivateChatRspOuterClass {
         output.writeMessage(1, chatInfo_.get(i));
       }
       if (retcode_ != 0) {
-        output.writeInt32(2, retcode_);
+        output.writeInt32(9, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -236,7 +235,7 @@ public final class PullPrivateChatRspOuterClass {
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
+          .computeInt32Size(9, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -371,9 +370,8 @@ public final class PullPrivateChatRspOuterClass {
     }
     /**
      * <pre>
-     *sus
-     * 4.6.0
-     * CmdId: 26010
+     * 4.7.0
+     * CmdId: 23154
      * </pre>
      *
      * Protobuf type {@code PullPrivateChatRsp}
@@ -808,7 +806,7 @@ public final class PullPrivateChatRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 9;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -816,7 +814,7 @@ public final class PullPrivateChatRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 9;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -827,7 +825,7 @@ public final class PullPrivateChatRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -905,7 +903,7 @@ public final class PullPrivateChatRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030PullPrivateChatRsp.proto\032\016ChatInfo.pro" +
       "to\"C\n\022PullPrivateChatRsp\022\034\n\tchat_info\030\001 " +
-      "\003(\0132\t.ChatInfo\022\017\n\007retcode\030\002 \001(\005B\033\n\031emu.g" +
+      "\003(\0132\t.ChatInfo\022\017\n\007retcode\030\t \001(\005B\033\n\031emu.g" +
       "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

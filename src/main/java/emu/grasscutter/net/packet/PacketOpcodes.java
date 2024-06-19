@@ -108,8 +108,8 @@ public final class PacketOpcodes {
     public static final int QuestDestroyEntityRsp = 9927;
     public static final int PrivateChatNotify = 7936;
     public static final int PullPrivateChatReq = 9253;
-    public static final int PullRecentChatReq = 8936;
     public static final int PullPrivateChatRsp = 23154;
+    public static final int PullRecentChatReq = 8936;
     public static final int PullRecentChatRsp = 523;
     public static final int WindSeedType1Notify = 27020;
     public static final int SceneTimeNotify = 23193;

@@ -16,7 +16,7 @@ public final class ChangeEnergyReasonOuterClass {
   }
   /**
    * <pre>
-   *obf: DIBAILDCPJF
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code ChangeEnergyReason}
@@ -31,6 +31,26 @@ public final class ChangeEnergyReasonOuterClass {
      * <code>CHANGE_ENERGY_REASON_SKILL_START = 1;</code>
      */
     CHANGE_ENERGY_REASON_SKILL_START(1),
+    /**
+     * <code>CHANGE_ENERGY_REASON_BALL = 2;</code>
+     */
+    CHANGE_ENERGY_REASON_BALL(2),
+    /**
+     * <code>CHANGE_ENERGY_REASON_QUEST = 3;</code>
+     */
+    CHANGE_ENERGY_REASON_QUEST(3),
+    /**
+     * <code>CHANGE_ENERGY_REASON_ABILITY = 4;</code>
+     */
+    CHANGE_ENERGY_REASON_ABILITY(4),
+    /**
+     * <code>CHANGE_ENERGY_REASON_DIE = 5;</code>
+     */
+    CHANGE_ENERGY_REASON_DIE(5),
+    /**
+     * <code>CHANGE_ENERGY_REASON_SKILL_DEPOT = 6;</code>
+     */
+    CHANGE_ENERGY_REASON_SKILL_DEPOT(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -42,6 +62,26 @@ public final class ChangeEnergyReasonOuterClass {
      * <code>CHANGE_ENERGY_REASON_SKILL_START = 1;</code>
      */
     public static final int CHANGE_ENERGY_REASON_SKILL_START_VALUE = 1;
+    /**
+     * <code>CHANGE_ENERGY_REASON_BALL = 2;</code>
+     */
+    public static final int CHANGE_ENERGY_REASON_BALL_VALUE = 2;
+    /**
+     * <code>CHANGE_ENERGY_REASON_QUEST = 3;</code>
+     */
+    public static final int CHANGE_ENERGY_REASON_QUEST_VALUE = 3;
+    /**
+     * <code>CHANGE_ENERGY_REASON_ABILITY = 4;</code>
+     */
+    public static final int CHANGE_ENERGY_REASON_ABILITY_VALUE = 4;
+    /**
+     * <code>CHANGE_ENERGY_REASON_DIE = 5;</code>
+     */
+    public static final int CHANGE_ENERGY_REASON_DIE_VALUE = 5;
+    /**
+     * <code>CHANGE_ENERGY_REASON_SKILL_DEPOT = 6;</code>
+     */
+    public static final int CHANGE_ENERGY_REASON_SKILL_DEPOT_VALUE = 6;
 
 
     public final int getNumber() {
@@ -70,6 +110,11 @@ public final class ChangeEnergyReasonOuterClass {
       switch (value) {
         case 0: return CHANGE_ENERGY_REASON_NONE;
         case 1: return CHANGE_ENERGY_REASON_SKILL_START;
+        case 2: return CHANGE_ENERGY_REASON_BALL;
+        case 3: return CHANGE_ENERGY_REASON_QUEST;
+        case 4: return CHANGE_ENERGY_REASON_ABILITY;
+        case 5: return CHANGE_ENERGY_REASON_DIE;
+        case 6: return CHANGE_ENERGY_REASON_SKILL_DEPOT;
         default: return null;
       }
     }
@@ -135,10 +180,14 @@ public final class ChangeEnergyReasonOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030ChangeEnergyReason.proto*Y\n\022ChangeEner" +
-      "gyReason\022\035\n\031CHANGE_ENERGY_REASON_NONE\020\000\022" +
-      "$\n CHANGE_ENERGY_REASON_SKILL_START\020\001B\033\n" +
-      "\031emu.grasscutter.net.protob\006proto3"
+      "\n\030ChangeEnergyReason.proto*\376\001\n\022ChangeEne" +
+      "rgyReason\022\035\n\031CHANGE_ENERGY_REASON_NONE\020\000" +
+      "\022$\n CHANGE_ENERGY_REASON_SKILL_START\020\001\022\035" +
+      "\n\031CHANGE_ENERGY_REASON_BALL\020\002\022\036\n\032CHANGE_" +
+      "ENERGY_REASON_QUEST\020\003\022 \n\034CHANGE_ENERGY_R" +
+      "EASON_ABILITY\020\004\022\034\n\030CHANGE_ENERGY_REASON_" +
+      "DIE\020\005\022$\n CHANGE_ENERGY_REASON_SKILL_DEPO" +
+      "T\020\006B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
