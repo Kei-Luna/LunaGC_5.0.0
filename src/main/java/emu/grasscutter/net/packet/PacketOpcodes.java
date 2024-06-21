@@ -4,6 +4,9 @@ public final class PacketOpcodes {
     // Empty
     public static final int NONE = 1;
 
+    //Opcodes Loop
+    public static final int Loop_4_7_0 = 23233;
+
     // Opcodes
     public static final int GetPlayerTokenReq = 23703;
     public static final int GetPlayerTokenRsp = 322;
@@ -138,9 +141,9 @@ public final class PacketOpcodes {
     public static final int EvtAvatarLockChairRsp = 9256;
     public static final int EvtAvatarStandUpNotify = 29783;
     public static final int MarkMapRsp = 23656;
-    public static final int UNKNOWN1 = 2682;
+    public static final int EvtAiSyncCombatThreatInfoNotify = 2682;
     public static final int UNKNOWN2 = 24710;
-    public static final int UNKNOWN3 = 28968;
+    public static final int SetEntityClientDataNotify = 28968;
     public static final int HomeAvatarTalkReq = 29305;
     public static final int NpcTalkReq = 21148;
     public static final int NpcTalkRsp = 26611;
@@ -221,7 +224,6 @@ public final class PacketOpcodes {
     public static final int EvtEntityRenderersChangedNotify = 1;
     public static final int AbilityChangeNotify = 1;
     public static final int HitTreeNotify = 1;
-    public static final int SetEntityClientDataNotify = 1;
     public static final int WorldPlayerLocationNotify = 1;
     public static final int ObstacleModifyNotify = 1;
     public static final int WeaponUpgradeReq = 1;
@@ -2197,4 +2199,8 @@ public final class PacketOpcodes {
     public static final int WorldRoutineChangeNotify = 1;
     public static final int WorldRoutineTypeCloseNotify = 1;
     public static final int WorldRoutineTypeRefreshNotify = 1;
+
+
+
+
 }
