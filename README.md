@@ -28,10 +28,10 @@ However, if you need a more detailed guide and help with the server please refer
 | [GenshinImpact_4.7.0.zip.004](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.004) | 10.0 GB | d1c0d81ab7aff5d5fb490cff20b9b87f |
 | [GenshinImpact_4.7.0.zip.005](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.005) | 10.0 GB | fec57d6f7f78c04309f16dfc2207cd6f |
 | [GenshinImpact_4.7.0.zip.006](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.006) | 6.70 GB | 84135fa7008156965514a6ec99c55c66 |
-| [Audio_Chinese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Chinese_4.7.0.zip) | 14.5 GB | 974bc5df3f7d96de01b68f1aab0371e5 |
-| [Audio_English(US)_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_English(US)_4.7.0.zip) | 17.0 GB | f577ea4624981b36789e24913d0f3745 |
-| [Audio_Japanese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Japanese_4.7.0.zip) | 19.3 GB | f039da619e670259d7e57c4f5e84be9e |
-| [Audio_Korean_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Korean_4.7.0.zip) | 14.8 GB | 58c3fc8782f3d59b324dfd603fa93e6d |
+| [Audio_Chinese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Chinese_4.7.0.zip) | 13.6 GB | 974bc5df3f7d96de01b68f1aab0371e5 |
+| [Audio_English(US)_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_English(US)_4.7.0.zip) | 15.9 GB | f577ea4624981b36789e24913d0f3745 |
+| [Audio_Japanese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Japanese_4.7.0.zip) | 17.8 GB | f039da619e670259d7e57c4f5e84be9e |
+| [Audio_Korean_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Korean_4.7.0.zip) | 13.4 GB | 58c3fc8782f3d59b324dfd603fa93e6d |
 
 
 - Make sure to install java and set the environment variables.
