@@ -20,7 +20,8 @@ public final class GetPlayerFriendListReqOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
+   * 4.7.0
+   * CmdId: 21140 (?)
    * </pre>
    *
    * Protobuf type {@code GetPlayerFriendListReq}
@@ -245,7 +246,8 @@ public final class GetPlayerFriendListReqOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
+     * 4.7.0
+     * CmdId: 21140 (?)
      * </pre>
      *
      * Protobuf type {@code GetPlayerFriendListReq}

@@ -774,7 +774,6 @@ public final class PacketOpcodes {
     public static final int EntityPropNotify = 1;
     public static final int EquipRoguelikeRuneReq = 1;
     public static final int EquipRoguelikeRuneRsp = 1;
-    public static final int EvtAiSyncCombatThreatInfoNotify = 1;
     public static final int EvtAnimatorParameterNotify = 1;
     public static final int EvtAnimatorStateChangedNotify = 1;
     public static final int EvtAvatarEnterFocusNotify = 1;

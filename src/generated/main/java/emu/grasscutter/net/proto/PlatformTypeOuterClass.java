@@ -16,7 +16,7 @@ public final class PlatformTypeOuterClass {
   }
   /**
    * <pre>
-   * Obf: MLEBHNLEKAB
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code PlatformType}

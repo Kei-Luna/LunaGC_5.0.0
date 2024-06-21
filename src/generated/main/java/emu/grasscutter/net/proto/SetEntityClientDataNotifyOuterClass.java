@@ -34,14 +34,15 @@ public final class SetEntityClientDataNotifyOuterClass {
     emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientDataOrBuilder getEntityClientDataOrBuilder();
 
     /**
-     * <code>uint32 entity_id = 10;</code>
+     * <code>uint32 entity_id = 7;</code>
      * @return The entityId.
      */
     int getEntityId();
   }
   /**
    * <pre>
-   * CmdId: 7008
+   * 4.7.0
+   * CmdId: 28968
    * </pre>
    *
    * Protobuf type {@code SetEntityClientDataNotify}
@@ -101,7 +102,7 @@ public final class SetEntityClientDataNotifyOuterClass {
 
               break;
             }
-            case 80: {
+            case 56: {
 
               entityId_ = input.readUInt32();
               break;
@@ -164,10 +165,10 @@ public final class SetEntityClientDataNotifyOuterClass {
       return getEntityClientData();
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 10;
+    public static final int ENTITY_ID_FIELD_NUMBER = 7;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 10;</code>
+     * <code>uint32 entity_id = 7;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -193,7 +194,7 @@ public final class SetEntityClientDataNotifyOuterClass {
         output.writeMessage(6, getEntityClientData());
       }
       if (entityId_ != 0) {
-        output.writeUInt32(10, entityId_);
+        output.writeUInt32(7, entityId_);
       }
       unknownFields.writeTo(output);
     }
@@ -210,7 +211,7 @@ public final class SetEntityClientDataNotifyOuterClass {
       }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, entityId_);
+          .computeUInt32Size(7, entityId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -348,7 +349,8 @@ public final class SetEntityClientDataNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 7008
+     * 4.7.0
+     * CmdId: 28968
      * </pre>
      *
      * Protobuf type {@code SetEntityClientDataNotify}
@@ -632,7 +634,7 @@ public final class SetEntityClientDataNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 7;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -640,7 +642,7 @@ public final class SetEntityClientDataNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 7;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -651,7 +653,7 @@ public final class SetEntityClientDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -730,7 +732,7 @@ public final class SetEntityClientDataNotifyOuterClass {
       "\n\037SetEntityClientDataNotify.proto\032\026Entit" +
       "yClientData.proto\"]\n\031SetEntityClientData" +
       "Notify\022-\n\022entity_client_data\030\006 \001(\0132\021.Ent" +
-      "ityClientData\022\021\n\tentity_id\030\n \001(\rB\033\n\031emu." +
+      "ityClientData\022\021\n\tentity_id\030\007 \001(\rB\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
