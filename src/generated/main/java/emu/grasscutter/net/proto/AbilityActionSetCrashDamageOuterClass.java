@@ -34,14 +34,14 @@ public final class AbilityActionSetCrashDamageOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHitPosOrBuilder();
 
     /**
-     * <code>float damage = 8;</code>
+     * <code>float damage = 12;</code>
      * @return The damage.
      */
     float getDamage();
   }
   /**
    * <pre>
-   * Obf: DHBNJILLKFA
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code AbilityActionSetCrashDamage}
@@ -101,7 +101,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
 
               break;
             }
-            case 69: {
+            case 101: {
 
               damage_ = input.readFloat();
               break;
@@ -164,10 +164,10 @@ public final class AbilityActionSetCrashDamageOuterClass {
       return getHitPos();
     }
 
-    public static final int DAMAGE_FIELD_NUMBER = 8;
+    public static final int DAMAGE_FIELD_NUMBER = 12;
     private float damage_;
     /**
-     * <code>float damage = 8;</code>
+     * <code>float damage = 12;</code>
      * @return The damage.
      */
     @java.lang.Override
@@ -193,7 +193,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
         output.writeMessage(4, getHitPos());
       }
       if (damage_ != 0F) {
-        output.writeFloat(8, damage_);
+        output.writeFloat(12, damage_);
       }
       unknownFields.writeTo(output);
     }
@@ -210,7 +210,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
       }
       if (damage_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, damage_);
+          .computeFloatSize(12, damage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -350,7 +350,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
     }
     /**
      * <pre>
-     * Obf: DHBNJILLKFA
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code AbilityActionSetCrashDamage}
@@ -634,7 +634,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
 
       private float damage_ ;
       /**
-       * <code>float damage = 8;</code>
+       * <code>float damage = 12;</code>
        * @return The damage.
        */
       @java.lang.Override
@@ -642,7 +642,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
         return damage_;
       }
       /**
-       * <code>float damage = 8;</code>
+       * <code>float damage = 12;</code>
        * @param value The damage to set.
        * @return This builder for chaining.
        */
@@ -653,7 +653,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
         return this;
       }
       /**
-       * <code>float damage = 8;</code>
+       * <code>float damage = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearDamage() {
@@ -731,7 +731,7 @@ public final class AbilityActionSetCrashDamageOuterClass {
     java.lang.String[] descriptorData = {
       "\n!AbilityActionSetCrashDamage.proto\032\014Vec" +
       "tor.proto\"G\n\033AbilityActionSetCrashDamage" +
-      "\022\030\n\007hit_pos\030\004 \001(\0132\007.Vector\022\016\n\006damage\030\010 \001" +
+      "\022\030\n\007hit_pos\030\004 \001(\0132\007.Vector\022\016\n\006damage\030\014 \001" +
       "(\002B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

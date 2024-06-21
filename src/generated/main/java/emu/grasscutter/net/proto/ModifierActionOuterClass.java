@@ -16,7 +16,7 @@ public final class ModifierActionOuterClass {
   }
   /**
    * <pre>
-   * Obf: DBPAAGNJNHH
+   * 4.7.0
    * </pre>
    *
    * Protobuf enum {@code ModifierAction}

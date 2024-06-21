@@ -200,6 +200,7 @@ public final class PacketOpcodes {
     public static final int SyncTeamEntityNotify = 5280;
     public static final int SyncScenePlayTeamEntityNotify = 22675;
     public static final int PlayerGameTimeNotify = 29079;
+    public static final int AbilityInvocationFixedNotify = 23176;
 
 
 
@@ -254,7 +255,6 @@ public final class PacketOpcodes {
     public static final int SceneForceLockNotify = 1;
     public static final int PlayerEnterMapLayerNotify = 1;
     public static final int AbilityInvocationFailNotify = 1;
-    public static final int AbilityInvocationFixedNotify = 1;
     public static final int AcceptCityReputationRequestReq = 1;
     public static final int AcceptCityReputationRequestRsp = 1;
     public static final int AchievementAllDataNotify = 1;
