@@ -1,4 +1,4 @@
-# LunaGC-4.6.0
+# LunaGC-4.7.0
 
 My Discord https://discord.gg/8vSyTHVphj
 
@@ -7,43 +7,44 @@ Please contribute actively to this repository
 # Setup Guide
 
 This guide is very minimal and contains steps to just get your server and client up and running.
-Connecting to the server won't require Fiddler.
+Connecting to the server will require fiddler.
 However, if you need a more detailed guide and help with the server please refer to GrassCutter's official repository and discord server.
 
 ## Read the handbook (found at the end of the file)
+## Some stuff mentioned here (such as wishing etc.) will not work.
 
 ## Main Requirements
 
 - Get [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - Get [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-- Get game version REL4.6.0 (If you don't have a 4.6.0 client, you can find it here along with the audio files) :
+- Get game version REL4.7.0 (If you don't have a 4.7.0 client, you can find it here along with the audio files) :
 
 
 | Download link | Package size | MD5 checksum |
 | :---: | :---: | :---: |
-| [GenshinImpact_4.6.0.zip.001](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.001) | 10.0 GB | 03ce6a5d4b7d8ba192cc6d9133a00bef |
-| [GenshinImpact_4.6.0.zip.002](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.002) | 10.0 GB | a0320432c00779630df4a421ac7f3999 |
-| [GenshinImpact_4.6.0.zip.003](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.003) | 10.0 GB | 335a750e6576205970a0bb49fbb2ce72 |
-| [GenshinImpact_4.6.0.zip.004](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.004) | 10.0 GB | 2210fca193fc5261c5ae75841ce17002 |
-| [GenshinImpact_4.6.0.zip.005](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.005) | 10.0 GB | f96757dbce7764e65150449f4a476b3e |
-| [GenshinImpact_4.6.0.zip.006](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/GenshinImpact_4.6.0.zip.006) | 5.67 GB | 6b43dac3616027ce7a980c41092f72fa |
-| [Audio_Chinese_4.6.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/Audio_Chinese_4.6.0.zip) | 14.0 GB | 974bc5df3f7d96de01b68f1aab0371e5 |
-| [Audio_English(US)_4.6.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/Audio_English(US)_4.6.0.zip) | 16.4 GB | f577ea4624981b36789e24913d0f3745 |
-| [Audio_Japanese_4.6.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/Audio_Japanese_4.6.0.zip) | 18.4 GB | f039da619e670259d7e57c4f5e84be9e |
-| [Audio_Korean_4.6.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240412191920_HThGUGlY3Gjy6AXP/Audio_Korean_4.6.0.zip) | 13.8 GB | 58c3fc8782f3d59b324dfd603fa93e6d |
+| [GenshinImpact_4.7.0.zip.001](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.001) | 10.0 GB | 0790ed842a1732fb9e5530a826828440 |
+| [GenshinImpact_4.7.0.zip.002](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.002) | 10.0 GB | 6ac391b6a3a185bc8ab1e431f67ecd25 |
+| [GenshinImpact_4.7.0.zip.003](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.003) | 10.0 GB | 36460a467de4901f517f8ed9be6b877c |
+| [GenshinImpact_4.7.0.zip.004](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.004) | 10.0 GB | d1c0d81ab7aff5d5fb490cff20b9b87f |
+| [GenshinImpact_4.7.0.zip.005](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.005) | 10.0 GB | fec57d6f7f78c04309f16dfc2207cd6f |
+| [GenshinImpact_4.7.0.zip.006](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.006) | 5.67 GB | 84135fa7008156965514a6ec99c55c66 |
+| [Audio_Chinese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Chinese_4.7.0.zip) | 14.0 GB | 974bc5df3f7d96de01b68f1aab0371e5 |
+| [Audio_English(US)_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_English(US)_4.7.0.zip) | 16.4 GB | f577ea4624981b36789e24913d0f3745 |
+| [Audio_Japanese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Japanese_4.7.0.zip) | 18.4 GB | f039da619e670259d7e57c4f5e84be9e |
+| [Audio_Korean_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Korean_4.7.0.zip) | 13.8 GB | 58c3fc8782f3d59b324dfd603fa93e6d |
 
 
 - Make sure to install java and set the environment variables.
 - Build the server (refer to "Compile the actual server" in this guide.)
 - Download the patch from [here](https://watchandy.me/version.dll).
 - Download the older version of [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) (4.2.0) and replace `GenshinImpact_Data/Plugins/mihoyonet.dll`
-- Download the [Resources](https://github.com/Kei-Luna/LunaGC_Resources_4.6.0), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
+- Download the [Resources](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
 - Set useEncryption, Questing and useInRouting to false (it should be false by default, if not then change it)
 - Start the server and the game, make sure to also create an account in the LunaGC console!
 - Have fun
 
 ## Important!
-- If you use cultivation and you know what you are doing please disable the automatically patch RSA option in settings! (I recommend to use NotThorny's Cultivation modification if you really want to use Cultivation) Cultivation will automatically patch the game either with a 4.0 or 4.5 patch which is not good because LunaGC is 4.6. So, uncheck automatically patch RSA in settings and then place the rsa patch dll again in the game folder if Cultivation has gotten rid of it.
+- If you use cultivation and you know what you are doing please disable the automatically patch RSA option in settings! (I recommend to use NotThorny's Cultivation modification if you really want to use Cultivation) Cultivation will automatically patch the game either with a 4.0 or 4.6 patch which is not good because LunaGC is 4.7. So, uncheck automatically patch RSA in settings and then place the rsa patch dll again in the game folder if Cultivation has gotten rid of it.
 
 ### Compile the actual Server
 
@@ -142,7 +143,8 @@ Method 2:
 - Restore to server-default UID: `/uid default`
 
 ## What doesn't work
-- All of the quests
+- Wishing
+- Quests
 - Serenitea pot
 - Abyss
 - Mail
