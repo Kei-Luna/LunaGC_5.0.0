@@ -40,19 +40,19 @@ public final class AvatarEquipChangeNotifyOuterClass {
     emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.SceneWeaponInfoOrBuilder getWeaponOrBuilder();
 
     /**
-     * <code>uint64 avatar_guid = 5;</code>
-     * @return The avatarGuid.
-     */
-    long getAvatarGuid();
-
-    /**
-     * <code>uint32 item_id = 7;</code>
+     * <code>uint32 item_id = 9;</code>
      * @return The itemId.
      */
     int getItemId();
 
     /**
-     * <code>uint64 equip_guid = 9;</code>
+     * <code>uint64 avatar_guid = 13;</code>
+     * @return The avatarGuid.
+     */
+    long getAvatarGuid();
+
+    /**
+     * <code>uint64 equip_guid = 14;</code>
      * @return The equipGuid.
      */
     long getEquipGuid();
@@ -74,8 +74,8 @@ public final class AvatarEquipChangeNotifyOuterClass {
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 24844
+   * 4.7.0
+   * CmdId: 5079
    * </pre>
    *
    * Protobuf type {@code AvatarEquipChangeNotify}
@@ -140,17 +140,17 @@ public final class AvatarEquipChangeNotifyOuterClass {
 
               break;
             }
-            case 40: {
-
-              avatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 56: {
+            case 72: {
 
               itemId_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 104: {
+
+              avatarGuid_ = input.readUInt64();
+              break;
+            }
+            case 112: {
 
               equipGuid_ = input.readUInt64();
               break;
@@ -237,21 +237,10 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return getWeapon();
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 5;
-    private long avatarGuid_;
-    /**
-     * <code>uint64 avatar_guid = 5;</code>
-     * @return The avatarGuid.
-     */
-    @java.lang.Override
-    public long getAvatarGuid() {
-      return avatarGuid_;
-    }
-
-    public static final int ITEM_ID_FIELD_NUMBER = 7;
+    public static final int ITEM_ID_FIELD_NUMBER = 9;
     private int itemId_;
     /**
-     * <code>uint32 item_id = 7;</code>
+     * <code>uint32 item_id = 9;</code>
      * @return The itemId.
      */
     @java.lang.Override
@@ -259,10 +248,21 @@ public final class AvatarEquipChangeNotifyOuterClass {
       return itemId_;
     }
 
-    public static final int EQUIP_GUID_FIELD_NUMBER = 9;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 13;
+    private long avatarGuid_;
+    /**
+     * <code>uint64 avatar_guid = 13;</code>
+     * @return The avatarGuid.
+     */
+    @java.lang.Override
+    public long getAvatarGuid() {
+      return avatarGuid_;
+    }
+
+    public static final int EQUIP_GUID_FIELD_NUMBER = 14;
     private long equipGuid_;
     /**
-     * <code>uint64 equip_guid = 9;</code>
+     * <code>uint64 equip_guid = 14;</code>
      * @return The equipGuid.
      */
     @java.lang.Override
@@ -316,14 +316,14 @@ public final class AvatarEquipChangeNotifyOuterClass {
       if (weapon_ != null) {
         output.writeMessage(2, getWeapon());
       }
-      if (avatarGuid_ != 0L) {
-        output.writeUInt64(5, avatarGuid_);
-      }
       if (itemId_ != 0) {
-        output.writeUInt32(7, itemId_);
+        output.writeUInt32(9, itemId_);
+      }
+      if (avatarGuid_ != 0L) {
+        output.writeUInt64(13, avatarGuid_);
       }
       if (equipGuid_ != 0L) {
-        output.writeUInt64(9, equipGuid_);
+        output.writeUInt64(14, equipGuid_);
       }
       if (reliquary_ != null) {
         output.writeMessage(15, getReliquary());
@@ -345,17 +345,17 @@ public final class AvatarEquipChangeNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getWeapon());
       }
-      if (avatarGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, avatarGuid_);
-      }
       if (itemId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, itemId_);
+          .computeUInt32Size(9, itemId_);
+      }
+      if (avatarGuid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, avatarGuid_);
       }
       if (equipGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, equipGuid_);
+          .computeUInt64Size(14, equipGuid_);
       }
       if (reliquary_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -383,10 +383,10 @@ public final class AvatarEquipChangeNotifyOuterClass {
         if (!getWeapon()
             .equals(other.getWeapon())) return false;
       }
-      if (getAvatarGuid()
-          != other.getAvatarGuid()) return false;
       if (getItemId()
           != other.getItemId()) return false;
+      if (getAvatarGuid()
+          != other.getAvatarGuid()) return false;
       if (getEquipGuid()
           != other.getEquipGuid()) return false;
       if (hasReliquary() != other.hasReliquary()) return false;
@@ -411,11 +411,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         hash = (37 * hash) + WEAPON_FIELD_NUMBER;
         hash = (53 * hash) + getWeapon().hashCode();
       }
+      hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getItemId();
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getItemId();
       hash = (37 * hash) + EQUIP_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEquipGuid());
@@ -520,8 +520,8 @@ public final class AvatarEquipChangeNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 24844
+     * 4.7.0
+     * CmdId: 5079
      * </pre>
      *
      * Protobuf type {@code AvatarEquipChangeNotify}
@@ -569,9 +569,9 @@ public final class AvatarEquipChangeNotifyOuterClass {
           weapon_ = null;
           weaponBuilder_ = null;
         }
-        avatarGuid_ = 0L;
-
         itemId_ = 0;
+
+        avatarGuid_ = 0L;
 
         equipGuid_ = 0L;
 
@@ -613,8 +613,8 @@ public final class AvatarEquipChangeNotifyOuterClass {
         } else {
           result.weapon_ = weaponBuilder_.build();
         }
-        result.avatarGuid_ = avatarGuid_;
         result.itemId_ = itemId_;
+        result.avatarGuid_ = avatarGuid_;
         result.equipGuid_ = equipGuid_;
         if (reliquaryBuilder_ == null) {
           result.reliquary_ = reliquary_;
@@ -675,11 +675,11 @@ public final class AvatarEquipChangeNotifyOuterClass {
         if (other.hasWeapon()) {
           mergeWeapon(other.getWeapon());
         }
-        if (other.getAvatarGuid() != 0L) {
-          setAvatarGuid(other.getAvatarGuid());
-        }
         if (other.getItemId() != 0) {
           setItemId(other.getItemId());
+        }
+        if (other.getAvatarGuid() != 0L) {
+          setAvatarGuid(other.getAvatarGuid());
         }
         if (other.getEquipGuid() != 0L) {
           setEquipGuid(other.getEquipGuid());
@@ -866,40 +866,9 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return weaponBuilder_;
       }
 
-      private long avatarGuid_ ;
-      /**
-       * <code>uint64 avatar_guid = 5;</code>
-       * @return The avatarGuid.
-       */
-      @java.lang.Override
-      public long getAvatarGuid() {
-        return avatarGuid_;
-      }
-      /**
-       * <code>uint64 avatar_guid = 5;</code>
-       * @param value The avatarGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAvatarGuid(long value) {
-        
-        avatarGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 avatar_guid = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAvatarGuid() {
-        
-        avatarGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private int itemId_ ;
       /**
-       * <code>uint32 item_id = 7;</code>
+       * <code>uint32 item_id = 9;</code>
        * @return The itemId.
        */
       @java.lang.Override
@@ -907,7 +876,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return itemId_;
       }
       /**
-       * <code>uint32 item_id = 7;</code>
+       * <code>uint32 item_id = 9;</code>
        * @param value The itemId to set.
        * @return This builder for chaining.
        */
@@ -918,7 +887,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 item_id = 7;</code>
+       * <code>uint32 item_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
@@ -928,9 +897,40 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
 
+      private long avatarGuid_ ;
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @return The avatarGuid.
+       */
+      @java.lang.Override
+      public long getAvatarGuid() {
+        return avatarGuid_;
+      }
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @param value The avatarGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvatarGuid(long value) {
+        
+        avatarGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 avatar_guid = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvatarGuid() {
+        
+        avatarGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private long equipGuid_ ;
       /**
-       * <code>uint64 equip_guid = 9;</code>
+       * <code>uint64 equip_guid = 14;</code>
        * @return The equipGuid.
        */
       @java.lang.Override
@@ -938,7 +938,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return equipGuid_;
       }
       /**
-       * <code>uint64 equip_guid = 9;</code>
+       * <code>uint64 equip_guid = 14;</code>
        * @param value The equipGuid to set.
        * @return This builder for chaining.
        */
@@ -949,7 +949,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint64 equip_guid = 9;</code>
+       * <code>uint64 equip_guid = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearEquipGuid() {
@@ -1148,8 +1148,8 @@ public final class AvatarEquipChangeNotifyOuterClass {
       "aponInfo.proto\032\030SceneReliquaryInfo.proto" +
       "\"\261\001\n\027AvatarEquipChangeNotify\022\022\n\nequip_ty" +
       "pe\030\001 \001(\r\022 \n\006weapon\030\002 \001(\0132\020.SceneWeaponIn" +
-      "fo\022\023\n\013avatar_guid\030\005 \001(\004\022\017\n\007item_id\030\007 \001(\r" +
-      "\022\022\n\nequip_guid\030\t \001(\004\022&\n\treliquary\030\017 \001(\0132" +
+      "fo\022\017\n\007item_id\030\t \001(\r\022\023\n\013avatar_guid\030\r \001(\004" +
+      "\022\022\n\nequip_guid\030\016 \001(\004\022&\n\treliquary\030\017 \001(\0132" +
       "\023.SceneReliquaryInfoB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
@@ -1164,7 +1164,7 @@ public final class AvatarEquipChangeNotifyOuterClass {
     internal_static_AvatarEquipChangeNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarEquipChangeNotify_descriptor,
-        new java.lang.String[] { "EquipType", "Weapon", "AvatarGuid", "ItemId", "EquipGuid", "Reliquary", });
+        new java.lang.String[] { "EquipType", "Weapon", "ItemId", "AvatarGuid", "EquipGuid", "Reliquary", });
     emu.grasscutter.net.proto.SceneWeaponInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SceneReliquaryInfoOuterClass.getDescriptor();
   }

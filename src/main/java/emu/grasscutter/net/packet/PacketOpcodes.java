@@ -25,12 +25,13 @@ public final class PacketOpcodes {
     public static final int EnterScenePeerNotify = 20926;
     public static final int EnterSceneReadyRsp = 5816;
     public static final int PlayerSetPauseReq = 27557;
+    public static final int PlayerSetPauseRsp = 25525;
     public static final int PathfindingEnterSceneReq = 2382;
     public static final int ToTheMoonEnterSceneReq = 6163;
     public static final int ClientAbilityInitFinishNotify = 4679;
     public static final int GetScenePointReq = 6271;
-    public static final int GetSceneAreaReq = 28350;
     public static final int GetScenePointRsp = 7225;
+    public static final int GetSceneAreaReq = 28350;
     public static final int GetSceneAreaRsp = 28603;
     public static final int SceneInitFinishReq = 21370;
     public static final int PlayerWorldSceneInfoListNotify = 3846;
@@ -158,6 +159,7 @@ public final class PacketOpcodes {
     public static final int AvatarChangeCostumeNotify = 29175;
     public static final int EvtDoSkillSuccNotify = 9433;
     public static final int StoreItemChangeNotify = 825;
+    public static final int StoreItemDelNotify = 27723;
     public static final int SetEquipLockStateReq = 3852;
     public static final int SetEquipLockStateRsp = 23492;
     public static final int UpdatePlayerShowAvatarListReq = 27376;
@@ -181,7 +183,6 @@ public final class PacketOpcodes {
     public static final int ScenePointUnlockNotify = 5540;
     public static final int TakeoffEquipReq = 26274;
     public static final int TakeoffEquipRsp = 3147;
-    public static final int PlayerSetPauseRsp = 25525;
     public static final int GetGachaInfoReq = 2098;
     public static final int GetGachaInfoRsp = 26742;
     public static final int DoGachaReq = 1018;
@@ -1929,7 +1930,6 @@ public final class PacketOpcodes {
     public static final int StopReminderNotify = 1;
     public static final int StoreCustomDungeonReq = 1;
     public static final int StoreCustomDungeonRsp = 1;
-    public static final int StoreItemDelNotify = 1;
     public static final int SubmitInferenceWordReq = 1;
     public static final int SubmitInferenceWordRsp = 1;
     public static final int SummerTimeFloatSignalPositionNotify = 1;
