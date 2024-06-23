@@ -1,5 +1,7 @@
 # LunaGC-4.7.0
 
+[简中](docs/README_zh-CN.md)
+
 我的Discord https://discord.gg/8vSyTHVphj
 
 请积极为这个仓库贡献
