@@ -1,5 +1,7 @@
 # LunaGC-4.7.0
 
+[简中](docs/README_zh-CN.md)
+
 My Discord https://discord.gg/8vSyTHVphj
 
 Please contribute actively to this repository
@@ -36,8 +38,10 @@ However, if you need a more detailed guide and help with the server please refer
 
 - Make sure to install java and set the environment variables.
 - Build the server (refer to "Compile the actual server" in this guide.)
-- Download the patch from [here](https://watchandy.me/version.dll).
-- Download the older version of [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) (4.2.0) and replace `GenshinImpact_Data/Plugins/mihoyonet.dll`
+- Solve the anti-cheat pop-up window and patch renaming issues
+- Private server patch usage tutorial
+- Put mhypbase.dll and version.dll in the local game root directory
+- Put mihoyonet.dll in the GenshinImpact_Data/Plugins/mihoyonet.dll directory and replace it
 - Download the [Resources](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
 - Set useEncryption, Questing and useInRouting to false (it should be false by default, if not then change it)
 - Start the server and the game, make sure to also create an account in the LunaGC console!
