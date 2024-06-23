@@ -1,26 +1,25 @@
 # LunaGC-4.7.0
 
-My Discord https://discord.gg/8vSyTHVphj
+我的Discord https://discord.gg/8vSyTHVphj
 
-Please contribute actively to this repository
+请积极为这个仓库贡献
 
-# Setup Guide
+# 安装指南
 
-This guide is very minimal and contains steps to just get your server and client up and running.
-Connecting to the server will require fiddler.
-However, if you need a more detailed guide and help with the server please refer to GrassCutter's official repository and discord server.
+本指南非常简洁，仅包含启动服务器和客户端的步骤。
+连接服务器需要使用Fiddler。
+然而，如果你需要更详细的指南和服务器帮助，请参考GrassCutter的官方仓库和Discord服务器。
 
-## Read the handbook (found at the end of the file)
-## Some stuff mentioned here (such as wishing etc.) will not work.
+## 阅读手册（在文件末尾找到）
+## 这里提到的一些内容（如祈愿等）将无法使用。
 
-## Main Requirements
+## 主要要求
 
-- Get [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-- Get [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-- Get game version REL4.7.0 (If you don't have a 4.7.0 client, you can find it here along with the audio files) :
+- 获取 [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- 获取 [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- 获取游戏版本REL4.7.0（如果你没有4.7.0客户端，可以在这里找到，包括音频文件）：
 
-
-| Download link | Package size | MD5 checksum |
+| 下载链接 | 包大小 | MD5校验码 |
 | :---: | :---: | :---: |
 | [GenshinImpact_4.7.0.zip.001](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.001) | 10.0 GB | 0790ed842a1732fb9e5530a826828440 |
 | [GenshinImpact_4.7.0.zip.002](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/GenshinImpact_4.7.0.zip.002) | 10.0 GB | 6ac391b6a3a185bc8ab1e431f67ecd25 |
@@ -33,130 +32,134 @@ However, if you need a more detailed guide and help with the server please refer
 | [Audio_Japanese_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Japanese_4.7.0.zip) | 17.8 GB | f039da619e670259d7e57c4f5e84be9e |
 | [Audio_Korean_4.7.0.zip](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20240524181522_P7n5afVhY8WeoVZb/Audio_Korean_4.7.0.zip) | 13.4 GB | 58c3fc8782f3d59b324dfd603fa93e6d |
 
+- 确保安装Java并设置环境变量。
+- 构建服务器（参考本指南中的“编译实际服务器”部分）。
+- 从[这里](https://watchandy.me/version.dll)下载补丁。
+- 下载旧版本的 [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) (4.2.0) 并替换 GenshinImpact_Data/Plugins/mihoyonet.dll
+- 下载 [资源](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip)，在下载的LunaGC文件夹中创建一个名为resources的新文件夹，然后在新文件夹中解压资源。
+- 将useEncryption、Questing和useInRouting设置为false（默认情况下应该是false，如果不是则更改）。
+- 启动服务器和游戏，确保在LunaGC控制台中创建一个账户！
+- 玩得开心
 
-- Make sure to install java and set the environment variables.
-- Build the server (refer to "Compile the actual server" in this guide.)
-- Download the patch from [here](https://watchandy.me/version.dll).
-- Download the older version of [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) (4.2.0) and replace `GenshinImpact_Data/Plugins/mihoyonet.dll`
-- Download the [Resources](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
-- Set useEncryption, Questing and useInRouting to false (it should be false by default, if not then change it)
-- Start the server and the game, make sure to also create an account in the LunaGC console!
-- Have fun
+## 重要！
+- 如果你使用cultivation并且知道自己在做什么，请在设置中禁用自动补丁RSA选项！（建议使用NotThorny's Cultivation修改，如果你真的想使用Cultivation）Cultivation会自动用4.0或4.6补丁修补游戏，这对LunaGC的4.7版本来说不太好。因此，在设置中取消选中自动修补RSA，然后如果Cultivation删除了rsa补丁dll，请再次将其放置在游戏文件夹中。
 
-## Important!
-- If you use cultivation and you know what you are doing please disable the automatically patch RSA option in settings! (I recommend to use NotThorny's Cultivation modification if you really want to use Cultivation) Cultivation will automatically patch the game either with a 4.0 or 4.6 patch which is not good because LunaGC is 4.7. So, uncheck automatically patch RSA in settings and then place the rsa patch dll again in the game folder if Cultivation has gotten rid of it.
+### 编译实际服务器
 
-### Compile the actual Server
+**附注**：请确保根据你的操作系统附加正确的前缀和后缀（./用于Linux | .\用于Windows | 编译服务器JAR/手册时添加.bat用于Windows系统）。
 
-**Sidenote**: Make sure to append the right prefix and suffix based on your operating system (./ for linux | .\ for windows | add .bat for windows systems when compiling server JAR/handbook).
+**要求**：
 
-**Requirements**:
+[Java Development Kit 17 | JDK](https://oracle.com/java/technologies/javase/jdk17-archive-downloads.html) 或更高版本
 
-[Java Development Kit 17 | JDK](https://oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or higher
+- **附注**：在某些系统上生成手册可能会失败。要禁用手册生成，请在gradlew jar命令后附加 -PskipHandbook=1。
 
-- **Sidenote**: Handbook generation may fail on some systems. To disable handbook generation, append `-PskipHandbook=1` to the `gradlew jar` command.
-
-- **For Windows**:
+- **对于Windows**:
 ```shell
 .\gradlew.bat
 .\gradlew.bat jar
-```
-*If you are wondering, the first command is to set up the environment while the 2nd one is for building the server JAR file.*
 
-- **For Linux**:
+```
+*如果你想知道，第一条命令是设置环境，而第二条命令是构建服务器JAR文件。*
+
+- **对于Linux**:
 ```bash
 chmod +x gradlew
 ./gradlew jar
 ```
-*If you are wondering, the first command is to make the file executeable and for the rest refer to the windows explanation.*
+*如果你想知道，第一条命令是使文件可执行，其余的参考Windows解释。*
 
-### You can find the output JAR in the project root folder.
+### 你可以在项目根文件夹中找到输出的JAR文件。
 
-### Manually compile the handbook
+### 手动编译手册
 ```shell
 ./gradlew generateHandbook
 ```
 
-## Troubleshooting
-- Make sure to set useEncryption and useInRouting both to false otherwise you might encounter errors.
-- To use windy make sure that you put your luac files in C:\Windy (make the folder if it doesnt exist)
-- If you get an error related to MongoDB connection timeout, check if the mongodb service is running. On windows: Press windows key and r then type `services.msc`, look for mongodb server and if it's not started then start it by right clicking on it and start. On linux, you can do `systemctl status mongod` to see if it's running, if it isn't then type `systemctl start mongod`. However, if you get error 14 on linux change the owner of the mongodb folder and the .sock file (`sudo chown -R mongodb:mongodb /var/lib/mongodb` and `sudo chown mongodb:mongodb /tmp/mongodb-27017.sock` then try to start the service again.)
+## 疑难解答
+- 确保将useEncryption和useInRouting都设置为false，否则可能会遇到错误。
+- 要使用Windy，请确保将luac文件放在C:\Windy（如果不存在则创建该文件夹）
+- 如果遇到与MongoDB连接超时相关的错误，请检查mongodb服务是否正在运行。在Windows上：按Windows键和R键，然后输入services.msc，查找mongodb server，如果没有启动则右键单击并启动。在Linux上，可以使用systemctl status mongod查看其是否正在运行，如果没有则输入systemctl start mongod。然而，如果在Linux上遇到错误14，请更改mongodb文件夹和.sock文件的所有者（sudo chown -R mongodb
+/var/lib/mongodb和sudo chown mongodb
+/tmp/mongodb-27017.sock然后再尝试启动服务）。
 
 
-## How to make or get custom banners?
-- Well, you can get pre-made ones from this [github repo](https://github.com/Zhaokugua/Grasscutter_Banners)
-- Rename the file you chose to download to Banners.json and replace it with the already-existing one in the data folder.
-- The repo also offers a file which contains all of the banners, to use it follow the same procedure mentioned above.
-### Making custom banners
-- If you want to make a custom banner for a character or weapon, you'll need to know the prefabPath, the titlePath and the character/item IDs.
-- Fun fact: You can set any item to be on the rateUp, even if it's a 4* instead of a 5*.
+## 如何制作或获取自定义横幅？
+- 你可以从这个[GitHub仓库](https://github.com/Zhaokugua/Grasscutter_Banners)获取预制的Banner文件。
+- 下载后将文件重命名为`Banners.json`，然后替换data文件夹中已有的同名文件。
+- 该仓库还提供包含所有Banner的文件，使用方法与上面提到的相同。
 
-## Handmade Handbook (tested)
-- Create accounts: /account <username>
-- Get all achievements: /am grantall
-- God mode: /prop god 1
-- Enter a domain: /dungeon <ID>
-- Unlimited stamina: /prop ns 0
-- Unlimited energy: /prop UnlimitedEnergy 1
-- Recharge energy: /er
-- Set constellation for selected character: /setConst <number 1 to 6>
-- Get rid of the skill cooldown: /stat cdr 99
-- Change weather: /weather <sunny/rain/cloudy/thunderstorm/snow/mist>
-- Change talent for selected character: /talent <n/e/q/all> <level> (n - normal attack only) (e - skill only) (q - burst only)
-- Give items: /g <itemId|avatarId|all|weapons|mats|avatars> [lv<number>] [r<refinement number>] [x<amount>] [c<constellation number>] [sl<skilllevel>]
-- Unlock all: /unlockall
-- Change world level: /prop wl <number>
-- Change AR: /prop player_level <number between 1 and 60>
-- Change the game speed: /gamespeed <0.1|0.2|0.5|0.75|1.0|1.5|2.0|3.0>
-- Get 9999 Intertwined fates: /g 223 x9999
-- Get 9999 Acquaint fates: /g 224 x9999
-- Get 9999 Mora: /g 202 x9999
-- Get 9999 Primogems: /g 201 x9999
-### Make sure to not include <> or [] in the commands! The stuff in <> means its required and the stuff in [] means its not required.
-### How to get all of the stuff maxed out: /g all lv90 r5 c6 c6 sl10 | Then do a separate one for the materials: /g mats x99999
-### Ways to TP around the map:
+### 制作自定义Banner
+- 如果你想为角色或武器制作自定义Banner，你需要知道`prefabPath`、`titlePath`和角色/物品的ID。
+- 趣闻：你可以将任何物品设为rateUp，即使它是4星而不是5星。
 
-Method 1:
+## 手动手册（已测试）
+- 创建账户：`/account <username>`
+- 获取所有成就：`/am grantall`
+- 上帝模式：`/prop god 1`
+- 进入秘境：`/dungeon <ID>`
+- 无限体力：`/prop ns 0`
+- 无限能量：`/prop UnlimitedEnergy 1`
+- 充能：`/er`
+- 为选择的角色设置命座：`/setConst <number 1 to 6>`
+- 移除技能冷却：`/stat cdr 99`
+- 更改天气：`/weather <sunny/rain/cloudy/thunderstorm/snow/mist>`
+- 更改选定角色的天赋：`/talent <n/e/q/all> <level>`（n - 普通攻击，e - 技能，q - 爆发）
+- 给予物品：`/g <itemId|avatarId|all|weapons|mats|avatars> [lv<number>] [r<refinement number>] [x<amount>] [c<constellation number>] [sl<skilllevel>]`
+- 解锁所有：`/unlockall`
+- 更改世界等级：`/prop wl <number>`
+- 更改冒险等级：`/prop player_level <number between 1 and 60>`
+- 更改游戏速度：`/gamespeed <0.1|0.2|0.5|0.75|1.0|1.5|2.0|3.0>`
+- 获取9999相遇之缘：`/g 223 x9999`
+- 获取9999纠缠之缘：`/g 224 x9999`
+- 获取9999摩拉：`/g 202 x9999`
+- 获取9999原石：`/g 201 x9999`
+### 请确保不要在命令中包含<>或[]！<>中的内容为必填项，[]中的内容为选填项。
+### 如何将所有东西最大化：`/g all lv90 r5 c6 c6 sl10` | 然后单独为材料使用：`/g mats x99999`
 
-- 1: Unlock the map: /prop um 1
-- 2: Open the map
-- 3: Use the waypoints
+### 在地图上传送的方法：
 
-Method 2:
+方法1：
 
-- 1: Open the map
-- 2: Place a fishing rod marker (the last one) where you want to teleport and mark it.
-### How to get avatar/entity/material etc. IDs?
-- Go to [ambr.top](https://ambr.top)
-- Search up the material/avatar/enemy and then the ID of it should be in the URL of the site, for example I searched for the pyro hilichurl archer; the link for it is ambr.top/en/archive/monster/21010501/pyro-hilichurl-shooter so the ID for it will be 21010501.
+- 1. 解锁地图：`/prop um 1`
+- 2. 打开地图
+- 3. 使用传送点
 
+方法2：
 
-### How to spawn monsters?
-- Get the ID from the ambr.top link (above)
-- Do /spawn <id> in the in-game chat. You can also find out more arguments that you can use to modify the monster hp etc by doing `/help spawn` or `/spawn` | Example: `/spawn 21010501`, that will spawn a pyro hilichurl. Give it more hp: `/spawn 21010501 hp9999` and you can find more about the arguments trough the method I mentioned above.
+- 1. 打开地图
+- 2. 将一个钓鱼标记（最后一个）放在你想传送的地方并标记。
 
-### How to use the brand new /uid command?
-- Rich text is supported
-- How to set custom UID: `/uid set changethistext` | bold: `/uid set <b>changethistext</b>` | italic: `/uid set <i>changethistext</i>` | combined: `/uid set <i><b>changethistext</b></i>` | colored text (you'll need a hex color code, you can easy get and pick one by search hex color picker on google now let's assume that you have done it): `/uid set <color=#698ae8>changethistext</color>`
-- You can also include spaces like this: `/uid set <b>B O L D</b>`
-- You can combine the bold, italic and colored text
-- Restore to server-default UID: `/uid default`
+### 如何获取角色/实体/材料等ID？
+- 访问[ambr.top](https://ambr.top)
+- 搜索材料/角色/敌人，ID在网站的URL中，例如，我搜索了火元素丘丘人弓箭手，链接为`ambr.top/en/archive/monster/21010501/pyro-hilichurl-shooter`，所以ID是21010501。
 
-## What doesn't work
-- Wishing
-- Quests
-- Serenitea pot
-- Abyss
-- Mail
-- Battlepass
-- Events
-- Claiming AR/Commission rewards
-- Claiming bosses drops
-- City reputation
-- Character ascension
-- Gadgets
-- Forging
-- Some inventory stuff
-- Weapon refinement
-- Registration in-game using the box when logging in for first time (use console to make account instead)
-### Even more
+### 如何生成怪物？
+- 从上面的ambr.top链接获取ID
+- 在游戏聊天中输入`/spawn <id>`。你还可以通过输入`/help spawn`或`/spawn`来了解更多可用参数 | 示例：`/spawn 21010501`，这将生成一个火元素丘丘人。增加其HP：`/spawn 21010501 hp9999`，你可以通过上述方法了解更多参数。
+
+### 如何使用全新的`/uid`命令？
+- 支持富文本
+- 设置自定义UID：`/uid set changethistext` | 粗体：`/uid set <b>changethistext</b>` | 斜体：`/uid set <i>changethistext</i>` | 组合：`/uid set <i><b>changethistext</b></i>` | 彩色文本（你需要一个HEX颜色代码，你可以通过搜索hex颜色选择器轻松获取）：`/uid set <color=#698ae8>changethistext</color>`
+- 你还可以像这样包含空格：`/uid set <b>B O L D</b>`
+- 你可以组合使用粗体、斜体和彩色文本
+- 恢复到服务器默认UID：`/uid default`
+
+## 不可用功能
+- 祈愿
+- 任务
+- 洞天
+- 深渊
+- 邮件
+- 战令
+- 活动
+- 领取冒险等级/委托奖励
+- 领取boss掉落
+- 城市声望
+- 角色突破
+- 小道具
+- 锻造
+- 某些背包物品
+- 武器精炼
+- 游戏内首次登录注册（请使用控制台创建账户）
+### 还有更多
