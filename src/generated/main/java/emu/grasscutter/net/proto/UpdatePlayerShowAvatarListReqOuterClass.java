@@ -19,32 +19,32 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @return A list containing the showAvatarIdList.
      */
     java.util.List<java.lang.Integer> getShowAvatarIdListList();
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @return The count of showAvatarIdList.
      */
     int getShowAvatarIdListCount();
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @param index The index of the element to return.
      * @return The showAvatarIdList at the given index.
      */
     int getShowAvatarIdList(int index);
 
     /**
-     * <code>bool is_show_avatar = 2;</code>
+     * <code>bool is_show_avatar = 8;</code>
      * @return The isShowAvatar.
      */
     boolean getIsShowAvatar();
   }
   /**
    * <pre>
-   * CmdId: 6950
-   * Obf: JJAJFEBFLED
+   * 4.7.0
+   * CmdId: 27376
    * </pre>
    *
    * Protobuf type {@code UpdatePlayerShowAvatarListReq}
@@ -93,12 +93,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              isShowAvatar_ = input.readBool();
-              break;
-            }
-            case 112: {
+            case 56: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 showAvatarIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -106,7 +101,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
               showAvatarIdList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 58: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -117,6 +112,11 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
                 showAvatarIdList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
+              break;
+            }
+            case 64: {
+
+              isShowAvatar_ = input.readBool();
               break;
             }
             default: {
@@ -154,10 +154,10 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
               emu.grasscutter.net.proto.UpdatePlayerShowAvatarListReqOuterClass.UpdatePlayerShowAvatarListReq.class, emu.grasscutter.net.proto.UpdatePlayerShowAvatarListReqOuterClass.UpdatePlayerShowAvatarListReq.Builder.class);
     }
 
-    public static final int SHOW_AVATAR_ID_LIST_FIELD_NUMBER = 14;
+    public static final int SHOW_AVATAR_ID_LIST_FIELD_NUMBER = 7;
     private com.google.protobuf.Internal.IntList showAvatarIdList_;
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @return A list containing the showAvatarIdList.
      */
     @java.lang.Override
@@ -166,14 +166,14 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
       return showAvatarIdList_;
     }
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @return The count of showAvatarIdList.
      */
     public int getShowAvatarIdListCount() {
       return showAvatarIdList_.size();
     }
     /**
-     * <code>repeated uint32 show_avatar_id_list = 14;</code>
+     * <code>repeated uint32 show_avatar_id_list = 7;</code>
      * @param index The index of the element to return.
      * @return The showAvatarIdList at the given index.
      */
@@ -182,10 +182,10 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
     }
     private int showAvatarIdListMemoizedSerializedSize = -1;
 
-    public static final int IS_SHOW_AVATAR_FIELD_NUMBER = 2;
+    public static final int IS_SHOW_AVATAR_FIELD_NUMBER = 8;
     private boolean isShowAvatar_;
     /**
-     * <code>bool is_show_avatar = 2;</code>
+     * <code>bool is_show_avatar = 8;</code>
      * @return The isShowAvatar.
      */
     @java.lang.Override
@@ -208,15 +208,15 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (isShowAvatar_ != false) {
-        output.writeBool(2, isShowAvatar_);
-      }
       if (getShowAvatarIdListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(58);
         output.writeUInt32NoTag(showAvatarIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < showAvatarIdList_.size(); i++) {
         output.writeUInt32NoTag(showAvatarIdList_.getInt(i));
+      }
+      if (isShowAvatar_ != false) {
+        output.writeBool(8, isShowAvatar_);
       }
       unknownFields.writeTo(output);
     }
@@ -227,10 +227,6 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (isShowAvatar_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isShowAvatar_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < showAvatarIdList_.size(); i++) {
@@ -244,6 +240,10 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         showAvatarIdListMemoizedSerializedSize = dataSize;
+      }
+      if (isShowAvatar_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isShowAvatar_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -379,8 +379,8 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 6950
-     * Obf: JJAJFEBFLED
+     * 4.7.0
+     * CmdId: 27376
      * </pre>
      *
      * Protobuf type {@code UpdatePlayerShowAvatarListReq}
@@ -556,7 +556,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @return A list containing the showAvatarIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -565,14 +565,14 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
                  java.util.Collections.unmodifiableList(showAvatarIdList_) : showAvatarIdList_;
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @return The count of showAvatarIdList.
        */
       public int getShowAvatarIdListCount() {
         return showAvatarIdList_.size();
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @param index The index of the element to return.
        * @return The showAvatarIdList at the given index.
        */
@@ -580,7 +580,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return showAvatarIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @param index The index to set the value at.
        * @param value The showAvatarIdList to set.
        * @return This builder for chaining.
@@ -593,7 +593,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @param value The showAvatarIdList to add.
        * @return This builder for chaining.
        */
@@ -604,7 +604,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @param values The showAvatarIdList to add.
        * @return This builder for chaining.
        */
@@ -617,7 +617,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 show_avatar_id_list = 14;</code>
+       * <code>repeated uint32 show_avatar_id_list = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearShowAvatarIdList() {
@@ -629,7 +629,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
 
       private boolean isShowAvatar_ ;
       /**
-       * <code>bool is_show_avatar = 2;</code>
+       * <code>bool is_show_avatar = 8;</code>
        * @return The isShowAvatar.
        */
       @java.lang.Override
@@ -637,7 +637,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return isShowAvatar_;
       }
       /**
-       * <code>bool is_show_avatar = 2;</code>
+       * <code>bool is_show_avatar = 8;</code>
        * @param value The isShowAvatar to set.
        * @return This builder for chaining.
        */
@@ -648,7 +648,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
         return this;
       }
       /**
-       * <code>bool is_show_avatar = 2;</code>
+       * <code>bool is_show_avatar = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsShowAvatar() {
@@ -726,7 +726,7 @@ public final class UpdatePlayerShowAvatarListReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n#UpdatePlayerShowAvatarListReq.proto\"T\n" +
       "\035UpdatePlayerShowAvatarListReq\022\033\n\023show_a" +
-      "vatar_id_list\030\016 \003(\r\022\026\n\016is_show_avatar\030\002 " +
+      "vatar_id_list\030\007 \003(\r\022\026\n\016is_show_avatar\030\010 " +
       "\001(\010B\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

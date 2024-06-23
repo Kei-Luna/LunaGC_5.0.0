@@ -19,21 +19,21 @@ public final class AvatarChangeCostumeReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 avatar_guid = 2;</code>
+     * <code>uint64 avatar_guid = 3;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
 
     /**
-     * <code>uint32 costume_id = 6;</code>
+     * <code>uint32 costume_id = 7;</code>
      * @return The costumeId.
      */
     int getCostumeId();
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 27094
+   * 4.7.0
+   * CmdId: 20969
    * </pre>
    *
    * Protobuf type {@code AvatarChangeCostumeReq}
@@ -80,12 +80,12 @@ public final class AvatarChangeCostumeReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 24: {
 
               avatarGuid_ = input.readUInt64();
               break;
             }
-            case 48: {
+            case 56: {
 
               costumeId_ = input.readUInt32();
               break;
@@ -122,10 +122,10 @@ public final class AvatarChangeCostumeReqOuterClass {
               emu.grasscutter.net.proto.AvatarChangeCostumeReqOuterClass.AvatarChangeCostumeReq.class, emu.grasscutter.net.proto.AvatarChangeCostumeReqOuterClass.AvatarChangeCostumeReq.Builder.class);
     }
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 2;
+    public static final int AVATAR_GUID_FIELD_NUMBER = 3;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 2;</code>
+     * <code>uint64 avatar_guid = 3;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
@@ -133,10 +133,10 @@ public final class AvatarChangeCostumeReqOuterClass {
       return avatarGuid_;
     }
 
-    public static final int COSTUME_ID_FIELD_NUMBER = 6;
+    public static final int COSTUME_ID_FIELD_NUMBER = 7;
     private int costumeId_;
     /**
-     * <code>uint32 costume_id = 6;</code>
+     * <code>uint32 costume_id = 7;</code>
      * @return The costumeId.
      */
     @java.lang.Override
@@ -159,10 +159,10 @@ public final class AvatarChangeCostumeReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(2, avatarGuid_);
+        output.writeUInt64(3, avatarGuid_);
       }
       if (costumeId_ != 0) {
-        output.writeUInt32(6, costumeId_);
+        output.writeUInt32(7, costumeId_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +175,11 @@ public final class AvatarChangeCostumeReqOuterClass {
       size = 0;
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, avatarGuid_);
+          .computeUInt64Size(3, avatarGuid_);
       }
       if (costumeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, costumeId_);
+          .computeUInt32Size(7, costumeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -313,8 +313,8 @@ public final class AvatarChangeCostumeReqOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 27094
+     * 4.7.0
+     * CmdId: 20969
      * </pre>
      *
      * Protobuf type {@code AvatarChangeCostumeReq}
@@ -471,7 +471,7 @@ public final class AvatarChangeCostumeReqOuterClass {
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 2;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -479,7 +479,7 @@ public final class AvatarChangeCostumeReqOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 2;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -490,7 +490,7 @@ public final class AvatarChangeCostumeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 2;</code>
+       * <code>uint64 avatar_guid = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
@@ -502,7 +502,7 @@ public final class AvatarChangeCostumeReqOuterClass {
 
       private int costumeId_ ;
       /**
-       * <code>uint32 costume_id = 6;</code>
+       * <code>uint32 costume_id = 7;</code>
        * @return The costumeId.
        */
       @java.lang.Override
@@ -510,7 +510,7 @@ public final class AvatarChangeCostumeReqOuterClass {
         return costumeId_;
       }
       /**
-       * <code>uint32 costume_id = 6;</code>
+       * <code>uint32 costume_id = 7;</code>
        * @param value The costumeId to set.
        * @return This builder for chaining.
        */
@@ -521,7 +521,7 @@ public final class AvatarChangeCostumeReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 costume_id = 6;</code>
+       * <code>uint32 costume_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearCostumeId() {
@@ -598,8 +598,8 @@ public final class AvatarChangeCostumeReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034AvatarChangeCostumeReq.proto\"A\n\026Avatar" +
-      "ChangeCostumeReq\022\023\n\013avatar_guid\030\002 \001(\004\022\022\n" +
-      "\ncostume_id\030\006 \001(\rB\033\n\031emu.grasscutter.net" +
+      "ChangeCostumeReq\022\023\n\013avatar_guid\030\003 \001(\004\022\022\n" +
+      "\ncostume_id\030\007 \001(\rB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
