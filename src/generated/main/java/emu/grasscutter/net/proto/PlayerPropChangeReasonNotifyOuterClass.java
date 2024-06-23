@@ -19,38 +19,38 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>float old_value = 1;</code>
-     * @return The oldValue.
-     */
-    float getOldValue();
-
-    /**
-     * <code>.PropChangeReason reason = 6;</code>
-     * @return The enum numeric value on the wire for reason.
-     */
-    int getReasonValue();
-    /**
-     * <code>.PropChangeReason reason = 6;</code>
-     * @return The reason.
-     */
-    emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason getReason();
-
-    /**
-     * <code>float cur_value = 8;</code>
+     * <code>float cur_value = 1;</code>
      * @return The curValue.
      */
     float getCurValue();
 
     /**
-     * <code>uint32 prop_type = 9;</code>
+     * <code>float old_value = 4;</code>
+     * @return The oldValue.
+     */
+    float getOldValue();
+
+    /**
+     * <code>uint32 prop_type = 5;</code>
      * @return The propType.
      */
     int getPropType();
+
+    /**
+     * <code>.PropChangeReason reason = 9;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    int getReasonValue();
+    /**
+     * <code>.PropChangeReason reason = 9;</code>
+     * @return The reason.
+     */
+    emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason getReason();
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 29305
+   * 4.7.0
+   * CmdId: 21300
    * </pre>
    *
    * Protobuf type {@code PlayerPropChangeReasonNotify}
@@ -100,23 +100,23 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
               break;
             case 13: {
 
-              oldValue_ = input.readFloat();
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-
-              reason_ = rawValue;
-              break;
-            }
-            case 69: {
-
               curValue_ = input.readFloat();
               break;
             }
-            case 72: {
+            case 37: {
+
+              oldValue_ = input.readFloat();
+              break;
+            }
+            case 40: {
 
               propType_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              reason_ = rawValue;
               break;
             }
             default: {
@@ -151,40 +151,10 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify.class, emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify.Builder.class);
     }
 
-    public static final int OLD_VALUE_FIELD_NUMBER = 1;
-    private float oldValue_;
-    /**
-     * <code>float old_value = 1;</code>
-     * @return The oldValue.
-     */
-    @java.lang.Override
-    public float getOldValue() {
-      return oldValue_;
-    }
-
-    public static final int REASON_FIELD_NUMBER = 6;
-    private int reason_;
-    /**
-     * <code>.PropChangeReason reason = 6;</code>
-     * @return The enum numeric value on the wire for reason.
-     */
-    @java.lang.Override public int getReasonValue() {
-      return reason_;
-    }
-    /**
-     * <code>.PropChangeReason reason = 6;</code>
-     * @return The reason.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason getReason() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason result = emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.valueOf(reason_);
-      return result == null ? emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.UNRECOGNIZED : result;
-    }
-
-    public static final int CUR_VALUE_FIELD_NUMBER = 8;
+    public static final int CUR_VALUE_FIELD_NUMBER = 1;
     private float curValue_;
     /**
-     * <code>float cur_value = 8;</code>
+     * <code>float cur_value = 1;</code>
      * @return The curValue.
      */
     @java.lang.Override
@@ -192,15 +162,45 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       return curValue_;
     }
 
-    public static final int PROP_TYPE_FIELD_NUMBER = 9;
+    public static final int OLD_VALUE_FIELD_NUMBER = 4;
+    private float oldValue_;
+    /**
+     * <code>float old_value = 4;</code>
+     * @return The oldValue.
+     */
+    @java.lang.Override
+    public float getOldValue() {
+      return oldValue_;
+    }
+
+    public static final int PROP_TYPE_FIELD_NUMBER = 5;
     private int propType_;
     /**
-     * <code>uint32 prop_type = 9;</code>
+     * <code>uint32 prop_type = 5;</code>
      * @return The propType.
      */
     @java.lang.Override
     public int getPropType() {
       return propType_;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 9;
+    private int reason_;
+    /**
+     * <code>.PropChangeReason reason = 9;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    @java.lang.Override public int getReasonValue() {
+      return reason_;
+    }
+    /**
+     * <code>.PropChangeReason reason = 9;</code>
+     * @return The reason.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason getReason() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason result = emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.valueOf(reason_);
+      return result == null ? emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -217,17 +217,17 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (oldValue_ != 0F) {
-        output.writeFloat(1, oldValue_);
-      }
-      if (reason_ != emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_NONE.getNumber()) {
-        output.writeEnum(6, reason_);
-      }
       if (curValue_ != 0F) {
-        output.writeFloat(8, curValue_);
+        output.writeFloat(1, curValue_);
+      }
+      if (oldValue_ != 0F) {
+        output.writeFloat(4, oldValue_);
       }
       if (propType_ != 0) {
-        output.writeUInt32(9, propType_);
+        output.writeUInt32(5, propType_);
+      }
+      if (reason_ != emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_NONE.getNumber()) {
+        output.writeEnum(9, reason_);
       }
       unknownFields.writeTo(output);
     }
@@ -238,21 +238,21 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (oldValue_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, oldValue_);
-      }
-      if (reason_ != emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_NONE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(6, reason_);
-      }
       if (curValue_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(8, curValue_);
+          .computeFloatSize(1, curValue_);
+      }
+      if (oldValue_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, oldValue_);
       }
       if (propType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, propType_);
+          .computeUInt32Size(5, propType_);
+      }
+      if (reason_ != emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, reason_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -269,15 +269,15 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify other = (emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify) obj;
 
-      if (java.lang.Float.floatToIntBits(getOldValue())
-          != java.lang.Float.floatToIntBits(
-              other.getOldValue())) return false;
-      if (reason_ != other.reason_) return false;
       if (java.lang.Float.floatToIntBits(getCurValue())
           != java.lang.Float.floatToIntBits(
               other.getCurValue())) return false;
+      if (java.lang.Float.floatToIntBits(getOldValue())
+          != java.lang.Float.floatToIntBits(
+              other.getOldValue())) return false;
       if (getPropType()
           != other.getPropType()) return false;
+      if (reason_ != other.reason_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -289,16 +289,16 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OLD_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getOldValue());
-      hash = (37 * hash) + REASON_FIELD_NUMBER;
-      hash = (53 * hash) + reason_;
       hash = (37 * hash) + CUR_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getCurValue());
+      hash = (37 * hash) + OLD_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getOldValue());
       hash = (37 * hash) + PROP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getPropType();
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + reason_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -396,8 +396,8 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 29305
+     * 4.7.0
+     * CmdId: 21300
      * </pre>
      *
      * Protobuf type {@code PlayerPropChangeReasonNotify}
@@ -437,13 +437,13 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        oldValue_ = 0F;
-
-        reason_ = 0;
-
         curValue_ = 0F;
 
+        oldValue_ = 0F;
+
         propType_ = 0;
+
+        reason_ = 0;
 
         return this;
       }
@@ -471,10 +471,10 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify result = new emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify(this);
-        result.oldValue_ = oldValue_;
-        result.reason_ = reason_;
         result.curValue_ = curValue_;
+        result.oldValue_ = oldValue_;
         result.propType_ = propType_;
+        result.reason_ = reason_;
         onBuilt();
         return result;
       }
@@ -523,17 +523,17 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify other) {
         if (other == emu.grasscutter.net.proto.PlayerPropChangeReasonNotifyOuterClass.PlayerPropChangeReasonNotify.getDefaultInstance()) return this;
-        if (other.getOldValue() != 0F) {
-          setOldValue(other.getOldValue());
-        }
-        if (other.reason_ != 0) {
-          setReasonValue(other.getReasonValue());
-        }
         if (other.getCurValue() != 0F) {
           setCurValue(other.getCurValue());
         }
+        if (other.getOldValue() != 0F) {
+          setOldValue(other.getOldValue());
+        }
         if (other.getPropType() != 0) {
           setPropType(other.getPropType());
+        }
+        if (other.reason_ != 0) {
+          setReasonValue(other.getReasonValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -564,9 +564,40 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return this;
       }
 
+      private float curValue_ ;
+      /**
+       * <code>float cur_value = 1;</code>
+       * @return The curValue.
+       */
+      @java.lang.Override
+      public float getCurValue() {
+        return curValue_;
+      }
+      /**
+       * <code>float cur_value = 1;</code>
+       * @param value The curValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurValue(float value) {
+        
+        curValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float cur_value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurValue() {
+        
+        curValue_ = 0F;
+        onChanged();
+        return this;
+      }
+
       private float oldValue_ ;
       /**
-       * <code>float old_value = 1;</code>
+       * <code>float old_value = 4;</code>
        * @return The oldValue.
        */
       @java.lang.Override
@@ -574,7 +605,7 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return oldValue_;
       }
       /**
-       * <code>float old_value = 1;</code>
+       * <code>float old_value = 4;</code>
        * @param value The oldValue to set.
        * @return This builder for chaining.
        */
@@ -585,7 +616,7 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return this;
       }
       /**
-       * <code>float old_value = 1;</code>
+       * <code>float old_value = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearOldValue() {
@@ -595,16 +626,47 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return this;
       }
 
+      private int propType_ ;
+      /**
+       * <code>uint32 prop_type = 5;</code>
+       * @return The propType.
+       */
+      @java.lang.Override
+      public int getPropType() {
+        return propType_;
+      }
+      /**
+       * <code>uint32 prop_type = 5;</code>
+       * @param value The propType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropType(int value) {
+        
+        propType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 prop_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPropType() {
+        
+        propType_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int reason_ = 0;
       /**
-       * <code>.PropChangeReason reason = 6;</code>
+       * <code>.PropChangeReason reason = 9;</code>
        * @return The enum numeric value on the wire for reason.
        */
       @java.lang.Override public int getReasonValue() {
         return reason_;
       }
       /**
-       * <code>.PropChangeReason reason = 6;</code>
+       * <code>.PropChangeReason reason = 9;</code>
        * @param value The enum numeric value on the wire for reason to set.
        * @return This builder for chaining.
        */
@@ -615,7 +677,7 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.PropChangeReason reason = 6;</code>
+       * <code>.PropChangeReason reason = 9;</code>
        * @return The reason.
        */
       @java.lang.Override
@@ -625,7 +687,7 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return result == null ? emu.grasscutter.net.proto.PropChangeReasonOuterClass.PropChangeReason.UNRECOGNIZED : result;
       }
       /**
-       * <code>.PropChangeReason reason = 6;</code>
+       * <code>.PropChangeReason reason = 9;</code>
        * @param value The reason to set.
        * @return This builder for chaining.
        */
@@ -639,74 +701,12 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.PropChangeReason reason = 6;</code>
+       * <code>.PropChangeReason reason = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearReason() {
         
         reason_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private float curValue_ ;
-      /**
-       * <code>float cur_value = 8;</code>
-       * @return The curValue.
-       */
-      @java.lang.Override
-      public float getCurValue() {
-        return curValue_;
-      }
-      /**
-       * <code>float cur_value = 8;</code>
-       * @param value The curValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurValue(float value) {
-        
-        curValue_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>float cur_value = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurValue() {
-        
-        curValue_ = 0F;
-        onChanged();
-        return this;
-      }
-
-      private int propType_ ;
-      /**
-       * <code>uint32 prop_type = 9;</code>
-       * @return The propType.
-       */
-      @java.lang.Override
-      public int getPropType() {
-        return propType_;
-      }
-      /**
-       * <code>uint32 prop_type = 9;</code>
-       * @param value The propType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPropType(int value) {
-        
-        propType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 prop_type = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPropType() {
-        
-        propType_ = 0;
         onChanged();
         return this;
       }
@@ -779,9 +779,9 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"PlayerPropChangeReasonNotify.proto\032\026Pr" +
       "opChangeReason.proto\"z\n\034PlayerPropChange" +
-      "ReasonNotify\022\021\n\told_value\030\001 \001(\002\022!\n\006reaso" +
-      "n\030\006 \001(\0162\021.PropChangeReason\022\021\n\tcur_value\030" +
-      "\010 \001(\002\022\021\n\tprop_type\030\t \001(\rB\033\n\031emu.grasscut" +
+      "ReasonNotify\022\021\n\tcur_value\030\001 \001(\002\022\021\n\told_v" +
+      "alue\030\004 \001(\002\022\021\n\tprop_type\030\005 \001(\r\022!\n\006reason\030" +
+      "\t \001(\0162\021.PropChangeReasonB\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -794,7 +794,7 @@ public final class PlayerPropChangeReasonNotifyOuterClass {
     internal_static_PlayerPropChangeReasonNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerPropChangeReasonNotify_descriptor,
-        new java.lang.String[] { "OldValue", "Reason", "CurValue", "PropType", });
+        new java.lang.String[] { "CurValue", "OldValue", "PropType", "Reason", });
     emu.grasscutter.net.proto.PropChangeReasonOuterClass.getDescriptor();
   }
 
