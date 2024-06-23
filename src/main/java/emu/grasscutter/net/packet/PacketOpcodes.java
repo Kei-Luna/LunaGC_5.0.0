@@ -54,6 +54,7 @@ public final class PacketOpcodes {
     public static final int GetPlayerFriendListRsp = 4989;
     public static final int PrivateChatReq = 583;
     public static final int SceneTransToPointReq = 28479;
+    public static final int SceneTransToPointRsp = 4798;
     public static final int MarkMapReq = 9954;
     public static final int SetUpAvatarTeamReq = 24152;
     public static final int SetUpAvatarTeamRsp = 897;
@@ -215,7 +216,6 @@ public final class PacketOpcodes {
     // 4.7.0 Obfuscated
 
     // Names
-    public static final int SceneTransToPointRsp = 1;
     public static final int WindSeedClientNotify = 1;
     public static final int SceneEntityUpdateNotify = 1;
     public static final int EvtCreateGadgetNotify = 1;
