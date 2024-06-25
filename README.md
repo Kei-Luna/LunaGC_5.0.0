@@ -19,6 +19,7 @@ However, if you need a more detailed guide and help with the server please refer
 
 - Get [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - Get [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- Get [NodeJS](https://nodejs.org/dist/v20.15.0/node-v20.15.0-x64.msi)
 - Get game version REL4.7.0 (If you don't have a 4.7.0 client, you can find it here along with the audio files) :
 
 
@@ -38,10 +39,8 @@ However, if you need a more detailed guide and help with the server please refer
 
 - Make sure to install java and set the environment variables.
 - Build the server (refer to "Compile the actual server" in this guide.)
-- Solve the anti-cheat pop-up window and patch renaming issues
-- Private server patch usage tutorial
-- Put mhypbase.dll and version.dll in the local game root directory
-- Put mihoyonet.dll in the GenshinImpact_Data/Plugins/mihoyonet.dll directory and replace it
+- Put [mhypbase.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/mhypbase.dll) and [version.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/version.dll) in the local game root directory
+- Put [mihoyonet.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/mihoyonet.dll) in the GenshinImpact_Data/Plugins/ directory and replace it
 - Download the [Resources](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
 - Set useEncryption, Questing and useInRouting to false (it should be false by default, if not then change it)
 - Start the server and the game, make sure to also create an account in the LunaGC console!
