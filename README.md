@@ -19,6 +19,7 @@ However, if you need a more detailed guide and help with the server please refer
 
 - Get [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - Get [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- Get [NodeJS](https://nodejs.org/dist/v20.15.0/node-v20.15.0-x64.msi)
 - Get game version REL4.7.0 (If you don't have a 4.7.0 client, you can find it here along with the audio files) :
 
 
