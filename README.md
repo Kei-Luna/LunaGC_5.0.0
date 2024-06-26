@@ -9,8 +9,12 @@ Please contribute actively to this repository
 # Setup Guide
 
 This guide is very minimal and contains steps to just get your server and client up and running.
-Connecting to the server will require fiddler.
 However, if you need a more detailed guide and help with the server please refer to GrassCutter's official repository and discord server.
+
+
+## You'll need a proxy to connect to the server.
+- This tutorial uses fiddler, check this [video tutorial](https://gi2.pmagickline.xyz/other/tutorials/EN/fiddler.mp4) to set it up if you don't know how.
+- The script can be found in the docs folder, or by [this link](https://github.com/Kei-Luna/LunaGC_4.7.0/blob/main/docs/fiddlerscript.txt).
 
 ## Read the handbook (found at the end of the file)
 ## Some stuff mentioned here (such as wishing etc.) will not work.
