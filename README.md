@@ -45,7 +45,7 @@ However, if you need a more detailed guide and help with the server please refer
 - Build the server (refer to "Compile the actual server" in this guide.)
 - Put [mhypbase.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/mhypbase.dll) and [version.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/version.dll) in the local game root directory
 - Put [mihoyonet.dll](https://github.com/Kei-Luna/LunaGC_4.7.0/raw/main/path/mihoyonet.dll) in the GenshinImpact_Data/Plugins/ directory and replace it
-- Download the [Resources](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
+- Download the [Resources](https://github.com/pmagixc/4.7-res), make a new folder called `resources` in the downloaded LunaGC folder and then extract the resources in that new folder.
 - Set useEncryption, Questing and useInRouting to false (it should be false by default, if not then change it)
 - Start the server and the game, make sure to also create an account in the LunaGC console!
 - Have fun
