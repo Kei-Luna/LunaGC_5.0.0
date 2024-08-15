@@ -210,6 +210,8 @@ public final class PacketOpcodes {
     public static final int ChooseCurAvatarTeamRsp = 6895;
     public static final int ChangeTeamNameReq = 24699;
     public static final int ChangeTeamNameRsp = 27356;
+    public static final int AddBackupAvatarTeamReq = 22689;
+    public static final int DelBackupAvatarTeamReq = 20273;
 
 
 
@@ -306,7 +308,6 @@ public final class PacketOpcodes {
     public static final int ActivityTakeWatcherRewardRsp = 1;
     public static final int ActivityUpdateWatcherNotify = 1;
     public static final int AddAranaraCollectionNotify = 1;
-    public static final int AddBackupAvatarTeamReq = 1;
     public static final int AddBackupAvatarTeamRsp = 1;
     public static final int AddBlacklistReq = 1;
     public static final int AddBlacklistRsp = 1;
@@ -635,7 +636,6 @@ public final class PacketOpcodes {
     public static final int DealAddFriendRsp = 1;
     public static final int DeathZoneInfoNotify = 1;
     public static final int DeathZoneObserveNotify = 1;
-    public static final int DelBackupAvatarTeamReq = 1;
     public static final int DelBackupAvatarTeamRsp = 1;
     public static final int DelMailReq = 1;
     public static final int DelMailRsp = 1;
