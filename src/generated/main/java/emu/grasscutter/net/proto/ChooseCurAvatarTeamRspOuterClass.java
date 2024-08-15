@@ -19,21 +19,21 @@ public final class ChooseCurAvatarTeamRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 cur_team_id = 10;</code>
+     * <code>uint32 cur_team_id = 7;</code>
      * @return The curTeamId.
      */
     int getCurTeamId();
 
     /**
-     * <code>int32 retcode = 2;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 4031
-   * Obf: GCKFCHMIFPD
+   * CmdId: 6895
+   * 4.7.0
    * </pre>
    *
    * Protobuf type {@code ChooseCurAvatarTeamRsp}
@@ -80,14 +80,14 @@ public final class ChooseCurAvatarTeamRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 80: {
+            case 56: {
 
               curTeamId_ = input.readUInt32();
+              break;
+            }
+            case 96: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -122,10 +122,10 @@ public final class ChooseCurAvatarTeamRspOuterClass {
               emu.grasscutter.net.proto.ChooseCurAvatarTeamRspOuterClass.ChooseCurAvatarTeamRsp.class, emu.grasscutter.net.proto.ChooseCurAvatarTeamRspOuterClass.ChooseCurAvatarTeamRsp.Builder.class);
     }
 
-    public static final int CUR_TEAM_ID_FIELD_NUMBER = 10;
+    public static final int CUR_TEAM_ID_FIELD_NUMBER = 7;
     private int curTeamId_;
     /**
-     * <code>uint32 cur_team_id = 10;</code>
+     * <code>uint32 cur_team_id = 7;</code>
      * @return The curTeamId.
      */
     @java.lang.Override
@@ -133,10 +133,10 @@ public final class ChooseCurAvatarTeamRspOuterClass {
       return curTeamId_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 2;
+    public static final int RETCODE_FIELD_NUMBER = 12;
     private int retcode_;
     /**
-     * <code>int32 retcode = 2;</code>
+     * <code>int32 retcode = 12;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -158,11 +158,11 @@ public final class ChooseCurAvatarTeamRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (retcode_ != 0) {
-        output.writeInt32(2, retcode_);
-      }
       if (curTeamId_ != 0) {
-        output.writeUInt32(10, curTeamId_);
+        output.writeUInt32(7, curTeamId_);
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(12, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +173,13 @@ public final class ChooseCurAvatarTeamRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, retcode_);
-      }
       if (curTeamId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, curTeamId_);
+          .computeUInt32Size(7, curTeamId_);
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(12, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -312,8 +312,8 @@ public final class ChooseCurAvatarTeamRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 4031
-     * Obf: GCKFCHMIFPD
+     * CmdId: 6895
+     * 4.7.0
      * </pre>
      *
      * Protobuf type {@code ChooseCurAvatarTeamRsp}
@@ -470,7 +470,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
 
       private int curTeamId_ ;
       /**
-       * <code>uint32 cur_team_id = 10;</code>
+       * <code>uint32 cur_team_id = 7;</code>
        * @return The curTeamId.
        */
       @java.lang.Override
@@ -478,7 +478,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
         return curTeamId_;
       }
       /**
-       * <code>uint32 cur_team_id = 10;</code>
+       * <code>uint32 cur_team_id = 7;</code>
        * @param value The curTeamId to set.
        * @return This builder for chaining.
        */
@@ -489,7 +489,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 cur_team_id = 10;</code>
+       * <code>uint32 cur_team_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurTeamId() {
@@ -501,7 +501,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 12;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -509,7 +509,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 12;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -520,7 +520,7 @@ public final class ChooseCurAvatarTeamRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 2;</code>
+       * <code>int32 retcode = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -597,8 +597,8 @@ public final class ChooseCurAvatarTeamRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034ChooseCurAvatarTeamRsp.proto\">\n\026Choose" +
-      "CurAvatarTeamRsp\022\023\n\013cur_team_id\030\n \001(\r\022\017\n" +
-      "\007retcode\030\002 \001(\005B\033\n\031emu.grasscutter.net.pr" +
+      "CurAvatarTeamRsp\022\023\n\013cur_team_id\030\007 \001(\r\022\017\n" +
+      "\007retcode\030\014 \001(\005B\033\n\031emu.grasscutter.net.pr" +
       "otob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
