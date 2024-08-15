@@ -212,6 +212,7 @@ public final class PacketOpcodes {
     public static final int ChangeTeamNameRsp = 27356;
     public static final int AddBackupAvatarTeamReq = 22689;
     public static final int DelBackupAvatarTeamReq = 20273;
+    public static final int DelBackupAvatarTeamRsp = 5780;
 
 
 
@@ -636,7 +637,6 @@ public final class PacketOpcodes {
     public static final int DealAddFriendRsp = 1;
     public static final int DeathZoneInfoNotify = 1;
     public static final int DeathZoneObserveNotify = 1;
-    public static final int DelBackupAvatarTeamRsp = 1;
     public static final int DelMailReq = 1;
     public static final int DelMailRsp = 1;
     public static final int DelScenePlayTeamEntityNotify = 1;
