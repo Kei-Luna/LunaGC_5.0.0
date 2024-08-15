@@ -206,6 +206,13 @@ public final class PacketOpcodes {
     public static final int SyncScenePlayTeamEntityNotify = 22675;
     public static final int PlayerGameTimeNotify = 29079;
     public static final int AbilityInvocationFixedNotify = 23176;
+    public static final int ChooseCurAvatarTeamReq = 27622;
+    public static final int ChooseCurAvatarTeamRsp = 6895;
+    public static final int ChangeTeamNameReq = 24699;
+    public static final int ChangeTeamNameRsp = 27356;
+    public static final int AddBackupAvatarTeamReq = 22689;
+    public static final int DelBackupAvatarTeamReq = 20273;
+    public static final int DelBackupAvatarTeamRsp = 5780;
 
 
 
@@ -302,7 +309,6 @@ public final class PacketOpcodes {
     public static final int ActivityTakeWatcherRewardRsp = 1;
     public static final int ActivityUpdateWatcherNotify = 1;
     public static final int AddAranaraCollectionNotify = 1;
-    public static final int AddBackupAvatarTeamReq = 1;
     public static final int AddBackupAvatarTeamRsp = 1;
     public static final int AddBlacklistReq = 1;
     public static final int AddBlacklistRsp = 1;
@@ -500,8 +506,6 @@ public final class PacketOpcodes {
     public static final int ChangeMpTeamAvatarReq = 1;
     public static final int ChangeMpTeamAvatarRsp = 1;
     public static final int ChangeServerGlobalValueNotify = 1;
-    public static final int ChangeTeamNameReq = 1;
-    public static final int ChangeTeamNameRsp = 1;
     public static final int ChangeWidgetBackgroundActiveStateReq = 1;
     public static final int ChangeWidgetBackgroundActiveStateRsp = 1;
     public static final int ChangeWorldToSingleModeNotify = 1;
@@ -554,8 +558,6 @@ public final class PacketOpcodes {
     public static final int ChessPickCardRsp = 1;
     public static final int ChessPlayerInfoNotify = 1;
     public static final int ChessSelectedCardsNotify = 1;
-    public static final int ChooseCurAvatarTeamReq = 1;
-    public static final int ChooseCurAvatarTeamRsp = 1;
     public static final int CityReputationDataNotify = 1;
     public static final int CityReputationLevelupNotify = 1;
     public static final int ClearRoguelikeCurseNotify = 1;
@@ -635,8 +637,6 @@ public final class PacketOpcodes {
     public static final int DealAddFriendRsp = 1;
     public static final int DeathZoneInfoNotify = 1;
     public static final int DeathZoneObserveNotify = 1;
-    public static final int DelBackupAvatarTeamReq = 1;
-    public static final int DelBackupAvatarTeamRsp = 1;
     public static final int DelMailReq = 1;
     public static final int DelMailRsp = 1;
     public static final int DelScenePlayTeamEntityNotify = 1;
