@@ -3,27 +3,23 @@ package emu.grasscutter.net.packet;
 public final class PacketOpcodes {
     // Empty
     public static final int NONE = 1;
-
-    //Opcodes Loop
-    public static final int Loop_4_7_0 = 23233;
-
     // Opcodes
-    public static final int GetPlayerTokenReq = 23703;
-    public static final int GetPlayerTokenRsp = 322;
-    public static final int PlayerLoginReq = 7412;
-    public static final int PlayerLoginRsp = 22719;
-    public static final int PlayerDataNotify = 21169;
-    public static final int OpenStateUpdateNotify = 29113;
-    public static final int AvatarDataNotify = 26021;
+    public static final int GetPlayerTokenReq = 6013;//5.0
+    public static final int GetPlayerTokenRsp = 24174;//5.0
+    public static final int PlayerLoginReq = 2422;//5.0
+    public static final int PlayerLoginRsp = 27771;//5.0
+    public static final int PlayerDataNotify = 7961;//5.0
+    public static final int OpenStateUpdateNotify = 29093;//5.0
+    public static final int AvatarDataNotify = 23378;//5.0
     public static final int PlayerPropNotify = 2616;
-    public static final int PlayerEnterSceneNotify = 23590;
+    public static final int PlayerEnterSceneNotify = 3595;//5.0
     public static final int GetPlayerSocialDetailReq = 1043;
     public static final int GetPlayerSocialDetailRsp = 1804;
     public static final int GetShopReq = 5877;
     public static final int GetShopRsp = 27397;
-    public static final int EnterSceneReadyReq = 27508;
-    public static final int EnterScenePeerNotify = 20926;
-    public static final int EnterSceneReadyRsp = 5816;
+    public static final int EnterSceneReadyReq = 20524;//5.0
+    public static final int EnterScenePeerNotify = 9626;//5.0
+    public static final int EnterSceneReadyRsp = 7914;//5.0
     public static final int PlayerSetPauseReq = 27557;
     public static final int PlayerSetPauseRsp = 25525;
     public static final int PathfindingEnterSceneReq = 2382;
@@ -33,21 +29,21 @@ public final class PacketOpcodes {
     public static final int GetScenePointRsp = 7225;
     public static final int GetSceneAreaReq = 28350;
     public static final int GetSceneAreaRsp = 28603;
-    public static final int SceneInitFinishReq = 21370;
+    public static final int SceneInitFinishReq = 377;//5.0
     public static final int PlayerWorldSceneInfoListNotify = 3846;
-    public static final int PlayerEnterSceneInfoNotify = 28783;
+    public static final int PlayerEnterSceneInfoNotify = 26700;//5.0
     public static final int ScenePlayerInfoNotify = 21623;
-    public static final int SceneTeamUpdateNotify = 3630;
-    public static final int SceneInitFinishRsp = 3099;
-    public static final int EnterSceneDoneReq = 117;
-    public static final int EnterSceneDoneRsp = 26367;
-    public static final int SceneEntityAppearNotify = 24635;
-    public static final int PostEnterSceneReq = 9174;
-    public static final int PostEnterSceneRsp = 24454;
+    public static final int SceneTeamUpdateNotify = 29107;//5.0
+    public static final int SceneInitFinishRsp = 24671;//5.0
+    public static final int EnterSceneDoneReq = 4561;//5.0
+    public static final int EnterSceneDoneRsp = 793;//5.0
+    public static final int SceneEntityAppearNotify = 6263;//5.0
+    public static final int PostEnterSceneReq = 3633;//5.0
+    public static final int PostEnterSceneRsp = 22743;//5.0
     public static final int ClientAbilityChangeNotify = 21288;
     public static final int PingReq = 28999;
     public static final int PingRsp = 4322;
-    public static final int PlayerStoreNotify = 2454;
+    public static final int PlayerStoreNotify = 7845;//5.0
     public static final int StoreWeightLimitNotify = 28467;
     public static final int UnionCmdNotify = 6564;
     public static final int GetPlayerFriendListReq = 21140;
@@ -70,7 +66,7 @@ public final class PacketOpcodes {
     public static final int GetAllUnlockNameCardRsp = 22367;
     public static final int PersonalSceneJumpReq = 21464;
     public static final int PersonalSceneJumpRsp = 9709;
-    public static final int HostPlayerNotify = 23063;
+    public static final int HostPlayerNotify = 2109;//5.0
     public static final int DungeonSettleNotify = 3857;
     public static final int GetAuthkeyRsp = 383;
     public static final int AvatarTeamAllDataNotify = 26224;
@@ -110,7 +106,7 @@ public final class PacketOpcodes {
     public static final int GetParentQuestVideoKeyRsp = 9194;
     public static final int TakeCityReputationParentQuestReq = 506;
     public static final int QuestDestroyEntityReq = 24278;
-    public static final int SceneForceUnlockNotify = 27604;
+    public static final int SceneForceUnlockNotify = 2583;//5.0
     public static final int QuestDestroyEntityRsp = 9927;
     public static final int PrivateChatNotify = 7936;
     public static final int PullPrivateChatReq = 9253;
@@ -204,7 +200,7 @@ public final class PacketOpcodes {
     public static final int SceneAreaWeatherNotify = 23245;
     public static final int SyncTeamEntityNotify = 5280;
     public static final int SyncScenePlayTeamEntityNotify = 22675;
-    public static final int PlayerGameTimeNotify = 29079;
+    public static final int PlayerGameTimeNotify = 4423;//5.0
     public static final int AbilityInvocationFixedNotify = 23176;
     public static final int ChooseCurAvatarTeamReq = 27622;
     public static final int ChooseCurAvatarTeamRsp = 6895;
@@ -1785,7 +1781,7 @@ public final class PacketOpcodes {
     public static final int SceneAvatarStaminaStepRsp = 1;
     public static final int SceneCreateEntityReq = 1;
     public static final int SceneCreateEntityRsp = 1;
-    public static final int SceneDataNotify = 1;
+    public static final int SceneDataNotify = 23046;//5.0
     public static final int SceneDestroyEntityReq = 1;
     public static final int SceneDestroyEntityRsp = 1;
     public static final int SceneEntitiesMoveCombineNotify = 1;
@@ -1854,7 +1850,7 @@ public final class PacketOpcodes {
     public static final int ServerGlobalValueChangeNotify = 1;
     public static final int ServerLogNotify = 1;
     public static final int ServerMessageNotify = 1;
-    public static final int ServerTimeNotify = 1;
+    public static final int ServerTimeNotify = 28606;//5.0
     public static final int ServerTryCancelGeneralMatchNotify = 1;
     public static final int ServerUpdateGlobalValueNotify = 1;
     public static final int SetBattlePassViewedReq = 1;
