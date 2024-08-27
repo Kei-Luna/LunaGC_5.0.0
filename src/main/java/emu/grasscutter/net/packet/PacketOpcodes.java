@@ -68,6 +68,7 @@ public final class PacketOpcodes {
     public static final int AvatarTeamUpdateNotify = 4042;
     public static final int GetAllUnlockNameCardReq = 26933;
     public static final int GetAllUnlockNameCardRsp = 22367;
+    public static final int PersonalSceneJumpReq = 21464;
     public static final int PersonalSceneJumpRsp = 9709;
     public static final int HostPlayerNotify = 23063;
     public static final int DungeonSettleNotify = 3857;
@@ -193,7 +194,6 @@ public final class PacketOpcodes {
     public static final int DungeonEntryInfoReq = 730;
     public static final int DungeonEntryInfoRsp = 27078;
     public static final int GetActivityInfoRsp = 27972;
-    public static final int PersonalSceneJumpReq = 21464;
     public static final int DestroyMaterialReq = 29395;
     public static final int DestroyMaterialRsp = 24989;
     public static final int McoinExchangeHcoinReq = 26763;
