@@ -118,10 +118,6 @@ public final class EntityAuthorityInfoOuterClass {
     emu.grasscutter.net.proto.EntityClientExtraInfoOuterClass.EntityClientExtraInfoOrBuilder getClientExtraInfoOrBuilder();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code EntityAuthorityInfo}
    */
   public static final class EntityAuthorityInfo extends
@@ -685,10 +681,6 @@ public final class EntityAuthorityInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code EntityAuthorityInfo}
      */
     public static final class Builder extends

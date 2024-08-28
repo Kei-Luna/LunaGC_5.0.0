@@ -65,10 +65,6 @@ public final class EntityRendererChangedInfoOuterClass {
     boolean getIsCached();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code EntityRendererChangedInfo}
    */
   public static final class EntityRendererChangedInfo extends
@@ -474,10 +470,6 @@ public final class EntityRendererChangedInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code EntityRendererChangedInfo}
      */
     public static final class Builder extends

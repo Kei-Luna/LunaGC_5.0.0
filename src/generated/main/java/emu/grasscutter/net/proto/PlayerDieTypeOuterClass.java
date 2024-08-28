@@ -15,10 +15,6 @@ public final class PlayerDieTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf enum {@code PlayerDieType}
    */
   public enum PlayerDieType
@@ -60,9 +56,13 @@ public final class PlayerDieTypeOuterClass {
      */
     PLAYER_DIE_TYPE_STORM_LIGHTING(8),
     /**
-     * <code>PLAYER_DIE_DIRTY_WATER_EROSION = 9;</code>
+     * <code>PLAYER_DIE_TYPE_DIRTY_WATER_EROSION = 9;</code>
      */
-    PLAYER_DIE_DIRTY_WATER_EROSION(9),
+    PLAYER_DIE_TYPE_DIRTY_WATER_EROSION(9),
+    /**
+     * <code>PLAYER_DIE_TYPE_LIQUID_PHLOGISTON = 10;</code>
+     */
+    PLAYER_DIE_TYPE_LIQUID_PHLOGISTON(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -103,9 +103,13 @@ public final class PlayerDieTypeOuterClass {
      */
     public static final int PLAYER_DIE_TYPE_STORM_LIGHTING_VALUE = 8;
     /**
-     * <code>PLAYER_DIE_DIRTY_WATER_EROSION = 9;</code>
+     * <code>PLAYER_DIE_TYPE_DIRTY_WATER_EROSION = 9;</code>
      */
-    public static final int PLAYER_DIE_DIRTY_WATER_EROSION_VALUE = 9;
+    public static final int PLAYER_DIE_TYPE_DIRTY_WATER_EROSION_VALUE = 9;
+    /**
+     * <code>PLAYER_DIE_TYPE_LIQUID_PHLOGISTON = 10;</code>
+     */
+    public static final int PLAYER_DIE_TYPE_LIQUID_PHLOGISTON_VALUE = 10;
 
 
     public final int getNumber() {
@@ -141,7 +145,8 @@ public final class PlayerDieTypeOuterClass {
         case 6: return PLAYER_DIE_TYPE_GM;
         case 7: return PLAYER_DIE_TYPE_CLIMATE_COLD;
         case 8: return PLAYER_DIE_TYPE_STORM_LIGHTING;
-        case 9: return PLAYER_DIE_DIRTY_WATER_EROSION;
+        case 9: return PLAYER_DIE_TYPE_DIRTY_WATER_EROSION;
+        case 10: return PLAYER_DIE_TYPE_LIQUID_PHLOGISTON;
         default: return null;
       }
     }
@@ -207,16 +212,17 @@ public final class PlayerDieTypeOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023PlayerDieType.proto*\302\002\n\rPlayerDieType\022" +
+      "\n\023PlayerDieType.proto*\356\002\n\rPlayerDieType\022" +
       "\030\n\024PLAYER_DIE_TYPE_NONE\020\000\022#\n\037PLAYER_DIE_" +
       "TYPE_KILL_BY_MONSTER\020\001\022 \n\034PLAYER_DIE_TYP" +
       "E_KILL_BY_GEAR\020\002\022\030\n\024PLAYER_DIE_TYPE_FALL" +
       "\020\003\022\031\n\025PLAYER_DIE_TYPE_DRAWN\020\004\022\031\n\025PLAYER_" +
       "DIE_TYPE_ABYSS\020\005\022\026\n\022PLAYER_DIE_TYPE_GM\020\006" +
       "\022 \n\034PLAYER_DIE_TYPE_CLIMATE_COLD\020\007\022\"\n\036PL" +
-      "AYER_DIE_TYPE_STORM_LIGHTING\020\010\022\"\n\036PLAYER" +
-      "_DIE_DIRTY_WATER_EROSION\020\tB\033\n\031emu.grassc" +
-      "utter.net.protob\006proto3"
+      "AYER_DIE_TYPE_STORM_LIGHTING\020\010\022\'\n#PLAYER" +
+      "_DIE_TYPE_DIRTY_WATER_EROSION\020\t\022%\n!PLAYE" +
+      "R_DIE_TYPE_LIQUID_PHLOGISTON\020\nB\033\n\031emu.gr" +
+      "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

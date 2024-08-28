@@ -43,10 +43,6 @@ public final class MathQuaternionOuterClass {
     float getW();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code MathQuaternion}
    */
   public static final class MathQuaternion extends
@@ -384,10 +380,6 @@ public final class MathQuaternionOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code MathQuaternion}
      */
     public static final class Builder extends

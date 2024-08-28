@@ -16,7 +16,7 @@ public final class FoundationStatusOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
    * </pre>
    *
    * Protobuf enum {@code FoundationStatus}

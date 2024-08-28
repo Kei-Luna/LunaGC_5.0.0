@@ -65,7 +65,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 group = 'io.grasscutter'
-version = '4.7.0'
+version = '5.0.0'
 
 java {
     withJavadocJar()
@@ -130,6 +130,9 @@ dependencies {
     implementation group: 'io.javalin', name: 'javalin', version: '5.5.0'
     // Java WebSocket server & client library.
     implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.2'
+    
+    // Xxhash
+    implementation group: 'net.openhft', name: 'zero-allocation-hashing', version: '0.26ea0'
 
     // Google Protocol Buffer definitions.
     // These are the raw '.proto' files.

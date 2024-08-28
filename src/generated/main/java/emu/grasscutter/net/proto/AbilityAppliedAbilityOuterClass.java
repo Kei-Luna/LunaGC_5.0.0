@@ -79,10 +79,6 @@ public final class AbilityAppliedAbilityOuterClass {
     int getInstancedAbilityId();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code AbilityAppliedAbility}
    */
   public static final class AbilityAppliedAbility extends
@@ -508,10 +504,6 @@ public final class AbilityAppliedAbilityOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code AbilityAppliedAbility}
      */
     public static final class Builder extends

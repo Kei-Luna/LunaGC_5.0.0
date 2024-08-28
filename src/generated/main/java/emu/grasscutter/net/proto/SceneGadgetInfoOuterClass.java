@@ -60,10 +60,10 @@ public final class SceneGadgetInfoOuterClass {
     int getGadgetState();
 
     /**
-     * <code>uint32 KPKNNJLPMFP = 7;</code>
-     * @return The kPKNNJLPMFP.
+     * <code>uint32 gadget_type = 7;</code>
+     * @return The gadgetType.
      */
-    int getKPKNNJLPMFP();
+    int getGadgetType();
 
     /**
      * <code>bool is_show_cutscene = 8;</code>
@@ -84,10 +84,10 @@ public final class SceneGadgetInfoOuterClass {
     boolean getIsEnableInteract();
 
     /**
-     * <code>uint32 CLICILNBKDD = 11;</code>
-     * @return The cLICILNBKDD.
+     * <code>uint32 interact_id = 11;</code>
+     * @return The interactId.
      */
-    int getCLICILNBKDD();
+    int getInteractId();
 
     /**
      * <code>.GatherGadgetInfo gather_gadget = 13;</code>
@@ -405,28 +405,16 @@ public final class SceneGadgetInfoOuterClass {
     emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.CoinCollectOperatorInfoOrBuilder getCoinCollectOperatorInfoOrBuilder();
 
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return Whether the trifleGadget field is set.
      */
     boolean hasTrifleGadget();
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return The trifleGadget.
      */
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget getTrifleGadget();
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      */
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadgetOrBuilder getTrifleGadgetOrBuilder();
@@ -482,14 +470,26 @@ public final class SceneGadgetInfoOuterClass {
     int getDraftId();
 
     /**
-     * <code>uint32 KHICBPFFAII = 26;</code>
-     * @return The kHICBPFFAII.
+     * <code>uint32 gadget_talk_state = 26;</code>
+     * @return The gadgetTalkState.
      */
-    int getKHICBPFFAII();
+    int getGadgetTalkState();
 
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *OKJCNOADKMM IGMDELMIHMA = 27;
+     * </pre>
+     *
+     * <code>uint32 init_pose_id = 28;</code>
+     * @return The initPoseId.
+     */
+    int getInitPoseId();
+
+    /**
+     * <pre>
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -498,7 +498,9 @@ public final class SceneGadgetInfoOuterClass {
     boolean hasPlayInfo();
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -507,7 +509,9 @@ public final class SceneGadgetInfoOuterClass {
     emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo getPlayInfo();
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -517,10 +521,6 @@ public final class SceneGadgetInfoOuterClass {
     public emu.grasscutter.net.proto.SceneGadgetInfoOuterClass.SceneGadgetInfo.ContentCase getContentCase();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code SceneGadgetInfo}
    */
   public static final class SceneGadgetInfo extends
@@ -601,7 +601,7 @@ public final class SceneGadgetInfoOuterClass {
             }
             case 56: {
 
-              kPKNNJLPMFP_ = input.readUInt32();
+              gadgetType_ = input.readUInt32();
               break;
             }
             case 64: {
@@ -621,7 +621,7 @@ public final class SceneGadgetInfoOuterClass {
             }
             case 88: {
 
-              cLICILNBKDD_ = input.readUInt32();
+              interactId_ = input.readUInt32();
               break;
             }
             case 106: {
@@ -773,7 +773,12 @@ public final class SceneGadgetInfoOuterClass {
             }
             case 208: {
 
-              kHICBPFFAII_ = input.readUInt32();
+              gadgetTalkState_ = input.readUInt32();
+              break;
+            }
+            case 224: {
+
+              initPoseId_ = input.readUInt32();
               break;
             }
             case 330: {
@@ -1189,15 +1194,15 @@ public final class SceneGadgetInfoOuterClass {
       return gadgetState_;
     }
 
-    public static final int KPKNNJLPMFP_FIELD_NUMBER = 7;
-    private int kPKNNJLPMFP_;
+    public static final int GADGET_TYPE_FIELD_NUMBER = 7;
+    private int gadgetType_;
     /**
-     * <code>uint32 KPKNNJLPMFP = 7;</code>
-     * @return The kPKNNJLPMFP.
+     * <code>uint32 gadget_type = 7;</code>
+     * @return The gadgetType.
      */
     @java.lang.Override
-    public int getKPKNNJLPMFP() {
-      return kPKNNJLPMFP_;
+    public int getGadgetType() {
+      return gadgetType_;
     }
 
     public static final int IS_SHOW_CUTSCENE_FIELD_NUMBER = 8;
@@ -1233,15 +1238,15 @@ public final class SceneGadgetInfoOuterClass {
       return isEnableInteract_;
     }
 
-    public static final int CLICILNBKDD_FIELD_NUMBER = 11;
-    private int cLICILNBKDD_;
+    public static final int INTERACT_ID_FIELD_NUMBER = 11;
+    private int interactId_;
     /**
-     * <code>uint32 CLICILNBKDD = 11;</code>
-     * @return The cLICILNBKDD.
+     * <code>uint32 interact_id = 11;</code>
+     * @return The interactId.
      */
     @java.lang.Override
-    public int getCLICILNBKDD() {
-      return cLICILNBKDD_;
+    public int getInteractId() {
+      return interactId_;
     }
 
     public static final int GATHER_GADGET_FIELD_NUMBER = 13;
@@ -1897,10 +1902,6 @@ public final class SceneGadgetInfoOuterClass {
 
     public static final int TRIFLE_GADGET_FIELD_NUMBER = 67;
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return Whether the trifleGadget field is set.
      */
@@ -1909,10 +1910,6 @@ public final class SceneGadgetInfoOuterClass {
       return contentCase_ == 67;
     }
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      * @return The trifleGadget.
      */
@@ -1924,10 +1921,6 @@ public final class SceneGadgetInfoOuterClass {
       return emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.getDefaultInstance();
     }
     /**
-     * <pre>
-     *Item trifle_item = 67;
-     * </pre>
-     *
      * <code>.TrifleGadget trifle_gadget = 67;</code>
      */
     @java.lang.Override
@@ -2025,22 +2018,39 @@ public final class SceneGadgetInfoOuterClass {
       return draftId_;
     }
 
-    public static final int KHICBPFFAII_FIELD_NUMBER = 26;
-    private int kHICBPFFAII_;
+    public static final int GADGET_TALK_STATE_FIELD_NUMBER = 26;
+    private int gadgetTalkState_;
     /**
-     * <code>uint32 KHICBPFFAII = 26;</code>
-     * @return The kHICBPFFAII.
+     * <code>uint32 gadget_talk_state = 26;</code>
+     * @return The gadgetTalkState.
      */
     @java.lang.Override
-    public int getKHICBPFFAII() {
-      return kHICBPFFAII_;
+    public int getGadgetTalkState() {
+      return gadgetTalkState_;
+    }
+
+    public static final int INIT_POSE_ID_FIELD_NUMBER = 28;
+    private int initPoseId_;
+    /**
+     * <pre>
+     *OKJCNOADKMM IGMDELMIHMA = 27;
+     * </pre>
+     *
+     * <code>uint32 init_pose_id = 28;</code>
+     * @return The initPoseId.
+     */
+    @java.lang.Override
+    public int getInitPoseId() {
+      return initPoseId_;
     }
 
     public static final int PLAY_INFO_FIELD_NUMBER = 100;
     private emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo playInfo_;
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -2052,7 +2062,9 @@ public final class SceneGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -2064,7 +2076,9 @@ public final class SceneGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     *JMFPBNKNHED GPOHBBPBBEC = 27;
+     *HGPFAKAPMMB PNAJJDAFJCH = 101;
+     *DFBLLCCOCBA GLGAHAJNALA = 102;
+     *POLDBBPAHPC INIHNDCAMAJ = 103;
      * </pre>
      *
      * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -2107,8 +2121,8 @@ public final class SceneGadgetInfoOuterClass {
       if (gadgetState_ != 0) {
         output.writeUInt32(6, gadgetState_);
       }
-      if (kPKNNJLPMFP_ != 0) {
-        output.writeUInt32(7, kPKNNJLPMFP_);
+      if (gadgetType_ != 0) {
+        output.writeUInt32(7, gadgetType_);
       }
       if (isShowCutscene_ != false) {
         output.writeBool(8, isShowCutscene_);
@@ -2119,8 +2133,8 @@ public final class SceneGadgetInfoOuterClass {
       if (isEnableInteract_ != false) {
         output.writeBool(10, isEnableInteract_);
       }
-      if (cLICILNBKDD_ != 0) {
-        output.writeUInt32(11, cLICILNBKDD_);
+      if (interactId_ != 0) {
+        output.writeUInt32(11, interactId_);
       }
       if (contentCase_ == 13) {
         output.writeMessage(13, (emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.GatherGadgetInfo) content_);
@@ -2162,8 +2176,11 @@ public final class SceneGadgetInfoOuterClass {
       if (draftId_ != 0) {
         output.writeUInt32(25, draftId_);
       }
-      if (kHICBPFFAII_ != 0) {
-        output.writeUInt32(26, kHICBPFFAII_);
+      if (gadgetTalkState_ != 0) {
+        output.writeUInt32(26, gadgetTalkState_);
+      }
+      if (initPoseId_ != 0) {
+        output.writeUInt32(28, initPoseId_);
       }
       if (contentCase_ == 41) {
         output.writeMessage(41, (emu.grasscutter.net.proto.BlossomChestInfoOuterClass.BlossomChestInfo) content_);
@@ -2246,9 +2263,9 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, gadgetState_);
       }
-      if (kPKNNJLPMFP_ != 0) {
+      if (gadgetType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, kPKNNJLPMFP_);
+          .computeUInt32Size(7, gadgetType_);
       }
       if (isShowCutscene_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2262,9 +2279,9 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, isEnableInteract_);
       }
-      if (cLICILNBKDD_ != 0) {
+      if (interactId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, cLICILNBKDD_);
+          .computeUInt32Size(11, interactId_);
       }
       if (contentCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
@@ -2324,9 +2341,13 @@ public final class SceneGadgetInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(25, draftId_);
       }
-      if (kHICBPFFAII_ != 0) {
+      if (gadgetTalkState_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(26, kHICBPFFAII_);
+          .computeUInt32Size(26, gadgetTalkState_);
+      }
+      if (initPoseId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(28, initPoseId_);
       }
       if (contentCase_ == 41) {
         size += com.google.protobuf.CodedOutputStream
@@ -2418,16 +2439,16 @@ public final class SceneGadgetInfoOuterClass {
       if (bornType_ != other.bornType_) return false;
       if (getGadgetState()
           != other.getGadgetState()) return false;
-      if (getKPKNNJLPMFP()
-          != other.getKPKNNJLPMFP()) return false;
+      if (getGadgetType()
+          != other.getGadgetType()) return false;
       if (getIsShowCutscene()
           != other.getIsShowCutscene()) return false;
       if (getAuthorityPeerId()
           != other.getAuthorityPeerId()) return false;
       if (getIsEnableInteract()
           != other.getIsEnableInteract()) return false;
-      if (getCLICILNBKDD()
-          != other.getCLICILNBKDD()) return false;
+      if (getInteractId()
+          != other.getInteractId()) return false;
       if (getMarkFlag()
           != other.getMarkFlag()) return false;
       if (getPropOwnerEntityId()
@@ -2441,8 +2462,10 @@ public final class SceneGadgetInfoOuterClass {
           .equals(other.getInteractUidListList())) return false;
       if (getDraftId()
           != other.getDraftId()) return false;
-      if (getKHICBPFFAII()
-          != other.getKHICBPFFAII()) return false;
+      if (getGadgetTalkState()
+          != other.getGadgetTalkState()) return false;
+      if (getInitPoseId()
+          != other.getInitPoseId()) return false;
       if (hasPlayInfo() != other.hasPlayInfo()) return false;
       if (hasPlayInfo()) {
         if (!getPlayInfo()
@@ -2564,8 +2587,8 @@ public final class SceneGadgetInfoOuterClass {
       hash = (53 * hash) + bornType_;
       hash = (37 * hash) + GADGET_STATE_FIELD_NUMBER;
       hash = (53 * hash) + getGadgetState();
-      hash = (37 * hash) + KPKNNJLPMFP_FIELD_NUMBER;
-      hash = (53 * hash) + getKPKNNJLPMFP();
+      hash = (37 * hash) + GADGET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetType();
       hash = (37 * hash) + IS_SHOW_CUTSCENE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsShowCutscene());
@@ -2574,8 +2597,8 @@ public final class SceneGadgetInfoOuterClass {
       hash = (37 * hash) + IS_ENABLE_INTERACT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsEnableInteract());
-      hash = (37 * hash) + CLICILNBKDD_FIELD_NUMBER;
-      hash = (53 * hash) + getCLICILNBKDD();
+      hash = (37 * hash) + INTERACT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInteractId();
       hash = (37 * hash) + MARK_FLAG_FIELD_NUMBER;
       hash = (53 * hash) + getMarkFlag();
       hash = (37 * hash) + PROP_OWNER_ENTITY_ID_FIELD_NUMBER;
@@ -2590,8 +2613,10 @@ public final class SceneGadgetInfoOuterClass {
       }
       hash = (37 * hash) + DRAFT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDraftId();
-      hash = (37 * hash) + KHICBPFFAII_FIELD_NUMBER;
-      hash = (53 * hash) + getKHICBPFFAII();
+      hash = (37 * hash) + GADGET_TALK_STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getGadgetTalkState();
+      hash = (37 * hash) + INIT_POSE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInitPoseId();
       if (hasPlayInfo()) {
         hash = (37 * hash) + PLAY_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getPlayInfo().hashCode();
@@ -2784,10 +2809,6 @@ public final class SceneGadgetInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code SceneGadgetInfo}
      */
     public static final class Builder extends
@@ -2837,7 +2858,7 @@ public final class SceneGadgetInfoOuterClass {
 
         gadgetState_ = 0;
 
-        kPKNNJLPMFP_ = 0;
+        gadgetType_ = 0;
 
         isShowCutscene_ = false;
 
@@ -2845,7 +2866,7 @@ public final class SceneGadgetInfoOuterClass {
 
         isEnableInteract_ = false;
 
-        cLICILNBKDD_ = 0;
+        interactId_ = 0;
 
         markFlag_ = 0;
 
@@ -2861,7 +2882,9 @@ public final class SceneGadgetInfoOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         draftId_ = 0;
 
-        kHICBPFFAII_ = 0;
+        gadgetTalkState_ = 0;
+
+        initPoseId_ = 0;
 
         if (playInfoBuilder_ == null) {
           playInfo_ = null;
@@ -2904,11 +2927,11 @@ public final class SceneGadgetInfoOuterClass {
         result.ownerEntityId_ = ownerEntityId_;
         result.bornType_ = bornType_;
         result.gadgetState_ = gadgetState_;
-        result.kPKNNJLPMFP_ = kPKNNJLPMFP_;
+        result.gadgetType_ = gadgetType_;
         result.isShowCutscene_ = isShowCutscene_;
         result.authorityPeerId_ = authorityPeerId_;
         result.isEnableInteract_ = isEnableInteract_;
-        result.cLICILNBKDD_ = cLICILNBKDD_;
+        result.interactId_ = interactId_;
         if (contentCase_ == 13) {
           if (gatherGadgetBuilder_ == null) {
             result.content_ = content_;
@@ -3076,7 +3099,8 @@ public final class SceneGadgetInfoOuterClass {
         }
         result.interactUidList_ = interactUidList_;
         result.draftId_ = draftId_;
-        result.kHICBPFFAII_ = kHICBPFFAII_;
+        result.gadgetTalkState_ = gadgetTalkState_;
+        result.initPoseId_ = initPoseId_;
         if (playInfoBuilder_ == null) {
           result.playInfo_ = playInfo_;
         } else {
@@ -3149,8 +3173,8 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getGadgetState() != 0) {
           setGadgetState(other.getGadgetState());
         }
-        if (other.getKPKNNJLPMFP() != 0) {
-          setKPKNNJLPMFP(other.getKPKNNJLPMFP());
+        if (other.getGadgetType() != 0) {
+          setGadgetType(other.getGadgetType());
         }
         if (other.getIsShowCutscene() != false) {
           setIsShowCutscene(other.getIsShowCutscene());
@@ -3161,8 +3185,8 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getIsEnableInteract() != false) {
           setIsEnableInteract(other.getIsEnableInteract());
         }
-        if (other.getCLICILNBKDD() != 0) {
-          setCLICILNBKDD(other.getCLICILNBKDD());
+        if (other.getInteractId() != 0) {
+          setInteractId(other.getInteractId());
         }
         if (other.getMarkFlag() != 0) {
           setMarkFlag(other.getMarkFlag());
@@ -3186,8 +3210,11 @@ public final class SceneGadgetInfoOuterClass {
         if (other.getDraftId() != 0) {
           setDraftId(other.getDraftId());
         }
-        if (other.getKHICBPFFAII() != 0) {
-          setKHICBPFFAII(other.getKHICBPFFAII());
+        if (other.getGadgetTalkState() != 0) {
+          setGadgetTalkState(other.getGadgetTalkState());
+        }
+        if (other.getInitPoseId() != 0) {
+          setInitPoseId(other.getInitPoseId());
         }
         if (other.hasPlayInfo()) {
           mergePlayInfo(other.getPlayInfo());
@@ -3539,33 +3566,33 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
 
-      private int kPKNNJLPMFP_ ;
+      private int gadgetType_ ;
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
-       * @return The kPKNNJLPMFP.
+       * <code>uint32 gadget_type = 7;</code>
+       * @return The gadgetType.
        */
       @java.lang.Override
-      public int getKPKNNJLPMFP() {
-        return kPKNNJLPMFP_;
+      public int getGadgetType() {
+        return gadgetType_;
       }
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
-       * @param value The kPKNNJLPMFP to set.
+       * <code>uint32 gadget_type = 7;</code>
+       * @param value The gadgetType to set.
        * @return This builder for chaining.
        */
-      public Builder setKPKNNJLPMFP(int value) {
+      public Builder setGadgetType(int value) {
         
-        kPKNNJLPMFP_ = value;
+        gadgetType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 KPKNNJLPMFP = 7;</code>
+       * <code>uint32 gadget_type = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKPKNNJLPMFP() {
+      public Builder clearGadgetType() {
         
-        kPKNNJLPMFP_ = 0;
+        gadgetType_ = 0;
         onChanged();
         return this;
       }
@@ -3663,33 +3690,33 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
 
-      private int cLICILNBKDD_ ;
+      private int interactId_ ;
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
-       * @return The cLICILNBKDD.
+       * <code>uint32 interact_id = 11;</code>
+       * @return The interactId.
        */
       @java.lang.Override
-      public int getCLICILNBKDD() {
-        return cLICILNBKDD_;
+      public int getInteractId() {
+        return interactId_;
       }
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
-       * @param value The cLICILNBKDD to set.
+       * <code>uint32 interact_id = 11;</code>
+       * @param value The interactId to set.
        * @return This builder for chaining.
        */
-      public Builder setCLICILNBKDD(int value) {
+      public Builder setInteractId(int value) {
         
-        cLICILNBKDD_ = value;
+        interactId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 CLICILNBKDD = 11;</code>
+       * <code>uint32 interact_id = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCLICILNBKDD() {
+      public Builder clearInteractId() {
         
-        cLICILNBKDD_ = 0;
+        interactId_ = 0;
         onChanged();
         return this;
       }
@@ -6658,10 +6685,6 @@ public final class SceneGadgetInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget, emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.Builder, emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadgetOrBuilder> trifleGadgetBuilder_;
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        * @return Whether the trifleGadget field is set.
        */
@@ -6670,10 +6693,6 @@ public final class SceneGadgetInfoOuterClass {
         return contentCase_ == 67;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        * @return The trifleGadget.
        */
@@ -6692,10 +6711,6 @@ public final class SceneGadgetInfoOuterClass {
         }
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder setTrifleGadget(emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget value) {
@@ -6712,10 +6727,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder setTrifleGadget(
@@ -6730,10 +6741,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder mergeTrifleGadget(emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget value) {
@@ -6756,10 +6763,6 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public Builder clearTrifleGadget() {
@@ -6779,20 +6782,12 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       public emu.grasscutter.net.proto.TrifleGadgetOuterClass.TrifleGadget.Builder getTrifleGadgetBuilder() {
         return getTrifleGadgetFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       @java.lang.Override
@@ -6807,10 +6802,6 @@ public final class SceneGadgetInfoOuterClass {
         }
       }
       /**
-       * <pre>
-       *Item trifle_item = 67;
-       * </pre>
-       *
        * <code>.TrifleGadget trifle_gadget = 67;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7123,33 +7114,76 @@ public final class SceneGadgetInfoOuterClass {
         return this;
       }
 
-      private int kHICBPFFAII_ ;
+      private int gadgetTalkState_ ;
       /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
-       * @return The kHICBPFFAII.
+       * <code>uint32 gadget_talk_state = 26;</code>
+       * @return The gadgetTalkState.
        */
       @java.lang.Override
-      public int getKHICBPFFAII() {
-        return kHICBPFFAII_;
+      public int getGadgetTalkState() {
+        return gadgetTalkState_;
       }
       /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
-       * @param value The kHICBPFFAII to set.
+       * <code>uint32 gadget_talk_state = 26;</code>
+       * @param value The gadgetTalkState to set.
        * @return This builder for chaining.
        */
-      public Builder setKHICBPFFAII(int value) {
+      public Builder setGadgetTalkState(int value) {
         
-        kHICBPFFAII_ = value;
+        gadgetTalkState_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 KHICBPFFAII = 26;</code>
+       * <code>uint32 gadget_talk_state = 26;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKHICBPFFAII() {
+      public Builder clearGadgetTalkState() {
         
-        kHICBPFFAII_ = 0;
+        gadgetTalkState_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int initPoseId_ ;
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @return The initPoseId.
+       */
+      @java.lang.Override
+      public int getInitPoseId() {
+        return initPoseId_;
+      }
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @param value The initPoseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitPoseId(int value) {
+        
+        initPoseId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *OKJCNOADKMM IGMDELMIHMA = 27;
+       * </pre>
+       *
+       * <code>uint32 init_pose_id = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitPoseId() {
+        
+        initPoseId_ = 0;
         onChanged();
         return this;
       }
@@ -7159,7 +7193,9 @@ public final class SceneGadgetInfoOuterClass {
           emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfo.Builder, emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.GadgetPlayInfoOrBuilder> playInfoBuilder_;
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7170,7 +7206,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7185,7 +7223,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7205,7 +7245,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7223,7 +7265,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7245,7 +7289,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7263,7 +7309,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7275,7 +7323,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7290,7 +7340,9 @@ public final class SceneGadgetInfoOuterClass {
       }
       /**
        * <pre>
-       *JMFPBNKNHED GPOHBBPBBEC = 27;
+       *HGPFAKAPMMB PNAJJDAFJCH = 101;
+       *DFBLLCCOCBA GLGAHAJNALA = 102;
+       *POLDBBPAHPC INIHNDCAMAJ = 103;
        * </pre>
        *
        * <code>.GadgetPlayInfo play_info = 100;</code>
@@ -7376,28 +7428,28 @@ public final class SceneGadgetInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025SceneGadgetInfo.proto\032\024GadgetBornType." +
-      "proto\032\026GatherGadgetInfo.proto\032\021WorktopIn" +
-      "fo.proto\032\026ClientGadgetInfo.proto\032\021Weathe" +
-      "rInfo.proto\032\027AbilityGadgetInfo.proto\032\026St" +
-      "atueGadgetInfo.proto\032\023BossChestInfo.prot" +
-      "o\032\026BlossomChestInfo.proto\032\026MpPlayRewardI" +
-      "nfo.proto\032\035GadgetGeneralRewardInfo.proto" +
-      "\032\022OfferingInfo.proto\032\024FoundationInfo.pro" +
-      "to\032\021VehicleInfo.proto\032\023EchoShellInfo.pro" +
-      "to\032\020ScreenInfo.proto\032\022FishPoolInfo.proto" +
-      "\032\032CustomGadgetTreeInfo.proto\032\031RoguelikeG" +
-      "adgetInfo.proto\032\031NightCrowGadgetInfo.pro" +
-      "to\032\036DeshretObeliskGadgetInfo.proto\032\035Coin" +
-      "CollectOperatorInfo.proto\032\022TrifleGadget." +
-      "proto\032\022PlatformInfo.proto\032\024GadgetPlayInf" +
-      "o.proto\"\301\013\n\017SceneGadgetInfo\022\021\n\tgadget_id" +
+      "proto\032\022PlatformInfo.proto\032\026GatherGadgetI" +
+      "nfo.proto\032\021WorktopInfo.proto\032\026ClientGadg" +
+      "etInfo.proto\032\021WeatherInfo.proto\032\027Ability" +
+      "GadgetInfo.proto\032\026StatueGadgetInfo.proto" +
+      "\032\023BossChestInfo.proto\032\026BlossomChestInfo." +
+      "proto\032\026MpPlayRewardInfo.proto\032\035GadgetGen" +
+      "eralRewardInfo.proto\032\022OfferingInfo.proto" +
+      "\032\024FoundationInfo.proto\032\021VehicleInfo.prot" +
+      "o\032\023EchoShellInfo.proto\032\020ScreenInfo.proto" +
+      "\032\022FishPoolInfo.proto\032\032CustomGadgetTreeIn" +
+      "fo.proto\032\031RoguelikeGadgetInfo.proto\032\031Nig" +
+      "htCrowGadgetInfo.proto\032\036DeshretObeliskGa" +
+      "dgetInfo.proto\032\035CoinCollectOperatorInfo." +
+      "proto\032\022TrifleGadget.proto\032\024GadgetPlayInf" +
+      "o.proto\"\335\013\n\017SceneGadgetInfo\022\021\n\tgadget_id" +
       "\030\001 \001(\r\022\020\n\010group_id\030\002 \001(\r\022\021\n\tconfig_id\030\003 " +
       "\001(\r\022\027\n\017owner_entity_id\030\004 \001(\r\022\"\n\tborn_typ" +
       "e\030\005 \001(\0162\017.GadgetBornType\022\024\n\014gadget_state" +
-      "\030\006 \001(\r\022\023\n\013KPKNNJLPMFP\030\007 \001(\r\022\030\n\020is_show_c" +
+      "\030\006 \001(\r\022\023\n\013gadget_type\030\007 \001(\r\022\030\n\020is_show_c" +
       "utscene\030\010 \001(\010\022\031\n\021authority_peer_id\030\t \001(\r" +
-      "\022\032\n\022is_enable_interact\030\n \001(\010\022\023\n\013CLICILNB" +
-      "KDD\030\013 \001(\r\022*\n\rgather_gadget\030\r \001(\0132\021.Gathe" +
+      "\022\032\n\022is_enable_interact\030\n \001(\010\022\023\n\013interact" +
+      "_id\030\013 \001(\r\022*\n\rgather_gadget\030\r \001(\0132\021.Gathe" +
       "rGadgetInfoH\000\022\037\n\007worktop\030\016 \001(\0132\014.Worktop" +
       "InfoH\000\022*\n\rclient_gadget\030\017 \001(\0132\021.ClientGa" +
       "dgetInfoH\000\022\037\n\007weather\030\021 \001(\0132\014.WeatherInf" +
@@ -7425,14 +7477,16 @@ public final class SceneGadgetInfoOuterClass {
       "GadgetH\000\022\021\n\tmark_flag\030\025 \001(\r\022\034\n\024prop_owne" +
       "r_entity_id\030\026 \001(\r\022\037\n\010platform\030\027 \001(\0132\r.Pl" +
       "atformInfo\022\031\n\021interact_uid_list\030\030 \003(\r\022\020\n" +
-      "\010draft_id\030\031 \001(\r\022\023\n\013KHICBPFFAII\030\032 \001(\r\022\"\n\t" +
-      "play_info\030d \001(\0132\017.GadgetPlayInfoB\t\n\007cont" +
-      "entB\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\010draft_id\030\031 \001(\r\022\031\n\021gadget_talk_state\030\032 \001" +
+      "(\r\022\024\n\014init_pose_id\030\034 \001(\r\022\"\n\tplay_info\030d " +
+      "\001(\0132\017.GadgetPlayInfoB\t\n\007ContentB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.WorktopInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.getDescriptor(),
@@ -7455,7 +7509,6 @@ public final class SceneGadgetInfoOuterClass {
           emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.TrifleGadgetOuterClass.getDescriptor(),
-          emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor(),
         });
     internal_static_SceneGadgetInfo_descriptor =
@@ -7463,8 +7516,9 @@ public final class SceneGadgetInfoOuterClass {
     internal_static_SceneGadgetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneGadgetInfo_descriptor,
-        new java.lang.String[] { "GadgetId", "GroupId", "ConfigId", "OwnerEntityId", "BornType", "GadgetState", "KPKNNJLPMFP", "IsShowCutscene", "AuthorityPeerId", "IsEnableInteract", "CLICILNBKDD", "GatherGadget", "Worktop", "ClientGadget", "Weather", "AbilityGadget", "StatueGadget", "BossChest", "BlossomChest", "MpPlayReward", "GeneralReward", "OfferingInfo", "FoundationInfo", "VehicleInfo", "ShellInfo", "ScreenInfo", "FishPoolInfo", "CustomGadgetTreeInfo", "RoguelikeGadgetInfo", "NightCrowGadgetInfo", "DeshretObeliskGadgetInfo", "CoinCollectOperatorInfo", "TrifleGadget", "MarkFlag", "PropOwnerEntityId", "Platform", "InteractUidList", "DraftId", "KHICBPFFAII", "PlayInfo", "Content", });
+        new java.lang.String[] { "GadgetId", "GroupId", "ConfigId", "OwnerEntityId", "BornType", "GadgetState", "GadgetType", "IsShowCutscene", "AuthorityPeerId", "IsEnableInteract", "InteractId", "GatherGadget", "Worktop", "ClientGadget", "Weather", "AbilityGadget", "StatueGadget", "BossChest", "BlossomChest", "MpPlayReward", "GeneralReward", "OfferingInfo", "FoundationInfo", "VehicleInfo", "ShellInfo", "ScreenInfo", "FishPoolInfo", "CustomGadgetTreeInfo", "RoguelikeGadgetInfo", "NightCrowGadgetInfo", "DeshretObeliskGadgetInfo", "CoinCollectOperatorInfo", "TrifleGadget", "MarkFlag", "PropOwnerEntityId", "Platform", "InteractUidList", "DraftId", "GadgetTalkState", "InitPoseId", "PlayInfo", "Content", });
     emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.GatherGadgetInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.WorktopInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ClientGadgetInfoOuterClass.getDescriptor();
@@ -7487,7 +7541,6 @@ public final class SceneGadgetInfoOuterClass {
     emu.grasscutter.net.proto.DeshretObeliskGadgetInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.CoinCollectOperatorInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.TrifleGadgetOuterClass.getDescriptor();
-    emu.grasscutter.net.proto.PlatformInfoOuterClass.getDescriptor();
     emu.grasscutter.net.proto.GadgetPlayInfoOuterClass.getDescriptor();
   }
 

@@ -1,2 +1,2 @@
-java -jar LunaGC-4.7.0.jar -debug
+java -jar LunaGC-5.0.0.jar -debug
 pause

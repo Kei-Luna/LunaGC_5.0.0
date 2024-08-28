@@ -49,10 +49,6 @@ public final class ServerBuffOuterClass {
     boolean getIsModifierAdded();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code ServerBuff}
    */
   public static final class ServerBuff extends
@@ -410,10 +406,6 @@ public final class ServerBuffOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code ServerBuff}
      */
     public static final class Builder extends

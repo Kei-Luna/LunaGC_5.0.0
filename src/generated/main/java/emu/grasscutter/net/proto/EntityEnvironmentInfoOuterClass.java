@@ -31,10 +31,6 @@ public final class EntityEnvironmentInfoOuterClass {
     int getClimateAreaId();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code EntityEnvironmentInfo}
    */
   public static final class EntityEnvironmentInfo extends
@@ -310,10 +306,6 @@ public final class EntityEnvironmentInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code EntityEnvironmentInfo}
      */
     public static final class Builder extends

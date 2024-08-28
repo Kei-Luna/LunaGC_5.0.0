@@ -19,22 +19,17 @@ public final class PlayerLogoutReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+     * <code>.PlayerLogoutReason reason = 11;</code>
      * @return The enum numeric value on the wire for reason.
      */
     int getReasonValue();
     /**
-     * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+     * <code>.PlayerLogoutReason reason = 11;</code>
      * @return The reason.
      */
-    emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason getReason();
+    emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason getReason();
   }
   /**
-   * <pre>
-   * CmdId: 5347
-   * Obf: JLDKOJCCCAM
-   * </pre>
-   *
    * Protobuf type {@code PlayerLogoutReq}
    */
   public static final class PlayerLogoutReq extends
@@ -80,7 +75,7 @@ public final class PlayerLogoutReqOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 88: {
               int rawValue = input.readEnum();
 
               reason_ = rawValue;
@@ -118,198 +113,23 @@ public final class PlayerLogoutReqOuterClass {
               emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.class, emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Builder.class);
     }
 
-    /**
-     * <pre>
-     * Obf: HGHJNAABBAM
-     * </pre>
-     *
-     * Protobuf enum {@code PlayerLogoutReq.Reason}
-     */
-    public enum Reason
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>DISCONNECT = 0;</code>
-       */
-      DISCONNECT(0),
-      /**
-       * <code>CLIENT_REQ = 1;</code>
-       */
-      CLIENT_REQ(1),
-      /**
-       * <code>TIMEOUT = 2;</code>
-       */
-      TIMEOUT(2),
-      /**
-       * <code>ADMIN_REQ = 3;</code>
-       */
-      ADMIN_REQ(3),
-      /**
-       * <code>SERVER_CLOSE = 4;</code>
-       */
-      SERVER_CLOSE(4),
-      /**
-       * <code>GM_CLEAR = 5;</code>
-       */
-      GM_CLEAR(5),
-      /**
-       * <code>PLAYER_TRANSFER = 6;</code>
-       */
-      PLAYER_TRANSFER(6),
-      /**
-       * <code>CLIENT_CHECKSUM_INVALID = 7;</code>
-       */
-      CLIENT_CHECKSUM_INVALID(7),
-      /**
-       * <code>REASON_MUIP_MOVE_SAVE_WAIT = 8;</code>
-       */
-      REASON_MUIP_MOVE_SAVE_WAIT(8),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>DISCONNECT = 0;</code>
-       */
-      public static final int DISCONNECT_VALUE = 0;
-      /**
-       * <code>CLIENT_REQ = 1;</code>
-       */
-      public static final int CLIENT_REQ_VALUE = 1;
-      /**
-       * <code>TIMEOUT = 2;</code>
-       */
-      public static final int TIMEOUT_VALUE = 2;
-      /**
-       * <code>ADMIN_REQ = 3;</code>
-       */
-      public static final int ADMIN_REQ_VALUE = 3;
-      /**
-       * <code>SERVER_CLOSE = 4;</code>
-       */
-      public static final int SERVER_CLOSE_VALUE = 4;
-      /**
-       * <code>GM_CLEAR = 5;</code>
-       */
-      public static final int GM_CLEAR_VALUE = 5;
-      /**
-       * <code>PLAYER_TRANSFER = 6;</code>
-       */
-      public static final int PLAYER_TRANSFER_VALUE = 6;
-      /**
-       * <code>CLIENT_CHECKSUM_INVALID = 7;</code>
-       */
-      public static final int CLIENT_CHECKSUM_INVALID_VALUE = 7;
-      /**
-       * <code>REASON_MUIP_MOVE_SAVE_WAIT = 8;</code>
-       */
-      public static final int REASON_MUIP_MOVE_SAVE_WAIT_VALUE = 8;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Reason valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static Reason forNumber(int value) {
-        switch (value) {
-          case 0: return DISCONNECT;
-          case 1: return CLIENT_REQ;
-          case 2: return TIMEOUT;
-          case 3: return ADMIN_REQ;
-          case 4: return SERVER_CLOSE;
-          case 5: return GM_CLEAR;
-          case 6: return PLAYER_TRANSFER;
-          case 7: return CLIENT_CHECKSUM_INVALID;
-          case 8: return REASON_MUIP_MOVE_SAVE_WAIT;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Reason>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Reason> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Reason>() {
-              public Reason findValueByNumber(int number) {
-                return Reason.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Reason[] VALUES = values();
-
-      public static Reason valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Reason(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:PlayerLogoutReq.Reason)
-    }
-
-    public static final int REASON_FIELD_NUMBER = 14;
+    public static final int REASON_FIELD_NUMBER = 11;
     private int reason_;
     /**
-     * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+     * <code>.PlayerLogoutReason reason = 11;</code>
      * @return The enum numeric value on the wire for reason.
      */
     @java.lang.Override public int getReasonValue() {
       return reason_;
     }
     /**
-     * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+     * <code>.PlayerLogoutReason reason = 11;</code>
      * @return The reason.
      */
-    @java.lang.Override public emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason getReason() {
+    @java.lang.Override public emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason getReason() {
       @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason result = emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.valueOf(reason_);
-      return result == null ? emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.UNRECOGNIZED : result;
+      emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason result = emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.valueOf(reason_);
+      return result == null ? emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -326,8 +146,8 @@ public final class PlayerLogoutReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (reason_ != emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.DISCONNECT.getNumber()) {
-        output.writeEnum(14, reason_);
+      if (reason_ != emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.DISCONNECT.getNumber()) {
+        output.writeEnum(11, reason_);
       }
       unknownFields.writeTo(output);
     }
@@ -338,9 +158,9 @@ public final class PlayerLogoutReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (reason_ != emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.DISCONNECT.getNumber()) {
+      if (reason_ != emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.DISCONNECT.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(14, reason_);
+          .computeEnumSize(11, reason_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -467,11 +287,6 @@ public final class PlayerLogoutReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5347
-     * Obf: JLDKOJCCCAM
-     * </pre>
-     *
      * Protobuf type {@code PlayerLogoutReq}
      */
     public static final class Builder extends
@@ -620,14 +435,14 @@ public final class PlayerLogoutReqOuterClass {
 
       private int reason_ = 0;
       /**
-       * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+       * <code>.PlayerLogoutReason reason = 11;</code>
        * @return The enum numeric value on the wire for reason.
        */
       @java.lang.Override public int getReasonValue() {
         return reason_;
       }
       /**
-       * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+       * <code>.PlayerLogoutReason reason = 11;</code>
        * @param value The enum numeric value on the wire for reason to set.
        * @return This builder for chaining.
        */
@@ -638,21 +453,21 @@ public final class PlayerLogoutReqOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+       * <code>.PlayerLogoutReason reason = 11;</code>
        * @return The reason.
        */
       @java.lang.Override
-      public emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason getReason() {
+      public emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason getReason() {
         @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason result = emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.valueOf(reason_);
-        return result == null ? emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason.UNRECOGNIZED : result;
+        emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason result = emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.valueOf(reason_);
+        return result == null ? emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason.UNRECOGNIZED : result;
       }
       /**
-       * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+       * <code>.PlayerLogoutReason reason = 11;</code>
        * @param value The reason to set.
        * @return This builder for chaining.
        */
-      public Builder setReason(emu.grasscutter.net.proto.PlayerLogoutReqOuterClass.PlayerLogoutReq.Reason value) {
+      public Builder setReason(emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.PlayerLogoutReason value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -662,7 +477,7 @@ public final class PlayerLogoutReqOuterClass {
         return this;
       }
       /**
-       * <code>.PlayerLogoutReq.Reason reason = 14;</code>
+       * <code>.PlayerLogoutReason reason = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearReason() {
@@ -738,18 +553,15 @@ public final class PlayerLogoutReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025PlayerLogoutReq.proto\"\363\001\n\017PlayerLogout" +
-      "Req\022\'\n\006reason\030\016 \001(\0162\027.PlayerLogoutReq.Re" +
-      "ason\"\266\001\n\006Reason\022\016\n\nDISCONNECT\020\000\022\016\n\nCLIEN" +
-      "T_REQ\020\001\022\013\n\007TIMEOUT\020\002\022\r\n\tADMIN_REQ\020\003\022\020\n\014S" +
-      "ERVER_CLOSE\020\004\022\014\n\010GM_CLEAR\020\005\022\023\n\017PLAYER_TR" +
-      "ANSFER\020\006\022\033\n\027CLIENT_CHECKSUM_INVALID\020\007\022\036\n" +
-      "\032REASON_MUIP_MOVE_SAVE_WAIT\020\010B\033\n\031emu.gra" +
-      "sscutter.net.protob\006proto3"
+      "\n\025PlayerLogoutReq.proto\032\030PlayerLogoutRea" +
+      "son.proto\"6\n\017PlayerLogoutReq\022#\n\006reason\030\013" +
+      " \001(\0162\023.PlayerLogoutReasonB\033\n\031emu.grasscu" +
+      "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.getDescriptor(),
         });
     internal_static_PlayerLogoutReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -757,6 +569,7 @@ public final class PlayerLogoutReqOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerLogoutReq_descriptor,
         new java.lang.String[] { "Reason", });
+    emu.grasscutter.net.proto.PlayerLogoutReasonOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

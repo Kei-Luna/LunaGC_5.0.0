@@ -32,7 +32,7 @@ public final class ModifierDurabilityOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
    * </pre>
    *
    * Protobuf type {@code ModifierDurability}
@@ -315,7 +315,7 @@ public final class ModifierDurabilityOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
      * </pre>
      *
      * Protobuf type {@code ModifierDurability}

@@ -174,7 +174,7 @@ public class ConfigContainer {
         /* Enabling this will generate a unique packet encryption key for each player. */
         public boolean useUniquePacketKey = true;
 
-        public boolean useXorEncryption = false;
+        public boolean useXorEncryption = true;
 
         /* Entities within a certain range will be loaded for the player */
         public int loadEntitiesForPlayerRange = 300;
@@ -362,11 +362,11 @@ public class ConfigContainer {
 
     public static class JoinOptions {
         public int[] welcomeEmotes = {2007, 1002, 4010};
-        public String welcomeMessage = "Welcome to a LunaGC 4.7.0";
+        public String welcomeMessage = "Welcome to a LunaGC 5.0.0";
         public JoinOptions.Mail welcomeMail = new JoinOptions.Mail();
 
         public static class Mail {
-            public String title = "Welcome to a LunaGC 4.7.0";
+            public String title = "Welcome to a LunaGC 5.0.0";
             public String content = """
                     Hi there!\r\nWelcome to LunaGC!
                     """;

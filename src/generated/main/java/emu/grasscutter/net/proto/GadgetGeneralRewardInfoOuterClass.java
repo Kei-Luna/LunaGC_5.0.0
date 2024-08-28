@@ -81,7 +81,7 @@ public final class GadgetGeneralRewardInfoOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
    * </pre>
    *
    * Protobuf type {@code GadgetGeneralRewardInfo}
@@ -577,7 +577,7 @@ public final class GadgetGeneralRewardInfoOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
      * </pre>
      *
      * Protobuf type {@code GadgetGeneralRewardInfo}

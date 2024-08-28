@@ -16,7 +16,6 @@ public class PacketOpcodesUtils {
                     PacketOpcodes.UnionCmdNotify,
                     PacketOpcodes.QueryPathReq,
                     PacketOpcodes.QueryPathRsp,
-                    PacketOpcodes.Loop_4_7_0,
 
                     // Satiation sends these every tick
                     PacketOpcodes.PlayerTimeNotify,

@@ -15,10 +15,6 @@ public final class AvatarTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: OPLFNKHAOBP
-   * </pre>
-   *
    * Protobuf enum {@code AvatarType}
    */
   public enum AvatarType

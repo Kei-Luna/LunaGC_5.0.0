@@ -341,12 +341,20 @@ public final class RegionInfoOuterClass {
      */
     com.google.protobuf.ByteString
         getGameBizBytes();
+
+    /**
+     * <code>string gateserver_ipv6_ip = 37;</code>
+     * @return The gateserverIpv6Ip.
+     */
+    java.lang.String getGateserverIpv6Ip();
+    /**
+     * <code>string gateserver_ipv6_ip = 37;</code>
+     * @return The bytes for gateserverIpv6Ip.
+     */
+    com.google.protobuf.ByteString
+        getGateserverIpv6IpBytes();
   }
   /**
-   * <pre>
-   * Obf: FHNLCIOBJDG
-   * </pre>
-   *
    * Protobuf type {@code RegionInfo}
    */
   public static final class RegionInfo extends
@@ -382,6 +390,7 @@ public final class RegionInfoOuterClass {
       privacyPolicyUrl_ = "";
       nextResourceUrl_ = "";
       gameBiz_ = "";
+      gateserverIpv6Ip_ = "";
     }
 
     @java.lang.Override
@@ -595,6 +604,12 @@ public final class RegionInfoOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               gameBiz_ = s;
+              break;
+            }
+            case 298: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gateserverIpv6Ip_ = s;
               break;
             }
             default: {
@@ -1572,6 +1587,44 @@ public final class RegionInfoOuterClass {
       }
     }
 
+    public static final int GATESERVER_IPV6_IP_FIELD_NUMBER = 37;
+    private volatile java.lang.Object gateserverIpv6Ip_;
+    /**
+     * <code>string gateserver_ipv6_ip = 37;</code>
+     * @return The gateserverIpv6Ip.
+     */
+    @java.lang.Override
+    public java.lang.String getGateserverIpv6Ip() {
+      java.lang.Object ref = gateserverIpv6Ip_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gateserverIpv6Ip_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string gateserver_ipv6_ip = 37;</code>
+     * @return The bytes for gateserverIpv6Ip.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGateserverIpv6IpBytes() {
+      java.lang.Object ref = gateserverIpv6Ip_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gateserverIpv6Ip_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1672,6 +1725,9 @@ public final class RegionInfoOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gameBiz_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 36, gameBiz_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gateserverIpv6Ip_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, gateserverIpv6Ip_);
       }
       unknownFields.writeTo(output);
     }
@@ -1776,6 +1832,9 @@ public final class RegionInfoOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gameBiz_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, gameBiz_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gateserverIpv6Ip_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, gateserverIpv6Ip_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1855,6 +1914,8 @@ public final class RegionInfoOuterClass {
       }
       if (!getGameBiz()
           .equals(other.getGameBiz())) return false;
+      if (!getGateserverIpv6Ip()
+          .equals(other.getGateserverIpv6Ip())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1929,6 +1990,8 @@ public final class RegionInfoOuterClass {
       }
       hash = (37 * hash) + GAME_BIZ_FIELD_NUMBER;
       hash = (53 * hash) + getGameBiz().hashCode();
+      hash = (37 * hash) + GATESERVER_IPV6_IP_FIELD_NUMBER;
+      hash = (53 * hash) + getGateserverIpv6Ip().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2025,10 +2088,6 @@ public final class RegionInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: FHNLCIOBJDG
-     * </pre>
-     *
      * Protobuf type {@code RegionInfo}
      */
     public static final class Builder extends
@@ -2132,6 +2191,8 @@ public final class RegionInfoOuterClass {
         }
         gameBiz_ = "";
 
+        gateserverIpv6Ip_ = "";
+
         return this;
       }
 
@@ -2195,6 +2256,7 @@ public final class RegionInfoOuterClass {
           result.nextResVersionConfig_ = nextResVersionConfigBuilder_.build();
         }
         result.gameBiz_ = gameBiz_;
+        result.gateserverIpv6Ip_ = gateserverIpv6Ip_;
         onBuilt();
         return result;
       }
@@ -2350,6 +2412,10 @@ public final class RegionInfoOuterClass {
         }
         if (!other.getGameBiz().isEmpty()) {
           gameBiz_ = other.gameBiz_;
+          onChanged();
+        }
+        if (!other.getGateserverIpv6Ip().isEmpty()) {
+          gateserverIpv6Ip_ = other.gateserverIpv6Ip_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4448,6 +4514,82 @@ public final class RegionInfoOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object gateserverIpv6Ip_ = "";
+      /**
+       * <code>string gateserver_ipv6_ip = 37;</code>
+       * @return The gateserverIpv6Ip.
+       */
+      public java.lang.String getGateserverIpv6Ip() {
+        java.lang.Object ref = gateserverIpv6Ip_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gateserverIpv6Ip_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string gateserver_ipv6_ip = 37;</code>
+       * @return The bytes for gateserverIpv6Ip.
+       */
+      public com.google.protobuf.ByteString
+          getGateserverIpv6IpBytes() {
+        java.lang.Object ref = gateserverIpv6Ip_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gateserverIpv6Ip_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string gateserver_ipv6_ip = 37;</code>
+       * @param value The gateserverIpv6Ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGateserverIpv6Ip(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gateserverIpv6Ip_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gateserver_ipv6_ip = 37;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGateserverIpv6Ip() {
+        
+        gateserverIpv6Ip_ = getDefaultInstance().getGateserverIpv6Ip();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gateserver_ipv6_ip = 37;</code>
+       * @param value The bytes for gateserverIpv6Ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGateserverIpv6IpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gateserverIpv6Ip_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4516,7 +4658,7 @@ public final class RegionInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\020RegionInfo.proto\032\026ResVersionConfig.pro" +
-      "to\"\257\006\n\nRegionInfo\022\025\n\rgateserver_ip\030\001 \001(\t" +
+      "to\"\313\006\n\nRegionInfo\022\025\n\rgateserver_ip\030\001 \001(\t" +
       "\022\027\n\017gateserver_port\030\002 \001(\r\022\030\n\020pay_callbac" +
       "k_url\030\003 \001(\t\022\021\n\tarea_type\030\007 \001(\t\022\024\n\014resour" +
       "ce_url\030\010 \001(\t\022\020\n\010data_url\030\t \001(\t\022\024\n\014feedba" +
@@ -4536,8 +4678,9 @@ public final class RegionInfoOuterClass {
       "cdkey_url\030  \001(\t\022\032\n\022privacy_policy_url\030! " +
       "\001(\t\022\031\n\021next_resource_url\030\" \001(\t\0222\n\027next_r" +
       "es_version_config\030# \001(\0132\021.ResVersionConf" +
-      "ig\022\020\n\010game_biz\030$ \001(\tB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "ig\022\020\n\010game_biz\030$ \001(\t\022\032\n\022gateserver_ipv6_" +
+      "ip\030% \001(\tB\033\n\031emu.grasscutter.net.protob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4549,7 +4692,7 @@ public final class RegionInfoOuterClass {
     internal_static_RegionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegionInfo_descriptor,
-        new java.lang.String[] { "GateserverIp", "GateserverPort", "PayCallbackUrl", "AreaType", "ResourceUrl", "DataUrl", "FeedbackUrl", "BulletinUrl", "ResourceUrlBak", "DataUrlBak", "ClientDataVersion", "HandbookUrl", "ClientSilenceDataVersion", "ClientDataMd5", "ClientSilenceDataMd5", "ResVersionConfig", "SecretKey", "OfficialCommunityUrl", "ClientVersionSuffix", "ClientSilenceVersionSuffix", "UseGateserverDomainName", "GateserverDomainName", "UserCenterUrl", "AccountBindUrl", "CdkeyUrl", "PrivacyPolicyUrl", "NextResourceUrl", "NextResVersionConfig", "GameBiz", });
+        new java.lang.String[] { "GateserverIp", "GateserverPort", "PayCallbackUrl", "AreaType", "ResourceUrl", "DataUrl", "FeedbackUrl", "BulletinUrl", "ResourceUrlBak", "DataUrlBak", "ClientDataVersion", "HandbookUrl", "ClientSilenceDataVersion", "ClientDataMd5", "ClientSilenceDataMd5", "ResVersionConfig", "SecretKey", "OfficialCommunityUrl", "ClientVersionSuffix", "ClientSilenceVersionSuffix", "UseGateserverDomainName", "GateserverDomainName", "UserCenterUrl", "AccountBindUrl", "CdkeyUrl", "PrivacyPolicyUrl", "NextResourceUrl", "NextResVersionConfig", "GameBiz", "GateserverIpv6Ip", });
     emu.grasscutter.net.proto.ResVersionConfigOuterClass.getDescriptor();
   }
 

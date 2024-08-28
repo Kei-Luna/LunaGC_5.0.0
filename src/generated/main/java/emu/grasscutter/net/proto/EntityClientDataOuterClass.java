@@ -37,10 +37,6 @@ public final class EntityClientDataOuterClass {
     int getWindChangeTargetLevel();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code EntityClientData}
    */
   public static final class EntityClientData extends
@@ -345,10 +341,6 @@ public final class EntityClientDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code EntityClientData}
      */
     public static final class Builder extends

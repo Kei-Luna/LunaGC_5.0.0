@@ -130,12 +130,20 @@ public final class MotionInfoOuterClass {
      * @return The intervalVelocity.
      */
     long getIntervalVelocity();
+
+    /**
+     * <code>uint32 BIMCAJGDDOI = 10;</code>
+     * @return The bIMCAJGDDOI.
+     */
+    int getBIMCAJGDDOI();
+
+    /**
+     * <code>uint32 HJCDICMBDKE = 11;</code>
+     * @return The hJCDICMBDKE.
+     */
+    int getHJCDICMBDKE();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code MotionInfo}
    */
   public static final class MotionInfo extends
@@ -263,6 +271,16 @@ public final class MotionInfoOuterClass {
             case 72: {
 
               intervalVelocity_ = input.readUInt64();
+              break;
+            }
+            case 80: {
+
+              bIMCAJGDDOI_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              hJCDICMBDKE_ = input.readUInt32();
               break;
             }
             default: {
@@ -496,6 +514,28 @@ public final class MotionInfoOuterClass {
       return intervalVelocity_;
     }
 
+    public static final int BIMCAJGDDOI_FIELD_NUMBER = 10;
+    private int bIMCAJGDDOI_;
+    /**
+     * <code>uint32 BIMCAJGDDOI = 10;</code>
+     * @return The bIMCAJGDDOI.
+     */
+    @java.lang.Override
+    public int getBIMCAJGDDOI() {
+      return bIMCAJGDDOI_;
+    }
+
+    public static final int HJCDICMBDKE_FIELD_NUMBER = 11;
+    private int hJCDICMBDKE_;
+    /**
+     * <code>uint32 HJCDICMBDKE = 11;</code>
+     * @return The hJCDICMBDKE.
+     */
+    @java.lang.Override
+    public int getHJCDICMBDKE() {
+      return hJCDICMBDKE_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -536,6 +576,12 @@ public final class MotionInfoOuterClass {
       }
       if (intervalVelocity_ != 0L) {
         output.writeUInt64(9, intervalVelocity_);
+      }
+      if (bIMCAJGDDOI_ != 0) {
+        output.writeUInt32(10, bIMCAJGDDOI_);
+      }
+      if (hJCDICMBDKE_ != 0) {
+        output.writeUInt32(11, hJCDICMBDKE_);
       }
       unknownFields.writeTo(output);
     }
@@ -582,6 +628,14 @@ public final class MotionInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(9, intervalVelocity_);
       }
+      if (bIMCAJGDDOI_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, bIMCAJGDDOI_);
+      }
+      if (hJCDICMBDKE_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, hJCDICMBDKE_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -626,6 +680,10 @@ public final class MotionInfoOuterClass {
           != other.getSceneTime()) return false;
       if (getIntervalVelocity()
           != other.getIntervalVelocity()) return false;
+      if (getBIMCAJGDDOI()
+          != other.getBIMCAJGDDOI()) return false;
+      if (getHJCDICMBDKE()
+          != other.getHJCDICMBDKE()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -666,6 +724,10 @@ public final class MotionInfoOuterClass {
       hash = (37 * hash) + INTERVAL_VELOCITY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getIntervalVelocity());
+      hash = (37 * hash) + BIMCAJGDDOI_FIELD_NUMBER;
+      hash = (53 * hash) + getBIMCAJGDDOI();
+      hash = (37 * hash) + HJCDICMBDKE_FIELD_NUMBER;
+      hash = (53 * hash) + getHJCDICMBDKE();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -762,10 +824,6 @@ public final class MotionInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code MotionInfo}
      */
     public static final class Builder extends
@@ -842,6 +900,10 @@ public final class MotionInfoOuterClass {
 
         intervalVelocity_ = 0L;
 
+        bIMCAJGDDOI_ = 0;
+
+        hJCDICMBDKE_ = 0;
+
         return this;
       }
 
@@ -902,6 +964,8 @@ public final class MotionInfoOuterClass {
         result.refId_ = refId_;
         result.sceneTime_ = sceneTime_;
         result.intervalVelocity_ = intervalVelocity_;
+        result.bIMCAJGDDOI_ = bIMCAJGDDOI_;
+        result.hJCDICMBDKE_ = hJCDICMBDKE_;
         onBuilt();
         return result;
       }
@@ -999,6 +1063,12 @@ public final class MotionInfoOuterClass {
         }
         if (other.getIntervalVelocity() != 0L) {
           setIntervalVelocity(other.getIntervalVelocity());
+        }
+        if (other.getBIMCAJGDDOI() != 0) {
+          setBIMCAJGDDOI(other.getBIMCAJGDDOI());
+        }
+        if (other.getHJCDICMBDKE() != 0) {
+          setHJCDICMBDKE(other.getHJCDICMBDKE());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1892,6 +1962,68 @@ public final class MotionInfoOuterClass {
         onChanged();
         return this;
       }
+
+      private int bIMCAJGDDOI_ ;
+      /**
+       * <code>uint32 BIMCAJGDDOI = 10;</code>
+       * @return The bIMCAJGDDOI.
+       */
+      @java.lang.Override
+      public int getBIMCAJGDDOI() {
+        return bIMCAJGDDOI_;
+      }
+      /**
+       * <code>uint32 BIMCAJGDDOI = 10;</code>
+       * @param value The bIMCAJGDDOI to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBIMCAJGDDOI(int value) {
+        
+        bIMCAJGDDOI_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 BIMCAJGDDOI = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBIMCAJGDDOI() {
+        
+        bIMCAJGDDOI_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int hJCDICMBDKE_ ;
+      /**
+       * <code>uint32 HJCDICMBDKE = 11;</code>
+       * @return The hJCDICMBDKE.
+       */
+      @java.lang.Override
+      public int getHJCDICMBDKE() {
+        return hJCDICMBDKE_;
+      }
+      /**
+       * <code>uint32 HJCDICMBDKE = 11;</code>
+       * @param value The hJCDICMBDKE to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHJCDICMBDKE(int value) {
+        
+        hJCDICMBDKE_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 HJCDICMBDKE = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHJCDICMBDKE() {
+        
+        hJCDICMBDKE_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1960,13 +2092,14 @@ public final class MotionInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\020MotionInfo.proto\032\014Vector.proto\032\021Motion" +
-      "State.proto\"\337\001\n\nMotionInfo\022\024\n\003pos\030\001 \001(\0132" +
+      "State.proto\"\211\002\n\nMotionInfo\022\024\n\003pos\030\001 \001(\0132" +
       "\007.Vector\022\024\n\003rot\030\002 \001(\0132\007.Vector\022\026\n\005speed\030" +
       "\003 \001(\0132\007.Vector\022\033\n\005state\030\004 \001(\0162\014.MotionSt" +
       "ate\022\027\n\006params\030\005 \003(\0132\007.Vector\022\030\n\007ref_pos\030" +
       "\006 \001(\0132\007.Vector\022\016\n\006ref_id\030\007 \001(\r\022\022\n\nscene_" +
-      "time\030\010 \001(\r\022\031\n\021interval_velocity\030\t \001(\004B\033\n" +
-      "\031emu.grasscutter.net.protob\006proto3"
+      "time\030\010 \001(\r\022\031\n\021interval_velocity\030\t \001(\004\022\023\n" +
+      "\013BIMCAJGDDOI\030\n \001(\r\022\023\n\013HJCDICMBDKE\030\013 \001(\rB" +
+      "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1979,7 +2112,7 @@ public final class MotionInfoOuterClass {
     internal_static_MotionInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MotionInfo_descriptor,
-        new java.lang.String[] { "Pos", "Rot", "Speed", "State", "Params", "RefPos", "RefId", "SceneTime", "IntervalVelocity", });
+        new java.lang.String[] { "Pos", "Rot", "Speed", "State", "Params", "RefPos", "RefId", "SceneTime", "IntervalVelocity", "BIMCAJGDDOI", "HJCDICMBDKE", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.MotionStateOuterClass.getDescriptor();
   }

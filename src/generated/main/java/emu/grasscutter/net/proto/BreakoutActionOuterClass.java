@@ -153,14 +153,15 @@ public final class BreakoutActionOuterClass {
     int getOffset();
 
     /**
-     * <code>uint64 HCFFMHEFMLJ = 18;</code>
-     * @return The hCFFMHEFMLJ.
+     * <code>uint64 CLKEPICNJJD = 18;</code>
+     * @return The cLKEPICNJJD.
      */
-    long getHCFFMHEFMLJ();
+    long getCLKEPICNJJD();
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
+   * CmdId: 
    * </pre>
    *
    * Protobuf type {@code BreakoutAction}
@@ -320,7 +321,7 @@ public final class BreakoutActionOuterClass {
             }
             case 144: {
 
-              hCFFMHEFMLJ_ = input.readUInt64();
+              cLKEPICNJJD_ = input.readUInt64();
               break;
             }
             default: {
@@ -730,15 +731,15 @@ public final class BreakoutActionOuterClass {
       return offset_;
     }
 
-    public static final int HCFFMHEFMLJ_FIELD_NUMBER = 18;
-    private long hCFFMHEFMLJ_;
+    public static final int CLKEPICNJJD_FIELD_NUMBER = 18;
+    private long cLKEPICNJJD_;
     /**
-     * <code>uint64 HCFFMHEFMLJ = 18;</code>
-     * @return The hCFFMHEFMLJ.
+     * <code>uint64 CLKEPICNJJD = 18;</code>
+     * @return The cLKEPICNJJD.
      */
     @java.lang.Override
-    public long getHCFFMHEFMLJ() {
-      return hCFFMHEFMLJ_;
+    public long getCLKEPICNJJD() {
+      return cLKEPICNJJD_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -806,8 +807,8 @@ public final class BreakoutActionOuterClass {
       if (offset_ != 0) {
         output.writeInt32(17, offset_);
       }
-      if (hCFFMHEFMLJ_ != 0L) {
-        output.writeUInt64(18, hCFFMHEFMLJ_);
+      if (cLKEPICNJJD_ != 0L) {
+        output.writeUInt64(18, cLKEPICNJJD_);
       }
       unknownFields.writeTo(output);
     }
@@ -886,9 +887,9 @@ public final class BreakoutActionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(17, offset_);
       }
-      if (hCFFMHEFMLJ_ != 0L) {
+      if (cLKEPICNJJD_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(18, hCFFMHEFMLJ_);
+          .computeUInt64Size(18, cLKEPICNJJD_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -947,8 +948,8 @@ public final class BreakoutActionOuterClass {
           != other.getExtraBallIndex()) return false;
       if (getOffset()
           != other.getOffset()) return false;
-      if (getHCFFMHEFMLJ()
-          != other.getHCFFMHEFMLJ()) return false;
+      if (getCLKEPICNJJD()
+          != other.getCLKEPICNJJD()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1004,9 +1005,9 @@ public final class BreakoutActionOuterClass {
       hash = (53 * hash) + getExtraBallIndex();
       hash = (37 * hash) + OFFSET_FIELD_NUMBER;
       hash = (53 * hash) + getOffset();
-      hash = (37 * hash) + HCFFMHEFMLJ_FIELD_NUMBER;
+      hash = (37 * hash) + CLKEPICNJJD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getHCFFMHEFMLJ());
+          getCLKEPICNJJD());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1104,7 +1105,8 @@ public final class BreakoutActionOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
+     * CmdId: 
      * </pre>
      *
      * Protobuf type {@code BreakoutAction}
@@ -1190,7 +1192,7 @@ public final class BreakoutActionOuterClass {
 
         offset_ = 0;
 
-        hCFFMHEFMLJ_ = 0L;
+        cLKEPICNJJD_ = 0L;
 
         return this;
       }
@@ -1247,7 +1249,7 @@ public final class BreakoutActionOuterClass {
         }
         result.extraBallIndex_ = extraBallIndex_;
         result.offset_ = offset_;
-        result.hCFFMHEFMLJ_ = hCFFMHEFMLJ_;
+        result.cLKEPICNJJD_ = cLKEPICNJJD_;
         onBuilt();
         return result;
       }
@@ -1347,8 +1349,8 @@ public final class BreakoutActionOuterClass {
         if (other.getOffset() != 0) {
           setOffset(other.getOffset());
         }
-        if (other.getHCFFMHEFMLJ() != 0L) {
-          setHCFFMHEFMLJ(other.getHCFFMHEFMLJ());
+        if (other.getCLKEPICNJJD() != 0L) {
+          setCLKEPICNJJD(other.getCLKEPICNJJD());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2193,33 +2195,33 @@ public final class BreakoutActionOuterClass {
         return this;
       }
 
-      private long hCFFMHEFMLJ_ ;
+      private long cLKEPICNJJD_ ;
       /**
-       * <code>uint64 HCFFMHEFMLJ = 18;</code>
-       * @return The hCFFMHEFMLJ.
+       * <code>uint64 CLKEPICNJJD = 18;</code>
+       * @return The cLKEPICNJJD.
        */
       @java.lang.Override
-      public long getHCFFMHEFMLJ() {
-        return hCFFMHEFMLJ_;
+      public long getCLKEPICNJJD() {
+        return cLKEPICNJJD_;
       }
       /**
-       * <code>uint64 HCFFMHEFMLJ = 18;</code>
-       * @param value The hCFFMHEFMLJ to set.
+       * <code>uint64 CLKEPICNJJD = 18;</code>
+       * @param value The cLKEPICNJJD to set.
        * @return This builder for chaining.
        */
-      public Builder setHCFFMHEFMLJ(long value) {
+      public Builder setCLKEPICNJJD(long value) {
         
-        hCFFMHEFMLJ_ = value;
+        cLKEPICNJJD_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 HCFFMHEFMLJ = 18;</code>
+       * <code>uint64 CLKEPICNJJD = 18;</code>
        * @return This builder for chaining.
        */
-      public Builder clearHCFFMHEFMLJ() {
+      public Builder clearCLKEPICNJJD() {
         
-        hCFFMHEFMLJ_ = 0L;
+        cLKEPICNJJD_ = 0L;
         onChanged();
         return this;
       }
@@ -2303,7 +2305,7 @@ public final class BreakoutActionOuterClass {
       "_count\030\r \001(\r\022\026\n\016has_extra_ball\030\016 \001(\010\022(\n\016" +
       "extra_ball_dir\030\017 \001(\0132\020.BreakoutVector2\022\030" +
       "\n\020extra_ball_index\030\020 \001(\r\022\016\n\006offset\030\021 \001(\005" +
-      "\022\023\n\013HCFFMHEFMLJ\030\022 \001(\004\"\236\001\n\022BreakoutAction" +
+      "\022\023\n\013CLKEPICNJJD\030\022 \001(\004\"\236\001\n\022BreakoutAction" +
       "Type\022\024\n\020ACTION_TYPE_NONE\020\000\022\033\n\027ACTION_TYP" +
       "E_LAUNCH_BALL\020\001\022\034\n\030ACTION_TYPE_DESTROY_B" +
       "ALL\020\002\022\036\n\032ACTION_TYPE_FALLING_OBJECT\020\003\022\027\n" +
@@ -2320,7 +2322,7 @@ public final class BreakoutActionOuterClass {
     internal_static_BreakoutAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BreakoutAction_descriptor,
-        new java.lang.String[] { "ActionType", "ClientGameTime", "ServerGameTime", "IsFailed", "PreIndex", "NewIndex", "Pos", "MoveDir", "Speed", "PeerId", "ElementType", "ElementReactionBuff", "SpeedIncreaseCount", "HasExtraBall", "ExtraBallDir", "ExtraBallIndex", "Offset", "HCFFMHEFMLJ", });
+        new java.lang.String[] { "ActionType", "ClientGameTime", "ServerGameTime", "IsFailed", "PreIndex", "NewIndex", "Pos", "MoveDir", "Speed", "PeerId", "ElementType", "ElementReactionBuff", "SpeedIncreaseCount", "HasExtraBall", "ExtraBallDir", "ExtraBallIndex", "Offset", "CLKEPICNJJD", });
     emu.grasscutter.net.proto.BreakoutVector2OuterClass.getDescriptor();
   }
 

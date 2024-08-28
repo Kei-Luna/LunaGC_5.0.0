@@ -48,10 +48,6 @@ public final class AvatarSkillInfoOuterClass {
     int getMaxChargeCount();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code AvatarSkillInfo}
    */
   public static final class AvatarSkillInfo extends
@@ -409,10 +405,6 @@ public final class AvatarSkillInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code AvatarSkillInfo}
      */
     public static final class Builder extends

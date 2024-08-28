@@ -40,10 +40,6 @@ public final class PropPairOuterClass {
     emu.grasscutter.net.proto.PropValueOuterClass.PropValueOrBuilder getPropValueOrBuilder();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code PropPair}
    */
   public static final class PropPair extends
@@ -347,10 +343,6 @@ public final class PropPairOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code PropPair}
      */
     public static final class Builder extends

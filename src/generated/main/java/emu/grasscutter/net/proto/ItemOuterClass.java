@@ -78,10 +78,6 @@ public final class ItemOuterClass {
     public emu.grasscutter.net.proto.ItemOuterClass.Item.DetailCase getDetailCase();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code Item}
    */
   public static final class Item extends
@@ -590,10 +586,6 @@ public final class ItemOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code Item}
      */
     public static final class Builder extends
@@ -1357,7 +1349,7 @@ public final class ItemOuterClass {
       "o\032\017Furniture.proto\"\210\001\n\004Item\022\017\n\007item_id\030\001" +
       " \001(\r\022\014\n\004guid\030\002 \001(\004\022\035\n\010material\030\005 \001(\0132\t.M" +
       "aterialH\000\022\027\n\005equip\030\006 \001(\0132\006.EquipH\000\022\037\n\tfu" +
-      "rniture\030\007 \001(\0132\n.FurnitureH\000B\010\n\006detailB\033\n" +
+      "rniture\030\007 \001(\0132\n.FurnitureH\000B\010\n\006DetailB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

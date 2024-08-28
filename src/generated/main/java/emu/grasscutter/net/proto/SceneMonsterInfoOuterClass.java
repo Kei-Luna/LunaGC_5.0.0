@@ -260,10 +260,6 @@ public final class SceneMonsterInfoOuterClass {
     public emu.grasscutter.net.proto.SceneMonsterInfoOuterClass.SceneMonsterInfo.ContentCase getContentCase();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code SceneMonsterInfo}
    */
   public static final class SceneMonsterInfo extends
@@ -1510,10 +1506,6 @@ public final class SceneMonsterInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code SceneMonsterInfo}
      */
     public static final class Builder extends
@@ -3467,7 +3459,7 @@ public final class SceneMonsterInfoOuterClass {
       "m\030\027 \001(\r\022#\n\tfish_info\0302 \001(\0132\016.SceneFishIn" +
       "foH\000\022/\n\022fishtank_fish_info\0303 \001(\0132\021.Fisht" +
       "ankFishInfoH\000\0323\n\021SummonTagMapEntry\022\013\n\003ke" +
-      "y\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\t\n\007contentB\033\n" +
+      "y\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\t\n\007ContentB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

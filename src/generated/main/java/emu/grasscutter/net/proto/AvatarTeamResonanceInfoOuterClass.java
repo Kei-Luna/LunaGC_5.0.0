@@ -19,56 +19,52 @@ public final class AvatarTeamResonanceInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 entity_id = 7;</code>
+     * <code>uint32 entity_id = 1;</code>
      * @return The entityId.
      */
     int getEntityId();
 
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
-     * @return A list containing the aPADELCPLGE.
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+     * @return A list containing the aJMOCMHLEOI.
      */
-    java.util.List<java.lang.Integer> getAPADELCPLGEList();
+    java.util.List<java.lang.Integer> getAJMOCMHLEOIList();
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
-     * @return The count of aPADELCPLGE.
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+     * @return The count of aJMOCMHLEOI.
      */
-    int getAPADELCPLGECount();
+    int getAJMOCMHLEOICount();
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
      * @param index The index of the element to return.
-     * @return The aPADELCPLGE at the given index.
+     * @return The aJMOCMHLEOI at the given index.
      */
-    int getAPADELCPLGE(int index);
+    int getAJMOCMHLEOI(int index);
 
     /**
-     * <code>uint64 avatar_guid = 6;</code>
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @return A list containing the dGAGDLKNFFP.
+     */
+    java.util.List<java.lang.Integer> getDGAGDLKNFFPList();
+    /**
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @return The count of dGAGDLKNFFP.
+     */
+    int getDGAGDLKNFFPCount();
+    /**
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @param index The index of the element to return.
+     * @return The dGAGDLKNFFP at the given index.
+     */
+    int getDGAGDLKNFFP(int index);
+
+    /**
+     * <code>uint64 avatar_guid = 15;</code>
      * @return The avatarGuid.
      */
     long getAvatarGuid();
-
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @return A list containing the gFJMLEAFNBM.
-     */
-    java.util.List<java.lang.Integer> getGFJMLEAFNBMList();
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @return The count of gFJMLEAFNBM.
-     */
-    int getGFJMLEAFNBMCount();
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @param index The index of the element to return.
-     * @return The gFJMLEAFNBM at the given index.
-     */
-    int getGFJMLEAFNBM(int index);
   }
   /**
-   * <pre>
-   * Obf: COBALHBKFBJ
-   * </pre>
-   *
    * Protobuf type {@code AvatarTeamResonanceInfo}
    */
   public static final class AvatarTeamResonanceInfo extends
@@ -81,8 +77,8 @@ public final class AvatarTeamResonanceInfoOuterClass {
       super(builder);
     }
     private AvatarTeamResonanceInfo() {
-      aPADELCPLGE_ = emptyIntList();
-      gFJMLEAFNBM_ = emptyIntList();
+      aJMOCMHLEOI_ = emptyIntList();
+      dGAGDLKNFFP_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -117,55 +113,55 @@ public final class AvatarTeamResonanceInfoOuterClass {
               done = true;
               break;
             case 8: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                aPADELCPLGE_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              aPADELCPLGE_.addInt(input.readUInt32());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                aPADELCPLGE_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                aPADELCPLGE_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 48: {
-
-              avatarGuid_ = input.readUInt64();
-              break;
-            }
-            case 56: {
 
               entityId_ = input.readUInt32();
               break;
             }
-            case 112: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                gFJMLEAFNBM_ = newIntList();
-                mutable_bitField0_ |= 0x00000002;
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                aJMOCMHLEOI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
               }
-              gFJMLEAFNBM_.addInt(input.readUInt32());
+              aJMOCMHLEOI_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                aJMOCMHLEOI_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                aJMOCMHLEOI_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 88: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                dGAGDLKNFFP_ = newIntList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              dGAGDLKNFFP_.addInt(input.readUInt32());
+              break;
+            }
+            case 90: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
-                gFJMLEAFNBM_ = newIntList();
+                dGAGDLKNFFP_ = newIntList();
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                gFJMLEAFNBM_.addInt(input.readUInt32());
+                dGAGDLKNFFP_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
+              break;
+            }
+            case 120: {
+
+              avatarGuid_ = input.readUInt64();
               break;
             }
             default: {
@@ -184,10 +180,10 @@ public final class AvatarTeamResonanceInfoOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          aPADELCPLGE_.makeImmutable(); // C
+          aJMOCMHLEOI_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          gFJMLEAFNBM_.makeImmutable(); // C
+          dGAGDLKNFFP_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -206,10 +202,10 @@ public final class AvatarTeamResonanceInfoOuterClass {
               emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo.class, emu.grasscutter.net.proto.AvatarTeamResonanceInfoOuterClass.AvatarTeamResonanceInfo.Builder.class);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 7;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 7;</code>
+     * <code>uint32 entity_id = 1;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -217,72 +213,72 @@ public final class AvatarTeamResonanceInfoOuterClass {
       return entityId_;
     }
 
-    public static final int APADELCPLGE_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.IntList aPADELCPLGE_;
+    public static final int AJMOCMHLEOI_FIELD_NUMBER = 7;
+    private com.google.protobuf.Internal.IntList aJMOCMHLEOI_;
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
-     * @return A list containing the aPADELCPLGE.
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+     * @return A list containing the aJMOCMHLEOI.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getAPADELCPLGEList() {
-      return aPADELCPLGE_;
+        getAJMOCMHLEOIList() {
+      return aJMOCMHLEOI_;
     }
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
-     * @return The count of aPADELCPLGE.
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+     * @return The count of aJMOCMHLEOI.
      */
-    public int getAPADELCPLGECount() {
-      return aPADELCPLGE_.size();
+    public int getAJMOCMHLEOICount() {
+      return aJMOCMHLEOI_.size();
     }
     /**
-     * <code>repeated uint32 APADELCPLGE = 1;</code>
+     * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
      * @param index The index of the element to return.
-     * @return The aPADELCPLGE at the given index.
+     * @return The aJMOCMHLEOI at the given index.
      */
-    public int getAPADELCPLGE(int index) {
-      return aPADELCPLGE_.getInt(index);
+    public int getAJMOCMHLEOI(int index) {
+      return aJMOCMHLEOI_.getInt(index);
     }
-    private int aPADELCPLGEMemoizedSerializedSize = -1;
+    private int aJMOCMHLEOIMemoizedSerializedSize = -1;
 
-    public static final int AVATAR_GUID_FIELD_NUMBER = 6;
+    public static final int DGAGDLKNFFP_FIELD_NUMBER = 11;
+    private com.google.protobuf.Internal.IntList dGAGDLKNFFP_;
+    /**
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @return A list containing the dGAGDLKNFFP.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getDGAGDLKNFFPList() {
+      return dGAGDLKNFFP_;
+    }
+    /**
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @return The count of dGAGDLKNFFP.
+     */
+    public int getDGAGDLKNFFPCount() {
+      return dGAGDLKNFFP_.size();
+    }
+    /**
+     * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+     * @param index The index of the element to return.
+     * @return The dGAGDLKNFFP at the given index.
+     */
+    public int getDGAGDLKNFFP(int index) {
+      return dGAGDLKNFFP_.getInt(index);
+    }
+    private int dGAGDLKNFFPMemoizedSerializedSize = -1;
+
+    public static final int AVATAR_GUID_FIELD_NUMBER = 15;
     private long avatarGuid_;
     /**
-     * <code>uint64 avatar_guid = 6;</code>
+     * <code>uint64 avatar_guid = 15;</code>
      * @return The avatarGuid.
      */
     @java.lang.Override
     public long getAvatarGuid() {
       return avatarGuid_;
     }
-
-    public static final int GFJMLEAFNBM_FIELD_NUMBER = 14;
-    private com.google.protobuf.Internal.IntList gFJMLEAFNBM_;
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @return A list containing the gFJMLEAFNBM.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getGFJMLEAFNBMList() {
-      return gFJMLEAFNBM_;
-    }
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @return The count of gFJMLEAFNBM.
-     */
-    public int getGFJMLEAFNBMCount() {
-      return gFJMLEAFNBM_.size();
-    }
-    /**
-     * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-     * @param index The index of the element to return.
-     * @return The gFJMLEAFNBM at the given index.
-     */
-    public int getGFJMLEAFNBM(int index) {
-      return gFJMLEAFNBM_.getInt(index);
-    }
-    private int gFJMLEAFNBMMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -299,25 +295,25 @@ public final class AvatarTeamResonanceInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (getAPADELCPLGEList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(aPADELCPLGEMemoizedSerializedSize);
+      if (entityId_ != 0) {
+        output.writeUInt32(1, entityId_);
       }
-      for (int i = 0; i < aPADELCPLGE_.size(); i++) {
-        output.writeUInt32NoTag(aPADELCPLGE_.getInt(i));
+      if (getAJMOCMHLEOIList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(aJMOCMHLEOIMemoizedSerializedSize);
+      }
+      for (int i = 0; i < aJMOCMHLEOI_.size(); i++) {
+        output.writeUInt32NoTag(aJMOCMHLEOI_.getInt(i));
+      }
+      if (getDGAGDLKNFFPList().size() > 0) {
+        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(dGAGDLKNFFPMemoizedSerializedSize);
+      }
+      for (int i = 0; i < dGAGDLKNFFP_.size(); i++) {
+        output.writeUInt32NoTag(dGAGDLKNFFP_.getInt(i));
       }
       if (avatarGuid_ != 0L) {
-        output.writeUInt64(6, avatarGuid_);
-      }
-      if (entityId_ != 0) {
-        output.writeUInt32(7, entityId_);
-      }
-      if (getGFJMLEAFNBMList().size() > 0) {
-        output.writeUInt32NoTag(114);
-        output.writeUInt32NoTag(gFJMLEAFNBMMemoizedSerializedSize);
-      }
-      for (int i = 0; i < gFJMLEAFNBM_.size(); i++) {
-        output.writeUInt32NoTag(gFJMLEAFNBM_.getInt(i));
+        output.writeUInt64(15, avatarGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -328,41 +324,41 @@ public final class AvatarTeamResonanceInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (entityId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, entityId_);
+      }
       {
         int dataSize = 0;
-        for (int i = 0; i < aPADELCPLGE_.size(); i++) {
+        for (int i = 0; i < aJMOCMHLEOI_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(aPADELCPLGE_.getInt(i));
+            .computeUInt32SizeNoTag(aJMOCMHLEOI_.getInt(i));
         }
         size += dataSize;
-        if (!getAPADELCPLGEList().isEmpty()) {
+        if (!getAJMOCMHLEOIList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        aPADELCPLGEMemoizedSerializedSize = dataSize;
+        aJMOCMHLEOIMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dGAGDLKNFFP_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dGAGDLKNFFP_.getInt(i));
+        }
+        size += dataSize;
+        if (!getDGAGDLKNFFPList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        dGAGDLKNFFPMemoizedSerializedSize = dataSize;
       }
       if (avatarGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, avatarGuid_);
-      }
-      if (entityId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, entityId_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < gFJMLEAFNBM_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(gFJMLEAFNBM_.getInt(i));
-        }
-        size += dataSize;
-        if (!getGFJMLEAFNBMList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        gFJMLEAFNBMMemoizedSerializedSize = dataSize;
+          .computeUInt64Size(15, avatarGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -381,12 +377,12 @@ public final class AvatarTeamResonanceInfoOuterClass {
 
       if (getEntityId()
           != other.getEntityId()) return false;
-      if (!getAPADELCPLGEList()
-          .equals(other.getAPADELCPLGEList())) return false;
+      if (!getAJMOCMHLEOIList()
+          .equals(other.getAJMOCMHLEOIList())) return false;
+      if (!getDGAGDLKNFFPList()
+          .equals(other.getDGAGDLKNFFPList())) return false;
       if (getAvatarGuid()
           != other.getAvatarGuid()) return false;
-      if (!getGFJMLEAFNBMList()
-          .equals(other.getGFJMLEAFNBMList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -400,17 +396,17 @@ public final class AvatarTeamResonanceInfoOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEntityId();
-      if (getAPADELCPLGECount() > 0) {
-        hash = (37 * hash) + APADELCPLGE_FIELD_NUMBER;
-        hash = (53 * hash) + getAPADELCPLGEList().hashCode();
+      if (getAJMOCMHLEOICount() > 0) {
+        hash = (37 * hash) + AJMOCMHLEOI_FIELD_NUMBER;
+        hash = (53 * hash) + getAJMOCMHLEOIList().hashCode();
+      }
+      if (getDGAGDLKNFFPCount() > 0) {
+        hash = (37 * hash) + DGAGDLKNFFP_FIELD_NUMBER;
+        hash = (53 * hash) + getDGAGDLKNFFPList().hashCode();
       }
       hash = (37 * hash) + AVATAR_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getAvatarGuid());
-      if (getGFJMLEAFNBMCount() > 0) {
-        hash = (37 * hash) + GFJMLEAFNBM_FIELD_NUMBER;
-        hash = (53 * hash) + getGFJMLEAFNBMList().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -507,10 +503,6 @@ public final class AvatarTeamResonanceInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: COBALHBKFBJ
-     * </pre>
-     *
      * Protobuf type {@code AvatarTeamResonanceInfo}
      */
     public static final class Builder extends
@@ -550,12 +542,12 @@ public final class AvatarTeamResonanceInfoOuterClass {
         super.clear();
         entityId_ = 0;
 
-        aPADELCPLGE_ = emptyIntList();
+        aJMOCMHLEOI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        dGAGDLKNFFP_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         avatarGuid_ = 0L;
 
-        gFJMLEAFNBM_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -585,16 +577,16 @@ public final class AvatarTeamResonanceInfoOuterClass {
         int from_bitField0_ = bitField0_;
         result.entityId_ = entityId_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          aPADELCPLGE_.makeImmutable();
+          aJMOCMHLEOI_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.aPADELCPLGE_ = aPADELCPLGE_;
-        result.avatarGuid_ = avatarGuid_;
+        result.aJMOCMHLEOI_ = aJMOCMHLEOI_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          gFJMLEAFNBM_.makeImmutable();
+          dGAGDLKNFFP_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.gFJMLEAFNBM_ = gFJMLEAFNBM_;
+        result.dGAGDLKNFFP_ = dGAGDLKNFFP_;
+        result.avatarGuid_ = avatarGuid_;
         onBuilt();
         return result;
       }
@@ -646,28 +638,28 @@ public final class AvatarTeamResonanceInfoOuterClass {
         if (other.getEntityId() != 0) {
           setEntityId(other.getEntityId());
         }
-        if (!other.aPADELCPLGE_.isEmpty()) {
-          if (aPADELCPLGE_.isEmpty()) {
-            aPADELCPLGE_ = other.aPADELCPLGE_;
+        if (!other.aJMOCMHLEOI_.isEmpty()) {
+          if (aJMOCMHLEOI_.isEmpty()) {
+            aJMOCMHLEOI_ = other.aJMOCMHLEOI_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureAPADELCPLGEIsMutable();
-            aPADELCPLGE_.addAll(other.aPADELCPLGE_);
+            ensureAJMOCMHLEOIIsMutable();
+            aJMOCMHLEOI_.addAll(other.aJMOCMHLEOI_);
+          }
+          onChanged();
+        }
+        if (!other.dGAGDLKNFFP_.isEmpty()) {
+          if (dGAGDLKNFFP_.isEmpty()) {
+            dGAGDLKNFFP_ = other.dGAGDLKNFFP_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDGAGDLKNFFPIsMutable();
+            dGAGDLKNFFP_.addAll(other.dGAGDLKNFFP_);
           }
           onChanged();
         }
         if (other.getAvatarGuid() != 0L) {
           setAvatarGuid(other.getAvatarGuid());
-        }
-        if (!other.gFJMLEAFNBM_.isEmpty()) {
-          if (gFJMLEAFNBM_.isEmpty()) {
-            gFJMLEAFNBM_ = other.gFJMLEAFNBM_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureGFJMLEAFNBMIsMutable();
-            gFJMLEAFNBM_.addAll(other.gFJMLEAFNBM_);
-          }
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -701,7 +693,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 7;</code>
+       * <code>uint32 entity_id = 1;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -709,7 +701,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 7;</code>
+       * <code>uint32 entity_id = 1;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -720,7 +712,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 7;</code>
+       * <code>uint32 entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -730,88 +722,167 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList aPADELCPLGE_ = emptyIntList();
-      private void ensureAPADELCPLGEIsMutable() {
+      private com.google.protobuf.Internal.IntList aJMOCMHLEOI_ = emptyIntList();
+      private void ensureAJMOCMHLEOIIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          aPADELCPLGE_ = mutableCopy(aPADELCPLGE_);
+          aJMOCMHLEOI_ = mutableCopy(aJMOCMHLEOI_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
-       * @return A list containing the aPADELCPLGE.
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+       * @return A list containing the aJMOCMHLEOI.
        */
       public java.util.List<java.lang.Integer>
-          getAPADELCPLGEList() {
+          getAJMOCMHLEOIList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(aPADELCPLGE_) : aPADELCPLGE_;
+                 java.util.Collections.unmodifiableList(aJMOCMHLEOI_) : aJMOCMHLEOI_;
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
-       * @return The count of aPADELCPLGE.
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+       * @return The count of aJMOCMHLEOI.
        */
-      public int getAPADELCPLGECount() {
-        return aPADELCPLGE_.size();
+      public int getAJMOCMHLEOICount() {
+        return aJMOCMHLEOI_.size();
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
        * @param index The index of the element to return.
-       * @return The aPADELCPLGE at the given index.
+       * @return The aJMOCMHLEOI at the given index.
        */
-      public int getAPADELCPLGE(int index) {
-        return aPADELCPLGE_.getInt(index);
+      public int getAJMOCMHLEOI(int index) {
+        return aJMOCMHLEOI_.getInt(index);
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
        * @param index The index to set the value at.
-       * @param value The aPADELCPLGE to set.
+       * @param value The aJMOCMHLEOI to set.
        * @return This builder for chaining.
        */
-      public Builder setAPADELCPLGE(
+      public Builder setAJMOCMHLEOI(
           int index, int value) {
-        ensureAPADELCPLGEIsMutable();
-        aPADELCPLGE_.setInt(index, value);
+        ensureAJMOCMHLEOIIsMutable();
+        aJMOCMHLEOI_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
-       * @param value The aPADELCPLGE to add.
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+       * @param value The aJMOCMHLEOI to add.
        * @return This builder for chaining.
        */
-      public Builder addAPADELCPLGE(int value) {
-        ensureAPADELCPLGEIsMutable();
-        aPADELCPLGE_.addInt(value);
+      public Builder addAJMOCMHLEOI(int value) {
+        ensureAJMOCMHLEOIIsMutable();
+        aJMOCMHLEOI_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
-       * @param values The aPADELCPLGE to add.
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
+       * @param values The aJMOCMHLEOI to add.
        * @return This builder for chaining.
        */
-      public Builder addAllAPADELCPLGE(
+      public Builder addAllAJMOCMHLEOI(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureAPADELCPLGEIsMutable();
+        ensureAJMOCMHLEOIIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, aPADELCPLGE_);
+            values, aJMOCMHLEOI_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 APADELCPLGE = 1;</code>
+       * <code>repeated uint32 AJMOCMHLEOI = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAPADELCPLGE() {
-        aPADELCPLGE_ = emptyIntList();
+      public Builder clearAJMOCMHLEOI() {
+        aJMOCMHLEOI_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList dGAGDLKNFFP_ = emptyIntList();
+      private void ensureDGAGDLKNFFPIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          dGAGDLKNFFP_ = mutableCopy(dGAGDLKNFFP_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @return A list containing the dGAGDLKNFFP.
+       */
+      public java.util.List<java.lang.Integer>
+          getDGAGDLKNFFPList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(dGAGDLKNFFP_) : dGAGDLKNFFP_;
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @return The count of dGAGDLKNFFP.
+       */
+      public int getDGAGDLKNFFPCount() {
+        return dGAGDLKNFFP_.size();
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @param index The index of the element to return.
+       * @return The dGAGDLKNFFP at the given index.
+       */
+      public int getDGAGDLKNFFP(int index) {
+        return dGAGDLKNFFP_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The dGAGDLKNFFP to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDGAGDLKNFFP(
+          int index, int value) {
+        ensureDGAGDLKNFFPIsMutable();
+        dGAGDLKNFFP_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @param value The dGAGDLKNFFP to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDGAGDLKNFFP(int value) {
+        ensureDGAGDLKNFFPIsMutable();
+        dGAGDLKNFFP_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @param values The dGAGDLKNFFP to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDGAGDLKNFFP(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDGAGDLKNFFPIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dGAGDLKNFFP_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 DGAGDLKNFFP = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDGAGDLKNFFP() {
+        dGAGDLKNFFP_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
       private long avatarGuid_ ;
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 15;</code>
        * @return The avatarGuid.
        */
       @java.lang.Override
@@ -819,7 +890,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return avatarGuid_;
       }
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 15;</code>
        * @param value The avatarGuid to set.
        * @return This builder for chaining.
        */
@@ -830,91 +901,12 @@ public final class AvatarTeamResonanceInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint64 avatar_guid = 6;</code>
+       * <code>uint64 avatar_guid = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvatarGuid() {
         
         avatarGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList gFJMLEAFNBM_ = emptyIntList();
-      private void ensureGFJMLEAFNBMIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          gFJMLEAFNBM_ = mutableCopy(gFJMLEAFNBM_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @return A list containing the gFJMLEAFNBM.
-       */
-      public java.util.List<java.lang.Integer>
-          getGFJMLEAFNBMList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(gFJMLEAFNBM_) : gFJMLEAFNBM_;
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @return The count of gFJMLEAFNBM.
-       */
-      public int getGFJMLEAFNBMCount() {
-        return gFJMLEAFNBM_.size();
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @param index The index of the element to return.
-       * @return The gFJMLEAFNBM at the given index.
-       */
-      public int getGFJMLEAFNBM(int index) {
-        return gFJMLEAFNBM_.getInt(index);
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @param index The index to set the value at.
-       * @param value The gFJMLEAFNBM to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGFJMLEAFNBM(
-          int index, int value) {
-        ensureGFJMLEAFNBMIsMutable();
-        gFJMLEAFNBM_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @param value The gFJMLEAFNBM to add.
-       * @return This builder for chaining.
-       */
-      public Builder addGFJMLEAFNBM(int value) {
-        ensureGFJMLEAFNBMIsMutable();
-        gFJMLEAFNBM_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @param values The gFJMLEAFNBM to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllGFJMLEAFNBM(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureGFJMLEAFNBMIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, gFJMLEAFNBM_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated uint32 GFJMLEAFNBM = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGFJMLEAFNBM() {
-        gFJMLEAFNBM_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -986,9 +978,9 @@ public final class AvatarTeamResonanceInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035AvatarTeamResonanceInfo.proto\"k\n\027Avata" +
-      "rTeamResonanceInfo\022\021\n\tentity_id\030\007 \001(\r\022\023\n" +
-      "\013APADELCPLGE\030\001 \003(\r\022\023\n\013avatar_guid\030\006 \001(\004\022" +
-      "\023\n\013GFJMLEAFNBM\030\016 \003(\rB\033\n\031emu.grasscutter." +
+      "rTeamResonanceInfo\022\021\n\tentity_id\030\001 \001(\r\022\023\n" +
+      "\013AJMOCMHLEOI\030\007 \003(\r\022\023\n\013DGAGDLKNFFP\030\013 \003(\r\022" +
+      "\023\n\013avatar_guid\030\017 \001(\004B\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1000,7 +992,7 @@ public final class AvatarTeamResonanceInfoOuterClass {
     internal_static_AvatarTeamResonanceInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AvatarTeamResonanceInfo_descriptor,
-        new java.lang.String[] { "EntityId", "APADELCPLGE", "AvatarGuid", "GFJMLEAFNBM", });
+        new java.lang.String[] { "EntityId", "AJMOCMHLEOI", "DGAGDLKNFFP", "AvatarGuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

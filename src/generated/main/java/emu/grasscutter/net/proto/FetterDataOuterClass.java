@@ -48,10 +48,6 @@ public final class FetterDataOuterClass {
     int getCondIndexList(int index);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code FetterData}
    */
   public static final class FetterData extends
@@ -409,10 +405,6 @@ public final class FetterDataOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code FetterData}
      */
     public static final class Builder extends

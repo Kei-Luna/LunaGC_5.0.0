@@ -306,12 +306,14 @@ public final class SceneAvatarInfoOuterClass {
      * @return The animHash.
      */
     int getAnimHash();
+
+    /**
+     * <code>uint32 KCINBOMOIGL = 23;</code>
+     * @return The kCINBOMOIGL.
+     */
+    int getKCINBOMOIGL();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code SceneAvatarInfo}
    */
   public static final class SceneAvatarInfo extends
@@ -578,6 +580,11 @@ public final class SceneAvatarInfoOuterClass {
             case 176: {
 
               animHash_ = input.readUInt32();
+              break;
+            }
+            case 184: {
+
+              kCINBOMOIGL_ = input.readUInt32();
               break;
             }
             default: {
@@ -1186,6 +1193,17 @@ public final class SceneAvatarInfoOuterClass {
       return animHash_;
     }
 
+    public static final int KCINBOMOIGL_FIELD_NUMBER = 23;
+    private int kCINBOMOIGL_;
+    /**
+     * <code>uint32 KCINBOMOIGL = 23;</code>
+     * @return The kCINBOMOIGL.
+     */
+    @java.lang.Override
+    public int getKCINBOMOIGL() {
+      return kCINBOMOIGL_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1285,6 +1303,9 @@ public final class SceneAvatarInfoOuterClass {
       }
       if (animHash_ != 0) {
         output.writeUInt32(22, animHash_);
+      }
+      if (kCINBOMOIGL_ != 0) {
+        output.writeUInt32(23, kCINBOMOIGL_);
       }
       unknownFields.writeTo(output);
     }
@@ -1431,6 +1452,10 @@ public final class SceneAvatarInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(22, animHash_);
       }
+      if (kCINBOMOIGL_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(23, kCINBOMOIGL_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1497,6 +1522,8 @@ public final class SceneAvatarInfoOuterClass {
       }
       if (getAnimHash()
           != other.getAnimHash()) return false;
+      if (getKCINBOMOIGL()
+          != other.getKCINBOMOIGL()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1573,6 +1600,8 @@ public final class SceneAvatarInfoOuterClass {
       }
       hash = (37 * hash) + ANIM_HASH_FIELD_NUMBER;
       hash = (53 * hash) + getAnimHash();
+      hash = (37 * hash) + KCINBOMOIGL_FIELD_NUMBER;
+      hash = (53 * hash) + getKCINBOMOIGL();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1669,10 +1698,6 @@ public final class SceneAvatarInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code SceneAvatarInfo}
      */
     public static final class Builder extends
@@ -1798,6 +1823,8 @@ public final class SceneAvatarInfoOuterClass {
         }
         animHash_ = 0;
 
+        kCINBOMOIGL_ = 0;
+
         return this;
       }
 
@@ -1892,6 +1919,7 @@ public final class SceneAvatarInfoOuterClass {
           result.excelInfo_ = excelInfoBuilder_.build();
         }
         result.animHash_ = animHash_;
+        result.kCINBOMOIGL_ = kCINBOMOIGL_;
         onBuilt();
         return result;
       }
@@ -2074,6 +2102,9 @@ public final class SceneAvatarInfoOuterClass {
         }
         if (other.getAnimHash() != 0) {
           setAnimHash(other.getAnimHash());
+        }
+        if (other.getKCINBOMOIGL() != 0) {
+          setKCINBOMOIGL(other.getKCINBOMOIGL());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3823,6 +3854,37 @@ public final class SceneAvatarInfoOuterClass {
         onChanged();
         return this;
       }
+
+      private int kCINBOMOIGL_ ;
+      /**
+       * <code>uint32 KCINBOMOIGL = 23;</code>
+       * @return The kCINBOMOIGL.
+       */
+      @java.lang.Override
+      public int getKCINBOMOIGL() {
+        return kCINBOMOIGL_;
+      }
+      /**
+       * <code>uint32 KCINBOMOIGL = 23;</code>
+       * @param value The kCINBOMOIGL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKCINBOMOIGL(int value) {
+        
+        kCINBOMOIGL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 KCINBOMOIGL = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKCINBOMOIGL() {
+        
+        kCINBOMOIGL_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3903,7 +3965,7 @@ public final class SceneAvatarInfoOuterClass {
       "\n\025SceneAvatarInfo.proto\032\025SceneWeaponInfo" +
       ".proto\032\030SceneReliquaryInfo.proto\032\020Server" +
       "Buff.proto\032\024CurVehicleInfo.proto\032\025Avatar" +
-      "ExcelInfo.proto\"\235\006\n\017SceneAvatarInfo\022\013\n\003u" +
+      "ExcelInfo.proto\"\262\006\n\017SceneAvatarInfo\022\013\n\003u" +
       "id\030\001 \001(\r\022\021\n\tavatar_id\030\002 \001(\r\022\014\n\004guid\030\003 \001(" +
       "\004\022\017\n\007peer_id\030\004 \001(\r\022\025\n\requip_id_list\030\005 \003(" +
       "\r\022\026\n\016skill_depot_id\030\006 \001(\r\022\026\n\016talent_id_l" +
@@ -3920,11 +3982,11 @@ public final class SceneAvatarInfoOuterClass {
       "\n\tborn_time\030\022 \001(\r\022\022\n\ncostume_id\030\023 \001(\r\022)\n" +
       "\020cur_vehicle_info\030\024 \001(\0132\017.CurVehicleInfo" +
       "\022$\n\nexcel_info\030\025 \001(\0132\020.AvatarExcelInfo\022\021" +
-      "\n\tanim_hash\030\026 \001(\r\0324\n\022SkillLevelMapEntry\022" +
-      "\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001\032>\n\034Proud" +
-      "SkillExtraLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
-      "value\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.net.p" +
-      "rotob\006proto3"
+      "\n\tanim_hash\030\026 \001(\r\022\023\n\013KCINBOMOIGL\030\027 \001(\r\0324" +
+      "\n\022SkillLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005val" +
+      "ue\030\002 \001(\r:\0028\001\032>\n\034ProudSkillExtraLevelMapE" +
+      "ntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031" +
+      "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3940,7 +4002,7 @@ public final class SceneAvatarInfoOuterClass {
     internal_static_SceneAvatarInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneAvatarInfo_descriptor,
-        new java.lang.String[] { "Uid", "AvatarId", "Guid", "PeerId", "EquipIdList", "SkillDepotId", "TalentIdList", "Weapon", "ReliquaryList", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ProudSkillExtraLevelMap", "ServerBuffList", "TeamResonanceList", "WearingFlycloakId", "BornTime", "CostumeId", "CurVehicleInfo", "ExcelInfo", "AnimHash", });
+        new java.lang.String[] { "Uid", "AvatarId", "Guid", "PeerId", "EquipIdList", "SkillDepotId", "TalentIdList", "Weapon", "ReliquaryList", "CoreProudSkillLevel", "InherentProudSkillList", "SkillLevelMap", "ProudSkillExtraLevelMap", "ServerBuffList", "TeamResonanceList", "WearingFlycloakId", "BornTime", "CostumeId", "CurVehicleInfo", "ExcelInfo", "AnimHash", "KCINBOMOIGL", });
     internal_static_SceneAvatarInfo_SkillLevelMapEntry_descriptor =
       internal_static_SceneAvatarInfo_descriptor.getNestedTypes().get(0);
     internal_static_SceneAvatarInfo_SkillLevelMapEntry_fieldAccessorTable = new

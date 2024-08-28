@@ -60,7 +60,8 @@ public final class FoundationInfoOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
+   * CmdId: 
    * </pre>
    *
    * Protobuf type {@code FoundationInfo}
@@ -457,7 +458,8 @@ public final class FoundationInfoOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
+     * CmdId: 
      * </pre>
      *
      * Protobuf type {@code FoundationInfo}

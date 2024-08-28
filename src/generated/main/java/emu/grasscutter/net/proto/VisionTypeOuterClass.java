@@ -15,10 +15,6 @@ public final class VisionTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf enum {@code VisionType}
    */
   public enum VisionType

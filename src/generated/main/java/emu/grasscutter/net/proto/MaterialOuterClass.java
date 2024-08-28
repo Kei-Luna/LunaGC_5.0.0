@@ -40,10 +40,6 @@ public final class MaterialOuterClass {
     emu.grasscutter.net.proto.MaterialDeleteInfoOuterClass.MaterialDeleteInfoOrBuilder getDeleteInfoOrBuilder();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code Material}
    */
   public static final class Material extends
@@ -347,10 +343,6 @@ public final class MaterialOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code Material}
      */
     public static final class Builder extends

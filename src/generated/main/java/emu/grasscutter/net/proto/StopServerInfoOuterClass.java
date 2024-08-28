@@ -55,10 +55,6 @@ public final class StopServerInfoOuterClass {
         getContentMsgBytes();
   }
   /**
-   * <pre>
-   * Obf: DIAMBGNPCHH
-   * </pre>
-   *
    * Protobuf type {@code StopServerInfo}
    */
   public static final class StopServerInfo extends
@@ -444,10 +440,6 @@ public final class StopServerInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: DIAMBGNPCHH
-     * </pre>
-     *
      * Protobuf type {@code StopServerInfo}
      */
     public static final class Builder extends

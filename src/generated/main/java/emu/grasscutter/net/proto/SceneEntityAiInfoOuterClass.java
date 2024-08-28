@@ -20,7 +20,7 @@ public final class SceneEntityAiInfoOuterClass {
 
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>bool is_ai_open = 1;</code>
@@ -30,7 +30,7 @@ public final class SceneEntityAiInfoOuterClass {
 
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -39,7 +39,7 @@ public final class SceneEntityAiInfoOuterClass {
     boolean hasBornPos();
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -48,7 +48,7 @@ public final class SceneEntityAiInfoOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.Vector getBornPos();
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -179,14 +179,15 @@ public final class SceneEntityAiInfoOuterClass {
     int getCurTactic();
 
     /**
-     * <code>bool NMECJFPHFGH = 8;</code>
-     * @return The nMECJFPHFGH.
+     * <code>bool AADJDKIFENL = 8;</code>
+     * @return The aADJDKIFENL.
      */
-    boolean getNMECJFPHFGH();
+    boolean getAADJDKIFENL();
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
+   * CmdId: 
    * </pre>
    *
    * Protobuf type {@code SceneEntityAiInfo}
@@ -311,7 +312,7 @@ public final class SceneEntityAiInfoOuterClass {
             }
             case 64: {
 
-              nMECJFPHFGH_ = input.readBool();
+              aADJDKIFENL_ = input.readBool();
               break;
             }
             default: {
@@ -366,7 +367,7 @@ public final class SceneEntityAiInfoOuterClass {
     private boolean isAiOpen_;
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>bool is_ai_open = 1;</code>
@@ -381,7 +382,7 @@ public final class SceneEntityAiInfoOuterClass {
     private emu.grasscutter.net.proto.VectorOuterClass.Vector bornPos_;
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -393,7 +394,7 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -405,7 +406,7 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     *Delete
+     *old
      * </pre>
      *
      * <code>.Vector born_pos = 2;</code>
@@ -695,15 +696,15 @@ public final class SceneEntityAiInfoOuterClass {
       return curTactic_;
     }
 
-    public static final int NMECJFPHFGH_FIELD_NUMBER = 8;
-    private boolean nMECJFPHFGH_;
+    public static final int AADJDKIFENL_FIELD_NUMBER = 8;
+    private boolean aADJDKIFENL_;
     /**
-     * <code>bool NMECJFPHFGH = 8;</code>
-     * @return The nMECJFPHFGH.
+     * <code>bool AADJDKIFENL = 8;</code>
+     * @return The aADJDKIFENL.
      */
     @java.lang.Override
-    public boolean getNMECJFPHFGH() {
-      return nMECJFPHFGH_;
+    public boolean getAADJDKIFENL() {
+      return aADJDKIFENL_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -750,8 +751,8 @@ public final class SceneEntityAiInfoOuterClass {
       if (curTactic_ != 0) {
         output.writeUInt32(7, curTactic_);
       }
-      if (nMECJFPHFGH_ != false) {
-        output.writeBool(8, nMECJFPHFGH_);
+      if (aADJDKIFENL_ != false) {
+        output.writeBool(8, aADJDKIFENL_);
       }
       unknownFields.writeTo(output);
     }
@@ -808,9 +809,9 @@ public final class SceneEntityAiInfoOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, curTactic_);
       }
-      if (nMECJFPHFGH_ != false) {
+      if (aADJDKIFENL_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, nMECJFPHFGH_);
+          .computeBoolSize(8, aADJDKIFENL_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -847,8 +848,8 @@ public final class SceneEntityAiInfoOuterClass {
           other.internalGetSkillGroupCdMap())) return false;
       if (getCurTactic()
           != other.getCurTactic()) return false;
-      if (getNMECJFPHFGH()
-          != other.getNMECJFPHFGH()) return false;
+      if (getAADJDKIFENL()
+          != other.getAADJDKIFENL()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -885,9 +886,9 @@ public final class SceneEntityAiInfoOuterClass {
       }
       hash = (37 * hash) + CUR_TACTIC_FIELD_NUMBER;
       hash = (53 * hash) + getCurTactic();
-      hash = (37 * hash) + NMECJFPHFGH_FIELD_NUMBER;
+      hash = (37 * hash) + AADJDKIFENL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getNMECJFPHFGH());
+          getAADJDKIFENL());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -985,7 +986,8 @@ public final class SceneEntityAiInfoOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
+     * CmdId: 
      * </pre>
      *
      * Protobuf type {@code SceneEntityAiInfo}
@@ -1074,7 +1076,7 @@ public final class SceneEntityAiInfoOuterClass {
         internalGetMutableSkillGroupCdMap().clear();
         curTactic_ = 0;
 
-        nMECJFPHFGH_ = false;
+        aADJDKIFENL_ = false;
 
         return this;
       }
@@ -1121,7 +1123,7 @@ public final class SceneEntityAiInfoOuterClass {
         result.skillGroupCdMap_ = internalGetSkillGroupCdMap();
         result.skillGroupCdMap_.makeImmutable();
         result.curTactic_ = curTactic_;
-        result.nMECJFPHFGH_ = nMECJFPHFGH_;
+        result.aADJDKIFENL_ = aADJDKIFENL_;
         onBuilt();
         return result;
       }
@@ -1188,8 +1190,8 @@ public final class SceneEntityAiInfoOuterClass {
         if (other.getCurTactic() != 0) {
           setCurTactic(other.getCurTactic());
         }
-        if (other.getNMECJFPHFGH() != false) {
-          setNMECJFPHFGH(other.getNMECJFPHFGH());
+        if (other.getAADJDKIFENL() != false) {
+          setAADJDKIFENL(other.getAADJDKIFENL());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1224,7 +1226,7 @@ public final class SceneEntityAiInfoOuterClass {
       private boolean isAiOpen_ ;
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1236,7 +1238,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1251,7 +1253,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>bool is_ai_open = 1;</code>
@@ -1269,7 +1271,7 @@ public final class SceneEntityAiInfoOuterClass {
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> bornPosBuilder_;
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1280,7 +1282,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1295,7 +1297,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1315,7 +1317,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1333,7 +1335,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1355,7 +1357,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1373,7 +1375,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1385,7 +1387,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1400,7 +1402,7 @@ public final class SceneEntityAiInfoOuterClass {
       }
       /**
        * <pre>
-       *Delete
+       *old
        * </pre>
        *
        * <code>.Vector born_pos = 2;</code>
@@ -1953,33 +1955,33 @@ public final class SceneEntityAiInfoOuterClass {
         return this;
       }
 
-      private boolean nMECJFPHFGH_ ;
+      private boolean aADJDKIFENL_ ;
       /**
-       * <code>bool NMECJFPHFGH = 8;</code>
-       * @return The nMECJFPHFGH.
+       * <code>bool AADJDKIFENL = 8;</code>
+       * @return The aADJDKIFENL.
        */
       @java.lang.Override
-      public boolean getNMECJFPHFGH() {
-        return nMECJFPHFGH_;
+      public boolean getAADJDKIFENL() {
+        return aADJDKIFENL_;
       }
       /**
-       * <code>bool NMECJFPHFGH = 8;</code>
-       * @param value The nMECJFPHFGH to set.
+       * <code>bool AADJDKIFENL = 8;</code>
+       * @param value The aADJDKIFENL to set.
        * @return This builder for chaining.
        */
-      public Builder setNMECJFPHFGH(boolean value) {
+      public Builder setAADJDKIFENL(boolean value) {
         
-        nMECJFPHFGH_ = value;
+        aADJDKIFENL_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool NMECJFPHFGH = 8;</code>
+       * <code>bool AADJDKIFENL = 8;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNMECJFPHFGH() {
+      public Builder clearAADJDKIFENL() {
         
-        nMECJFPHFGH_ = false;
+        aADJDKIFENL_ = false;
         onChanged();
         return this;
       }
@@ -2074,7 +2076,7 @@ public final class SceneEntityAiInfoOuterClass {
       " \003(\0132#.SceneEntityAiInfo.AiThreatMapEntr" +
       "y\022C\n\022skill_group_cd_map\030\006 \003(\0132\'.SceneEnt" +
       "ityAiInfo.SkillGroupCdMapEntry\022\022\n\ncur_ta" +
-      "ctic\030\007 \001(\r\022\023\n\013NMECJFPHFGH\030\010 \001(\010\0321\n\017Skill" +
+      "ctic\030\007 \001(\r\022\023\n\013AADJDKIFENL\030\010 \001(\010\0321\n\017Skill" +
       "CdMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\002" +
       "8\001\0322\n\020AiThreatMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005v" +
       "alue\030\002 \001(\r:\0028\001\0326\n\024SkillGroupCdMapEntry\022\013" +
@@ -2092,7 +2094,7 @@ public final class SceneEntityAiInfoOuterClass {
     internal_static_SceneEntityAiInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SceneEntityAiInfo_descriptor,
-        new java.lang.String[] { "IsAiOpen", "BornPos", "SkillCdMap", "ServantInfo", "AiThreatMap", "SkillGroupCdMap", "CurTactic", "NMECJFPHFGH", });
+        new java.lang.String[] { "IsAiOpen", "BornPos", "SkillCdMap", "ServantInfo", "AiThreatMap", "SkillGroupCdMap", "CurTactic", "AADJDKIFENL", });
     internal_static_SceneEntityAiInfo_SkillCdMapEntry_descriptor =
       internal_static_SceneEntityAiInfo_descriptor.getNestedTypes().get(0);
     internal_static_SceneEntityAiInfo_SkillCdMapEntry_fieldAccessorTable = new

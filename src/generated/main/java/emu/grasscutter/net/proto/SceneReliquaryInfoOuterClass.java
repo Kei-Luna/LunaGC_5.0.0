@@ -43,10 +43,6 @@ public final class SceneReliquaryInfoOuterClass {
     int getPromoteLevel();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code SceneReliquaryInfo}
    */
   public static final class SceneReliquaryInfo extends
@@ -377,10 +373,6 @@ public final class SceneReliquaryInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code SceneReliquaryInfo}
      */
     public static final class Builder extends

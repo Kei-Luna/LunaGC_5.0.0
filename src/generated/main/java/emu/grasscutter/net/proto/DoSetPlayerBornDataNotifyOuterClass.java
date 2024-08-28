@@ -19,11 +19,6 @@ public final class DoSetPlayerBornDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 5710
-   * Obf: JJKIDLCAPLA
-   * </pre>
-   *
    * Protobuf type {@code DoSetPlayerBornDataNotify}
    */
   public static final class DoSetPlayerBornDataNotify extends
@@ -245,11 +240,6 @@ public final class DoSetPlayerBornDataNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5710
-     * Obf: JJKIDLCAPLA
-     * </pre>
-     *
      * Protobuf type {@code DoSetPlayerBornDataNotify}
      */
     public static final class Builder extends

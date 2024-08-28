@@ -44,7 +44,7 @@ public final class CustomGadgetTreeInfoOuterClass {
   }
   /**
    * <pre>
-   * 4.7.0
+   * 5.0.0
    * </pre>
    *
    * Protobuf type {@code CustomGadgetTreeInfo}
@@ -336,7 +336,7 @@ public final class CustomGadgetTreeInfoOuterClass {
     }
     /**
      * <pre>
-     * 4.7.0
+     * 5.0.0
      * </pre>
      *
      * Protobuf type {@code CustomGadgetTreeInfo}

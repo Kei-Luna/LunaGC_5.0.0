@@ -67,10 +67,6 @@ public final class RegionSimpleInfoOuterClass {
         getDispatchUrlBytes();
   }
   /**
-   * <pre>
-   * Obf: KHPGILKGEPP
-   * </pre>
-   *
    * Protobuf type {@code RegionSimpleInfo}
    */
   public static final class RegionSimpleInfo extends
@@ -512,10 +508,6 @@ public final class RegionSimpleInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: KHPGILKGEPP
-     * </pre>
-     *
      * Protobuf type {@code RegionSimpleInfo}
      */
     public static final class Builder extends
