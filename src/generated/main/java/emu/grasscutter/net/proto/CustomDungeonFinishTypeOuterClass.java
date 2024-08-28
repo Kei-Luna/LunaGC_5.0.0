@@ -15,10 +15,6 @@ public final class CustomDungeonFinishTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Version: 4.6.0
-   * </pre>
-   *
    * Protobuf enum {@code CustomDungeonFinishType}
    */
   public enum CustomDungeonFinishType

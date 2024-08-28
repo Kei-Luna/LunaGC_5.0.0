@@ -36,17 +36,12 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
     int getCircleCampIdList(int index);
 
     /**
-     * <code>uint32 refresh_id = 6;</code>
+     * <code>uint32 refresh_id = 15;</code>
      * @return The refreshId.
      */
     int getRefreshId();
   }
   /**
-   * <pre>
-   * CmdId: 4362
-   * Obf: LDJNJFGOKHF
-   * </pre>
-   *
    * Protobuf type {@code OpenBlossomCircleCampGuideNotify}
    */
   public static final class OpenBlossomCircleCampGuideNotify extends
@@ -114,7 +109,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 48: {
+            case 120: {
 
               refreshId_ = input.readUInt32();
               break;
@@ -182,10 +177,10 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
     }
     private int circleCampIdListMemoizedSerializedSize = -1;
 
-    public static final int REFRESH_ID_FIELD_NUMBER = 6;
+    public static final int REFRESH_ID_FIELD_NUMBER = 15;
     private int refreshId_;
     /**
-     * <code>uint32 refresh_id = 6;</code>
+     * <code>uint32 refresh_id = 15;</code>
      * @return The refreshId.
      */
     @java.lang.Override
@@ -216,7 +211,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
         output.writeUInt32NoTag(circleCampIdList_.getInt(i));
       }
       if (refreshId_ != 0) {
-        output.writeUInt32(6, refreshId_);
+        output.writeUInt32(15, refreshId_);
       }
       unknownFields.writeTo(output);
     }
@@ -243,7 +238,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
       }
       if (refreshId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, refreshId_);
+          .computeUInt32Size(15, refreshId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -377,11 +372,6 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4362
-     * Obf: LDJNJFGOKHF
-     * </pre>
-     *
      * Protobuf type {@code OpenBlossomCircleCampGuideNotify}
      */
     public static final class Builder extends
@@ -628,7 +618,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
 
       private int refreshId_ ;
       /**
-       * <code>uint32 refresh_id = 6;</code>
+       * <code>uint32 refresh_id = 15;</code>
        * @return The refreshId.
        */
       @java.lang.Override
@@ -636,7 +626,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
         return refreshId_;
       }
       /**
-       * <code>uint32 refresh_id = 6;</code>
+       * <code>uint32 refresh_id = 15;</code>
        * @param value The refreshId to set.
        * @return This builder for chaining.
        */
@@ -647,7 +637,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 refresh_id = 6;</code>
+       * <code>uint32 refresh_id = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearRefreshId() {
@@ -726,7 +716,7 @@ public final class OpenBlossomCircleCampGuideNotifyOuterClass {
       "\n&OpenBlossomCircleCampGuideNotify.proto" +
       "\"S\n OpenBlossomCircleCampGuideNotify\022\033\n\023" +
       "circle_camp_id_list\030\004 \003(\r\022\022\n\nrefresh_id\030" +
-      "\006 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

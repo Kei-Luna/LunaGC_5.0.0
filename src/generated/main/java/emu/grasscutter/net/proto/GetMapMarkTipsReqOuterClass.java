@@ -19,11 +19,6 @@ public final class GetMapMarkTipsReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 4445
-   * Obf: EFPLHMCHFDJ
-   * </pre>
-   *
    * Protobuf type {@code GetMapMarkTipsReq}
    */
   public static final class GetMapMarkTipsReq extends
@@ -245,11 +240,6 @@ public final class GetMapMarkTipsReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4445
-     * Obf: EFPLHMCHFDJ
-     * </pre>
-     *
      * Protobuf type {@code GetMapMarkTipsReq}
      */
     public static final class Builder extends

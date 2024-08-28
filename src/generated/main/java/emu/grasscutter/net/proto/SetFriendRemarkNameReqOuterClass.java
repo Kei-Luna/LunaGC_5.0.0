@@ -19,29 +19,24 @@ public final class SetFriendRemarkNameReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 uid = 14;</code>
-     * @return The uid.
-     */
-    int getUid();
-
-    /**
-     * <code>string remark_name = 6;</code>
+     * <code>string remark_name = 14;</code>
      * @return The remarkName.
      */
     java.lang.String getRemarkName();
     /**
-     * <code>string remark_name = 6;</code>
+     * <code>string remark_name = 14;</code>
      * @return The bytes for remarkName.
      */
     com.google.protobuf.ByteString
         getRemarkNameBytes();
+
+    /**
+     * <code>uint32 uid = 12;</code>
+     * @return The uid.
+     */
+    int getUid();
   }
   /**
-   * <pre>
-   * CmdId: 1521
-   * Obf: KGIPKDELIOE
-   * </pre>
-   *
    * Protobuf type {@code SetFriendRemarkNameReq}
    */
   public static final class SetFriendRemarkNameReq extends
@@ -87,15 +82,15 @@ public final class SetFriendRemarkNameReqOuterClass {
             case 0:
               done = true;
               break;
-            case 50: {
+            case 96: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
+            case 114: {
               java.lang.String s = input.readStringRequireUtf8();
 
               remarkName_ = s;
-              break;
-            }
-            case 112: {
-
-              uid_ = input.readUInt32();
               break;
             }
             default: {
@@ -130,21 +125,10 @@ public final class SetFriendRemarkNameReqOuterClass {
               emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq.class, emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq.Builder.class);
     }
 
-    public static final int UID_FIELD_NUMBER = 14;
-    private int uid_;
-    /**
-     * <code>uint32 uid = 14;</code>
-     * @return The uid.
-     */
-    @java.lang.Override
-    public int getUid() {
-      return uid_;
-    }
-
-    public static final int REMARK_NAME_FIELD_NUMBER = 6;
+    public static final int REMARK_NAME_FIELD_NUMBER = 14;
     private volatile java.lang.Object remarkName_;
     /**
-     * <code>string remark_name = 6;</code>
+     * <code>string remark_name = 14;</code>
      * @return The remarkName.
      */
     @java.lang.Override
@@ -161,7 +145,7 @@ public final class SetFriendRemarkNameReqOuterClass {
       }
     }
     /**
-     * <code>string remark_name = 6;</code>
+     * <code>string remark_name = 14;</code>
      * @return The bytes for remarkName.
      */
     @java.lang.Override
@@ -179,6 +163,17 @@ public final class SetFriendRemarkNameReqOuterClass {
       }
     }
 
+    public static final int UID_FIELD_NUMBER = 12;
+    private int uid_;
+    /**
+     * <code>uint32 uid = 12;</code>
+     * @return The uid.
+     */
+    @java.lang.Override
+    public int getUid() {
+      return uid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -193,11 +188,11 @@ public final class SetFriendRemarkNameReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remarkName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, remarkName_);
-      }
       if (uid_ != 0) {
-        output.writeUInt32(14, uid_);
+        output.writeUInt32(12, uid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remarkName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, remarkName_);
       }
       unknownFields.writeTo(output);
     }
@@ -208,12 +203,12 @@ public final class SetFriendRemarkNameReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remarkName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, remarkName_);
-      }
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, uid_);
+          .computeUInt32Size(12, uid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remarkName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, remarkName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -230,10 +225,10 @@ public final class SetFriendRemarkNameReqOuterClass {
       }
       emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq other = (emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq) obj;
 
-      if (getUid()
-          != other.getUid()) return false;
       if (!getRemarkName()
           .equals(other.getRemarkName())) return false;
+      if (getUid()
+          != other.getUid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -245,10 +240,10 @@ public final class SetFriendRemarkNameReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid();
       hash = (37 * hash) + REMARK_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getRemarkName().hashCode();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -345,11 +340,6 @@ public final class SetFriendRemarkNameReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 1521
-     * Obf: KGIPKDELIOE
-     * </pre>
-     *
      * Protobuf type {@code SetFriendRemarkNameReq}
      */
     public static final class Builder extends
@@ -387,9 +377,9 @@ public final class SetFriendRemarkNameReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        uid_ = 0;
-
         remarkName_ = "";
+
+        uid_ = 0;
 
         return this;
       }
@@ -417,8 +407,8 @@ public final class SetFriendRemarkNameReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq buildPartial() {
         emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq result = new emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq(this);
-        result.uid_ = uid_;
         result.remarkName_ = remarkName_;
+        result.uid_ = uid_;
         onBuilt();
         return result;
       }
@@ -467,12 +457,12 @@ public final class SetFriendRemarkNameReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq other) {
         if (other == emu.grasscutter.net.proto.SetFriendRemarkNameReqOuterClass.SetFriendRemarkNameReq.getDefaultInstance()) return this;
-        if (other.getUid() != 0) {
-          setUid(other.getUid());
-        }
         if (!other.getRemarkName().isEmpty()) {
           remarkName_ = other.remarkName_;
           onChanged();
+        }
+        if (other.getUid() != 0) {
+          setUid(other.getUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -503,40 +493,9 @@ public final class SetFriendRemarkNameReqOuterClass {
         return this;
       }
 
-      private int uid_ ;
-      /**
-       * <code>uint32 uid = 14;</code>
-       * @return The uid.
-       */
-      @java.lang.Override
-      public int getUid() {
-        return uid_;
-      }
-      /**
-       * <code>uint32 uid = 14;</code>
-       * @param value The uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUid(int value) {
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 uid = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUid() {
-        
-        uid_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object remarkName_ = "";
       /**
-       * <code>string remark_name = 6;</code>
+       * <code>string remark_name = 14;</code>
        * @return The remarkName.
        */
       public java.lang.String getRemarkName() {
@@ -552,7 +511,7 @@ public final class SetFriendRemarkNameReqOuterClass {
         }
       }
       /**
-       * <code>string remark_name = 6;</code>
+       * <code>string remark_name = 14;</code>
        * @return The bytes for remarkName.
        */
       public com.google.protobuf.ByteString
@@ -569,7 +528,7 @@ public final class SetFriendRemarkNameReqOuterClass {
         }
       }
       /**
-       * <code>string remark_name = 6;</code>
+       * <code>string remark_name = 14;</code>
        * @param value The remarkName to set.
        * @return This builder for chaining.
        */
@@ -584,7 +543,7 @@ public final class SetFriendRemarkNameReqOuterClass {
         return this;
       }
       /**
-       * <code>string remark_name = 6;</code>
+       * <code>string remark_name = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearRemarkName() {
@@ -594,7 +553,7 @@ public final class SetFriendRemarkNameReqOuterClass {
         return this;
       }
       /**
-       * <code>string remark_name = 6;</code>
+       * <code>string remark_name = 14;</code>
        * @param value The bytes for remarkName to set.
        * @return This builder for chaining.
        */
@@ -606,6 +565,37 @@ public final class SetFriendRemarkNameReqOuterClass {
   checkByteStringIsUtf8(value);
         
         remarkName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int uid_ ;
+      /**
+       * <code>uint32 uid = 12;</code>
+       * @return The uid.
+       */
+      @java.lang.Override
+      public int getUid() {
+        return uid_;
+      }
+      /**
+       * <code>uint32 uid = 12;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(int value) {
+        
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 uid = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        
+        uid_ = 0;
         onChanged();
         return this;
       }
@@ -677,8 +667,8 @@ public final class SetFriendRemarkNameReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034SetFriendRemarkNameReq.proto\":\n\026SetFri" +
-      "endRemarkNameReq\022\013\n\003uid\030\016 \001(\r\022\023\n\013remark_" +
-      "name\030\006 \001(\tB\033\n\031emu.grasscutter.net.protob" +
+      "endRemarkNameReq\022\023\n\013remark_name\030\016 \001(\t\022\013\n" +
+      "\003uid\030\014 \001(\rB\033\n\031emu.grasscutter.net.protob" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -690,7 +680,7 @@ public final class SetFriendRemarkNameReqOuterClass {
     internal_static_SetFriendRemarkNameReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SetFriendRemarkNameReq_descriptor,
-        new java.lang.String[] { "Uid", "RemarkName", });
+        new java.lang.String[] { "RemarkName", "Uid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,11 +19,6 @@ public final class GetHomeExchangeWoodInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 20885
-   * Obf: BFCMDBHEBGK
-   * </pre>
-   *
    * Protobuf type {@code GetHomeExchangeWoodInfoReq}
    */
   public static final class GetHomeExchangeWoodInfoReq extends
@@ -245,11 +240,6 @@ public final class GetHomeExchangeWoodInfoReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 20885
-     * Obf: BFCMDBHEBGK
-     * </pre>
-     *
      * Protobuf type {@code GetHomeExchangeWoodInfoReq}
      */
     public static final class Builder extends

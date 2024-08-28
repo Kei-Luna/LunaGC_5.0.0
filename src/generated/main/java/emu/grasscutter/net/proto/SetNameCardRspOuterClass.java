@@ -19,7 +19,7 @@ public final class SetNameCardRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 10;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     int getRetcode();
@@ -31,11 +31,6 @@ public final class SetNameCardRspOuterClass {
     int getNameCardId();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 1786
-   * </pre>
-   *
    * Protobuf type {@code SetNameCardRsp}
    */
   public static final class SetNameCardRsp extends
@@ -80,7 +75,7 @@ public final class SetNameCardRspOuterClass {
             case 0:
               done = true;
               break;
-            case 80: {
+            case 48: {
 
               retcode_ = input.readInt32();
               break;
@@ -122,10 +117,10 @@ public final class SetNameCardRspOuterClass {
               emu.grasscutter.net.proto.SetNameCardRspOuterClass.SetNameCardRsp.class, emu.grasscutter.net.proto.SetNameCardRspOuterClass.SetNameCardRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 10;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
-     * <code>int32 retcode = 10;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -159,7 +154,7 @@ public final class SetNameCardRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(10, retcode_);
+        output.writeInt32(6, retcode_);
       }
       if (nameCardId_ != 0) {
         output.writeUInt32(11, nameCardId_);
@@ -175,7 +170,7 @@ public final class SetNameCardRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(10, retcode_);
+          .computeInt32Size(6, retcode_);
       }
       if (nameCardId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -311,11 +306,6 @@ public final class SetNameCardRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 1786
-     * </pre>
-     *
      * Protobuf type {@code SetNameCardRsp}
      */
     public static final class Builder extends
@@ -470,7 +460,7 @@ public final class SetNameCardRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 6;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -478,7 +468,7 @@ public final class SetNameCardRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 6;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -489,7 +479,7 @@ public final class SetNameCardRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 10;</code>
+       * <code>int32 retcode = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -597,7 +587,7 @@ public final class SetNameCardRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024SetNameCardRsp.proto\"7\n\016SetNameCardRsp" +
-      "\022\017\n\007retcode\030\n \001(\005\022\024\n\014name_card_id\030\013 \001(\rB" +
+      "\022\017\n\007retcode\030\006 \001(\005\022\024\n\014name_card_id\030\013 \001(\rB" +
       "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

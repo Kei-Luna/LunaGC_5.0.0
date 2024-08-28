@@ -34,23 +34,18 @@ public final class EvtAvatarLockChairReqOuterClass {
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPositionOrBuilder();
 
     /**
-     * <code>uint64 chair_id = 9;</code>
+     * <code>uint64 chair_id = 3;</code>
      * @return The chairId.
      */
     long getChairId();
 
     /**
-     * <code>int32 direction = 3;</code>
+     * <code>int32 direction = 14;</code>
      * @return The direction.
      */
     int getDirection();
   }
   /**
-   * <pre>
-   * CmdId: 23086
-   * Obf: LBJMDFGMGBD
-   * </pre>
-   *
    * Protobuf type {@code EvtAvatarLockChairReq}
    */
   public static final class EvtAvatarLockChairReq extends
@@ -97,11 +92,6 @@ public final class EvtAvatarLockChairReqOuterClass {
               break;
             case 24: {
 
-              direction_ = input.readInt32();
-              break;
-            }
-            case 72: {
-
               chairId_ = input.readUInt64();
               break;
             }
@@ -116,6 +106,11 @@ public final class EvtAvatarLockChairReqOuterClass {
                 position_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 112: {
+
+              direction_ = input.readInt32();
               break;
             }
             default: {
@@ -176,10 +171,10 @@ public final class EvtAvatarLockChairReqOuterClass {
       return getPosition();
     }
 
-    public static final int CHAIR_ID_FIELD_NUMBER = 9;
+    public static final int CHAIR_ID_FIELD_NUMBER = 3;
     private long chairId_;
     /**
-     * <code>uint64 chair_id = 9;</code>
+     * <code>uint64 chair_id = 3;</code>
      * @return The chairId.
      */
     @java.lang.Override
@@ -187,10 +182,10 @@ public final class EvtAvatarLockChairReqOuterClass {
       return chairId_;
     }
 
-    public static final int DIRECTION_FIELD_NUMBER = 3;
+    public static final int DIRECTION_FIELD_NUMBER = 14;
     private int direction_;
     /**
-     * <code>int32 direction = 3;</code>
+     * <code>int32 direction = 14;</code>
      * @return The direction.
      */
     @java.lang.Override
@@ -212,14 +207,14 @@ public final class EvtAvatarLockChairReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (direction_ != 0) {
-        output.writeInt32(3, direction_);
-      }
       if (chairId_ != 0L) {
-        output.writeUInt64(9, chairId_);
+        output.writeUInt64(3, chairId_);
       }
       if (position_ != null) {
         output.writeMessage(13, getPosition());
+      }
+      if (direction_ != 0) {
+        output.writeInt32(14, direction_);
       }
       unknownFields.writeTo(output);
     }
@@ -230,17 +225,17 @@ public final class EvtAvatarLockChairReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (direction_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, direction_);
-      }
       if (chairId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, chairId_);
+          .computeUInt64Size(3, chairId_);
       }
       if (position_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getPosition());
+      }
+      if (direction_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, direction_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -382,11 +377,6 @@ public final class EvtAvatarLockChairReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23086
-     * Obf: LBJMDFGMGBD
-     * </pre>
-     *
      * Protobuf type {@code EvtAvatarLockChairReq}
      */
     public static final class Builder extends
@@ -674,7 +664,7 @@ public final class EvtAvatarLockChairReqOuterClass {
 
       private long chairId_ ;
       /**
-       * <code>uint64 chair_id = 9;</code>
+       * <code>uint64 chair_id = 3;</code>
        * @return The chairId.
        */
       @java.lang.Override
@@ -682,7 +672,7 @@ public final class EvtAvatarLockChairReqOuterClass {
         return chairId_;
       }
       /**
-       * <code>uint64 chair_id = 9;</code>
+       * <code>uint64 chair_id = 3;</code>
        * @param value The chairId to set.
        * @return This builder for chaining.
        */
@@ -693,7 +683,7 @@ public final class EvtAvatarLockChairReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 chair_id = 9;</code>
+       * <code>uint64 chair_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearChairId() {
@@ -705,7 +695,7 @@ public final class EvtAvatarLockChairReqOuterClass {
 
       private int direction_ ;
       /**
-       * <code>int32 direction = 3;</code>
+       * <code>int32 direction = 14;</code>
        * @return The direction.
        */
       @java.lang.Override
@@ -713,7 +703,7 @@ public final class EvtAvatarLockChairReqOuterClass {
         return direction_;
       }
       /**
-       * <code>int32 direction = 3;</code>
+       * <code>int32 direction = 14;</code>
        * @param value The direction to set.
        * @return This builder for chaining.
        */
@@ -724,7 +714,7 @@ public final class EvtAvatarLockChairReqOuterClass {
         return this;
       }
       /**
-       * <code>int32 direction = 3;</code>
+       * <code>int32 direction = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearDirection() {
@@ -802,8 +792,8 @@ public final class EvtAvatarLockChairReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033EvtAvatarLockChairReq.proto\032\014Vector.pr" +
       "oto\"W\n\025EvtAvatarLockChairReq\022\031\n\010position" +
-      "\030\r \001(\0132\007.Vector\022\020\n\010chair_id\030\t \001(\004\022\021\n\tdir" +
-      "ection\030\003 \001(\005B\033\n\031emu.grasscutter.net.prot" +
+      "\030\r \001(\0132\007.Vector\022\020\n\010chair_id\030\003 \001(\004\022\021\n\tdir" +
+      "ection\030\016 \001(\005B\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

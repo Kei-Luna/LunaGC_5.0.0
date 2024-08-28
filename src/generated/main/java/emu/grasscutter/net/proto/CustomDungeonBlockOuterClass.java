@@ -19,38 +19,38 @@ public final class CustomDungeonBlockOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 guid = 15;</code>
+     * <code>.Vector rot = 1;</code>
+     * @return Whether the rot field is set.
+     */
+    boolean hasRot();
+    /**
+     * <code>.Vector rot = 1;</code>
+     * @return The rot.
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
+    /**
+     * <code>.Vector rot = 1;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
+
+    /**
+     * <code>uint32 guid = 4;</code>
      * @return The guid.
      */
     int getGuid();
 
     /**
-     * <code>.Vector rot = 9;</code>
-     * @return Whether the rot field is set.
-     */
-    boolean hasRot();
-    /**
-     * <code>.Vector rot = 9;</code>
-     * @return The rot.
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getRot();
-    /**
-     * <code>.Vector rot = 9;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder();
-
-    /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      * @return Whether the pos field is set.
      */
     boolean hasPos();
     /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      * @return The pos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
     /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
 
@@ -61,10 +61,6 @@ public final class CustomDungeonBlockOuterClass {
     int getBlockId();
   }
   /**
-   * <pre>
-   * Obf: AEPAOCNLPHA
-   * </pre>
-   *
    * Protobuf type {@code CustomDungeonBlock}
    */
   public static final class CustomDungeonBlock extends
@@ -109,20 +105,7 @@ public final class CustomDungeonBlockOuterClass {
             case 0:
               done = true;
               break;
-            case 42: {
-              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
+            case 10: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (rot_ != null) {
                 subBuilder = rot_.toBuilder();
@@ -135,14 +118,27 @@ public final class CustomDungeonBlockOuterClass {
 
               break;
             }
+            case 32: {
+
+              guid_ = input.readUInt32();
+              break;
+            }
+            case 74: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (pos_ != null) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 80: {
 
               blockId_ = input.readUInt32();
-              break;
-            }
-            case 120: {
-
-              guid_ = input.readUInt32();
               break;
             }
             default: {
@@ -177,21 +173,10 @@ public final class CustomDungeonBlockOuterClass {
               emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock.class, emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock.Builder.class);
     }
 
-    public static final int GUID_FIELD_NUMBER = 15;
-    private int guid_;
-    /**
-     * <code>uint32 guid = 15;</code>
-     * @return The guid.
-     */
-    @java.lang.Override
-    public int getGuid() {
-      return guid_;
-    }
-
-    public static final int ROT_FIELD_NUMBER = 9;
+    public static final int ROT_FIELD_NUMBER = 1;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
     /**
-     * <code>.Vector rot = 9;</code>
+     * <code>.Vector rot = 1;</code>
      * @return Whether the rot field is set.
      */
     @java.lang.Override
@@ -199,7 +184,7 @@ public final class CustomDungeonBlockOuterClass {
       return rot_ != null;
     }
     /**
-     * <code>.Vector rot = 9;</code>
+     * <code>.Vector rot = 1;</code>
      * @return The rot.
      */
     @java.lang.Override
@@ -207,17 +192,28 @@ public final class CustomDungeonBlockOuterClass {
       return rot_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : rot_;
     }
     /**
-     * <code>.Vector rot = 9;</code>
+     * <code>.Vector rot = 1;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
       return getRot();
     }
 
-    public static final int POS_FIELD_NUMBER = 5;
+    public static final int GUID_FIELD_NUMBER = 4;
+    private int guid_;
+    /**
+     * <code>uint32 guid = 4;</code>
+     * @return The guid.
+     */
+    @java.lang.Override
+    public int getGuid() {
+      return guid_;
+    }
+
+    public static final int POS_FIELD_NUMBER = 9;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      * @return Whether the pos field is set.
      */
     @java.lang.Override
@@ -225,7 +221,7 @@ public final class CustomDungeonBlockOuterClass {
       return pos_ != null;
     }
     /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      * @return The pos.
      */
     @java.lang.Override
@@ -233,7 +229,7 @@ public final class CustomDungeonBlockOuterClass {
       return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
     }
     /**
-     * <code>.Vector pos = 5;</code>
+     * <code>.Vector pos = 9;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
@@ -265,17 +261,17 @@ public final class CustomDungeonBlockOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (pos_ != null) {
-        output.writeMessage(5, getPos());
-      }
       if (rot_ != null) {
-        output.writeMessage(9, getRot());
+        output.writeMessage(1, getRot());
+      }
+      if (guid_ != 0) {
+        output.writeUInt32(4, guid_);
+      }
+      if (pos_ != null) {
+        output.writeMessage(9, getPos());
       }
       if (blockId_ != 0) {
         output.writeUInt32(10, blockId_);
-      }
-      if (guid_ != 0) {
-        output.writeUInt32(15, guid_);
       }
       unknownFields.writeTo(output);
     }
@@ -286,21 +282,21 @@ public final class CustomDungeonBlockOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (pos_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getPos());
-      }
       if (rot_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getRot());
+          .computeMessageSize(1, getRot());
+      }
+      if (guid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, guid_);
+      }
+      if (pos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getPos());
       }
       if (blockId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, blockId_);
-      }
-      if (guid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, guid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -317,13 +313,13 @@ public final class CustomDungeonBlockOuterClass {
       }
       emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock other = (emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock) obj;
 
-      if (getGuid()
-          != other.getGuid()) return false;
       if (hasRot() != other.hasRot()) return false;
       if (hasRot()) {
         if (!getRot()
             .equals(other.getRot())) return false;
       }
+      if (getGuid()
+          != other.getGuid()) return false;
       if (hasPos() != other.hasPos()) return false;
       if (hasPos()) {
         if (!getPos()
@@ -342,12 +338,12 @@ public final class CustomDungeonBlockOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GUID_FIELD_NUMBER;
-      hash = (53 * hash) + getGuid();
       if (hasRot()) {
         hash = (37 * hash) + ROT_FIELD_NUMBER;
         hash = (53 * hash) + getRot().hashCode();
       }
+      hash = (37 * hash) + GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getGuid();
       if (hasPos()) {
         hash = (37 * hash) + POS_FIELD_NUMBER;
         hash = (53 * hash) + getPos().hashCode();
@@ -450,10 +446,6 @@ public final class CustomDungeonBlockOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: AEPAOCNLPHA
-     * </pre>
-     *
      * Protobuf type {@code CustomDungeonBlock}
      */
     public static final class Builder extends
@@ -491,14 +483,14 @@ public final class CustomDungeonBlockOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        guid_ = 0;
-
         if (rotBuilder_ == null) {
           rot_ = null;
         } else {
           rot_ = null;
           rotBuilder_ = null;
         }
+        guid_ = 0;
+
         if (posBuilder_ == null) {
           pos_ = null;
         } else {
@@ -533,12 +525,12 @@ public final class CustomDungeonBlockOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock buildPartial() {
         emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock result = new emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock(this);
-        result.guid_ = guid_;
         if (rotBuilder_ == null) {
           result.rot_ = rot_;
         } else {
           result.rot_ = rotBuilder_.build();
         }
+        result.guid_ = guid_;
         if (posBuilder_ == null) {
           result.pos_ = pos_;
         } else {
@@ -593,11 +585,11 @@ public final class CustomDungeonBlockOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock other) {
         if (other == emu.grasscutter.net.proto.CustomDungeonBlockOuterClass.CustomDungeonBlock.getDefaultInstance()) return this;
-        if (other.getGuid() != 0) {
-          setGuid(other.getGuid());
-        }
         if (other.hasRot()) {
           mergeRot(other.getRot());
+        }
+        if (other.getGuid() != 0) {
+          setGuid(other.getGuid());
         }
         if (other.hasPos()) {
           mergePos(other.getPos());
@@ -634,49 +626,18 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
 
-      private int guid_ ;
-      /**
-       * <code>uint32 guid = 15;</code>
-       * @return The guid.
-       */
-      @java.lang.Override
-      public int getGuid() {
-        return guid_;
-      }
-      /**
-       * <code>uint32 guid = 15;</code>
-       * @param value The guid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGuid(int value) {
-        
-        guid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 guid = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGuid() {
-        
-        guid_ = 0;
-        onChanged();
-        return this;
-      }
-
       private emu.grasscutter.net.proto.VectorOuterClass.Vector rot_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> rotBuilder_;
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        * @return Whether the rot field is set.
        */
       public boolean hasRot() {
         return rotBuilder_ != null || rot_ != null;
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        * @return The rot.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getRot() {
@@ -687,7 +648,7 @@ public final class CustomDungeonBlockOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public Builder setRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -703,7 +664,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public Builder setRot(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -717,7 +678,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public Builder mergeRot(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (rotBuilder_ == null) {
@@ -735,7 +696,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public Builder clearRot() {
         if (rotBuilder_ == null) {
@@ -749,7 +710,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getRotBuilder() {
         
@@ -757,7 +718,7 @@ public final class CustomDungeonBlockOuterClass {
         return getRotFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getRotOrBuilder() {
         if (rotBuilder_ != null) {
@@ -768,7 +729,7 @@ public final class CustomDungeonBlockOuterClass {
         }
       }
       /**
-       * <code>.Vector rot = 9;</code>
+       * <code>.Vector rot = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -784,18 +745,49 @@ public final class CustomDungeonBlockOuterClass {
         return rotBuilder_;
       }
 
+      private int guid_ ;
+      /**
+       * <code>uint32 guid = 4;</code>
+       * @return The guid.
+       */
+      @java.lang.Override
+      public int getGuid() {
+        return guid_;
+      }
+      /**
+       * <code>uint32 guid = 4;</code>
+       * @param value The guid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGuid(int value) {
+        
+        guid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 guid = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGuid() {
+        
+        guid_ = 0;
+        onChanged();
+        return this;
+      }
+
       private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        * @return Whether the pos field is set.
        */
       public boolean hasPos() {
         return posBuilder_ != null || pos_ != null;
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        * @return The pos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
@@ -806,7 +798,7 @@ public final class CustomDungeonBlockOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -822,7 +814,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public Builder setPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -836,7 +828,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -854,7 +846,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
@@ -868,7 +860,7 @@ public final class CustomDungeonBlockOuterClass {
         return this;
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
         
@@ -876,7 +868,7 @@ public final class CustomDungeonBlockOuterClass {
         return getPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
@@ -887,7 +879,7 @@ public final class CustomDungeonBlockOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 5;</code>
+       * <code>.Vector pos = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -1001,8 +993,8 @@ public final class CustomDungeonBlockOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030CustomDungeonBlock.proto\032\014Vector.proto" +
-      "\"`\n\022CustomDungeonBlock\022\014\n\004guid\030\017 \001(\r\022\024\n\003" +
-      "rot\030\t \001(\0132\007.Vector\022\024\n\003pos\030\005 \001(\0132\007.Vector" +
+      "\"`\n\022CustomDungeonBlock\022\024\n\003rot\030\001 \001(\0132\007.Ve" +
+      "ctor\022\014\n\004guid\030\004 \001(\r\022\024\n\003pos\030\t \001(\0132\007.Vector" +
       "\022\020\n\010block_id\030\n \001(\rB\033\n\031emu.grasscutter.ne" +
       "t.protob\006proto3"
     };
@@ -1016,7 +1008,7 @@ public final class CustomDungeonBlockOuterClass {
     internal_static_CustomDungeonBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CustomDungeonBlock_descriptor,
-        new java.lang.String[] { "Guid", "Rot", "Pos", "BlockId", });
+        new java.lang.String[] { "Rot", "Guid", "Pos", "BlockId", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

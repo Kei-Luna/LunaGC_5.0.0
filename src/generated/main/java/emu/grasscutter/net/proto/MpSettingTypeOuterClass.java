@@ -15,10 +15,6 @@ public final class MpSettingTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf enum {@code MpSettingType}
    */
   public enum MpSettingType

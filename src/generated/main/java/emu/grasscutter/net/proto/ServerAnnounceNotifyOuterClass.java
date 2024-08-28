@@ -19,35 +19,30 @@ public final class ServerAnnounceNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData> 
         getAnnounceDataListList();
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData getAnnounceDataList(int index);
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     int getAnnounceDataListCount();
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder> 
         getAnnounceDataListOrBuilderList();
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder getAnnounceDataListOrBuilder(
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 7548
-   * Obf: MHDDLLDBBJD
-   * </pre>
-   *
    * Protobuf type {@code ServerAnnounceNotify}
    */
   public static final class ServerAnnounceNotify extends
@@ -94,7 +89,7 @@ public final class ServerAnnounceNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 122: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 announceDataList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData>();
                 mutable_bitField0_ |= 0x00000001;
@@ -138,17 +133,17 @@ public final class ServerAnnounceNotifyOuterClass {
               emu.grasscutter.net.proto.ServerAnnounceNotifyOuterClass.ServerAnnounceNotify.class, emu.grasscutter.net.proto.ServerAnnounceNotifyOuterClass.ServerAnnounceNotify.Builder.class);
     }
 
-    public static final int ANNOUNCE_DATA_LIST_FIELD_NUMBER = 3;
+    public static final int ANNOUNCE_DATA_LIST_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData> announceDataList_;
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData> getAnnounceDataListList() {
       return announceDataList_;
     }
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder> 
@@ -156,21 +151,21 @@ public final class ServerAnnounceNotifyOuterClass {
       return announceDataList_;
     }
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     @java.lang.Override
     public int getAnnounceDataListCount() {
       return announceDataList_.size();
     }
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData getAnnounceDataList(int index) {
       return announceDataList_.get(index);
     }
     /**
-     * <code>repeated .AnnounceData announce_data_list = 3;</code>
+     * <code>repeated .AnnounceData announce_data_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder getAnnounceDataListOrBuilder(
@@ -193,7 +188,7 @@ public final class ServerAnnounceNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < announceDataList_.size(); i++) {
-        output.writeMessage(3, announceDataList_.get(i));
+        output.writeMessage(15, announceDataList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -206,7 +201,7 @@ public final class ServerAnnounceNotifyOuterClass {
       size = 0;
       for (int i = 0; i < announceDataList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, announceDataList_.get(i));
+          .computeMessageSize(15, announceDataList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,11 +331,6 @@ public final class ServerAnnounceNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 7548
-     * Obf: MHDDLLDBBJD
-     * </pre>
-     *
      * Protobuf type {@code ServerAnnounceNotify}
      */
     public static final class Builder extends
@@ -538,7 +528,7 @@ public final class ServerAnnounceNotifyOuterClass {
           emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder> announceDataListBuilder_;
 
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData> getAnnounceDataListList() {
         if (announceDataListBuilder_ == null) {
@@ -548,7 +538,7 @@ public final class ServerAnnounceNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public int getAnnounceDataListCount() {
         if (announceDataListBuilder_ == null) {
@@ -558,7 +548,7 @@ public final class ServerAnnounceNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData getAnnounceDataList(int index) {
         if (announceDataListBuilder_ == null) {
@@ -568,7 +558,7 @@ public final class ServerAnnounceNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder setAnnounceDataList(
           int index, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData value) {
@@ -585,7 +575,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder setAnnounceDataList(
           int index, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder builderForValue) {
@@ -599,7 +589,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder addAnnounceDataList(emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData value) {
         if (announceDataListBuilder_ == null) {
@@ -615,7 +605,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder addAnnounceDataList(
           int index, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData value) {
@@ -632,7 +622,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder addAnnounceDataList(
           emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder builderForValue) {
@@ -646,7 +636,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder addAnnounceDataList(
           int index, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder builderForValue) {
@@ -660,7 +650,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder addAllAnnounceDataList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData> values) {
@@ -675,7 +665,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder clearAnnounceDataList() {
         if (announceDataListBuilder_ == null) {
@@ -688,7 +678,7 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public Builder removeAnnounceDataList(int index) {
         if (announceDataListBuilder_ == null) {
@@ -701,14 +691,14 @@ public final class ServerAnnounceNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder getAnnounceDataListBuilder(
           int index) {
         return getAnnounceDataListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder getAnnounceDataListOrBuilder(
           int index) {
@@ -718,7 +708,7 @@ public final class ServerAnnounceNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceDataOrBuilder> 
            getAnnounceDataListOrBuilderList() {
@@ -729,14 +719,14 @@ public final class ServerAnnounceNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder addAnnounceDataListBuilder() {
         return getAnnounceDataListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.getDefaultInstance());
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder addAnnounceDataListBuilder(
           int index) {
@@ -744,7 +734,7 @@ public final class ServerAnnounceNotifyOuterClass {
             index, emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.getDefaultInstance());
       }
       /**
-       * <code>repeated .AnnounceData announce_data_list = 3;</code>
+       * <code>repeated .AnnounceData announce_data_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AnnounceDataOuterClass.AnnounceData.Builder> 
            getAnnounceDataListBuilderList() {
@@ -833,7 +823,7 @@ public final class ServerAnnounceNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\032ServerAnnounceNotify.proto\032\022AnnounceDa" +
       "ta.proto\"A\n\024ServerAnnounceNotify\022)\n\022anno" +
-      "unce_data_list\030\003 \003(\0132\r.AnnounceDataB\033\n\031e" +
+      "unce_data_list\030\017 \003(\0132\r.AnnounceDataB\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

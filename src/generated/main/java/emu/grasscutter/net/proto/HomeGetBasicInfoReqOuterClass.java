@@ -19,11 +19,6 @@ public final class HomeGetBasicInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 27734
-   * Obf: IEPBGIKMJFE
-   * </pre>
-   *
    * Protobuf type {@code HomeGetBasicInfoReq}
    */
   public static final class HomeGetBasicInfoReq extends
@@ -245,11 +240,6 @@ public final class HomeGetBasicInfoReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 27734
-     * Obf: IEPBGIKMJFE
-     * </pre>
-     *
      * Protobuf type {@code HomeGetBasicInfoReq}
      */
     public static final class Builder extends

@@ -15,10 +15,6 @@ public final class FishBattleResultOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: LCKAOMFDGLP
-   * </pre>
-   *
    * Protobuf enum {@code FishBattleResult}
    */
   public enum FishBattleResult

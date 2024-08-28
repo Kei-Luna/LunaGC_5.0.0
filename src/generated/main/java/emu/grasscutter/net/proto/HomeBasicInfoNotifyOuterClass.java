@@ -34,10 +34,6 @@ public final class HomeBasicInfoNotifyOuterClass {
     emu.grasscutter.net.proto.HomeBasicInfoOuterClass.HomeBasicInfoOrBuilder getBasicInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 25591
-   * </pre>
-   *
    * Protobuf type {@code HomeBasicInfoNotify}
    */
   public static final class HomeBasicInfoNotify extends
@@ -314,10 +310,6 @@ public final class HomeBasicInfoNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25591
-     * </pre>
-     *
      * Protobuf type {@code HomeBasicInfoNotify}
      */
     public static final class Builder extends

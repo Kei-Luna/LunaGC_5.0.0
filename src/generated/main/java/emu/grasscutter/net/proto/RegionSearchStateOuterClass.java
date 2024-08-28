@@ -15,10 +15,6 @@ public final class RegionSearchStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: PNAKDNOMNOP
-   * </pre>
-   *
    * Protobuf enum {@code RegionSearchState}
    */
   public enum RegionSearchState

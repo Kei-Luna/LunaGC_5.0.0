@@ -15,10 +15,6 @@ public final class CodexTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * </pre>
-   *
    * Protobuf enum {@code CodexType}
    */
   public enum CodexType

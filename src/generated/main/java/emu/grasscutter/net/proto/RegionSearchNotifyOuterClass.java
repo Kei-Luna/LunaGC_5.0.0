@@ -19,6 +19,12 @@ public final class RegionSearchNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>uint32 uid = 5;</code>
+     * @return The uid.
+     */
+    int getUid();
+
+    /**
      * <code>repeated .RegionSearchInfo region_search_list = 14;</code>
      */
     java.util.List<emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo> 
@@ -41,19 +47,8 @@ public final class RegionSearchNotifyOuterClass {
      */
     emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfoOrBuilder getRegionSearchListOrBuilder(
         int index);
-
-    /**
-     * <code>uint32 uid = 12;</code>
-     * @return The uid.
-     */
-    int getUid();
   }
   /**
-   * <pre>
-   * CmdId: 26579
-   * Obf: HMHCLDNPMJI
-   * </pre>
-   *
    * Protobuf type {@code RegionSearchNotify}
    */
   public static final class RegionSearchNotify extends
@@ -100,7 +95,7 @@ public final class RegionSearchNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 40: {
 
               uid_ = input.readUInt32();
               break;
@@ -149,6 +144,17 @@ public final class RegionSearchNotifyOuterClass {
               emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify.class, emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify.Builder.class);
     }
 
+    public static final int UID_FIELD_NUMBER = 5;
+    private int uid_;
+    /**
+     * <code>uint32 uid = 5;</code>
+     * @return The uid.
+     */
+    @java.lang.Override
+    public int getUid() {
+      return uid_;
+    }
+
     public static final int REGION_SEARCH_LIST_FIELD_NUMBER = 14;
     private java.util.List<emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo> regionSearchList_;
     /**
@@ -189,17 +195,6 @@ public final class RegionSearchNotifyOuterClass {
       return regionSearchList_.get(index);
     }
 
-    public static final int UID_FIELD_NUMBER = 12;
-    private int uid_;
-    /**
-     * <code>uint32 uid = 12;</code>
-     * @return The uid.
-     */
-    @java.lang.Override
-    public int getUid() {
-      return uid_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -215,7 +210,7 @@ public final class RegionSearchNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (uid_ != 0) {
-        output.writeUInt32(12, uid_);
+        output.writeUInt32(5, uid_);
       }
       for (int i = 0; i < regionSearchList_.size(); i++) {
         output.writeMessage(14, regionSearchList_.get(i));
@@ -231,7 +226,7 @@ public final class RegionSearchNotifyOuterClass {
       size = 0;
       if (uid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, uid_);
+          .computeUInt32Size(5, uid_);
       }
       for (int i = 0; i < regionSearchList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -252,10 +247,10 @@ public final class RegionSearchNotifyOuterClass {
       }
       emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify other = (emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify) obj;
 
-      if (!getRegionSearchListList()
-          .equals(other.getRegionSearchListList())) return false;
       if (getUid()
           != other.getUid()) return false;
+      if (!getRegionSearchListList()
+          .equals(other.getRegionSearchListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -267,12 +262,12 @@ public final class RegionSearchNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid();
       if (getRegionSearchListCount() > 0) {
         hash = (37 * hash) + REGION_SEARCH_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRegionSearchListList().hashCode();
       }
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -369,11 +364,6 @@ public final class RegionSearchNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 26579
-     * Obf: HMHCLDNPMJI
-     * </pre>
-     *
      * Protobuf type {@code RegionSearchNotify}
      */
     public static final class Builder extends
@@ -412,14 +402,14 @@ public final class RegionSearchNotifyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        uid_ = 0;
+
         if (regionSearchListBuilder_ == null) {
           regionSearchList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           regionSearchListBuilder_.clear();
         }
-        uid_ = 0;
-
         return this;
       }
 
@@ -447,6 +437,7 @@ public final class RegionSearchNotifyOuterClass {
       public emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify buildPartial() {
         emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify result = new emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify(this);
         int from_bitField0_ = bitField0_;
+        result.uid_ = uid_;
         if (regionSearchListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             regionSearchList_ = java.util.Collections.unmodifiableList(regionSearchList_);
@@ -456,7 +447,6 @@ public final class RegionSearchNotifyOuterClass {
         } else {
           result.regionSearchList_ = regionSearchListBuilder_.build();
         }
-        result.uid_ = uid_;
         onBuilt();
         return result;
       }
@@ -505,6 +495,9 @@ public final class RegionSearchNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify other) {
         if (other == emu.grasscutter.net.proto.RegionSearchNotifyOuterClass.RegionSearchNotify.getDefaultInstance()) return this;
+        if (other.getUid() != 0) {
+          setUid(other.getUid());
+        }
         if (regionSearchListBuilder_ == null) {
           if (!other.regionSearchList_.isEmpty()) {
             if (regionSearchList_.isEmpty()) {
@@ -530,9 +523,6 @@ public final class RegionSearchNotifyOuterClass {
               regionSearchListBuilder_.addAllMessages(other.regionSearchList_);
             }
           }
-        }
-        if (other.getUid() != 0) {
-          setUid(other.getUid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -563,6 +553,37 @@ public final class RegionSearchNotifyOuterClass {
         return this;
       }
       private int bitField0_;
+
+      private int uid_ ;
+      /**
+       * <code>uint32 uid = 5;</code>
+       * @return The uid.
+       */
+      @java.lang.Override
+      public int getUid() {
+        return uid_;
+      }
+      /**
+       * <code>uint32 uid = 5;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(int value) {
+        
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 uid = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        
+        uid_ = 0;
+        onChanged();
+        return this;
+      }
 
       private java.util.List<emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo> regionSearchList_ =
         java.util.Collections.emptyList();
@@ -803,37 +824,6 @@ public final class RegionSearchNotifyOuterClass {
         }
         return regionSearchListBuilder_;
       }
-
-      private int uid_ ;
-      /**
-       * <code>uint32 uid = 12;</code>
-       * @return The uid.
-       */
-      @java.lang.Override
-      public int getUid() {
-        return uid_;
-      }
-      /**
-       * <code>uint32 uid = 12;</code>
-       * @param value The uid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUid(int value) {
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 uid = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUid() {
-        
-        uid_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -902,9 +892,9 @@ public final class RegionSearchNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030RegionSearchNotify.proto\032\026RegionSearch" +
-      "Info.proto\"P\n\022RegionSearchNotify\022-\n\022regi" +
-      "on_search_list\030\016 \003(\0132\021.RegionSearchInfo\022" +
-      "\013\n\003uid\030\014 \001(\rB\033\n\031emu.grasscutter.net.prot" +
+      "Info.proto\"P\n\022RegionSearchNotify\022\013\n\003uid\030" +
+      "\005 \001(\r\022-\n\022region_search_list\030\016 \003(\0132\021.Regi" +
+      "onSearchInfoB\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -917,7 +907,7 @@ public final class RegionSearchNotifyOuterClass {
     internal_static_RegionSearchNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegionSearchNotify_descriptor,
-        new java.lang.String[] { "RegionSearchList", "Uid", });
+        new java.lang.String[] { "Uid", "RegionSearchList", });
     emu.grasscutter.net.proto.RegionSearchInfoOuterClass.getDescriptor();
   }
 

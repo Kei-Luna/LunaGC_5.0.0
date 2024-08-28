@@ -19,58 +19,54 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> 
-        getInvestigationListList();
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index);
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    int getInvestigationListCount();
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
-        getInvestigationListOrBuilderList();
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> 
         getInvestigationTargetListList();
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget getInvestigationTargetList(int index);
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     int getInvestigationTargetListCount();
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder> 
         getInvestigationTargetListOrBuilderList();
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder getInvestigationTargetListOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> 
+        getInvestigationListList();
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index);
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    int getInvestigationListCount();
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
+        getInvestigationListOrBuilderList();
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
+        int index);
   }
   /**
-   * <pre>
-   * CmdId: 23844
-   * </pre>
-   *
    * Protobuf type {@code PlayerInvestigationAllInfoNotify}
    */
   public static final class PlayerInvestigationAllInfoNotify extends
@@ -83,8 +79,8 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       super(builder);
     }
     private PlayerInvestigationAllInfoNotify() {
-      investigationList_ = java.util.Collections.emptyList();
       investigationTargetList_ = java.util.Collections.emptyList();
+      investigationList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -118,22 +114,22 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 42: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                investigationList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              investigationList_.add(
-                  input.readMessage(emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.parser(), extensionRegistry));
-              break;
-            }
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 investigationTargetList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               investigationTargetList_.add(
                   input.readMessage(emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                investigationList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              investigationList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -152,10 +148,10 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          investigationList_ = java.util.Collections.unmodifiableList(investigationList_);
+          investigationTargetList_ = java.util.Collections.unmodifiableList(investigationTargetList_);
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          investigationTargetList_ = java.util.Collections.unmodifiableList(investigationTargetList_);
+          investigationList_ = java.util.Collections.unmodifiableList(investigationList_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -174,57 +170,17 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify.class, emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify.Builder.class);
     }
 
-    public static final int INVESTIGATION_LIST_FIELD_NUMBER = 5;
-    private java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> investigationList_;
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> getInvestigationListList() {
-      return investigationList_;
-    }
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
-        getInvestigationListOrBuilderList() {
-      return investigationList_;
-    }
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    @java.lang.Override
-    public int getInvestigationListCount() {
-      return investigationList_.size();
-    }
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index) {
-      return investigationList_.get(index);
-    }
-    /**
-     * <code>repeated .Investigation investigation_list = 5;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
-        int index) {
-      return investigationList_.get(index);
-    }
-
-    public static final int INVESTIGATION_TARGET_LIST_FIELD_NUMBER = 14;
+    public static final int INVESTIGATION_TARGET_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> investigationTargetList_;
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> getInvestigationTargetListList() {
       return investigationTargetList_;
     }
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder> 
@@ -232,26 +188,66 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       return investigationTargetList_;
     }
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     @java.lang.Override
     public int getInvestigationTargetListCount() {
       return investigationTargetList_.size();
     }
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget getInvestigationTargetList(int index) {
       return investigationTargetList_.get(index);
     }
     /**
-     * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+     * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder getInvestigationTargetListOrBuilder(
         int index) {
       return investigationTargetList_.get(index);
+    }
+
+    public static final int INVESTIGATION_LIST_FIELD_NUMBER = 9;
+    private java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> investigationList_;
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> getInvestigationListList() {
+      return investigationList_;
+    }
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
+        getInvestigationListOrBuilderList() {
+      return investigationList_;
+    }
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    @java.lang.Override
+    public int getInvestigationListCount() {
+      return investigationList_.size();
+    }
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index) {
+      return investigationList_.get(index);
+    }
+    /**
+     * <code>repeated .Investigation investigation_list = 9;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
+        int index) {
+      return investigationList_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -268,11 +264,11 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < investigationList_.size(); i++) {
-        output.writeMessage(5, investigationList_.get(i));
-      }
       for (int i = 0; i < investigationTargetList_.size(); i++) {
-        output.writeMessage(14, investigationTargetList_.get(i));
+        output.writeMessage(8, investigationTargetList_.get(i));
+      }
+      for (int i = 0; i < investigationList_.size(); i++) {
+        output.writeMessage(9, investigationList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -283,13 +279,13 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < investigationList_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, investigationList_.get(i));
-      }
       for (int i = 0; i < investigationTargetList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, investigationTargetList_.get(i));
+          .computeMessageSize(8, investigationTargetList_.get(i));
+      }
+      for (int i = 0; i < investigationList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, investigationList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -306,10 +302,10 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       }
       emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify other = (emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify) obj;
 
-      if (!getInvestigationListList()
-          .equals(other.getInvestigationListList())) return false;
       if (!getInvestigationTargetListList()
           .equals(other.getInvestigationTargetListList())) return false;
+      if (!getInvestigationListList()
+          .equals(other.getInvestigationListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -321,13 +317,13 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getInvestigationListCount() > 0) {
-        hash = (37 * hash) + INVESTIGATION_LIST_FIELD_NUMBER;
-        hash = (53 * hash) + getInvestigationListList().hashCode();
-      }
       if (getInvestigationTargetListCount() > 0) {
         hash = (37 * hash) + INVESTIGATION_TARGET_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getInvestigationTargetListList().hashCode();
+      }
+      if (getInvestigationListCount() > 0) {
+        hash = (37 * hash) + INVESTIGATION_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getInvestigationListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -425,10 +421,6 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23844
-     * </pre>
-     *
      * Protobuf type {@code PlayerInvestigationAllInfoNotify}
      */
     public static final class Builder extends
@@ -461,24 +453,24 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getInvestigationListFieldBuilder();
           getInvestigationTargetListFieldBuilder();
+          getInvestigationListFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (investigationListBuilder_ == null) {
-          investigationList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          investigationListBuilder_.clear();
-        }
         if (investigationTargetListBuilder_ == null) {
           investigationTargetList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           investigationTargetListBuilder_.clear();
+        }
+        if (investigationListBuilder_ == null) {
+          investigationList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          investigationListBuilder_.clear();
         }
         return this;
       }
@@ -507,23 +499,23 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       public emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify result = new emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify(this);
         int from_bitField0_ = bitField0_;
-        if (investigationListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            investigationList_ = java.util.Collections.unmodifiableList(investigationList_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.investigationList_ = investigationList_;
-        } else {
-          result.investigationList_ = investigationListBuilder_.build();
-        }
         if (investigationTargetListBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             investigationTargetList_ = java.util.Collections.unmodifiableList(investigationTargetList_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.investigationTargetList_ = investigationTargetList_;
         } else {
           result.investigationTargetList_ = investigationTargetListBuilder_.build();
+        }
+        if (investigationListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            investigationList_ = java.util.Collections.unmodifiableList(investigationList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.investigationList_ = investigationList_;
+        } else {
+          result.investigationList_ = investigationListBuilder_.build();
         }
         onBuilt();
         return result;
@@ -573,37 +565,11 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify other) {
         if (other == emu.grasscutter.net.proto.PlayerInvestigationAllInfoNotifyOuterClass.PlayerInvestigationAllInfoNotify.getDefaultInstance()) return this;
-        if (investigationListBuilder_ == null) {
-          if (!other.investigationList_.isEmpty()) {
-            if (investigationList_.isEmpty()) {
-              investigationList_ = other.investigationList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureInvestigationListIsMutable();
-              investigationList_.addAll(other.investigationList_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.investigationList_.isEmpty()) {
-            if (investigationListBuilder_.isEmpty()) {
-              investigationListBuilder_.dispose();
-              investigationListBuilder_ = null;
-              investigationList_ = other.investigationList_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              investigationListBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getInvestigationListFieldBuilder() : null;
-            } else {
-              investigationListBuilder_.addAllMessages(other.investigationList_);
-            }
-          }
-        }
         if (investigationTargetListBuilder_ == null) {
           if (!other.investigationTargetList_.isEmpty()) {
             if (investigationTargetList_.isEmpty()) {
               investigationTargetList_ = other.investigationTargetList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureInvestigationTargetListIsMutable();
               investigationTargetList_.addAll(other.investigationTargetList_);
@@ -616,12 +582,38 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
               investigationTargetListBuilder_.dispose();
               investigationTargetListBuilder_ = null;
               investigationTargetList_ = other.investigationTargetList_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               investigationTargetListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInvestigationTargetListFieldBuilder() : null;
             } else {
               investigationTargetListBuilder_.addAllMessages(other.investigationTargetList_);
+            }
+          }
+        }
+        if (investigationListBuilder_ == null) {
+          if (!other.investigationList_.isEmpty()) {
+            if (investigationList_.isEmpty()) {
+              investigationList_ = other.investigationList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInvestigationListIsMutable();
+              investigationList_.addAll(other.investigationList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.investigationList_.isEmpty()) {
+            if (investigationListBuilder_.isEmpty()) {
+              investigationListBuilder_.dispose();
+              investigationListBuilder_ = null;
+              investigationList_ = other.investigationList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              investigationListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInvestigationListFieldBuilder() : null;
+            } else {
+              investigationListBuilder_.addAllMessages(other.investigationList_);
             }
           }
         }
@@ -655,252 +647,12 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> investigationList_ =
-        java.util.Collections.emptyList();
-      private void ensureInvestigationListIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          investigationList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation>(investigationList_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> investigationListBuilder_;
-
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> getInvestigationListList() {
-        if (investigationListBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(investigationList_);
-        } else {
-          return investigationListBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public int getInvestigationListCount() {
-        if (investigationListBuilder_ == null) {
-          return investigationList_.size();
-        } else {
-          return investigationListBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index) {
-        if (investigationListBuilder_ == null) {
-          return investigationList_.get(index);
-        } else {
-          return investigationListBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder setInvestigationList(
-          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
-        if (investigationListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvestigationListIsMutable();
-          investigationList_.set(index, value);
-          onChanged();
-        } else {
-          investigationListBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder setInvestigationList(
-          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
-        if (investigationListBuilder_ == null) {
-          ensureInvestigationListIsMutable();
-          investigationList_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          investigationListBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder addInvestigationList(emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
-        if (investigationListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvestigationListIsMutable();
-          investigationList_.add(value);
-          onChanged();
-        } else {
-          investigationListBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder addInvestigationList(
-          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
-        if (investigationListBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvestigationListIsMutable();
-          investigationList_.add(index, value);
-          onChanged();
-        } else {
-          investigationListBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder addInvestigationList(
-          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
-        if (investigationListBuilder_ == null) {
-          ensureInvestigationListIsMutable();
-          investigationList_.add(builderForValue.build());
-          onChanged();
-        } else {
-          investigationListBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder addInvestigationList(
-          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
-        if (investigationListBuilder_ == null) {
-          ensureInvestigationListIsMutable();
-          investigationList_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          investigationListBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder addAllInvestigationList(
-          java.lang.Iterable<? extends emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> values) {
-        if (investigationListBuilder_ == null) {
-          ensureInvestigationListIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, investigationList_);
-          onChanged();
-        } else {
-          investigationListBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder clearInvestigationList() {
-        if (investigationListBuilder_ == null) {
-          investigationList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          investigationListBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public Builder removeInvestigationList(int index) {
-        if (investigationListBuilder_ == null) {
-          ensureInvestigationListIsMutable();
-          investigationList_.remove(index);
-          onChanged();
-        } else {
-          investigationListBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder getInvestigationListBuilder(
-          int index) {
-        return getInvestigationListFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
-          int index) {
-        if (investigationListBuilder_ == null) {
-          return investigationList_.get(index);  } else {
-          return investigationListBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
-           getInvestigationListOrBuilderList() {
-        if (investigationListBuilder_ != null) {
-          return investigationListBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(investigationList_);
-        }
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder addInvestigationListBuilder() {
-        return getInvestigationListFieldBuilder().addBuilder(
-            emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder addInvestigationListBuilder(
-          int index) {
-        return getInvestigationListFieldBuilder().addBuilder(
-            index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Investigation investigation_list = 5;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder> 
-           getInvestigationListBuilderList() {
-        return getInvestigationListFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
-          getInvestigationListFieldBuilder() {
-        if (investigationListBuilder_ == null) {
-          investigationListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder>(
-                  investigationList_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          investigationList_ = null;
-        }
-        return investigationListBuilder_;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> investigationTargetList_ =
         java.util.Collections.emptyList();
       private void ensureInvestigationTargetListIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           investigationTargetList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget>(investigationTargetList_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -908,7 +660,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
           emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder> investigationTargetListBuilder_;
 
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> getInvestigationTargetListList() {
         if (investigationTargetListBuilder_ == null) {
@@ -918,7 +670,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public int getInvestigationTargetListCount() {
         if (investigationTargetListBuilder_ == null) {
@@ -928,7 +680,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget getInvestigationTargetList(int index) {
         if (investigationTargetListBuilder_ == null) {
@@ -938,7 +690,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder setInvestigationTargetList(
           int index, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget value) {
@@ -955,7 +707,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder setInvestigationTargetList(
           int index, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder builderForValue) {
@@ -969,7 +721,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder addInvestigationTargetList(emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget value) {
         if (investigationTargetListBuilder_ == null) {
@@ -985,7 +737,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder addInvestigationTargetList(
           int index, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget value) {
@@ -1002,7 +754,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder addInvestigationTargetList(
           emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder builderForValue) {
@@ -1016,7 +768,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder addInvestigationTargetList(
           int index, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder builderForValue) {
@@ -1030,7 +782,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder addAllInvestigationTargetList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget> values) {
@@ -1045,12 +797,12 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder clearInvestigationTargetList() {
         if (investigationTargetListBuilder_ == null) {
           investigationTargetList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           investigationTargetListBuilder_.clear();
@@ -1058,7 +810,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public Builder removeInvestigationTargetList(int index) {
         if (investigationTargetListBuilder_ == null) {
@@ -1071,14 +823,14 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder getInvestigationTargetListBuilder(
           int index) {
         return getInvestigationTargetListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder getInvestigationTargetListOrBuilder(
           int index) {
@@ -1088,7 +840,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder> 
            getInvestigationTargetListOrBuilderList() {
@@ -1099,14 +851,14 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder addInvestigationTargetListBuilder() {
         return getInvestigationTargetListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.getDefaultInstance());
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder addInvestigationTargetListBuilder(
           int index) {
@@ -1114,7 +866,7 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
             index, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.getDefaultInstance());
       }
       /**
-       * <code>repeated .InvestigationTarget investigation_target_list = 14;</code>
+       * <code>repeated .InvestigationTarget investigation_target_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder> 
            getInvestigationTargetListBuilderList() {
@@ -1127,12 +879,252 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
           investigationTargetListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTarget.Builder, emu.grasscutter.net.proto.InvestigationTargetOuterClass.InvestigationTargetOrBuilder>(
                   investigationTargetList_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           investigationTargetList_ = null;
         }
         return investigationTargetListBuilder_;
+      }
+
+      private java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> investigationList_ =
+        java.util.Collections.emptyList();
+      private void ensureInvestigationListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          investigationList_ = new java.util.ArrayList<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation>(investigationList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> investigationListBuilder_;
+
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> getInvestigationListList() {
+        if (investigationListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(investigationList_);
+        } else {
+          return investigationListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public int getInvestigationListCount() {
+        if (investigationListBuilder_ == null) {
+          return investigationList_.size();
+        } else {
+          return investigationListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation getInvestigationList(int index) {
+        if (investigationListBuilder_ == null) {
+          return investigationList_.get(index);
+        } else {
+          return investigationListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder setInvestigationList(
+          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
+        if (investigationListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvestigationListIsMutable();
+          investigationList_.set(index, value);
+          onChanged();
+        } else {
+          investigationListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder setInvestigationList(
+          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
+        if (investigationListBuilder_ == null) {
+          ensureInvestigationListIsMutable();
+          investigationList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          investigationListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder addInvestigationList(emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
+        if (investigationListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvestigationListIsMutable();
+          investigationList_.add(value);
+          onChanged();
+        } else {
+          investigationListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder addInvestigationList(
+          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation value) {
+        if (investigationListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvestigationListIsMutable();
+          investigationList_.add(index, value);
+          onChanged();
+        } else {
+          investigationListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder addInvestigationList(
+          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
+        if (investigationListBuilder_ == null) {
+          ensureInvestigationListIsMutable();
+          investigationList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          investigationListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder addInvestigationList(
+          int index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder builderForValue) {
+        if (investigationListBuilder_ == null) {
+          ensureInvestigationListIsMutable();
+          investigationList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          investigationListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder addAllInvestigationList(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.InvestigationOuterClass.Investigation> values) {
+        if (investigationListBuilder_ == null) {
+          ensureInvestigationListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, investigationList_);
+          onChanged();
+        } else {
+          investigationListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder clearInvestigationList() {
+        if (investigationListBuilder_ == null) {
+          investigationList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          investigationListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public Builder removeInvestigationList(int index) {
+        if (investigationListBuilder_ == null) {
+          ensureInvestigationListIsMutable();
+          investigationList_.remove(index);
+          onChanged();
+        } else {
+          investigationListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder getInvestigationListBuilder(
+          int index) {
+        return getInvestigationListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder getInvestigationListOrBuilder(
+          int index) {
+        if (investigationListBuilder_ == null) {
+          return investigationList_.get(index);  } else {
+          return investigationListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
+           getInvestigationListOrBuilderList() {
+        if (investigationListBuilder_ != null) {
+          return investigationListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(investigationList_);
+        }
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder addInvestigationListBuilder() {
+        return getInvestigationListFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder addInvestigationListBuilder(
+          int index) {
+        return getInvestigationListFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Investigation investigation_list = 9;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder> 
+           getInvestigationListBuilderList() {
+        return getInvestigationListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder> 
+          getInvestigationListFieldBuilder() {
+        if (investigationListBuilder_ == null) {
+          investigationListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.InvestigationOuterClass.Investigation, emu.grasscutter.net.proto.InvestigationOuterClass.Investigation.Builder, emu.grasscutter.net.proto.InvestigationOuterClass.InvestigationOrBuilder>(
+                  investigationList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          investigationList_ = null;
+        }
+        return investigationListBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1202,27 +1194,27 @@ public final class PlayerInvestigationAllInfoNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n&PlayerInvestigationAllInfoNotify.proto" +
-      "\032\023Investigation.proto\032\031InvestigationTarg" +
-      "et.proto\"\207\001\n PlayerInvestigationAllInfoN" +
-      "otify\022*\n\022investigation_list\030\005 \003(\0132\016.Inve" +
-      "stigation\0227\n\031investigation_target_list\030\016" +
-      " \003(\0132\024.InvestigationTargetB\033\n\031emu.grassc" +
+      "\032\031InvestigationTarget.proto\032\023Investigati" +
+      "on.proto\"\207\001\n PlayerInvestigationAllInfoN" +
+      "otify\0227\n\031investigation_target_list\030\010 \003(\013" +
+      "2\024.InvestigationTarget\022*\n\022investigation_" +
+      "list\030\t \003(\0132\016.InvestigationB\033\n\031emu.grassc" +
       "utter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.InvestigationOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.InvestigationTargetOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.InvestigationOuterClass.getDescriptor(),
         });
     internal_static_PlayerInvestigationAllInfoNotify_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_PlayerInvestigationAllInfoNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerInvestigationAllInfoNotify_descriptor,
-        new java.lang.String[] { "InvestigationList", "InvestigationTargetList", });
-    emu.grasscutter.net.proto.InvestigationOuterClass.getDescriptor();
+        new java.lang.String[] { "InvestigationTargetList", "InvestigationList", });
     emu.grasscutter.net.proto.InvestigationTargetOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.InvestigationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

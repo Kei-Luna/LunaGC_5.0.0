@@ -19,11 +19,6 @@ public final class HomeEnterEditModeFinishReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 4149
-   * Obf: NCEKAKPOPHC
-   * </pre>
-   *
    * Protobuf type {@code HomeEnterEditModeFinishReq}
    */
   public static final class HomeEnterEditModeFinishReq extends
@@ -245,11 +240,6 @@ public final class HomeEnterEditModeFinishReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 4149
-     * Obf: NCEKAKPOPHC
-     * </pre>
-     *
      * Protobuf type {@code HomeEnterEditModeFinishReq}
      */
     public static final class Builder extends

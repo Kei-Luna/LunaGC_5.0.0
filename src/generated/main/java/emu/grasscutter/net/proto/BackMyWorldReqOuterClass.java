@@ -19,11 +19,6 @@ public final class BackMyWorldReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 7284
-   * Obf: KMDLHONLMJH
-   * </pre>
-   *
    * Protobuf type {@code BackMyWorldReq}
    */
   public static final class BackMyWorldReq extends
@@ -245,11 +240,6 @@ public final class BackMyWorldReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 7284
-     * Obf: KMDLHONLMJH
-     * </pre>
-     *
      * Protobuf type {@code BackMyWorldReq}
      */
     public static final class Builder extends

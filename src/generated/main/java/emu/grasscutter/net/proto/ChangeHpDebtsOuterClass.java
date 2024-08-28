@@ -15,10 +15,6 @@ public final class ChangeHpDebtsOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf enum {@code ChangeHpDebts}
    */
   public enum ChangeHpDebts
@@ -39,6 +35,10 @@ public final class ChangeHpDebtsOuterClass {
      * <code>CHANGE_HP_DEBTS_CLEAR = 21;</code>
      */
     CHANGE_HP_DEBTS_CLEAR(21),
+    /**
+     * <code>CHANGE_HP_DEBTS_REDUCE_ABILITY = 41;</code>
+     */
+    CHANGE_HP_DEBTS_REDUCE_ABILITY(41),
     /**
      * <code>CHANGE_HP_DEBTS_ADDABILiTY = 51;</code>
      */
@@ -62,6 +62,10 @@ public final class ChangeHpDebtsOuterClass {
      * <code>CHANGE_HP_DEBTS_CLEAR = 21;</code>
      */
     public static final int CHANGE_HP_DEBTS_CLEAR_VALUE = 21;
+    /**
+     * <code>CHANGE_HP_DEBTS_REDUCE_ABILITY = 41;</code>
+     */
+    public static final int CHANGE_HP_DEBTS_REDUCE_ABILITY_VALUE = 41;
     /**
      * <code>CHANGE_HP_DEBTS_ADDABILiTY = 51;</code>
      */
@@ -96,6 +100,7 @@ public final class ChangeHpDebtsOuterClass {
         case 1: return CHANGE_HP_DEBTS_PAY;
         case 2: return CHANGE_HP_DEBTS_PAYFINISH;
         case 21: return CHANGE_HP_DEBTS_CLEAR;
+        case 41: return CHANGE_HP_DEBTS_REDUCE_ABILITY;
         case 51: return CHANGE_HP_DEBTS_ADDABILiTY;
         default: return null;
       }
@@ -162,12 +167,13 @@ public final class ChangeHpDebtsOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023ChangeHpDebts.proto*\234\001\n\rChangeHpDebts\022" +
+      "\n\023ChangeHpDebts.proto*\300\001\n\rChangeHpDebts\022" +
       "\030\n\024CHANGE_HP_DEBTS_NONE\020\000\022\027\n\023CHANGE_HP_D" +
       "EBTS_PAY\020\001\022\035\n\031CHANGE_HP_DEBTS_PAYFINISH\020" +
-      "\002\022\031\n\025CHANGE_HP_DEBTS_CLEAR\020\025\022\036\n\032CHANGE_H" +
-      "P_DEBTS_ADDABILiTY\0203B\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "\002\022\031\n\025CHANGE_HP_DEBTS_CLEAR\020\025\022\"\n\036CHANGE_H" +
+      "P_DEBTS_REDUCE_ABILITY\020)\022\036\n\032CHANGE_HP_DE" +
+      "BTS_ADDABILiTY\0203B\033\n\031emu.grasscutter.net." +
+      "protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -15,10 +15,6 @@ public final class EnterCustomDungeonTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: PCCMGHKHKNL
-   * </pre>
-   *
    * Protobuf enum {@code EnterCustomDungeonType}
    */
   public enum EnterCustomDungeonType

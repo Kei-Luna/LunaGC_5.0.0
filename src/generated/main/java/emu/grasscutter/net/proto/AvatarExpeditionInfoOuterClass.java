@@ -54,10 +54,6 @@ public final class AvatarExpeditionInfoOuterClass {
     float getShortenRatio();
   }
   /**
-   * <pre>
-   * Obf: MBBNGLKDKFD
-   * </pre>
-   *
    * Protobuf type {@code AvatarExpeditionInfo}
    */
   public static final class AvatarExpeditionInfo extends
@@ -425,10 +421,6 @@ public final class AvatarExpeditionInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: MBBNGLKDKFD
-     * </pre>
-     *
      * Protobuf type {@code AvatarExpeditionInfo}
      */
     public static final class Builder extends

@@ -47,10 +47,6 @@ public final class MapMarkTipsInfoOuterClass {
     int getPointIdList(int index);
   }
   /**
-   * <pre>
-   * Obf: FCABMPGKCEL
-   * </pre>
-   *
    * Protobuf type {@code MapMarkTipsInfo}
    */
   public static final class MapMarkTipsInfo extends
@@ -390,10 +386,6 @@ public final class MapMarkTipsInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: FCABMPGKCEL
-     * </pre>
-     *
      * Protobuf type {@code MapMarkTipsInfo}
      */
     public static final class Builder extends

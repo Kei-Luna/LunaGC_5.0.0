@@ -37,11 +37,6 @@ public final class AvatarDieAnimationEndRspOuterClass {
     int getSkillId();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 1020
-   * </pre>
-   *
    * Protobuf type {@code AvatarDieAnimationEndRsp}
    */
   public static final class AvatarDieAnimationEndRsp extends
@@ -345,11 +340,6 @@ public final class AvatarDieAnimationEndRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 1020
-     * </pre>
-     *
      * Protobuf type {@code AvatarDieAnimationEndRsp}
      */
     public static final class Builder extends

@@ -15,41 +15,37 @@ public final class ActivityPushTipsStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: DKHCNPIKCHO
-   * </pre>
-   *
    * Protobuf enum {@code ActivityPushTipsState}
    */
   public enum ActivityPushTipsState
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_NONE = 0;</code>
+     * <code>ActivityPushTipsState_NONE = 0;</code>
      */
-    ACTIVITY_PUSH_TIPS_STATE_NONE(0),
+    ActivityPushTipsState_NONE(0),
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_START = 1;</code>
+     * <code>ActivityPushTipsState_START = 1;</code>
      */
-    ACTIVITY_PUSH_TIPS_STATE_START(1),
+    ActivityPushTipsState_START(1),
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_READ = 2;</code>
+     * <code>ActivityPushTipsState_READ = 2;</code>
      */
-    ACTIVITY_PUSH_TIPS_STATE_READ(2),
+    ActivityPushTipsState_READ(2),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_NONE = 0;</code>
+     * <code>ActivityPushTipsState_NONE = 0;</code>
      */
-    public static final int ACTIVITY_PUSH_TIPS_STATE_NONE_VALUE = 0;
+    public static final int ActivityPushTipsState_NONE_VALUE = 0;
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_START = 1;</code>
+     * <code>ActivityPushTipsState_START = 1;</code>
      */
-    public static final int ACTIVITY_PUSH_TIPS_STATE_START_VALUE = 1;
+    public static final int ActivityPushTipsState_START_VALUE = 1;
     /**
-     * <code>ACTIVITY_PUSH_TIPS_STATE_READ = 2;</code>
+     * <code>ActivityPushTipsState_READ = 2;</code>
      */
-    public static final int ACTIVITY_PUSH_TIPS_STATE_READ_VALUE = 2;
+    public static final int ActivityPushTipsState_READ_VALUE = 2;
 
 
     public final int getNumber() {
@@ -76,9 +72,9 @@ public final class ActivityPushTipsStateOuterClass {
      */
     public static ActivityPushTipsState forNumber(int value) {
       switch (value) {
-        case 0: return ACTIVITY_PUSH_TIPS_STATE_NONE;
-        case 1: return ACTIVITY_PUSH_TIPS_STATE_START;
-        case 2: return ACTIVITY_PUSH_TIPS_STATE_READ;
+        case 0: return ActivityPushTipsState_NONE;
+        case 1: return ActivityPushTipsState_START;
+        case 2: return ActivityPushTipsState_READ;
         default: return null;
       }
     }
@@ -144,11 +140,11 @@ public final class ActivityPushTipsStateOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033ActivityPushTipsState.proto*\201\001\n\025Activi" +
-      "tyPushTipsState\022!\n\035ACTIVITY_PUSH_TIPS_ST" +
-      "ATE_NONE\020\000\022\"\n\036ACTIVITY_PUSH_TIPS_STATE_S" +
-      "TART\020\001\022!\n\035ACTIVITY_PUSH_TIPS_STATE_READ\020" +
-      "\002B\033\n\031emu.grasscutter.net.protob\006proto3"
+      "\n\033ActivityPushTipsState.proto*x\n\025Activit" +
+      "yPushTipsState\022\036\n\032ActivityPushTipsState_" +
+      "NONE\020\000\022\037\n\033ActivityPushTipsState_START\020\001\022" +
+      "\036\n\032ActivityPushTipsState_READ\020\002B\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -19,11 +19,6 @@ public final class GetWidgetSlotReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 24304
-   * Obf: BCJMLGNMNHC
-   * </pre>
-   *
    * Protobuf type {@code GetWidgetSlotReq}
    */
   public static final class GetWidgetSlotReq extends
@@ -245,11 +240,6 @@ public final class GetWidgetSlotReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 24304
-     * Obf: BCJMLGNMNHC
-     * </pre>
-     *
      * Protobuf type {@code GetWidgetSlotReq}
      */
     public static final class Builder extends

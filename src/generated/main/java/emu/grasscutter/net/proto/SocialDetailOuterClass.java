@@ -273,28 +273,46 @@ public final class SocialDetailOuterClass {
         getIpCodeBytes();
 
     /**
-     * <code>uint32 FPBKNPMLEPC = 27;</code>
-     * @return The fPBKNPMLEPC.
+     * <code>uint32 CMOBLNACDIE = 27;</code>
+     * @return The cMOBLNACDIE.
      */
-    int getFPBKNPMLEPC();
+    int getCMOBLNACDIE();
 
     /**
-     * <code>uint32 BNBFADNNNNA = 28;</code>
-     * @return The bNBFADNNNNA.
+     * <code>uint32 GEGBOECJJMO = 28;</code>
+     * @return The gEGBOECJJMO.
      */
-    int getBNBFADNNNNA();
+    int getGEGBOECJJMO();
 
     /**
-     * <code>uint32 NHFIPHHHOEF = 32;</code>
-     * @return The nHFIPHHHOEF.
+     * <code>uint32 MBOLLDBJPCP = 32;</code>
+     * @return The mBOLLDBJPCP.
      */
-    int getNHFIPHHHOEF();
+    int getMBOLLDBJPCP();
+
+    /**
+     * <code>bool is_show_constellation_num = 33;</code>
+     * @return The isShowConstellationNum.
+     */
+    boolean getIsShowConstellationNum();
+
+    /**
+     * <code>uint32 FLMFEMCAFHB = 34;</code>
+     * @return The fLMFEMCAFHB.
+     */
+    int getFLMFEMCAFHB();
+
+    /**
+     * <pre>
+     *GBNIKBFHHKP GFKFJJOADMH = 36;
+     * </pre>
+     *
+     * <code>uint32 MOBMAJIJJGL = 35;</code>
+     * @return The mOBMAJIJJGL.
+     */
+    int getMOBMAJIJJGL();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code SocialDetail}
    */
   public static final class SocialDetail extends
@@ -541,17 +559,32 @@ public final class SocialDetailOuterClass {
             }
             case 216: {
 
-              fPBKNPMLEPC_ = input.readUInt32();
+              cMOBLNACDIE_ = input.readUInt32();
               break;
             }
             case 224: {
 
-              bNBFADNNNNA_ = input.readUInt32();
+              gEGBOECJJMO_ = input.readUInt32();
               break;
             }
             case 256: {
 
-              nHFIPHHHOEF_ = input.readUInt32();
+              mBOLLDBJPCP_ = input.readUInt32();
+              break;
+            }
+            case 264: {
+
+              isShowConstellationNum_ = input.readBool();
+              break;
+            }
+            case 272: {
+
+              fLMFEMCAFHB_ = input.readUInt32();
+              break;
+            }
+            case 280: {
+
+              mOBMAJIJJGL_ = input.readUInt32();
               break;
             }
             default: {
@@ -1125,37 +1158,74 @@ public final class SocialDetailOuterClass {
       }
     }
 
-    public static final int FPBKNPMLEPC_FIELD_NUMBER = 27;
-    private int fPBKNPMLEPC_;
+    public static final int CMOBLNACDIE_FIELD_NUMBER = 27;
+    private int cMOBLNACDIE_;
     /**
-     * <code>uint32 FPBKNPMLEPC = 27;</code>
-     * @return The fPBKNPMLEPC.
+     * <code>uint32 CMOBLNACDIE = 27;</code>
+     * @return The cMOBLNACDIE.
      */
     @java.lang.Override
-    public int getFPBKNPMLEPC() {
-      return fPBKNPMLEPC_;
+    public int getCMOBLNACDIE() {
+      return cMOBLNACDIE_;
     }
 
-    public static final int BNBFADNNNNA_FIELD_NUMBER = 28;
-    private int bNBFADNNNNA_;
+    public static final int GEGBOECJJMO_FIELD_NUMBER = 28;
+    private int gEGBOECJJMO_;
     /**
-     * <code>uint32 BNBFADNNNNA = 28;</code>
-     * @return The bNBFADNNNNA.
+     * <code>uint32 GEGBOECJJMO = 28;</code>
+     * @return The gEGBOECJJMO.
      */
     @java.lang.Override
-    public int getBNBFADNNNNA() {
-      return bNBFADNNNNA_;
+    public int getGEGBOECJJMO() {
+      return gEGBOECJJMO_;
     }
 
-    public static final int NHFIPHHHOEF_FIELD_NUMBER = 32;
-    private int nHFIPHHHOEF_;
+    public static final int MBOLLDBJPCP_FIELD_NUMBER = 32;
+    private int mBOLLDBJPCP_;
     /**
-     * <code>uint32 NHFIPHHHOEF = 32;</code>
-     * @return The nHFIPHHHOEF.
+     * <code>uint32 MBOLLDBJPCP = 32;</code>
+     * @return The mBOLLDBJPCP.
      */
     @java.lang.Override
-    public int getNHFIPHHHOEF() {
-      return nHFIPHHHOEF_;
+    public int getMBOLLDBJPCP() {
+      return mBOLLDBJPCP_;
+    }
+
+    public static final int IS_SHOW_CONSTELLATION_NUM_FIELD_NUMBER = 33;
+    private boolean isShowConstellationNum_;
+    /**
+     * <code>bool is_show_constellation_num = 33;</code>
+     * @return The isShowConstellationNum.
+     */
+    @java.lang.Override
+    public boolean getIsShowConstellationNum() {
+      return isShowConstellationNum_;
+    }
+
+    public static final int FLMFEMCAFHB_FIELD_NUMBER = 34;
+    private int fLMFEMCAFHB_;
+    /**
+     * <code>uint32 FLMFEMCAFHB = 34;</code>
+     * @return The fLMFEMCAFHB.
+     */
+    @java.lang.Override
+    public int getFLMFEMCAFHB() {
+      return fLMFEMCAFHB_;
+    }
+
+    public static final int MOBMAJIJJGL_FIELD_NUMBER = 35;
+    private int mOBMAJIJJGL_;
+    /**
+     * <pre>
+     *GBNIKBFHHKP GFKFJJOADMH = 36;
+     * </pre>
+     *
+     * <code>uint32 MOBMAJIJJGL = 35;</code>
+     * @return The mOBMAJIJJGL.
+     */
+    @java.lang.Override
+    public int getMOBMAJIJJGL() {
+      return mOBMAJIJJGL_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1259,14 +1329,23 @@ public final class SocialDetailOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 26, ipCode_);
       }
-      if (fPBKNPMLEPC_ != 0) {
-        output.writeUInt32(27, fPBKNPMLEPC_);
+      if (cMOBLNACDIE_ != 0) {
+        output.writeUInt32(27, cMOBLNACDIE_);
       }
-      if (bNBFADNNNNA_ != 0) {
-        output.writeUInt32(28, bNBFADNNNNA_);
+      if (gEGBOECJJMO_ != 0) {
+        output.writeUInt32(28, gEGBOECJJMO_);
       }
-      if (nHFIPHHHOEF_ != 0) {
-        output.writeUInt32(32, nHFIPHHHOEF_);
+      if (mBOLLDBJPCP_ != 0) {
+        output.writeUInt32(32, mBOLLDBJPCP_);
+      }
+      if (isShowConstellationNum_ != false) {
+        output.writeBool(33, isShowConstellationNum_);
+      }
+      if (fLMFEMCAFHB_ != 0) {
+        output.writeUInt32(34, fLMFEMCAFHB_);
+      }
+      if (mOBMAJIJJGL_ != 0) {
+        output.writeUInt32(35, mOBMAJIJJGL_);
       }
       unknownFields.writeTo(output);
     }
@@ -1396,17 +1475,29 @@ public final class SocialDetailOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ipCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, ipCode_);
       }
-      if (fPBKNPMLEPC_ != 0) {
+      if (cMOBLNACDIE_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(27, fPBKNPMLEPC_);
+          .computeUInt32Size(27, cMOBLNACDIE_);
       }
-      if (bNBFADNNNNA_ != 0) {
+      if (gEGBOECJJMO_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(28, bNBFADNNNNA_);
+          .computeUInt32Size(28, gEGBOECJJMO_);
       }
-      if (nHFIPHHHOEF_ != 0) {
+      if (mBOLLDBJPCP_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(32, nHFIPHHHOEF_);
+          .computeUInt32Size(32, mBOLLDBJPCP_);
+      }
+      if (isShowConstellationNum_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(33, isShowConstellationNum_);
+      }
+      if (fLMFEMCAFHB_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(34, fLMFEMCAFHB_);
+      }
+      if (mOBMAJIJJGL_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(35, mOBMAJIJJGL_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1479,12 +1570,18 @@ public final class SocialDetailOuterClass {
       }
       if (!getIpCode()
           .equals(other.getIpCode())) return false;
-      if (getFPBKNPMLEPC()
-          != other.getFPBKNPMLEPC()) return false;
-      if (getBNBFADNNNNA()
-          != other.getBNBFADNNNNA()) return false;
-      if (getNHFIPHHHOEF()
-          != other.getNHFIPHHHOEF()) return false;
+      if (getCMOBLNACDIE()
+          != other.getCMOBLNACDIE()) return false;
+      if (getGEGBOECJJMO()
+          != other.getGEGBOECJJMO()) return false;
+      if (getMBOLLDBJPCP()
+          != other.getMBOLLDBJPCP()) return false;
+      if (getIsShowConstellationNum()
+          != other.getIsShowConstellationNum()) return false;
+      if (getFLMFEMCAFHB()
+          != other.getFLMFEMCAFHB()) return false;
+      if (getMOBMAJIJJGL()
+          != other.getMOBMAJIJJGL()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1563,12 +1660,19 @@ public final class SocialDetailOuterClass {
       }
       hash = (37 * hash) + IP_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getIpCode().hashCode();
-      hash = (37 * hash) + FPBKNPMLEPC_FIELD_NUMBER;
-      hash = (53 * hash) + getFPBKNPMLEPC();
-      hash = (37 * hash) + BNBFADNNNNA_FIELD_NUMBER;
-      hash = (53 * hash) + getBNBFADNNNNA();
-      hash = (37 * hash) + NHFIPHHHOEF_FIELD_NUMBER;
-      hash = (53 * hash) + getNHFIPHHHOEF();
+      hash = (37 * hash) + CMOBLNACDIE_FIELD_NUMBER;
+      hash = (53 * hash) + getCMOBLNACDIE();
+      hash = (37 * hash) + GEGBOECJJMO_FIELD_NUMBER;
+      hash = (53 * hash) + getGEGBOECJJMO();
+      hash = (37 * hash) + MBOLLDBJPCP_FIELD_NUMBER;
+      hash = (53 * hash) + getMBOLLDBJPCP();
+      hash = (37 * hash) + IS_SHOW_CONSTELLATION_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsShowConstellationNum());
+      hash = (37 * hash) + FLMFEMCAFHB_FIELD_NUMBER;
+      hash = (53 * hash) + getFLMFEMCAFHB();
+      hash = (37 * hash) + MOBMAJIJJGL_FIELD_NUMBER;
+      hash = (53 * hash) + getMOBMAJIJJGL();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1665,10 +1769,6 @@ public final class SocialDetailOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code SocialDetail}
      */
     public static final class Builder extends
@@ -1771,11 +1871,17 @@ public final class SocialDetailOuterClass {
         }
         ipCode_ = "";
 
-        fPBKNPMLEPC_ = 0;
+        cMOBLNACDIE_ = 0;
 
-        bNBFADNNNNA_ = 0;
+        gEGBOECJJMO_ = 0;
 
-        nHFIPHHHOEF_ = 0;
+        mBOLLDBJPCP_ = 0;
+
+        isShowConstellationNum_ = false;
+
+        fLMFEMCAFHB_ = 0;
+
+        mOBMAJIJJGL_ = 0;
 
         return this;
       }
@@ -1854,9 +1960,12 @@ public final class SocialDetailOuterClass {
           result.profilePicture_ = profilePictureBuilder_.build();
         }
         result.ipCode_ = ipCode_;
-        result.fPBKNPMLEPC_ = fPBKNPMLEPC_;
-        result.bNBFADNNNNA_ = bNBFADNNNNA_;
-        result.nHFIPHHHOEF_ = nHFIPHHHOEF_;
+        result.cMOBLNACDIE_ = cMOBLNACDIE_;
+        result.gEGBOECJJMO_ = gEGBOECJJMO_;
+        result.mBOLLDBJPCP_ = mBOLLDBJPCP_;
+        result.isShowConstellationNum_ = isShowConstellationNum_;
+        result.fLMFEMCAFHB_ = fLMFEMCAFHB_;
+        result.mOBMAJIJJGL_ = mOBMAJIJJGL_;
         onBuilt();
         return result;
       }
@@ -2025,14 +2134,23 @@ public final class SocialDetailOuterClass {
           ipCode_ = other.ipCode_;
           onChanged();
         }
-        if (other.getFPBKNPMLEPC() != 0) {
-          setFPBKNPMLEPC(other.getFPBKNPMLEPC());
+        if (other.getCMOBLNACDIE() != 0) {
+          setCMOBLNACDIE(other.getCMOBLNACDIE());
         }
-        if (other.getBNBFADNNNNA() != 0) {
-          setBNBFADNNNNA(other.getBNBFADNNNNA());
+        if (other.getGEGBOECJJMO() != 0) {
+          setGEGBOECJJMO(other.getGEGBOECJJMO());
         }
-        if (other.getNHFIPHHHOEF() != 0) {
-          setNHFIPHHHOEF(other.getNHFIPHHHOEF());
+        if (other.getMBOLLDBJPCP() != 0) {
+          setMBOLLDBJPCP(other.getMBOLLDBJPCP());
+        }
+        if (other.getIsShowConstellationNum() != false) {
+          setIsShowConstellationNum(other.getIsShowConstellationNum());
+        }
+        if (other.getFLMFEMCAFHB() != 0) {
+          setFLMFEMCAFHB(other.getFLMFEMCAFHB());
+        }
+        if (other.getMOBMAJIJJGL() != 0) {
+          setMOBMAJIJJGL(other.getMOBMAJIJJGL());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3622,95 +3740,200 @@ public final class SocialDetailOuterClass {
         return this;
       }
 
-      private int fPBKNPMLEPC_ ;
+      private int cMOBLNACDIE_ ;
       /**
-       * <code>uint32 FPBKNPMLEPC = 27;</code>
-       * @return The fPBKNPMLEPC.
+       * <code>uint32 CMOBLNACDIE = 27;</code>
+       * @return The cMOBLNACDIE.
        */
       @java.lang.Override
-      public int getFPBKNPMLEPC() {
-        return fPBKNPMLEPC_;
+      public int getCMOBLNACDIE() {
+        return cMOBLNACDIE_;
       }
       /**
-       * <code>uint32 FPBKNPMLEPC = 27;</code>
-       * @param value The fPBKNPMLEPC to set.
+       * <code>uint32 CMOBLNACDIE = 27;</code>
+       * @param value The cMOBLNACDIE to set.
        * @return This builder for chaining.
        */
-      public Builder setFPBKNPMLEPC(int value) {
+      public Builder setCMOBLNACDIE(int value) {
         
-        fPBKNPMLEPC_ = value;
+        cMOBLNACDIE_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 FPBKNPMLEPC = 27;</code>
+       * <code>uint32 CMOBLNACDIE = 27;</code>
        * @return This builder for chaining.
        */
-      public Builder clearFPBKNPMLEPC() {
+      public Builder clearCMOBLNACDIE() {
         
-        fPBKNPMLEPC_ = 0;
+        cMOBLNACDIE_ = 0;
         onChanged();
         return this;
       }
 
-      private int bNBFADNNNNA_ ;
+      private int gEGBOECJJMO_ ;
       /**
-       * <code>uint32 BNBFADNNNNA = 28;</code>
-       * @return The bNBFADNNNNA.
+       * <code>uint32 GEGBOECJJMO = 28;</code>
+       * @return The gEGBOECJJMO.
        */
       @java.lang.Override
-      public int getBNBFADNNNNA() {
-        return bNBFADNNNNA_;
+      public int getGEGBOECJJMO() {
+        return gEGBOECJJMO_;
       }
       /**
-       * <code>uint32 BNBFADNNNNA = 28;</code>
-       * @param value The bNBFADNNNNA to set.
+       * <code>uint32 GEGBOECJJMO = 28;</code>
+       * @param value The gEGBOECJJMO to set.
        * @return This builder for chaining.
        */
-      public Builder setBNBFADNNNNA(int value) {
+      public Builder setGEGBOECJJMO(int value) {
         
-        bNBFADNNNNA_ = value;
+        gEGBOECJJMO_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 BNBFADNNNNA = 28;</code>
+       * <code>uint32 GEGBOECJJMO = 28;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBNBFADNNNNA() {
+      public Builder clearGEGBOECJJMO() {
         
-        bNBFADNNNNA_ = 0;
+        gEGBOECJJMO_ = 0;
         onChanged();
         return this;
       }
 
-      private int nHFIPHHHOEF_ ;
+      private int mBOLLDBJPCP_ ;
       /**
-       * <code>uint32 NHFIPHHHOEF = 32;</code>
-       * @return The nHFIPHHHOEF.
+       * <code>uint32 MBOLLDBJPCP = 32;</code>
+       * @return The mBOLLDBJPCP.
        */
       @java.lang.Override
-      public int getNHFIPHHHOEF() {
-        return nHFIPHHHOEF_;
+      public int getMBOLLDBJPCP() {
+        return mBOLLDBJPCP_;
       }
       /**
-       * <code>uint32 NHFIPHHHOEF = 32;</code>
-       * @param value The nHFIPHHHOEF to set.
+       * <code>uint32 MBOLLDBJPCP = 32;</code>
+       * @param value The mBOLLDBJPCP to set.
        * @return This builder for chaining.
        */
-      public Builder setNHFIPHHHOEF(int value) {
+      public Builder setMBOLLDBJPCP(int value) {
         
-        nHFIPHHHOEF_ = value;
+        mBOLLDBJPCP_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 NHFIPHHHOEF = 32;</code>
+       * <code>uint32 MBOLLDBJPCP = 32;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNHFIPHHHOEF() {
+      public Builder clearMBOLLDBJPCP() {
         
-        nHFIPHHHOEF_ = 0;
+        mBOLLDBJPCP_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isShowConstellationNum_ ;
+      /**
+       * <code>bool is_show_constellation_num = 33;</code>
+       * @return The isShowConstellationNum.
+       */
+      @java.lang.Override
+      public boolean getIsShowConstellationNum() {
+        return isShowConstellationNum_;
+      }
+      /**
+       * <code>bool is_show_constellation_num = 33;</code>
+       * @param value The isShowConstellationNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsShowConstellationNum(boolean value) {
+        
+        isShowConstellationNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_show_constellation_num = 33;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsShowConstellationNum() {
+        
+        isShowConstellationNum_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int fLMFEMCAFHB_ ;
+      /**
+       * <code>uint32 FLMFEMCAFHB = 34;</code>
+       * @return The fLMFEMCAFHB.
+       */
+      @java.lang.Override
+      public int getFLMFEMCAFHB() {
+        return fLMFEMCAFHB_;
+      }
+      /**
+       * <code>uint32 FLMFEMCAFHB = 34;</code>
+       * @param value The fLMFEMCAFHB to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFLMFEMCAFHB(int value) {
+        
+        fLMFEMCAFHB_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 FLMFEMCAFHB = 34;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFLMFEMCAFHB() {
+        
+        fLMFEMCAFHB_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int mOBMAJIJJGL_ ;
+      /**
+       * <pre>
+       *GBNIKBFHHKP GFKFJJOADMH = 36;
+       * </pre>
+       *
+       * <code>uint32 MOBMAJIJJGL = 35;</code>
+       * @return The mOBMAJIJJGL.
+       */
+      @java.lang.Override
+      public int getMOBMAJIJJGL() {
+        return mOBMAJIJJGL_;
+      }
+      /**
+       * <pre>
+       *GBNIKBFHHKP GFKFJJOADMH = 36;
+       * </pre>
+       *
+       * <code>uint32 MOBMAJIJJGL = 35;</code>
+       * @param value The mOBMAJIJJGL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMOBMAJIJJGL(int value) {
+        
+        mOBMAJIJJGL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *GBNIKBFHHKP GFKFJJOADMH = 36;
+       * </pre>
+       *
+       * <code>uint32 MOBMAJIJJGL = 35;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMOBMAJIJJGL() {
+        
+        mOBMAJIJJGL_ = 0;
         onChanged();
         return this;
       }
@@ -3784,7 +4007,7 @@ public final class SocialDetailOuterClass {
       "\n\022SocialDetail.proto\032\016Birthday.proto\032\027Fr" +
       "iendOnlineState.proto\032\032SocialShowAvatarI" +
       "nfo.proto\032\033FriendEnterHomeOption.proto\032\024" +
-      "ProfilePicture.proto\"\200\006\n\014SocialDetail\022\013\n" +
+      "ProfilePicture.proto\"\315\006\n\014SocialDetail\022\013\n" +
       "\003uid\030\001 \001(\r\022\020\n\010nickname\030\002 \001(\t\022\r\n\005level\030\003 " +
       "\001(\r\022\021\n\tavatar_id\030\004 \001(\r\022\021\n\tsignature\030\005 \001(" +
       "\t\022\033\n\010birthday\030\006 \001(\0132\t.Birthday\022\023\n\013world_" +
@@ -3802,9 +4025,11 @@ public final class SocialDetailOuterClass {
       "_list\030\027 \003(\r\0228\n\030friend_enter_home_option\030" +
       "\030 \001(\0162\026.FriendEnterHomeOption\022(\n\017profile" +
       "_picture\030\031 \001(\0132\017.ProfilePicture\022\017\n\007ip_co" +
-      "de\030\032 \001(\t\022\023\n\013FPBKNPMLEPC\030\033 \001(\r\022\023\n\013BNBFADN" +
-      "NNNA\030\034 \001(\r\022\023\n\013NHFIPHHHOEF\030  \001(\rB\033\n\031emu.g" +
-      "rasscutter.net.protob\006proto3"
+      "de\030\032 \001(\t\022\023\n\013CMOBLNACDIE\030\033 \001(\r\022\023\n\013GEGBOEC" +
+      "JJMO\030\034 \001(\r\022\023\n\013MBOLLDBJPCP\030  \001(\r\022!\n\031is_sh" +
+      "ow_constellation_num\030! \001(\010\022\023\n\013FLMFEMCAFH" +
+      "B\030\" \001(\r\022\023\n\013MOBMAJIJJGL\030# \001(\rB\033\n\031emu.gras" +
+      "scutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3820,7 +4045,7 @@ public final class SocialDetailOuterClass {
     internal_static_SocialDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SocialDetail_descriptor,
-        new java.lang.String[] { "Uid", "Nickname", "Level", "AvatarId", "Signature", "Birthday", "WorldLevel", "ReservedList", "OnlineState", "Param", "IsFriend", "IsMpModeAvailable", "OnlineId", "NameCardId", "IsInBlacklist", "IsChatNoDisturb", "RemarkName", "FinishAchievementNum", "TowerFloorIndex", "TowerLevelIndex", "IsShowAvatar", "ShowAvatarInfoList", "ShowNameCardIdList", "FriendEnterHomeOption", "ProfilePicture", "IpCode", "FPBKNPMLEPC", "BNBFADNNNNA", "NHFIPHHHOEF", });
+        new java.lang.String[] { "Uid", "Nickname", "Level", "AvatarId", "Signature", "Birthday", "WorldLevel", "ReservedList", "OnlineState", "Param", "IsFriend", "IsMpModeAvailable", "OnlineId", "NameCardId", "IsInBlacklist", "IsChatNoDisturb", "RemarkName", "FinishAchievementNum", "TowerFloorIndex", "TowerLevelIndex", "IsShowAvatar", "ShowAvatarInfoList", "ShowNameCardIdList", "FriendEnterHomeOption", "ProfilePicture", "IpCode", "CMOBLNACDIE", "GEGBOECJJMO", "MBOLLDBJPCP", "IsShowConstellationNum", "FLMFEMCAFHB", "MOBMAJIJJGL", });
     emu.grasscutter.net.proto.BirthdayOuterClass.getDescriptor();
     emu.grasscutter.net.proto.FriendOnlineStateOuterClass.getDescriptor();
     emu.grasscutter.net.proto.SocialShowAvatarInfoOuterClass.getDescriptor();

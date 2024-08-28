@@ -19,29 +19,23 @@ public final class HomeModuleSeenReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @return A list containing the seenModuleIdList.
      */
     java.util.List<java.lang.Integer> getSeenModuleIdListList();
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @return The count of seenModuleIdList.
      */
     int getSeenModuleIdListCount();
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The seenModuleIdList at the given index.
      */
     int getSeenModuleIdList(int index);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * Obf: LEHAIFPOFJI
-   * CmdId: 4142
-   * </pre>
-   *
    * Protobuf type {@code HomeModuleSeenReq}
    */
   public static final class HomeModuleSeenReq extends
@@ -88,7 +82,7 @@ public final class HomeModuleSeenReqOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
+            case 40: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 seenModuleIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -96,7 +90,7 @@ public final class HomeModuleSeenReqOuterClass {
               seenModuleIdList_.addInt(input.readUInt32());
               break;
             }
-            case 114: {
+            case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -144,10 +138,10 @@ public final class HomeModuleSeenReqOuterClass {
               emu.grasscutter.net.proto.HomeModuleSeenReqOuterClass.HomeModuleSeenReq.class, emu.grasscutter.net.proto.HomeModuleSeenReqOuterClass.HomeModuleSeenReq.Builder.class);
     }
 
-    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 14;
+    public static final int SEEN_MODULE_ID_LIST_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.IntList seenModuleIdList_;
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @return A list containing the seenModuleIdList.
      */
     @java.lang.Override
@@ -156,14 +150,14 @@ public final class HomeModuleSeenReqOuterClass {
       return seenModuleIdList_;
     }
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @return The count of seenModuleIdList.
      */
     public int getSeenModuleIdListCount() {
       return seenModuleIdList_.size();
     }
     /**
-     * <code>repeated uint32 seen_module_id_list = 14;</code>
+     * <code>repeated uint32 seen_module_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The seenModuleIdList at the given index.
      */
@@ -188,7 +182,7 @@ public final class HomeModuleSeenReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getSeenModuleIdListList().size() > 0) {
-        output.writeUInt32NoTag(114);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(seenModuleIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < seenModuleIdList_.size(); i++) {
@@ -345,12 +339,6 @@ public final class HomeModuleSeenReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * Obf: LEHAIFPOFJI
-     * CmdId: 4142
-     * </pre>
-     *
      * Protobuf type {@code HomeModuleSeenReq}
      */
     public static final class Builder extends
@@ -518,7 +506,7 @@ public final class HomeModuleSeenReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @return A list containing the seenModuleIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -527,14 +515,14 @@ public final class HomeModuleSeenReqOuterClass {
                  java.util.Collections.unmodifiableList(seenModuleIdList_) : seenModuleIdList_;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @return The count of seenModuleIdList.
        */
       public int getSeenModuleIdListCount() {
         return seenModuleIdList_.size();
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @param index The index of the element to return.
        * @return The seenModuleIdList at the given index.
        */
@@ -542,7 +530,7 @@ public final class HomeModuleSeenReqOuterClass {
         return seenModuleIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @param index The index to set the value at.
        * @param value The seenModuleIdList to set.
        * @return This builder for chaining.
@@ -555,7 +543,7 @@ public final class HomeModuleSeenReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @param value The seenModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -566,7 +554,7 @@ public final class HomeModuleSeenReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @param values The seenModuleIdList to add.
        * @return This builder for chaining.
        */
@@ -579,7 +567,7 @@ public final class HomeModuleSeenReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 seen_module_id_list = 14;</code>
+       * <code>repeated uint32 seen_module_id_list = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearSeenModuleIdList() {
@@ -656,7 +644,7 @@ public final class HomeModuleSeenReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027HomeModuleSeenReq.proto\"0\n\021HomeModuleS" +
-      "eenReq\022\033\n\023seen_module_id_list\030\016 \003(\rB\033\n\031e" +
+      "eenReq\022\033\n\023seen_module_id_list\030\005 \003(\rB\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

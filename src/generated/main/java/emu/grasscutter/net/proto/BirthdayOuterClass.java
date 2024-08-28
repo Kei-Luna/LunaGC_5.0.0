@@ -31,10 +31,6 @@ public final class BirthdayOuterClass {
     int getDay();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code Birthday}
    */
   public static final class Birthday extends
@@ -310,10 +306,6 @@ public final class BirthdayOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code Birthday}
      */
     public static final class Builder extends

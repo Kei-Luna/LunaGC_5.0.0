@@ -19,23 +19,18 @@ public final class VehicleStaminaNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 entity_id = 10;</code>
+     * <code>uint32 entity_id = 5;</code>
      * @return The entityId.
      */
     int getEntityId();
 
     /**
-     * <code>float cur_stamina = 5;</code>
+     * <code>float cur_stamina = 6;</code>
      * @return The curStamina.
      */
     float getCurStamina();
   }
   /**
-   * <pre>
-   * CmdId: 6743
-   * Obf: FJJEGAOHOAC
-   * </pre>
-   *
    * Protobuf type {@code VehicleStaminaNotify}
    */
   public static final class VehicleStaminaNotify extends
@@ -80,14 +75,14 @@ public final class VehicleStaminaNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 45: {
-
-              curStamina_ = input.readFloat();
-              break;
-            }
-            case 80: {
+            case 40: {
 
               entityId_ = input.readUInt32();
+              break;
+            }
+            case 53: {
+
+              curStamina_ = input.readFloat();
               break;
             }
             default: {
@@ -122,10 +117,10 @@ public final class VehicleStaminaNotifyOuterClass {
               emu.grasscutter.net.proto.VehicleStaminaNotifyOuterClass.VehicleStaminaNotify.class, emu.grasscutter.net.proto.VehicleStaminaNotifyOuterClass.VehicleStaminaNotify.Builder.class);
     }
 
-    public static final int ENTITY_ID_FIELD_NUMBER = 10;
+    public static final int ENTITY_ID_FIELD_NUMBER = 5;
     private int entityId_;
     /**
-     * <code>uint32 entity_id = 10;</code>
+     * <code>uint32 entity_id = 5;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -133,10 +128,10 @@ public final class VehicleStaminaNotifyOuterClass {
       return entityId_;
     }
 
-    public static final int CUR_STAMINA_FIELD_NUMBER = 5;
+    public static final int CUR_STAMINA_FIELD_NUMBER = 6;
     private float curStamina_;
     /**
-     * <code>float cur_stamina = 5;</code>
+     * <code>float cur_stamina = 6;</code>
      * @return The curStamina.
      */
     @java.lang.Override
@@ -158,11 +153,11 @@ public final class VehicleStaminaNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (curStamina_ != 0F) {
-        output.writeFloat(5, curStamina_);
-      }
       if (entityId_ != 0) {
-        output.writeUInt32(10, entityId_);
+        output.writeUInt32(5, entityId_);
+      }
+      if (curStamina_ != 0F) {
+        output.writeFloat(6, curStamina_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +168,13 @@ public final class VehicleStaminaNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (curStamina_ != 0F) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, curStamina_);
-      }
       if (entityId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, entityId_);
+          .computeUInt32Size(5, entityId_);
+      }
+      if (curStamina_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(6, curStamina_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -313,11 +308,6 @@ public final class VehicleStaminaNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6743
-     * Obf: FJJEGAOHOAC
-     * </pre>
-     *
      * Protobuf type {@code VehicleStaminaNotify}
      */
     public static final class Builder extends
@@ -472,7 +462,7 @@ public final class VehicleStaminaNotifyOuterClass {
 
       private int entityId_ ;
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 5;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -480,7 +470,7 @@ public final class VehicleStaminaNotifyOuterClass {
         return entityId_;
       }
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 5;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -491,7 +481,7 @@ public final class VehicleStaminaNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 entity_id = 10;</code>
+       * <code>uint32 entity_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -503,7 +493,7 @@ public final class VehicleStaminaNotifyOuterClass {
 
       private float curStamina_ ;
       /**
-       * <code>float cur_stamina = 5;</code>
+       * <code>float cur_stamina = 6;</code>
        * @return The curStamina.
        */
       @java.lang.Override
@@ -511,7 +501,7 @@ public final class VehicleStaminaNotifyOuterClass {
         return curStamina_;
       }
       /**
-       * <code>float cur_stamina = 5;</code>
+       * <code>float cur_stamina = 6;</code>
        * @param value The curStamina to set.
        * @return This builder for chaining.
        */
@@ -522,7 +512,7 @@ public final class VehicleStaminaNotifyOuterClass {
         return this;
       }
       /**
-       * <code>float cur_stamina = 5;</code>
+       * <code>float cur_stamina = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurStamina() {
@@ -599,8 +589,8 @@ public final class VehicleStaminaNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032VehicleStaminaNotify.proto\">\n\024VehicleS" +
-      "taminaNotify\022\021\n\tentity_id\030\n \001(\r\022\023\n\013cur_s" +
-      "tamina\030\005 \001(\002B\033\n\031emu.grasscutter.net.prot" +
+      "taminaNotify\022\021\n\tentity_id\030\005 \001(\r\022\023\n\013cur_s" +
+      "tamina\030\006 \001(\002B\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

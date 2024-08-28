@@ -15,49 +15,45 @@ public final class HuntingOfferStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: DINBLJHHDJN
-   * </pre>
-   *
    * Protobuf enum {@code HuntingOfferState}
    */
   public enum HuntingOfferState
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>HUNTING_OFFER_STATE_NONE = 0;</code>
+     * <code>HuntingOfferState_NONE = 0;</code>
      */
-    HUNTING_OFFER_STATE_NONE(0),
+    HuntingOfferState_NONE(0),
     /**
-     * <code>HUNTING_OFFER_STATE_STARTED = 1;</code>
+     * <code>HuntingOfferState_STARTED = 1;</code>
      */
-    HUNTING_OFFER_STATE_STARTED(1),
+    HuntingOfferState_STARTED(1),
     /**
-     * <code>HUNTING_OFFER_STATE_UNSTARTED = 2;</code>
+     * <code>HuntingOfferState_UNSTARTED = 2;</code>
      */
-    HUNTING_OFFER_STATE_UNSTARTED(2),
+    HuntingOfferState_UNSTARTED(2),
     /**
-     * <code>HUNTING_OFFER_STATE_SUCC = 3;</code>
+     * <code>HuntingOfferState_SUCC = 3;</code>
      */
-    HUNTING_OFFER_STATE_SUCC(3),
+    HuntingOfferState_SUCC(3),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>HUNTING_OFFER_STATE_NONE = 0;</code>
+     * <code>HuntingOfferState_NONE = 0;</code>
      */
-    public static final int HUNTING_OFFER_STATE_NONE_VALUE = 0;
+    public static final int HuntingOfferState_NONE_VALUE = 0;
     /**
-     * <code>HUNTING_OFFER_STATE_STARTED = 1;</code>
+     * <code>HuntingOfferState_STARTED = 1;</code>
      */
-    public static final int HUNTING_OFFER_STATE_STARTED_VALUE = 1;
+    public static final int HuntingOfferState_STARTED_VALUE = 1;
     /**
-     * <code>HUNTING_OFFER_STATE_UNSTARTED = 2;</code>
+     * <code>HuntingOfferState_UNSTARTED = 2;</code>
      */
-    public static final int HUNTING_OFFER_STATE_UNSTARTED_VALUE = 2;
+    public static final int HuntingOfferState_UNSTARTED_VALUE = 2;
     /**
-     * <code>HUNTING_OFFER_STATE_SUCC = 3;</code>
+     * <code>HuntingOfferState_SUCC = 3;</code>
      */
-    public static final int HUNTING_OFFER_STATE_SUCC_VALUE = 3;
+    public static final int HuntingOfferState_SUCC_VALUE = 3;
 
 
     public final int getNumber() {
@@ -84,10 +80,10 @@ public final class HuntingOfferStateOuterClass {
      */
     public static HuntingOfferState forNumber(int value) {
       switch (value) {
-        case 0: return HUNTING_OFFER_STATE_NONE;
-        case 1: return HUNTING_OFFER_STATE_STARTED;
-        case 2: return HUNTING_OFFER_STATE_UNSTARTED;
-        case 3: return HUNTING_OFFER_STATE_SUCC;
+        case 0: return HuntingOfferState_NONE;
+        case 1: return HuntingOfferState_STARTED;
+        case 2: return HuntingOfferState_UNSTARTED;
+        case 3: return HuntingOfferState_SUCC;
         default: return null;
       }
     }
@@ -153,12 +149,12 @@ public final class HuntingOfferStateOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027HuntingOfferState.proto*\223\001\n\021HuntingOff" +
-      "erState\022\034\n\030HUNTING_OFFER_STATE_NONE\020\000\022\037\n" +
-      "\033HUNTING_OFFER_STATE_STARTED\020\001\022!\n\035HUNTIN" +
-      "G_OFFER_STATE_UNSTARTED\020\002\022\034\n\030HUNTING_OFF" +
-      "ER_STATE_SUCC\020\003B\033\n\031emu.grasscutter.net.p" +
-      "rotob\006proto3"
+      "\n\027HuntingOfferState.proto*\213\001\n\021HuntingOff" +
+      "erState\022\032\n\026HuntingOfferState_NONE\020\000\022\035\n\031H" +
+      "untingOfferState_STARTED\020\001\022\037\n\033HuntingOff" +
+      "erState_UNSTARTED\020\002\022\032\n\026HuntingOfferState" +
+      "_SUCC\020\003B\033\n\031emu.grasscutter.net.protob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

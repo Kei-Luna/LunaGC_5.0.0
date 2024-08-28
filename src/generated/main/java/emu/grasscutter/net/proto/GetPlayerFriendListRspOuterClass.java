@@ -19,55 +19,60 @@ public final class GetPlayerFriendListRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>int32 retcode = 1;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> 
         getFriendListList();
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getFriendList(int index);
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     int getFriendListCount();
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
         getFriendListOrBuilderList();
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getFriendListOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> 
+        getAskFriendListList();
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getAskFriendList(int index);
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    int getAskFriendListCount();
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
+        getAskFriendListOrBuilderList();
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getAskFriendListOrBuilder(
+        int index);
   }
   /**
-   * <pre>
-   * 4.7.0
-   * CmdId: 4989
-   * </pre>
-   *
    * Protobuf type {@code GetPlayerFriendListRsp}
    */
   public static final class GetPlayerFriendListRsp extends
@@ -81,6 +86,7 @@ public final class GetPlayerFriendListRspOuterClass {
     }
     private GetPlayerFriendListRsp() {
       friendList_ = java.util.Collections.emptyList();
+      askFriendList_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -114,12 +120,26 @@ public final class GetPlayerFriendListRspOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+
+              retcode_ = input.readInt32();
+              break;
+            }
+            case 34: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 friendList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief>();
                 mutable_bitField0_ |= 0x00000001;
               }
               friendList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                askFriendList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              askFriendList_.add(
                   input.readMessage(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.parser(), extensionRegistry));
               break;
             }
@@ -141,6 +161,9 @@ public final class GetPlayerFriendListRspOuterClass {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           friendList_ = java.util.Collections.unmodifiableList(friendList_);
         }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          askFriendList_ = java.util.Collections.unmodifiableList(askFriendList_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -158,25 +181,28 @@ public final class GetPlayerFriendListRspOuterClass {
               emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp.class, emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp.Builder.class);
     }
 
-    public static final int FRIEND_LIST_FIELD_NUMBER = 1;
+    public static final int RETCODE_FIELD_NUMBER = 1;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 1;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int FRIEND_LIST_FIELD_NUMBER = 4;
     private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> friendList_;
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getFriendListList() {
       return friendList_;
     }
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
@@ -184,38 +210,66 @@ public final class GetPlayerFriendListRspOuterClass {
       return friendList_;
     }
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     @java.lang.Override
     public int getFriendListCount() {
       return friendList_.size();
     }
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getFriendList(int index) {
       return friendList_.get(index);
     }
     /**
-     * <pre>
-     * repeated FriendBrief ask_friend_list = 65535;
-     * </pre>
-     *
-     * <code>repeated .FriendBrief friend_list = 1;</code>
+     * <code>repeated .FriendBrief friend_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getFriendListOrBuilder(
         int index) {
       return friendList_.get(index);
+    }
+
+    public static final int ASK_FRIEND_LIST_FIELD_NUMBER = 7;
+    private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> askFriendList_;
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getAskFriendListList() {
+      return askFriendList_;
+    }
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
+        getAskFriendListOrBuilderList() {
+      return askFriendList_;
+    }
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    @java.lang.Override
+    public int getAskFriendListCount() {
+      return askFriendList_.size();
+    }
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getAskFriendList(int index) {
+      return askFriendList_.get(index);
+    }
+    /**
+     * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getAskFriendListOrBuilder(
+        int index) {
+      return askFriendList_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -232,8 +286,14 @@ public final class GetPlayerFriendListRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (retcode_ != 0) {
+        output.writeInt32(1, retcode_);
+      }
       for (int i = 0; i < friendList_.size(); i++) {
-        output.writeMessage(1, friendList_.get(i));
+        output.writeMessage(4, friendList_.get(i));
+      }
+      for (int i = 0; i < askFriendList_.size(); i++) {
+        output.writeMessage(7, askFriendList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -244,9 +304,17 @@ public final class GetPlayerFriendListRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, retcode_);
+      }
       for (int i = 0; i < friendList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, friendList_.get(i));
+          .computeMessageSize(4, friendList_.get(i));
+      }
+      for (int i = 0; i < askFriendList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, askFriendList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -263,8 +331,12 @@ public final class GetPlayerFriendListRspOuterClass {
       }
       emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp other = (emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp) obj;
 
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!getFriendListList()
           .equals(other.getFriendListList())) return false;
+      if (!getAskFriendListList()
+          .equals(other.getAskFriendListList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -276,9 +348,15 @@ public final class GetPlayerFriendListRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       if (getFriendListCount() > 0) {
         hash = (37 * hash) + FRIEND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFriendListList().hashCode();
+      }
+      if (getAskFriendListCount() > 0) {
+        hash = (37 * hash) + ASK_FRIEND_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAskFriendListList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -376,11 +454,6 @@ public final class GetPlayerFriendListRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * CmdId: 4989
-     * </pre>
-     *
      * Protobuf type {@code GetPlayerFriendListRsp}
      */
     public static final class Builder extends
@@ -414,16 +487,25 @@ public final class GetPlayerFriendListRspOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getFriendListFieldBuilder();
+          getAskFriendListFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        retcode_ = 0;
+
         if (friendListBuilder_ == null) {
           friendList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           friendListBuilder_.clear();
+        }
+        if (askFriendListBuilder_ == null) {
+          askFriendList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          askFriendListBuilder_.clear();
         }
         return this;
       }
@@ -452,6 +534,7 @@ public final class GetPlayerFriendListRspOuterClass {
       public emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp buildPartial() {
         emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp result = new emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp(this);
         int from_bitField0_ = bitField0_;
+        result.retcode_ = retcode_;
         if (friendListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             friendList_ = java.util.Collections.unmodifiableList(friendList_);
@@ -460,6 +543,15 @@ public final class GetPlayerFriendListRspOuterClass {
           result.friendList_ = friendList_;
         } else {
           result.friendList_ = friendListBuilder_.build();
+        }
+        if (askFriendListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            askFriendList_ = java.util.Collections.unmodifiableList(askFriendList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.askFriendList_ = askFriendList_;
+        } else {
+          result.askFriendList_ = askFriendListBuilder_.build();
         }
         onBuilt();
         return result;
@@ -509,6 +601,9 @@ public final class GetPlayerFriendListRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp other) {
         if (other == emu.grasscutter.net.proto.GetPlayerFriendListRspOuterClass.GetPlayerFriendListRsp.getDefaultInstance()) return this;
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
         if (friendListBuilder_ == null) {
           if (!other.friendList_.isEmpty()) {
             if (friendList_.isEmpty()) {
@@ -532,6 +627,32 @@ public final class GetPlayerFriendListRspOuterClass {
                    getFriendListFieldBuilder() : null;
             } else {
               friendListBuilder_.addAllMessages(other.friendList_);
+            }
+          }
+        }
+        if (askFriendListBuilder_ == null) {
+          if (!other.askFriendList_.isEmpty()) {
+            if (askFriendList_.isEmpty()) {
+              askFriendList_ = other.askFriendList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAskFriendListIsMutable();
+              askFriendList_.addAll(other.askFriendList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.askFriendList_.isEmpty()) {
+            if (askFriendListBuilder_.isEmpty()) {
+              askFriendListBuilder_.dispose();
+              askFriendListBuilder_ = null;
+              askFriendList_ = other.askFriendList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              askFriendListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAskFriendListFieldBuilder() : null;
+            } else {
+              askFriendListBuilder_.addAllMessages(other.askFriendList_);
             }
           }
         }
@@ -565,6 +686,37 @@ public final class GetPlayerFriendListRspOuterClass {
       }
       private int bitField0_;
 
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 1;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 1;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> friendList_ =
         java.util.Collections.emptyList();
       private void ensureFriendListIsMutable() {
@@ -578,11 +730,7 @@ public final class GetPlayerFriendListRspOuterClass {
           emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> friendListBuilder_;
 
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getFriendListList() {
         if (friendListBuilder_ == null) {
@@ -592,11 +740,7 @@ public final class GetPlayerFriendListRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public int getFriendListCount() {
         if (friendListBuilder_ == null) {
@@ -606,11 +750,7 @@ public final class GetPlayerFriendListRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getFriendList(int index) {
         if (friendListBuilder_ == null) {
@@ -620,11 +760,7 @@ public final class GetPlayerFriendListRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder setFriendList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
@@ -641,11 +777,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder setFriendList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -659,11 +791,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder addFriendList(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
         if (friendListBuilder_ == null) {
@@ -679,11 +807,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder addFriendList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
@@ -700,11 +824,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder addFriendList(
           emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -718,11 +838,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder addFriendList(
           int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
@@ -736,11 +852,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder addAllFriendList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> values) {
@@ -755,11 +867,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder clearFriendList() {
         if (friendListBuilder_ == null) {
@@ -772,11 +880,7 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public Builder removeFriendList(int index) {
         if (friendListBuilder_ == null) {
@@ -789,22 +893,14 @@ public final class GetPlayerFriendListRspOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder getFriendListBuilder(
           int index) {
         return getFriendListFieldBuilder().getBuilder(index);
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getFriendListOrBuilder(
           int index) {
@@ -814,11 +910,7 @@ public final class GetPlayerFriendListRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
            getFriendListOrBuilderList() {
@@ -829,22 +921,14 @@ public final class GetPlayerFriendListRspOuterClass {
         }
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addFriendListBuilder() {
         return getFriendListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addFriendListBuilder(
           int index) {
@@ -852,11 +936,7 @@ public final class GetPlayerFriendListRspOuterClass {
             index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
       }
       /**
-       * <pre>
-       * repeated FriendBrief ask_friend_list = 65535;
-       * </pre>
-       *
-       * <code>repeated .FriendBrief friend_list = 1;</code>
+       * <code>repeated .FriendBrief friend_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder> 
            getFriendListBuilderList() {
@@ -875,6 +955,246 @@ public final class GetPlayerFriendListRspOuterClass {
           friendList_ = null;
         }
         return friendListBuilder_;
+      }
+
+      private java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> askFriendList_ =
+        java.util.Collections.emptyList();
+      private void ensureAskFriendListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          askFriendList_ = new java.util.ArrayList<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief>(askFriendList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> askFriendListBuilder_;
+
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> getAskFriendListList() {
+        if (askFriendListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(askFriendList_);
+        } else {
+          return askFriendListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public int getAskFriendListCount() {
+        if (askFriendListBuilder_ == null) {
+          return askFriendList_.size();
+        } else {
+          return askFriendListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief getAskFriendList(int index) {
+        if (askFriendListBuilder_ == null) {
+          return askFriendList_.get(index);
+        } else {
+          return askFriendListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder setAskFriendList(
+          int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
+        if (askFriendListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAskFriendListIsMutable();
+          askFriendList_.set(index, value);
+          onChanged();
+        } else {
+          askFriendListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder setAskFriendList(
+          int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
+        if (askFriendListBuilder_ == null) {
+          ensureAskFriendListIsMutable();
+          askFriendList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          askFriendListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder addAskFriendList(emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
+        if (askFriendListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAskFriendListIsMutable();
+          askFriendList_.add(value);
+          onChanged();
+        } else {
+          askFriendListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder addAskFriendList(
+          int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief value) {
+        if (askFriendListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAskFriendListIsMutable();
+          askFriendList_.add(index, value);
+          onChanged();
+        } else {
+          askFriendListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder addAskFriendList(
+          emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
+        if (askFriendListBuilder_ == null) {
+          ensureAskFriendListIsMutable();
+          askFriendList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          askFriendListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder addAskFriendList(
+          int index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder builderForValue) {
+        if (askFriendListBuilder_ == null) {
+          ensureAskFriendListIsMutable();
+          askFriendList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          askFriendListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder addAllAskFriendList(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief> values) {
+        if (askFriendListBuilder_ == null) {
+          ensureAskFriendListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, askFriendList_);
+          onChanged();
+        } else {
+          askFriendListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder clearAskFriendList() {
+        if (askFriendListBuilder_ == null) {
+          askFriendList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          askFriendListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public Builder removeAskFriendList(int index) {
+        if (askFriendListBuilder_ == null) {
+          ensureAskFriendListIsMutable();
+          askFriendList_.remove(index);
+          onChanged();
+        } else {
+          askFriendListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder getAskFriendListBuilder(
+          int index) {
+        return getAskFriendListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder getAskFriendListOrBuilder(
+          int index) {
+        if (askFriendListBuilder_ == null) {
+          return askFriendList_.get(index);  } else {
+          return askFriendListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
+           getAskFriendListOrBuilderList() {
+        if (askFriendListBuilder_ != null) {
+          return askFriendListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(askFriendList_);
+        }
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addAskFriendListBuilder() {
+        return getAskFriendListFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder addAskFriendListBuilder(
+          int index) {
+        return getAskFriendListFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .FriendBrief ask_friend_list = 7;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder> 
+           getAskFriendListBuilderList() {
+        return getAskFriendListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder> 
+          getAskFriendListFieldBuilder() {
+        if (askFriendListBuilder_ == null) {
+          askFriendListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBrief.Builder, emu.grasscutter.net.proto.FriendBriefOuterClass.FriendBriefOrBuilder>(
+                  askFriendList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          askFriendList_ = null;
+        }
+        return askFriendListBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -944,9 +1264,11 @@ public final class GetPlayerFriendListRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034GetPlayerFriendListRsp.proto\032\021FriendBr" +
-      "ief.proto\";\n\026GetPlayerFriendListRsp\022!\n\013f" +
-      "riend_list\030\001 \003(\0132\014.FriendBriefB\033\n\031emu.gr" +
-      "asscutter.net.protob\006proto3"
+      "ief.proto\"s\n\026GetPlayerFriendListRsp\022\017\n\007r" +
+      "etcode\030\001 \001(\005\022!\n\013friend_list\030\004 \003(\0132\014.Frie" +
+      "ndBrief\022%\n\017ask_friend_list\030\007 \003(\0132\014.Frien" +
+      "dBriefB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -958,7 +1280,7 @@ public final class GetPlayerFriendListRspOuterClass {
     internal_static_GetPlayerFriendListRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPlayerFriendListRsp_descriptor,
-        new java.lang.String[] { "FriendList", });
+        new java.lang.String[] { "Retcode", "FriendList", "AskFriendList", });
     emu.grasscutter.net.proto.FriendBriefOuterClass.getDescriptor();
   }
 

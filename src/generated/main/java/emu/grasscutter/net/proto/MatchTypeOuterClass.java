@@ -15,10 +15,6 @@ public final class MatchTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: DAHBJFKJLHG
-   * </pre>
-   *
    * Protobuf enum {@code MatchType}
    */
   public enum MatchType

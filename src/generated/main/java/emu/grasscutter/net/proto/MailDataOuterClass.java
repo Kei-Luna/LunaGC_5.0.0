@@ -19,7 +19,7 @@ public final class MailDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 mailId = 1;</code>
+     * <code>uint32 mail_id = 1;</code>
      * @return The mailId.
      */
     int getMailId();
@@ -294,10 +294,10 @@ public final class MailDataOuterClass {
               emu.grasscutter.net.proto.MailDataOuterClass.MailData.class, emu.grasscutter.net.proto.MailDataOuterClass.MailData.Builder.class);
     }
 
-    public static final int MAILID_FIELD_NUMBER = 1;
+    public static final int MAIL_ID_FIELD_NUMBER = 1;
     private int mailId_;
     /**
-     * <code>uint32 mailId = 1;</code>
+     * <code>uint32 mail_id = 1;</code>
      * @return The mailId.
      */
     @java.lang.Override
@@ -645,7 +645,7 @@ public final class MailDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MAILID_FIELD_NUMBER;
+      hash = (37 * hash) + MAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMailId();
       if (hasMailTextContent()) {
         hash = (37 * hash) + MAIL_TEXT_CONTENT_FIELD_NUMBER;
@@ -1036,7 +1036,7 @@ public final class MailDataOuterClass {
 
       private int mailId_ ;
       /**
-       * <code>uint32 mailId = 1;</code>
+       * <code>uint32 mail_id = 1;</code>
        * @return The mailId.
        */
       @java.lang.Override
@@ -1044,7 +1044,7 @@ public final class MailDataOuterClass {
         return mailId_;
       }
       /**
-       * <code>uint32 mailId = 1;</code>
+       * <code>uint32 mail_id = 1;</code>
        * @param value The mailId to set.
        * @return This builder for chaining.
        */
@@ -1055,7 +1055,7 @@ public final class MailDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 mailId = 1;</code>
+       * <code>uint32 mail_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearMailId() {
@@ -1842,15 +1842,15 @@ public final class MailDataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\016MailData.proto\032\025MailTextContent.proto\032" +
       "\016MailItem.proto\032\026MailCollectState.proto\"" +
-      "\241\002\n\010MailData\022\016\n\006mailId\030\001 \001(\r\022+\n\021mail_tex" +
-      "t_content\030\004 \001(\0132\020.MailTextContent\022\034\n\tite" +
-      "m_list\030\007 \003(\0132\t.MailItem\022\021\n\tsend_time\030\010 \001" +
-      "(\r\022\023\n\013expire_time\030\t \001(\r\022\022\n\nimportance\030\n " +
-      "\001(\r\022\017\n\007is_read\030\013 \001(\010\022\031\n\021is_attachment_go" +
-      "t\030\014 \001(\010\022\021\n\tconfig_id\030\r \001(\r\022\025\n\rargument_l" +
-      "ist\030\016 \003(\t\022(\n\rcollect_state\030\017 \001(\0162\021.MailC" +
-      "ollectStateB\033\n\031emu.grasscutter.net.proto" +
-      "b\006proto3"
+      "\242\002\n\010MailData\022\017\n\007mail_id\030\001 \001(\r\022+\n\021mail_te" +
+      "xt_content\030\004 \001(\0132\020.MailTextContent\022\034\n\tit" +
+      "em_list\030\007 \003(\0132\t.MailItem\022\021\n\tsend_time\030\010 " +
+      "\001(\r\022\023\n\013expire_time\030\t \001(\r\022\022\n\nimportance\030\n" +
+      " \001(\r\022\017\n\007is_read\030\013 \001(\010\022\031\n\021is_attachment_g" +
+      "ot\030\014 \001(\010\022\021\n\tconfig_id\030\r \001(\r\022\025\n\rargument_" +
+      "list\030\016 \003(\t\022(\n\rcollect_state\030\017 \001(\0162\021.Mail" +
+      "CollectStateB\033\n\031emu.grasscutter.net.prot" +
+      "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

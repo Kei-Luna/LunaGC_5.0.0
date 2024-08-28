@@ -19,11 +19,11 @@ public final class AvatarFetterDataNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     int getFetterInfoMapCount();
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     boolean containsFetterInfoMap(
         long key);
@@ -34,30 +34,25 @@ public final class AvatarFetterDataNotifyOuterClass {
     java.util.Map<java.lang.Long, emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo>
     getFetterInfoMap();
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     java.util.Map<java.lang.Long, emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo>
     getFetterInfoMapMap();
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
 
     emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo getFetterInfoMapOrDefault(
         long key,
         emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo defaultValue);
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
 
     emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo getFetterInfoMapOrThrow(
         long key);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 28961
-   * </pre>
-   *
    * Protobuf type {@code AvatarFetterDataNotify}
    */
   public static final class AvatarFetterDataNotify extends
@@ -103,7 +98,7 @@ public final class AvatarFetterDataNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 82: {
+            case 98: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 fetterInfoMap_ = com.google.protobuf.MapField.newMapField(
                     FetterInfoMapDefaultEntryHolder.defaultEntry);
@@ -145,7 +140,7 @@ public final class AvatarFetterDataNotifyOuterClass {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 10:
+        case 12:
           return internalGetFetterInfoMap();
         default:
           throw new RuntimeException(
@@ -160,7 +155,7 @@ public final class AvatarFetterDataNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarFetterDataNotifyOuterClass.AvatarFetterDataNotify.class, emu.grasscutter.net.proto.AvatarFetterDataNotifyOuterClass.AvatarFetterDataNotify.Builder.class);
     }
 
-    public static final int FETTER_INFO_MAP_FIELD_NUMBER = 10;
+    public static final int FETTER_INFO_MAP_FIELD_NUMBER = 12;
     private static final class FetterInfoMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Long, emu.grasscutter.net.proto.AvatarFetterInfoOuterClass.AvatarFetterInfo> defaultEntry =
@@ -187,7 +182,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       return internalGetFetterInfoMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
 
     @java.lang.Override
@@ -205,7 +200,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       return getFetterInfoMapMap();
     }
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     @java.lang.Override
 
@@ -213,7 +208,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       return internalGetFetterInfoMap().getMap();
     }
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     @java.lang.Override
 
@@ -226,7 +221,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+     * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
      */
     @java.lang.Override
 
@@ -260,7 +255,7 @@ public final class AvatarFetterDataNotifyOuterClass {
           output,
           internalGetFetterInfoMap(),
           FetterInfoMapDefaultEntryHolder.defaultEntry,
-          10);
+          12);
       unknownFields.writeTo(output);
     }
 
@@ -278,7 +273,7 @@ public final class AvatarFetterDataNotifyOuterClass {
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, fetterInfoMap__);
+            .computeMessageSize(12, fetterInfoMap__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -408,11 +403,6 @@ public final class AvatarFetterDataNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 28961
-     * </pre>
-     *
      * Protobuf type {@code AvatarFetterDataNotify}
      */
     public static final class Builder extends
@@ -428,7 +418,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 10:
+          case 12:
             return internalGetFetterInfoMap();
           default:
             throw new RuntimeException(
@@ -439,7 +429,7 @@ public final class AvatarFetterDataNotifyOuterClass {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 10:
+          case 12:
             return internalGetMutableFetterInfoMap();
           default:
             throw new RuntimeException(
@@ -609,7 +599,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return internalGetFetterInfoMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
 
       @java.lang.Override
@@ -627,7 +617,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return getFetterInfoMapMap();
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
       @java.lang.Override
 
@@ -635,7 +625,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return internalGetFetterInfoMap().getMap();
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
       @java.lang.Override
 
@@ -648,7 +638,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
       @java.lang.Override
 
@@ -669,7 +659,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
 
       public Builder removeFetterInfoMap(
@@ -688,7 +678,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return internalGetMutableFetterInfoMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
       public Builder putFetterInfoMap(
           long key,
@@ -700,7 +690,7 @@ public final class AvatarFetterDataNotifyOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 10;</code>
+       * <code>map&lt;uint64, .AvatarFetterInfo&gt; fetter_info_map = 12;</code>
        */
 
       public Builder putAllFetterInfoMap(
@@ -783,7 +773,7 @@ public final class AvatarFetterDataNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034AvatarFetterDataNotify.proto\032\026AvatarFe" +
       "tterInfo.proto\"\246\001\n\026AvatarFetterDataNotif" +
-      "y\022C\n\017fetter_info_map\030\n \003(\0132*.AvatarFette" +
+      "y\022C\n\017fetter_info_map\030\014 \003(\0132*.AvatarFette" +
       "rDataNotify.FetterInfoMapEntry\032G\n\022Fetter" +
       "InfoMapEntry\022\013\n\003key\030\001 \001(\004\022 \n\005value\030\002 \001(\013" +
       "2\021.AvatarFetterInfo:\0028\001B\033\n\031emu.grasscutt" +

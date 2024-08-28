@@ -19,17 +19,12 @@ public final class BackMyWorldRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 25964
-   * Obf: CLFDBEPFLAI
-   * </pre>
-   *
    * Protobuf type {@code BackMyWorldRsp}
    */
   public static final class BackMyWorldRsp extends
@@ -74,7 +69,7 @@ public final class BackMyWorldRspOuterClass {
             case 0:
               done = true;
               break;
-            case 72: {
+            case 24: {
 
               retcode_ = input.readInt32();
               break;
@@ -111,10 +106,10 @@ public final class BackMyWorldRspOuterClass {
               emu.grasscutter.net.proto.BackMyWorldRspOuterClass.BackMyWorldRsp.class, emu.grasscutter.net.proto.BackMyWorldRspOuterClass.BackMyWorldRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 9;
+    public static final int RETCODE_FIELD_NUMBER = 3;
     private int retcode_;
     /**
-     * <code>int32 retcode = 9;</code>
+     * <code>int32 retcode = 3;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -137,7 +132,7 @@ public final class BackMyWorldRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(9, retcode_);
+        output.writeInt32(3, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -150,7 +145,7 @@ public final class BackMyWorldRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, retcode_);
+          .computeInt32Size(3, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,11 +273,6 @@ public final class BackMyWorldRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25964
-     * Obf: CLFDBEPFLAI
-     * </pre>
-     *
      * Protobuf type {@code BackMyWorldRsp}
      */
     public static final class Builder extends
@@ -431,7 +421,7 @@ public final class BackMyWorldRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -439,7 +429,7 @@ public final class BackMyWorldRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -450,7 +440,7 @@ public final class BackMyWorldRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 9;</code>
+       * <code>int32 retcode = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -527,7 +517,7 @@ public final class BackMyWorldRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024BackMyWorldRsp.proto\"!\n\016BackMyWorldRsp" +
-      "\022\017\n\007retcode\030\t \001(\005B\033\n\031emu.grasscutter.net" +
+      "\022\017\n\007retcode\030\003 \001(\005B\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -19,11 +19,6 @@ public final class PersonalLineAllDataReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 9323
-   * Obf: BDPIKKGLOCD
-   * </pre>
-   *
    * Protobuf type {@code PersonalLineAllDataReq}
    */
   public static final class PersonalLineAllDataReq extends
@@ -245,11 +240,6 @@ public final class PersonalLineAllDataReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 9323
-     * Obf: BDPIKKGLOCD
-     * </pre>
-     *
      * Protobuf type {@code PersonalLineAllDataReq}
      */
     public static final class Builder extends

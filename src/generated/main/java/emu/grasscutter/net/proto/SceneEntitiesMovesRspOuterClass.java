@@ -19,35 +19,30 @@ public final class SceneEntitiesMovesRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     java.util.List<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo> 
         getEntityMoveFailInfoListList();
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo getEntityMoveFailInfoList(int index);
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     int getEntityMoveFailInfoListCount();
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder> 
         getEntityMoveFailInfoListOrBuilderList();
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder getEntityMoveFailInfoListOrBuilder(
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 8605
-   * Obf: GKFMIOACJJA
-   * </pre>
-   *
    * Protobuf type {@code SceneEntitiesMovesRsp}
    */
   public static final class SceneEntitiesMovesRsp extends
@@ -94,7 +89,7 @@ public final class SceneEntitiesMovesRspOuterClass {
             case 0:
               done = true;
               break;
-            case 98: {
+            case 50: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 entityMoveFailInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -138,17 +133,17 @@ public final class SceneEntitiesMovesRspOuterClass {
               emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.SceneEntitiesMovesRsp.class, emu.grasscutter.net.proto.SceneEntitiesMovesRspOuterClass.SceneEntitiesMovesRsp.Builder.class);
     }
 
-    public static final int ENTITY_MOVE_FAIL_INFO_LIST_FIELD_NUMBER = 12;
+    public static final int ENTITY_MOVE_FAIL_INFO_LIST_FIELD_NUMBER = 6;
     private java.util.List<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo> entityMoveFailInfoList_;
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo> getEntityMoveFailInfoListList() {
       return entityMoveFailInfoList_;
     }
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder> 
@@ -156,21 +151,21 @@ public final class SceneEntitiesMovesRspOuterClass {
       return entityMoveFailInfoList_;
     }
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     @java.lang.Override
     public int getEntityMoveFailInfoListCount() {
       return entityMoveFailInfoList_.size();
     }
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo getEntityMoveFailInfoList(int index) {
       return entityMoveFailInfoList_.get(index);
     }
     /**
-     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+     * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder getEntityMoveFailInfoListOrBuilder(
@@ -193,7 +188,7 @@ public final class SceneEntitiesMovesRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < entityMoveFailInfoList_.size(); i++) {
-        output.writeMessage(12, entityMoveFailInfoList_.get(i));
+        output.writeMessage(6, entityMoveFailInfoList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -206,7 +201,7 @@ public final class SceneEntitiesMovesRspOuterClass {
       size = 0;
       for (int i = 0; i < entityMoveFailInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, entityMoveFailInfoList_.get(i));
+          .computeMessageSize(6, entityMoveFailInfoList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,11 +331,6 @@ public final class SceneEntitiesMovesRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 8605
-     * Obf: GKFMIOACJJA
-     * </pre>
-     *
      * Protobuf type {@code SceneEntitiesMovesRsp}
      */
     public static final class Builder extends
@@ -538,7 +528,7 @@ public final class SceneEntitiesMovesRspOuterClass {
           emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder> entityMoveFailInfoListBuilder_;
 
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo> getEntityMoveFailInfoListList() {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -548,7 +538,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public int getEntityMoveFailInfoListCount() {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -558,7 +548,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo getEntityMoveFailInfoList(int index) {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -568,7 +558,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder setEntityMoveFailInfoList(
           int index, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo value) {
@@ -585,7 +575,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder setEntityMoveFailInfoList(
           int index, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder builderForValue) {
@@ -599,7 +589,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder addEntityMoveFailInfoList(emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo value) {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -615,7 +605,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder addEntityMoveFailInfoList(
           int index, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo value) {
@@ -632,7 +622,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder addEntityMoveFailInfoList(
           emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder builderForValue) {
@@ -646,7 +636,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder addEntityMoveFailInfoList(
           int index, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder builderForValue) {
@@ -660,7 +650,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder addAllEntityMoveFailInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo> values) {
@@ -675,7 +665,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder clearEntityMoveFailInfoList() {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -688,7 +678,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public Builder removeEntityMoveFailInfoList(int index) {
         if (entityMoveFailInfoListBuilder_ == null) {
@@ -701,14 +691,14 @@ public final class SceneEntitiesMovesRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder getEntityMoveFailInfoListBuilder(
           int index) {
         return getEntityMoveFailInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder getEntityMoveFailInfoListOrBuilder(
           int index) {
@@ -718,7 +708,7 @@ public final class SceneEntitiesMovesRspOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfoOrBuilder> 
            getEntityMoveFailInfoListOrBuilderList() {
@@ -729,14 +719,14 @@ public final class SceneEntitiesMovesRspOuterClass {
         }
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder addEntityMoveFailInfoListBuilder() {
         return getEntityMoveFailInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder addEntityMoveFailInfoListBuilder(
           int index) {
@@ -744,7 +734,7 @@ public final class SceneEntitiesMovesRspOuterClass {
             index, emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 12;</code>
+       * <code>repeated .EntityMoveFailInfo entity_move_fail_info_list = 6;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.EntityMoveFailInfoOuterClass.EntityMoveFailInfo.Builder> 
            getEntityMoveFailInfoListBuilderList() {
@@ -833,7 +823,7 @@ public final class SceneEntitiesMovesRspOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033SceneEntitiesMovesRsp.proto\032\030EntityMov" +
       "eFailInfo.proto\"P\n\025SceneEntitiesMovesRsp" +
-      "\0227\n\032entity_move_fail_info_list\030\014 \003(\0132\023.E" +
+      "\0227\n\032entity_move_fail_info_list\030\006 \003(\0132\023.E" +
       "ntityMoveFailInfoB\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"
     };

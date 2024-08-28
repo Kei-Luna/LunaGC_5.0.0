@@ -19,46 +19,42 @@ public final class RegionSearchInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 10;</code>
-     * @return The id.
-     */
-    int getId();
-
-    /**
-     * <code>bool is_entered = 2;</code>
+     * <code>bool is_entered = 4;</code>
      * @return The isEntered.
      */
     boolean getIsEntered();
 
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch> 
         getRegionSearchListList();
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch getRegionSearchList(int index);
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     int getRegionSearchListCount();
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder> 
         getRegionSearchListOrBuilderList();
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder getRegionSearchListOrBuilder(
         int index);
+
+    /**
+     * <code>uint32 id = 11;</code>
+     * @return The id.
+     */
+    int getId();
   }
   /**
-   * <pre>
-   * Obf: DHHDMABOCLM
-   * </pre>
-   *
    * Protobuf type {@code RegionSearchInfo}
    */
   public static final class RegionSearchInfo extends
@@ -105,12 +101,12 @@ public final class RegionSearchInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 32: {
 
               isEntered_ = input.readBool();
               break;
             }
-            case 74: {
+            case 66: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 regionSearchList_ = new java.util.ArrayList<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch>();
                 mutable_bitField0_ |= 0x00000001;
@@ -119,7 +115,7 @@ public final class RegionSearchInfoOuterClass {
                   input.readMessage(emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.parser(), extensionRegistry));
               break;
             }
-            case 80: {
+            case 88: {
 
               id_ = input.readUInt32();
               break;
@@ -159,21 +155,10 @@ public final class RegionSearchInfoOuterClass {
               emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo.class, emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 10;
-    private int id_;
-    /**
-     * <code>uint32 id = 10;</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public int getId() {
-      return id_;
-    }
-
-    public static final int IS_ENTERED_FIELD_NUMBER = 2;
+    public static final int IS_ENTERED_FIELD_NUMBER = 4;
     private boolean isEntered_;
     /**
-     * <code>bool is_entered = 2;</code>
+     * <code>bool is_entered = 4;</code>
      * @return The isEntered.
      */
     @java.lang.Override
@@ -181,17 +166,17 @@ public final class RegionSearchInfoOuterClass {
       return isEntered_;
     }
 
-    public static final int REGION_SEARCH_LIST_FIELD_NUMBER = 9;
+    public static final int REGION_SEARCH_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch> regionSearchList_;
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch> getRegionSearchListList() {
       return regionSearchList_;
     }
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder> 
@@ -199,26 +184,37 @@ public final class RegionSearchInfoOuterClass {
       return regionSearchList_;
     }
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     @java.lang.Override
     public int getRegionSearchListCount() {
       return regionSearchList_.size();
     }
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch getRegionSearchList(int index) {
       return regionSearchList_.get(index);
     }
     /**
-     * <code>repeated .RegionSearch region_search_list = 9;</code>
+     * <code>repeated .RegionSearch region_search_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder getRegionSearchListOrBuilder(
         int index) {
       return regionSearchList_.get(index);
+    }
+
+    public static final int ID_FIELD_NUMBER = 11;
+    private int id_;
+    /**
+     * <code>uint32 id = 11;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -236,13 +232,13 @@ public final class RegionSearchInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (isEntered_ != false) {
-        output.writeBool(2, isEntered_);
+        output.writeBool(4, isEntered_);
       }
       for (int i = 0; i < regionSearchList_.size(); i++) {
-        output.writeMessage(9, regionSearchList_.get(i));
+        output.writeMessage(8, regionSearchList_.get(i));
       }
       if (id_ != 0) {
-        output.writeUInt32(10, id_);
+        output.writeUInt32(11, id_);
       }
       unknownFields.writeTo(output);
     }
@@ -255,15 +251,15 @@ public final class RegionSearchInfoOuterClass {
       size = 0;
       if (isEntered_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isEntered_);
+          .computeBoolSize(4, isEntered_);
       }
       for (int i = 0; i < regionSearchList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, regionSearchList_.get(i));
+          .computeMessageSize(8, regionSearchList_.get(i));
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, id_);
+          .computeUInt32Size(11, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -280,12 +276,12 @@ public final class RegionSearchInfoOuterClass {
       }
       emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo other = (emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo) obj;
 
-      if (getId()
-          != other.getId()) return false;
       if (getIsEntered()
           != other.getIsEntered()) return false;
       if (!getRegionSearchListList()
           .equals(other.getRegionSearchListList())) return false;
+      if (getId()
+          != other.getId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -297,8 +293,6 @@ public final class RegionSearchInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
       hash = (37 * hash) + IS_ENTERED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsEntered());
@@ -306,6 +300,8 @@ public final class RegionSearchInfoOuterClass {
         hash = (37 * hash) + REGION_SEARCH_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getRegionSearchListList().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -402,10 +398,6 @@ public final class RegionSearchInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: DHHDMABOCLM
-     * </pre>
-     *
      * Protobuf type {@code RegionSearchInfo}
      */
     public static final class Builder extends
@@ -444,8 +436,6 @@ public final class RegionSearchInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
-
         isEntered_ = false;
 
         if (regionSearchListBuilder_ == null) {
@@ -454,6 +444,8 @@ public final class RegionSearchInfoOuterClass {
         } else {
           regionSearchListBuilder_.clear();
         }
+        id_ = 0;
+
         return this;
       }
 
@@ -481,7 +473,6 @@ public final class RegionSearchInfoOuterClass {
       public emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo buildPartial() {
         emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo result = new emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo(this);
         int from_bitField0_ = bitField0_;
-        result.id_ = id_;
         result.isEntered_ = isEntered_;
         if (regionSearchListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -492,6 +483,7 @@ public final class RegionSearchInfoOuterClass {
         } else {
           result.regionSearchList_ = regionSearchListBuilder_.build();
         }
+        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -540,9 +532,6 @@ public final class RegionSearchInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo other) {
         if (other == emu.grasscutter.net.proto.RegionSearchInfoOuterClass.RegionSearchInfo.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
-        }
         if (other.getIsEntered() != false) {
           setIsEntered(other.getIsEntered());
         }
@@ -571,6 +560,9 @@ public final class RegionSearchInfoOuterClass {
               regionSearchListBuilder_.addAllMessages(other.regionSearchList_);
             }
           }
+        }
+        if (other.getId() != 0) {
+          setId(other.getId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -602,40 +594,9 @@ public final class RegionSearchInfoOuterClass {
       }
       private int bitField0_;
 
-      private int id_ ;
-      /**
-       * <code>uint32 id = 10;</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public int getId() {
-        return id_;
-      }
-      /**
-       * <code>uint32 id = 10;</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(int value) {
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 id = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
       private boolean isEntered_ ;
       /**
-       * <code>bool is_entered = 2;</code>
+       * <code>bool is_entered = 4;</code>
        * @return The isEntered.
        */
       @java.lang.Override
@@ -643,7 +604,7 @@ public final class RegionSearchInfoOuterClass {
         return isEntered_;
       }
       /**
-       * <code>bool is_entered = 2;</code>
+       * <code>bool is_entered = 4;</code>
        * @param value The isEntered to set.
        * @return This builder for chaining.
        */
@@ -654,7 +615,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>bool is_entered = 2;</code>
+       * <code>bool is_entered = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsEntered() {
@@ -677,7 +638,7 @@ public final class RegionSearchInfoOuterClass {
           emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder> regionSearchListBuilder_;
 
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch> getRegionSearchListList() {
         if (regionSearchListBuilder_ == null) {
@@ -687,7 +648,7 @@ public final class RegionSearchInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public int getRegionSearchListCount() {
         if (regionSearchListBuilder_ == null) {
@@ -697,7 +658,7 @@ public final class RegionSearchInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch getRegionSearchList(int index) {
         if (regionSearchListBuilder_ == null) {
@@ -707,7 +668,7 @@ public final class RegionSearchInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder setRegionSearchList(
           int index, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch value) {
@@ -724,7 +685,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder setRegionSearchList(
           int index, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder builderForValue) {
@@ -738,7 +699,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder addRegionSearchList(emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch value) {
         if (regionSearchListBuilder_ == null) {
@@ -754,7 +715,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder addRegionSearchList(
           int index, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch value) {
@@ -771,7 +732,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder addRegionSearchList(
           emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder builderForValue) {
@@ -785,7 +746,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder addRegionSearchList(
           int index, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder builderForValue) {
@@ -799,7 +760,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder addAllRegionSearchList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch> values) {
@@ -814,7 +775,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder clearRegionSearchList() {
         if (regionSearchListBuilder_ == null) {
@@ -827,7 +788,7 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public Builder removeRegionSearchList(int index) {
         if (regionSearchListBuilder_ == null) {
@@ -840,14 +801,14 @@ public final class RegionSearchInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder getRegionSearchListBuilder(
           int index) {
         return getRegionSearchListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder getRegionSearchListOrBuilder(
           int index) {
@@ -857,7 +818,7 @@ public final class RegionSearchInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearchOrBuilder> 
            getRegionSearchListOrBuilderList() {
@@ -868,14 +829,14 @@ public final class RegionSearchInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder addRegionSearchListBuilder() {
         return getRegionSearchListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder addRegionSearchListBuilder(
           int index) {
@@ -883,7 +844,7 @@ public final class RegionSearchInfoOuterClass {
             index, emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionSearch region_search_list = 9;</code>
+       * <code>repeated .RegionSearch region_search_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.RegionSearchOuterClass.RegionSearch.Builder> 
            getRegionSearchListBuilderList() {
@@ -902,6 +863,37 @@ public final class RegionSearchInfoOuterClass {
           regionSearchList_ = null;
         }
         return regionSearchListBuilder_;
+      }
+
+      private int id_ ;
+      /**
+       * <code>uint32 id = 11;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>uint32 id = 11;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -971,9 +963,9 @@ public final class RegionSearchInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026RegionSearchInfo.proto\032\022RegionSearch.p" +
-      "roto\"]\n\020RegionSearchInfo\022\n\n\002id\030\n \001(\r\022\022\n\n" +
-      "is_entered\030\002 \001(\010\022)\n\022region_search_list\030\t" +
-      " \003(\0132\r.RegionSearchB\033\n\031emu.grasscutter.n" +
+      "roto\"]\n\020RegionSearchInfo\022\022\n\nis_entered\030\004" +
+      " \001(\010\022)\n\022region_search_list\030\010 \003(\0132\r.Regio" +
+      "nSearch\022\n\n\002id\030\013 \001(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -986,7 +978,7 @@ public final class RegionSearchInfoOuterClass {
     internal_static_RegionSearchInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegionSearchInfo_descriptor,
-        new java.lang.String[] { "Id", "IsEntered", "RegionSearchList", });
+        new java.lang.String[] { "IsEntered", "RegionSearchList", "Id", });
     emu.grasscutter.net.proto.RegionSearchOuterClass.getDescriptor();
   }
 

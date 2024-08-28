@@ -73,10 +73,6 @@ public final class ShopMcoinProductOuterClass {
     boolean getIsAudit();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code ShopMcoinProduct}
    */
   public static final class ShopMcoinProduct extends
@@ -544,10 +540,6 @@ public final class ShopMcoinProductOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code ShopMcoinProduct}
      */
     public static final class Builder extends

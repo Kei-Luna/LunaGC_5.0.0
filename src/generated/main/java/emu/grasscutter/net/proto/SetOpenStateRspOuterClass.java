@@ -19,29 +19,24 @@ public final class SetOpenStateRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 key = 4;</code>
+     * <code>uint32 key = 5;</code>
      * @return The key.
      */
     int getKey();
 
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint32 value = 11;</code>
+     * <code>uint32 value = 10;</code>
      * @return The value.
      */
     int getValue();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 24060
-   * </pre>
-   *
    * Protobuf type {@code SetOpenStateRsp}
    */
   public static final class SetOpenStateRsp extends
@@ -86,17 +81,17 @@ public final class SetOpenStateRspOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 40: {
 
               key_ = input.readUInt32();
               break;
             }
-            case 56: {
+            case 48: {
 
               retcode_ = input.readInt32();
               break;
             }
-            case 88: {
+            case 80: {
 
               value_ = input.readUInt32();
               break;
@@ -133,10 +128,10 @@ public final class SetOpenStateRspOuterClass {
               emu.grasscutter.net.proto.SetOpenStateRspOuterClass.SetOpenStateRsp.class, emu.grasscutter.net.proto.SetOpenStateRspOuterClass.SetOpenStateRsp.Builder.class);
     }
 
-    public static final int KEY_FIELD_NUMBER = 4;
+    public static final int KEY_FIELD_NUMBER = 5;
     private int key_;
     /**
-     * <code>uint32 key = 4;</code>
+     * <code>uint32 key = 5;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -144,10 +139,10 @@ public final class SetOpenStateRspOuterClass {
       return key_;
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 6;
     private int retcode_;
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 6;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -155,10 +150,10 @@ public final class SetOpenStateRspOuterClass {
       return retcode_;
     }
 
-    public static final int VALUE_FIELD_NUMBER = 11;
+    public static final int VALUE_FIELD_NUMBER = 10;
     private int value_;
     /**
-     * <code>uint32 value = 11;</code>
+     * <code>uint32 value = 10;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -181,13 +176,13 @@ public final class SetOpenStateRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (key_ != 0) {
-        output.writeUInt32(4, key_);
+        output.writeUInt32(5, key_);
       }
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(6, retcode_);
       }
       if (value_ != 0) {
-        output.writeUInt32(11, value_);
+        output.writeUInt32(10, value_);
       }
       unknownFields.writeTo(output);
     }
@@ -200,15 +195,15 @@ public final class SetOpenStateRspOuterClass {
       size = 0;
       if (key_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, key_);
+          .computeUInt32Size(5, key_);
       }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(6, retcode_);
       }
       if (value_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, value_);
+          .computeUInt32Size(10, value_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -344,11 +339,6 @@ public final class SetOpenStateRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 24060
-     * </pre>
-     *
      * Protobuf type {@code SetOpenStateRsp}
      */
     public static final class Builder extends
@@ -509,7 +499,7 @@ public final class SetOpenStateRspOuterClass {
 
       private int key_ ;
       /**
-       * <code>uint32 key = 4;</code>
+       * <code>uint32 key = 5;</code>
        * @return The key.
        */
       @java.lang.Override
@@ -517,7 +507,7 @@ public final class SetOpenStateRspOuterClass {
         return key_;
       }
       /**
-       * <code>uint32 key = 4;</code>
+       * <code>uint32 key = 5;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -528,7 +518,7 @@ public final class SetOpenStateRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 key = 4;</code>
+       * <code>uint32 key = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -540,7 +530,7 @@ public final class SetOpenStateRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 6;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -548,7 +538,7 @@ public final class SetOpenStateRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 6;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -559,7 +549,7 @@ public final class SetOpenStateRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -571,7 +561,7 @@ public final class SetOpenStateRspOuterClass {
 
       private int value_ ;
       /**
-       * <code>uint32 value = 11;</code>
+       * <code>uint32 value = 10;</code>
        * @return The value.
        */
       @java.lang.Override
@@ -579,7 +569,7 @@ public final class SetOpenStateRspOuterClass {
         return value_;
       }
       /**
-       * <code>uint32 value = 11;</code>
+       * <code>uint32 value = 10;</code>
        * @param value The value to set.
        * @return This builder for chaining.
        */
@@ -590,7 +580,7 @@ public final class SetOpenStateRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 value = 11;</code>
+       * <code>uint32 value = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearValue() {
@@ -667,8 +657,8 @@ public final class SetOpenStateRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025SetOpenStateRsp.proto\">\n\017SetOpenStateR" +
-      "sp\022\013\n\003key\030\004 \001(\r\022\017\n\007retcode\030\007 \001(\005\022\r\n\005valu" +
-      "e\030\013 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "sp\022\013\n\003key\030\005 \001(\r\022\017\n\007retcode\030\006 \001(\005\022\r\n\005valu" +
+      "e\030\n \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

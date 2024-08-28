@@ -19,12 +19,6 @@ public final class GetGachaInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 20029
-   * Version: 4.6.0
-   * Obfs: LNEBPLKCKLJ
-   * </pre>
-   *
    * Protobuf type {@code GetGachaInfoReq}
    */
   public static final class GetGachaInfoReq extends
@@ -246,12 +240,6 @@ public final class GetGachaInfoReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 20029
-     * Version: 4.6.0
-     * Obfs: LNEBPLKCKLJ
-     * </pre>
-     *
      * Protobuf type {@code GetGachaInfoReq}
      */
     public static final class Builder extends

@@ -25,11 +25,6 @@ public final class HomeModuleUnlockNotifyOuterClass {
     int getModuleId();
   }
   /**
-   * <pre>
-   *obf: HGGIEPGKANG
-   * CmdId: 768
-   * </pre>
-   *
    * Protobuf type {@code HomeModuleUnlockNotify}
    */
   public static final class HomeModuleUnlockNotify extends
@@ -278,11 +273,6 @@ public final class HomeModuleUnlockNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     *obf: HGGIEPGKANG
-     * CmdId: 768
-     * </pre>
-     *
      * Protobuf type {@code HomeModuleUnlockNotify}
      */
     public static final class Builder extends

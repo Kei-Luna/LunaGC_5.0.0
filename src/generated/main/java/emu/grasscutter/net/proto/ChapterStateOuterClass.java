@@ -15,10 +15,6 @@ public final class ChapterStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: IGBMFOLFJLJ
-   * </pre>
-   *
    * Protobuf enum {@code ChapterState}
    */
   public enum ChapterState

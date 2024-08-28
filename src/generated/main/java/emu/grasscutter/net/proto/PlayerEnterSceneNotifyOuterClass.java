@@ -81,10 +81,10 @@ public final class PlayerEnterSceneNotifyOuterClass {
     int getEnterSceneToken();
 
     /**
-     * <code>uint32 GAPLFMMGBFA = 11;</code>
-     * @return The gAPLFMMGBFA.
+     * <code>uint32 dungeon_id = 11;</code>
+     * @return The dungeonId.
      */
-    int getGAPLFMMGBFA();
+    int getDungeonId();
 
     /**
      * <code>uint32 GPJHAEEMCBK = 12;</code>
@@ -322,7 +322,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
             }
             case 88: {
 
-              gAPLFMMGBFA_ = input.readUInt32();
+              dungeonId_ = input.readUInt32();
               break;
             }
             case 96: {
@@ -552,15 +552,15 @@ public final class PlayerEnterSceneNotifyOuterClass {
       return enterSceneToken_;
     }
 
-    public static final int GAPLFMMGBFA_FIELD_NUMBER = 11;
-    private int gAPLFMMGBFA_;
+    public static final int DUNGEON_ID_FIELD_NUMBER = 11;
+    private int dungeonId_;
     /**
-     * <code>uint32 GAPLFMMGBFA = 11;</code>
-     * @return The gAPLFMMGBFA.
+     * <code>uint32 dungeon_id = 11;</code>
+     * @return The dungeonId.
      */
     @java.lang.Override
-    public int getGAPLFMMGBFA() {
-      return gAPLFMMGBFA_;
+    public int getDungeonId() {
+      return dungeonId_;
     }
 
     public static final int GPJHAEEMCBK_FIELD_NUMBER = 12;
@@ -830,8 +830,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       if (enterSceneToken_ != 0) {
         output.writeUInt32(7, enterSceneToken_);
       }
-      if (gAPLFMMGBFA_ != 0) {
-        output.writeUInt32(11, gAPLFMMGBFA_);
+      if (dungeonId_ != 0) {
+        output.writeUInt32(11, dungeonId_);
       }
       if (gPJHAEEMCBK_ != 0) {
         output.writeUInt32(12, gPJHAEEMCBK_);
@@ -919,9 +919,9 @@ public final class PlayerEnterSceneNotifyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, enterSceneToken_);
       }
-      if (gAPLFMMGBFA_ != 0) {
+      if (dungeonId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, gAPLFMMGBFA_);
+          .computeUInt32Size(11, dungeonId_);
       }
       if (gPJHAEEMCBK_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1006,8 +1006,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
           .equals(other.getSceneTagIdListList())) return false;
       if (getEnterSceneToken()
           != other.getEnterSceneToken()) return false;
-      if (getGAPLFMMGBFA()
-          != other.getGAPLFMMGBFA()) return false;
+      if (getDungeonId()
+          != other.getDungeonId()) return false;
       if (getGPJHAEEMCBK()
           != other.getGPJHAEEMCBK()) return false;
       if (hasPos() != other.hasPos()) return false;
@@ -1070,8 +1070,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
       }
       hash = (37 * hash) + ENTER_SCENE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getEnterSceneToken();
-      hash = (37 * hash) + GAPLFMMGBFA_FIELD_NUMBER;
-      hash = (53 * hash) + getGAPLFMMGBFA();
+      hash = (37 * hash) + DUNGEON_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDungeonId();
       hash = (37 * hash) + GPJHAEEMCBK_FIELD_NUMBER;
       hash = (53 * hash) + getGPJHAEEMCBK();
       if (hasPos()) {
@@ -1254,7 +1254,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         enterSceneToken_ = 0;
 
-        gAPLFMMGBFA_ = 0;
+        dungeonId_ = 0;
 
         gPJHAEEMCBK_ = 0;
 
@@ -1332,7 +1332,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
         }
         result.sceneTagIdList_ = sceneTagIdList_;
         result.enterSceneToken_ = enterSceneToken_;
-        result.gAPLFMMGBFA_ = gAPLFMMGBFA_;
+        result.dungeonId_ = dungeonId_;
         result.gPJHAEEMCBK_ = gPJHAEEMCBK_;
         if (posBuilder_ == null) {
           result.pos_ = pos_;
@@ -1430,8 +1430,8 @@ public final class PlayerEnterSceneNotifyOuterClass {
         if (other.getEnterSceneToken() != 0) {
           setEnterSceneToken(other.getEnterSceneToken());
         }
-        if (other.getGAPLFMMGBFA() != 0) {
-          setGAPLFMMGBFA(other.getGAPLFMMGBFA());
+        if (other.getDungeonId() != 0) {
+          setDungeonId(other.getDungeonId());
         }
         if (other.getGPJHAEEMCBK() != 0) {
           setGPJHAEEMCBK(other.getGPJHAEEMCBK());
@@ -1856,33 +1856,33 @@ public final class PlayerEnterSceneNotifyOuterClass {
         return this;
       }
 
-      private int gAPLFMMGBFA_ ;
+      private int dungeonId_ ;
       /**
-       * <code>uint32 GAPLFMMGBFA = 11;</code>
-       * @return The gAPLFMMGBFA.
+       * <code>uint32 dungeon_id = 11;</code>
+       * @return The dungeonId.
        */
       @java.lang.Override
-      public int getGAPLFMMGBFA() {
-        return gAPLFMMGBFA_;
+      public int getDungeonId() {
+        return dungeonId_;
       }
       /**
-       * <code>uint32 GAPLFMMGBFA = 11;</code>
-       * @param value The gAPLFMMGBFA to set.
+       * <code>uint32 dungeon_id = 11;</code>
+       * @param value The dungeonId to set.
        * @return This builder for chaining.
        */
-      public Builder setGAPLFMMGBFA(int value) {
+      public Builder setDungeonId(int value) {
         
-        gAPLFMMGBFA_ = value;
+        dungeonId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 GAPLFMMGBFA = 11;</code>
+       * <code>uint32 dungeon_id = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGAPLFMMGBFA() {
+      public Builder clearDungeonId() {
         
-        gAPLFMMGBFA_ = 0;
+        dungeonId_ = 0;
         onChanged();
         return this;
       }
@@ -2658,21 +2658,21 @@ public final class PlayerEnterSceneNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034PlayerEnterSceneNotify.proto\032\014Vector.p" +
-      "roto\032\017EnterType.proto\"\205\004\n\026PlayerEnterSce" +
+      "roto\032\017EnterType.proto\"\204\004\n\026PlayerEnterSce" +
       "neNotify\022\023\n\013JDNGEPMPFOH\030\001 \001(\010\022\034\n\013MBFONBL" +
       "MNBL\030\002 \001(\0132\007.Vector\022\023\n\013world_level\030\003 \001(\r" +
       "\022\022\n\ntarget_uid\030\004 \001(\r\022\030\n\020scene_begin_time" +
       "\030\005 \001(\004\022\031\n\021scene_tag_id_list\030\006 \003(\r\022\031\n\021ent" +
-      "er_scene_token\030\007 \001(\r\022\023\n\013GAPLFMMGBFA\030\013 \001(" +
-      "\r\022\023\n\013GPJHAEEMCBK\030\014 \001(\r\022\024\n\003pos\030\r \001(\0132\007.Ve" +
-      "ctor\022\020\n\010scene_id\030\016 \001(\r\022\030\n\004type\030\017 \001(\0162\n.E" +
-      "nterType\022\024\n\013ALJNJKPMOPB\030\322\002 \001(\r\022\024\n\013EKIBAC" +
-      "GBHCJ\030\346\002 \001(\r\022\024\n\013KDHNDLANKNI\030\320\003 \001(\r\022\035\n\013KM" +
-      "DLMKGJIHH\030\210\006 \001(\0132\007.Vector\022\024\n\013GBHGABLFDME" +
-      "\030\260\006 \001(\010\022\024\n\013DDGBKGDECME\030\374\010 \001(\r\022\032\n\021scene_t" +
-      "ransaction\030\324\013 \001(\t\022\024\n\013KKLADMFLAOE\030\240\r \001(\r\022" +
-      "\024\n\013OKCAGDNDEJN\030\316\016 \001(\rB\033\n\031emu.grasscutter" +
-      ".net.protob\006proto3"
+      "er_scene_token\030\007 \001(\r\022\022\n\ndungeon_id\030\013 \001(\r" +
+      "\022\023\n\013GPJHAEEMCBK\030\014 \001(\r\022\024\n\003pos\030\r \001(\0132\007.Vec" +
+      "tor\022\020\n\010scene_id\030\016 \001(\r\022\030\n\004type\030\017 \001(\0162\n.En" +
+      "terType\022\024\n\013ALJNJKPMOPB\030\322\002 \001(\r\022\024\n\013EKIBACG" +
+      "BHCJ\030\346\002 \001(\r\022\024\n\013KDHNDLANKNI\030\320\003 \001(\r\022\035\n\013KMD" +
+      "LMKGJIHH\030\210\006 \001(\0132\007.Vector\022\024\n\013GBHGABLFDME\030" +
+      "\260\006 \001(\010\022\024\n\013DDGBKGDECME\030\374\010 \001(\r\022\032\n\021scene_tr" +
+      "ansaction\030\324\013 \001(\t\022\024\n\013KKLADMFLAOE\030\240\r \001(\r\022\024" +
+      "\n\013OKCAGDNDEJN\030\316\016 \001(\rB\033\n\031emu.grasscutter." +
+      "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2685,7 +2685,7 @@ public final class PlayerEnterSceneNotifyOuterClass {
     internal_static_PlayerEnterSceneNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerEnterSceneNotify_descriptor,
-        new java.lang.String[] { "JDNGEPMPFOH", "MBFONBLMNBL", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "GAPLFMMGBFA", "GPJHAEEMCBK", "Pos", "SceneId", "Type", "ALJNJKPMOPB", "EKIBACGBHCJ", "KDHNDLANKNI", "KMDLMKGJIHH", "GBHGABLFDME", "DDGBKGDECME", "SceneTransaction", "KKLADMFLAOE", "OKCAGDNDEJN", });
+        new java.lang.String[] { "JDNGEPMPFOH", "MBFONBLMNBL", "WorldLevel", "TargetUid", "SceneBeginTime", "SceneTagIdList", "EnterSceneToken", "DungeonId", "GPJHAEEMCBK", "Pos", "SceneId", "Type", "ALJNJKPMOPB", "EKIBACGBHCJ", "KDHNDLANKNI", "KMDLMKGJIHH", "GBHGABLFDME", "DDGBKGDECME", "SceneTransaction", "KKLADMFLAOE", "OKCAGDNDEJN", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
     emu.grasscutter.net.proto.EnterTypeOuterClass.getDescriptor();
   }

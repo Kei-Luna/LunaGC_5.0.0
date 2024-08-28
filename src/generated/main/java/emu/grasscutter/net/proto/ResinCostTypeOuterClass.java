@@ -15,10 +15,6 @@ public final class ResinCostTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * </pre>
-   *
    * Protobuf enum {@code ResinCostType}
    */
   public enum ResinCostType

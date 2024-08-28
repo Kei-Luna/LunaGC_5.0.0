@@ -19,17 +19,12 @@ public final class ToTheMoonEnterSceneRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 12;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 6130
-   * Obf: ECOFGBHBFEO
-   * </pre>
-   *
    * Protobuf type {@code ToTheMoonEnterSceneRsp}
    */
   public static final class ToTheMoonEnterSceneRsp extends
@@ -74,7 +69,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 104: {
 
               retcode_ = input.readInt32();
               break;
@@ -111,10 +106,10 @@ public final class ToTheMoonEnterSceneRspOuterClass {
               emu.grasscutter.net.proto.ToTheMoonEnterSceneRspOuterClass.ToTheMoonEnterSceneRsp.class, emu.grasscutter.net.proto.ToTheMoonEnterSceneRspOuterClass.ToTheMoonEnterSceneRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 12;
+    public static final int RETCODE_FIELD_NUMBER = 13;
     private int retcode_;
     /**
-     * <code>int32 retcode = 12;</code>
+     * <code>int32 retcode = 13;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -137,7 +132,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(12, retcode_);
+        output.writeInt32(13, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -150,7 +145,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(12, retcode_);
+          .computeInt32Size(13, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,11 +273,6 @@ public final class ToTheMoonEnterSceneRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 6130
-     * Obf: ECOFGBHBFEO
-     * </pre>
-     *
      * Protobuf type {@code ToTheMoonEnterSceneRsp}
      */
     public static final class Builder extends
@@ -431,7 +421,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -439,7 +429,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -450,7 +440,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 12;</code>
+       * <code>int32 retcode = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -527,7 +517,7 @@ public final class ToTheMoonEnterSceneRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034ToTheMoonEnterSceneRsp.proto\")\n\026ToTheM" +
-      "oonEnterSceneRsp\022\017\n\007retcode\030\014 \001(\005B\033\n\031emu" +
+      "oonEnterSceneRsp\022\017\n\007retcode\030\r \001(\005B\033\n\031emu" +
       ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

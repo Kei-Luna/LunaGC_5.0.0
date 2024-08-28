@@ -19,35 +19,30 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> 
         getFurnitureArrangeCountListList();
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getFurnitureArrangeCountList(int index);
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     int getFurnitureArrangeCountListCount();
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
         getFurnitureArrangeCountListOrBuilderList();
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getFurnitureArrangeCountListOrBuilder(
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 2948
-   * Obf: FGLMMAMBPBP
-   * </pre>
-   *
    * Protobuf type {@code FurnitureCurModuleArrangeCountNotify}
    */
   public static final class FurnitureCurModuleArrangeCountNotify extends
@@ -94,7 +89,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
+            case 122: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 furnitureArrangeCountList_ = new java.util.ArrayList<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair>();
                 mutable_bitField0_ |= 0x00000001;
@@ -138,17 +133,17 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
               emu.grasscutter.net.proto.FurnitureCurModuleArrangeCountNotifyOuterClass.FurnitureCurModuleArrangeCountNotify.class, emu.grasscutter.net.proto.FurnitureCurModuleArrangeCountNotifyOuterClass.FurnitureCurModuleArrangeCountNotify.Builder.class);
     }
 
-    public static final int FURNITURE_ARRANGE_COUNT_LIST_FIELD_NUMBER = 1;
+    public static final int FURNITURE_ARRANGE_COUNT_LIST_FIELD_NUMBER = 15;
     private java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> furnitureArrangeCountList_;
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> getFurnitureArrangeCountListList() {
       return furnitureArrangeCountList_;
     }
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
@@ -156,21 +151,21 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
       return furnitureArrangeCountList_;
     }
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     @java.lang.Override
     public int getFurnitureArrangeCountListCount() {
       return furnitureArrangeCountList_.size();
     }
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getFurnitureArrangeCountList(int index) {
       return furnitureArrangeCountList_.get(index);
     }
     /**
-     * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+     * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getFurnitureArrangeCountListOrBuilder(
@@ -193,7 +188,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < furnitureArrangeCountList_.size(); i++) {
-        output.writeMessage(1, furnitureArrangeCountList_.get(i));
+        output.writeMessage(15, furnitureArrangeCountList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -206,7 +201,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
       size = 0;
       for (int i = 0; i < furnitureArrangeCountList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, furnitureArrangeCountList_.get(i));
+          .computeMessageSize(15, furnitureArrangeCountList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,11 +331,6 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 2948
-     * Obf: FGLMMAMBPBP
-     * </pre>
-     *
      * Protobuf type {@code FurnitureCurModuleArrangeCountNotify}
      */
     public static final class Builder extends
@@ -538,7 +528,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
           emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> furnitureArrangeCountListBuilder_;
 
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> getFurnitureArrangeCountListList() {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -548,7 +538,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public int getFurnitureArrangeCountListCount() {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -558,7 +548,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair getFurnitureArrangeCountList(int index) {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -568,7 +558,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder setFurnitureArrangeCountList(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
@@ -585,7 +575,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder setFurnitureArrangeCountList(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -599,7 +589,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder addFurnitureArrangeCountList(emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -615,7 +605,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder addFurnitureArrangeCountList(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair value) {
@@ -632,7 +622,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder addFurnitureArrangeCountList(
           emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -646,7 +636,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder addFurnitureArrangeCountList(
           int index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder builderForValue) {
@@ -660,7 +650,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder addAllFurnitureArrangeCountList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair> values) {
@@ -675,7 +665,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder clearFurnitureArrangeCountList() {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -688,7 +678,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public Builder removeFurnitureArrangeCountList(int index) {
         if (furnitureArrangeCountListBuilder_ == null) {
@@ -701,14 +691,14 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder getFurnitureArrangeCountListBuilder(
           int index) {
         return getFurnitureArrangeCountListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder getFurnitureArrangeCountListOrBuilder(
           int index) {
@@ -718,7 +708,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32PairOrBuilder> 
            getFurnitureArrangeCountListOrBuilderList() {
@@ -729,14 +719,14 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder addFurnitureArrangeCountListBuilder() {
         return getFurnitureArrangeCountListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.getDefaultInstance());
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder addFurnitureArrangeCountListBuilder(
           int index) {
@@ -744,7 +734,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
             index, emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.getDefaultInstance());
       }
       /**
-       * <code>repeated .Uint32Pair furniture_arrange_count_list = 1;</code>
+       * <code>repeated .Uint32Pair furniture_arrange_count_list = 15;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Uint32PairOuterClass.Uint32Pair.Builder> 
            getFurnitureArrangeCountListBuilderList() {
@@ -834,7 +824,7 @@ public final class FurnitureCurModuleArrangeCountNotifyOuterClass {
       "\n*FurnitureCurModuleArrangeCountNotify.p" +
       "roto\032\020Uint32Pair.proto\"Y\n$FurnitureCurMo" +
       "duleArrangeCountNotify\0221\n\034furniture_arra" +
-      "nge_count_list\030\001 \003(\0132\013.Uint32PairB\033\n\031emu" +
+      "nge_count_list\030\017 \003(\0132\013.Uint32PairB\033\n\031emu" +
       ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

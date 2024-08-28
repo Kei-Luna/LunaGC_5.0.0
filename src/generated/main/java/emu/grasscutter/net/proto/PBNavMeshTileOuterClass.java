@@ -19,58 +19,54 @@ public final class PBNavMeshTileOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> 
-        getVecsList();
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index);
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    int getVecsCount();
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-        getVecsOrBuilderList();
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> 
         getPolysList();
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly getPolys(int index);
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     int getPolysCount();
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder> 
         getPolysOrBuilderList();
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder getPolysOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> 
+        getVecsList();
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index);
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    int getVecsCount();
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+        getVecsOrBuilderList();
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
+        int index);
   }
   /**
-   * <pre>
-   * Obf: PPNJOACGDIN
-   * </pre>
-   *
    * Protobuf type {@code PBNavMeshTile}
    */
   public static final class PBNavMeshTile extends
@@ -83,8 +79,8 @@ public final class PBNavMeshTileOuterClass {
       super(builder);
     }
     private PBNavMeshTile() {
-      vecs_ = java.util.Collections.emptyList();
       polys_ = java.util.Collections.emptyList();
+      vecs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -118,22 +114,22 @@ public final class PBNavMeshTileOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                vecs_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              vecs_.add(
-                  input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 polys_ = new java.util.ArrayList<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               polys_.add(
                   input.readMessage(emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.parser(), extensionRegistry));
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                vecs_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              vecs_.add(
+                  input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -152,10 +148,10 @@ public final class PBNavMeshTileOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          vecs_ = java.util.Collections.unmodifiableList(vecs_);
+          polys_ = java.util.Collections.unmodifiableList(polys_);
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          polys_ = java.util.Collections.unmodifiableList(polys_);
+          vecs_ = java.util.Collections.unmodifiableList(vecs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -174,57 +170,17 @@ public final class PBNavMeshTileOuterClass {
               emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile.class, emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile.Builder.class);
     }
 
-    public static final int VECS_FIELD_NUMBER = 3;
-    private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> vecs_;
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getVecsList() {
-      return vecs_;
-    }
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-        getVecsOrBuilderList() {
-      return vecs_;
-    }
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    @java.lang.Override
-    public int getVecsCount() {
-      return vecs_.size();
-    }
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index) {
-      return vecs_.get(index);
-    }
-    /**
-     * <code>repeated .Vector vecs = 3;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
-        int index) {
-      return vecs_.get(index);
-    }
-
-    public static final int POLYS_FIELD_NUMBER = 5;
+    public static final int POLYS_FIELD_NUMBER = 2;
     private java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> polys_;
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> getPolysList() {
       return polys_;
     }
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder> 
@@ -232,26 +188,66 @@ public final class PBNavMeshTileOuterClass {
       return polys_;
     }
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     @java.lang.Override
     public int getPolysCount() {
       return polys_.size();
     }
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly getPolys(int index) {
       return polys_.get(index);
     }
     /**
-     * <code>repeated .PBNavMeshPoly polys = 5;</code>
+     * <code>repeated .PBNavMeshPoly polys = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder getPolysOrBuilder(
         int index) {
       return polys_.get(index);
+    }
+
+    public static final int VECS_FIELD_NUMBER = 14;
+    private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> vecs_;
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getVecsList() {
+      return vecs_;
+    }
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+        getVecsOrBuilderList() {
+      return vecs_;
+    }
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    @java.lang.Override
+    public int getVecsCount() {
+      return vecs_.size();
+    }
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index) {
+      return vecs_.get(index);
+    }
+    /**
+     * <code>repeated .Vector vecs = 14;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
+        int index) {
+      return vecs_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -268,11 +264,11 @@ public final class PBNavMeshTileOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < vecs_.size(); i++) {
-        output.writeMessage(3, vecs_.get(i));
-      }
       for (int i = 0; i < polys_.size(); i++) {
-        output.writeMessage(5, polys_.get(i));
+        output.writeMessage(2, polys_.get(i));
+      }
+      for (int i = 0; i < vecs_.size(); i++) {
+        output.writeMessage(14, vecs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -283,13 +279,13 @@ public final class PBNavMeshTileOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < vecs_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, vecs_.get(i));
-      }
       for (int i = 0; i < polys_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, polys_.get(i));
+          .computeMessageSize(2, polys_.get(i));
+      }
+      for (int i = 0; i < vecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, vecs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -306,10 +302,10 @@ public final class PBNavMeshTileOuterClass {
       }
       emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile other = (emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile) obj;
 
-      if (!getVecsList()
-          .equals(other.getVecsList())) return false;
       if (!getPolysList()
           .equals(other.getPolysList())) return false;
+      if (!getVecsList()
+          .equals(other.getVecsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -321,13 +317,13 @@ public final class PBNavMeshTileOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getVecsCount() > 0) {
-        hash = (37 * hash) + VECS_FIELD_NUMBER;
-        hash = (53 * hash) + getVecsList().hashCode();
-      }
       if (getPolysCount() > 0) {
         hash = (37 * hash) + POLYS_FIELD_NUMBER;
         hash = (53 * hash) + getPolysList().hashCode();
+      }
+      if (getVecsCount() > 0) {
+        hash = (37 * hash) + VECS_FIELD_NUMBER;
+        hash = (53 * hash) + getVecsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -425,10 +421,6 @@ public final class PBNavMeshTileOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: PPNJOACGDIN
-     * </pre>
-     *
      * Protobuf type {@code PBNavMeshTile}
      */
     public static final class Builder extends
@@ -461,24 +453,24 @@ public final class PBNavMeshTileOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getVecsFieldBuilder();
           getPolysFieldBuilder();
+          getVecsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (vecsBuilder_ == null) {
-          vecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          vecsBuilder_.clear();
-        }
         if (polysBuilder_ == null) {
           polys_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           polysBuilder_.clear();
+        }
+        if (vecsBuilder_ == null) {
+          vecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          vecsBuilder_.clear();
         }
         return this;
       }
@@ -507,23 +499,23 @@ public final class PBNavMeshTileOuterClass {
       public emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile buildPartial() {
         emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile result = new emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile(this);
         int from_bitField0_ = bitField0_;
-        if (vecsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            vecs_ = java.util.Collections.unmodifiableList(vecs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.vecs_ = vecs_;
-        } else {
-          result.vecs_ = vecsBuilder_.build();
-        }
         if (polysBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             polys_ = java.util.Collections.unmodifiableList(polys_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.polys_ = polys_;
         } else {
           result.polys_ = polysBuilder_.build();
+        }
+        if (vecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            vecs_ = java.util.Collections.unmodifiableList(vecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.vecs_ = vecs_;
+        } else {
+          result.vecs_ = vecsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -573,37 +565,11 @@ public final class PBNavMeshTileOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile other) {
         if (other == emu.grasscutter.net.proto.PBNavMeshTileOuterClass.PBNavMeshTile.getDefaultInstance()) return this;
-        if (vecsBuilder_ == null) {
-          if (!other.vecs_.isEmpty()) {
-            if (vecs_.isEmpty()) {
-              vecs_ = other.vecs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureVecsIsMutable();
-              vecs_.addAll(other.vecs_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.vecs_.isEmpty()) {
-            if (vecsBuilder_.isEmpty()) {
-              vecsBuilder_.dispose();
-              vecsBuilder_ = null;
-              vecs_ = other.vecs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              vecsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getVecsFieldBuilder() : null;
-            } else {
-              vecsBuilder_.addAllMessages(other.vecs_);
-            }
-          }
-        }
         if (polysBuilder_ == null) {
           if (!other.polys_.isEmpty()) {
             if (polys_.isEmpty()) {
               polys_ = other.polys_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensurePolysIsMutable();
               polys_.addAll(other.polys_);
@@ -616,12 +582,38 @@ public final class PBNavMeshTileOuterClass {
               polysBuilder_.dispose();
               polysBuilder_ = null;
               polys_ = other.polys_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               polysBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPolysFieldBuilder() : null;
             } else {
               polysBuilder_.addAllMessages(other.polys_);
+            }
+          }
+        }
+        if (vecsBuilder_ == null) {
+          if (!other.vecs_.isEmpty()) {
+            if (vecs_.isEmpty()) {
+              vecs_ = other.vecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureVecsIsMutable();
+              vecs_.addAll(other.vecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vecs_.isEmpty()) {
+            if (vecsBuilder_.isEmpty()) {
+              vecsBuilder_.dispose();
+              vecsBuilder_ = null;
+              vecs_ = other.vecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              vecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVecsFieldBuilder() : null;
+            } else {
+              vecsBuilder_.addAllMessages(other.vecs_);
             }
           }
         }
@@ -655,252 +647,12 @@ public final class PBNavMeshTileOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> vecs_ =
-        java.util.Collections.emptyList();
-      private void ensureVecsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          vecs_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>(vecs_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> vecsBuilder_;
-
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getVecsList() {
-        if (vecsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(vecs_);
-        } else {
-          return vecsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public int getVecsCount() {
-        if (vecsBuilder_ == null) {
-          return vecs_.size();
-        } else {
-          return vecsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index) {
-        if (vecsBuilder_ == null) {
-          return vecs_.get(index);
-        } else {
-          return vecsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder setVecs(
-          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (vecsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVecsIsMutable();
-          vecs_.set(index, value);
-          onChanged();
-        } else {
-          vecsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder setVecs(
-          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
-        if (vecsBuilder_ == null) {
-          ensureVecsIsMutable();
-          vecs_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          vecsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder addVecs(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (vecsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVecsIsMutable();
-          vecs_.add(value);
-          onChanged();
-        } else {
-          vecsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder addVecs(
-          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
-        if (vecsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureVecsIsMutable();
-          vecs_.add(index, value);
-          onChanged();
-        } else {
-          vecsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder addVecs(
-          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
-        if (vecsBuilder_ == null) {
-          ensureVecsIsMutable();
-          vecs_.add(builderForValue.build());
-          onChanged();
-        } else {
-          vecsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder addVecs(
-          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
-        if (vecsBuilder_ == null) {
-          ensureVecsIsMutable();
-          vecs_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          vecsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder addAllVecs(
-          java.lang.Iterable<? extends emu.grasscutter.net.proto.VectorOuterClass.Vector> values) {
-        if (vecsBuilder_ == null) {
-          ensureVecsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, vecs_);
-          onChanged();
-        } else {
-          vecsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder clearVecs() {
-        if (vecsBuilder_ == null) {
-          vecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          vecsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public Builder removeVecs(int index) {
-        if (vecsBuilder_ == null) {
-          ensureVecsIsMutable();
-          vecs_.remove(index);
-          onChanged();
-        } else {
-          vecsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getVecsBuilder(
-          int index) {
-        return getVecsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
-          int index) {
-        if (vecsBuilder_ == null) {
-          return vecs_.get(index);  } else {
-          return vecsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-           getVecsOrBuilderList() {
-        if (vecsBuilder_ != null) {
-          return vecsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(vecs_);
-        }
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addVecsBuilder() {
-        return getVecsFieldBuilder().addBuilder(
-            emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addVecsBuilder(
-          int index) {
-        return getVecsFieldBuilder().addBuilder(
-            index, emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Vector vecs = 3;</code>
-       */
-      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder> 
-           getVecsBuilderList() {
-        return getVecsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
-          getVecsFieldBuilder() {
-        if (vecsBuilder_ == null) {
-          vecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
-                  vecs_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          vecs_ = null;
-        }
-        return vecsBuilder_;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> polys_ =
         java.util.Collections.emptyList();
       private void ensurePolysIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           polys_ = new java.util.ArrayList<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly>(polys_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -908,7 +660,7 @@ public final class PBNavMeshTileOuterClass {
           emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder> polysBuilder_;
 
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> getPolysList() {
         if (polysBuilder_ == null) {
@@ -918,7 +670,7 @@ public final class PBNavMeshTileOuterClass {
         }
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public int getPolysCount() {
         if (polysBuilder_ == null) {
@@ -928,7 +680,7 @@ public final class PBNavMeshTileOuterClass {
         }
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly getPolys(int index) {
         if (polysBuilder_ == null) {
@@ -938,7 +690,7 @@ public final class PBNavMeshTileOuterClass {
         }
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder setPolys(
           int index, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly value) {
@@ -955,7 +707,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder setPolys(
           int index, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder builderForValue) {
@@ -969,7 +721,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder addPolys(emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly value) {
         if (polysBuilder_ == null) {
@@ -985,7 +737,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder addPolys(
           int index, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly value) {
@@ -1002,7 +754,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder addPolys(
           emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder builderForValue) {
@@ -1016,7 +768,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder addPolys(
           int index, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder builderForValue) {
@@ -1030,7 +782,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder addAllPolys(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly> values) {
@@ -1045,12 +797,12 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder clearPolys() {
         if (polysBuilder_ == null) {
           polys_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           polysBuilder_.clear();
@@ -1058,7 +810,7 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public Builder removePolys(int index) {
         if (polysBuilder_ == null) {
@@ -1071,14 +823,14 @@ public final class PBNavMeshTileOuterClass {
         return this;
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder getPolysBuilder(
           int index) {
         return getPolysFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder getPolysOrBuilder(
           int index) {
@@ -1088,7 +840,7 @@ public final class PBNavMeshTileOuterClass {
         }
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder> 
            getPolysOrBuilderList() {
@@ -1099,14 +851,14 @@ public final class PBNavMeshTileOuterClass {
         }
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder addPolysBuilder() {
         return getPolysFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.getDefaultInstance());
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder addPolysBuilder(
           int index) {
@@ -1114,7 +866,7 @@ public final class PBNavMeshTileOuterClass {
             index, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.getDefaultInstance());
       }
       /**
-       * <code>repeated .PBNavMeshPoly polys = 5;</code>
+       * <code>repeated .PBNavMeshPoly polys = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder> 
            getPolysBuilderList() {
@@ -1127,12 +879,252 @@ public final class PBNavMeshTileOuterClass {
           polysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPoly.Builder, emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.PBNavMeshPolyOrBuilder>(
                   polys_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           polys_ = null;
         }
         return polysBuilder_;
+      }
+
+      private java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> vecs_ =
+        java.util.Collections.emptyList();
+      private void ensureVecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          vecs_ = new java.util.ArrayList<emu.grasscutter.net.proto.VectorOuterClass.Vector>(vecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> vecsBuilder_;
+
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector> getVecsList() {
+        if (vecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vecs_);
+        } else {
+          return vecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public int getVecsCount() {
+        if (vecsBuilder_ == null) {
+          return vecs_.size();
+        } else {
+          return vecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector getVecs(int index) {
+        if (vecsBuilder_ == null) {
+          return vecs_.get(index);
+        } else {
+          return vecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder setVecs(
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (vecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVecsIsMutable();
+          vecs_.set(index, value);
+          onChanged();
+        } else {
+          vecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder setVecs(
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+        if (vecsBuilder_ == null) {
+          ensureVecsIsMutable();
+          vecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder addVecs(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (vecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVecsIsMutable();
+          vecs_.add(value);
+          onChanged();
+        } else {
+          vecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder addVecs(
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
+        if (vecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVecsIsMutable();
+          vecs_.add(index, value);
+          onChanged();
+        } else {
+          vecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder addVecs(
+          emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+        if (vecsBuilder_ == null) {
+          ensureVecsIsMutable();
+          vecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder addVecs(
+          int index, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
+        if (vecsBuilder_ == null) {
+          ensureVecsIsMutable();
+          vecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder addAllVecs(
+          java.lang.Iterable<? extends emu.grasscutter.net.proto.VectorOuterClass.Vector> values) {
+        if (vecsBuilder_ == null) {
+          ensureVecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vecs_);
+          onChanged();
+        } else {
+          vecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder clearVecs() {
+        if (vecsBuilder_ == null) {
+          vecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          vecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public Builder removeVecs(int index) {
+        if (vecsBuilder_ == null) {
+          ensureVecsIsMutable();
+          vecs_.remove(index);
+          onChanged();
+        } else {
+          vecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getVecsBuilder(
+          int index) {
+        return getVecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getVecsOrBuilder(
+          int index) {
+        if (vecsBuilder_ == null) {
+          return vecs_.get(index);  } else {
+          return vecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public java.util.List<? extends emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+           getVecsOrBuilderList() {
+        if (vecsBuilder_ != null) {
+          return vecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vecs_);
+        }
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addVecsBuilder() {
+        return getVecsFieldBuilder().addBuilder(
+            emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder addVecsBuilder(
+          int index) {
+        return getVecsFieldBuilder().addBuilder(
+            index, emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Vector vecs = 14;</code>
+       */
+      public java.util.List<emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder> 
+           getVecsBuilderList() {
+        return getVecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
+          getVecsFieldBuilder() {
+        if (vecsBuilder_ == null) {
+          vecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder>(
+                  vecs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vecs_ = null;
+        }
+        return vecsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1201,26 +1193,26 @@ public final class PBNavMeshTileOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023PBNavMeshTile.proto\032\014Vector.proto\032\023PBN" +
-      "avMeshPoly.proto\"E\n\rPBNavMeshTile\022\025\n\004vec" +
-      "s\030\003 \003(\0132\007.Vector\022\035\n\005polys\030\005 \003(\0132\016.PBNavM" +
-      "eshPolyB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "\n\023PBNavMeshTile.proto\032\023PBNavMeshPoly.pro" +
+      "to\032\014Vector.proto\"E\n\rPBNavMeshTile\022\035\n\005pol" +
+      "ys\030\002 \003(\0132\016.PBNavMeshPoly\022\025\n\004vecs\030\016 \003(\0132\007" +
+      ".VectorB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.VectorOuterClass.getDescriptor(),
         });
     internal_static_PBNavMeshTile_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_PBNavMeshTile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PBNavMeshTile_descriptor,
-        new java.lang.String[] { "Vecs", "Polys", });
-    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
+        new java.lang.String[] { "Polys", "Vecs", });
     emu.grasscutter.net.proto.PBNavMeshPolyOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

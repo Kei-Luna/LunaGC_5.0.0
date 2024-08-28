@@ -101,43 +101,38 @@ public final class QuestOuterClass {
     int getFailProgressList(int index);
 
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-     * @return A list containing the cBIIPBMDLCH.
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+     * @return A list containing the mLHFBAFCKIP.
      */
-    java.util.List<java.lang.Integer> getCBIIPBMDLCHList();
+    java.util.List<java.lang.Integer> getMLHFBAFCKIPList();
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-     * @return The count of cBIIPBMDLCH.
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+     * @return The count of mLHFBAFCKIP.
      */
-    int getCBIIPBMDLCHCount();
+    int getMLHFBAFCKIPCount();
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
      * @param index The index of the element to return.
-     * @return The cBIIPBMDLCH at the given index.
+     * @return The mLHFBAFCKIP at the given index.
      */
-    int getCBIIPBMDLCH(int index);
+    int getMLHFBAFCKIP(int index);
 
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-     * @return Whether the dMDCNMGJPAN field is set.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return Whether the lackingResourcesInfo field is set.
      */
-    boolean hasDMDCNMGJPAN();
+    boolean hasLackingResourcesInfo();
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-     * @return The dMDCNMGJPAN.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return The lackingResourcesInfo.
      */
-    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getDMDCNMGJPAN();
+    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo();
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
      */
-    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getDMDCNMGJPANOrBuilder();
+    emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder();
   }
   /**
-   * <pre>
-   * Version: 4.6.0
-   * Obfs: DNMAECDIBPD
-   * </pre>
-   *
    * Protobuf type {@code Quest}
    */
   public static final class Quest extends
@@ -152,7 +147,7 @@ public final class QuestOuterClass {
     private Quest() {
       finishProgressList_ = emptyIntList();
       failProgressList_ = emptyIntList();
-      cBIIPBMDLCH_ = emptyIntList();
+      mLHFBAFCKIP_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -270,34 +265,34 @@ public final class QuestOuterClass {
             }
             case 96: {
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                cBIIPBMDLCH_ = newIntList();
+                mLHFBAFCKIP_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
               }
-              cBIIPBMDLCH_.addInt(input.readUInt32());
+              mLHFBAFCKIP_.addInt(input.readUInt32());
               break;
             }
             case 98: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
-                cBIIPBMDLCH_ = newIntList();
+                mLHFBAFCKIP_ = newIntList();
                 mutable_bitField0_ |= 0x00000004;
               }
               while (input.getBytesUntilLimit() > 0) {
-                cBIIPBMDLCH_.addInt(input.readUInt32());
+                mLHFBAFCKIP_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
               break;
             }
             case 106: {
               emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder subBuilder = null;
-              if (dMDCNMGJPAN_ != null) {
-                subBuilder = dMDCNMGJPAN_.toBuilder();
+              if (lackingResourcesInfo_ != null) {
+                subBuilder = lackingResourcesInfo_.toBuilder();
               }
-              dMDCNMGJPAN_ = input.readMessage(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.parser(), extensionRegistry);
+              lackingResourcesInfo_ = input.readMessage(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(dMDCNMGJPAN_);
-                dMDCNMGJPAN_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(lackingResourcesInfo_);
+                lackingResourcesInfo_ = subBuilder.buildPartial();
               }
 
               break;
@@ -324,7 +319,7 @@ public final class QuestOuterClass {
           failProgressList_.makeImmutable(); // C
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          cBIIPBMDLCH_.makeImmutable(); // C
+          mLHFBAFCKIP_.makeImmutable(); // C
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -487,58 +482,58 @@ public final class QuestOuterClass {
     }
     private int failProgressListMemoizedSerializedSize = -1;
 
-    public static final int CBIIPBMDLCH_FIELD_NUMBER = 12;
-    private com.google.protobuf.Internal.IntList cBIIPBMDLCH_;
+    public static final int MLHFBAFCKIP_FIELD_NUMBER = 12;
+    private com.google.protobuf.Internal.IntList mLHFBAFCKIP_;
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-     * @return A list containing the cBIIPBMDLCH.
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+     * @return A list containing the mLHFBAFCKIP.
      */
     @java.lang.Override
     public java.util.List<java.lang.Integer>
-        getCBIIPBMDLCHList() {
-      return cBIIPBMDLCH_;
+        getMLHFBAFCKIPList() {
+      return mLHFBAFCKIP_;
     }
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-     * @return The count of cBIIPBMDLCH.
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+     * @return The count of mLHFBAFCKIP.
      */
-    public int getCBIIPBMDLCHCount() {
-      return cBIIPBMDLCH_.size();
+    public int getMLHFBAFCKIPCount() {
+      return mLHFBAFCKIP_.size();
     }
     /**
-     * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
+     * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
      * @param index The index of the element to return.
-     * @return The cBIIPBMDLCH at the given index.
+     * @return The mLHFBAFCKIP at the given index.
      */
-    public int getCBIIPBMDLCH(int index) {
-      return cBIIPBMDLCH_.getInt(index);
+    public int getMLHFBAFCKIP(int index) {
+      return mLHFBAFCKIP_.getInt(index);
     }
-    private int cBIIPBMDLCHMemoizedSerializedSize = -1;
+    private int mLHFBAFCKIPMemoizedSerializedSize = -1;
 
-    public static final int DMDCNMGJPAN_FIELD_NUMBER = 13;
-    private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo dMDCNMGJPAN_;
+    public static final int LACKING_RESOURCES_INFO_FIELD_NUMBER = 13;
+    private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo lackingResourcesInfo_;
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-     * @return Whether the dMDCNMGJPAN field is set.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return Whether the lackingResourcesInfo field is set.
      */
     @java.lang.Override
-    public boolean hasDMDCNMGJPAN() {
-      return dMDCNMGJPAN_ != null;
+    public boolean hasLackingResourcesInfo() {
+      return lackingResourcesInfo_ != null;
     }
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-     * @return The dMDCNMGJPAN.
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+     * @return The lackingResourcesInfo.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getDMDCNMGJPAN() {
-      return dMDCNMGJPAN_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : dMDCNMGJPAN_;
+    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo() {
+      return lackingResourcesInfo_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
     }
     /**
-     * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+     * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getDMDCNMGJPANOrBuilder() {
-      return getDMDCNMGJPAN();
+    public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder() {
+      return getLackingResourcesInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -594,15 +589,15 @@ public final class QuestOuterClass {
       for (int i = 0; i < failProgressList_.size(); i++) {
         output.writeUInt32NoTag(failProgressList_.getInt(i));
       }
-      if (getCBIIPBMDLCHList().size() > 0) {
+      if (getMLHFBAFCKIPList().size() > 0) {
         output.writeUInt32NoTag(98);
-        output.writeUInt32NoTag(cBIIPBMDLCHMemoizedSerializedSize);
+        output.writeUInt32NoTag(mLHFBAFCKIPMemoizedSerializedSize);
       }
-      for (int i = 0; i < cBIIPBMDLCH_.size(); i++) {
-        output.writeUInt32NoTag(cBIIPBMDLCH_.getInt(i));
+      for (int i = 0; i < mLHFBAFCKIP_.size(); i++) {
+        output.writeUInt32NoTag(mLHFBAFCKIP_.getInt(i));
       }
-      if (dMDCNMGJPAN_ != null) {
-        output.writeMessage(13, getDMDCNMGJPAN());
+      if (lackingResourcesInfo_ != null) {
+        output.writeMessage(13, getLackingResourcesInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -675,21 +670,21 @@ public final class QuestOuterClass {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < cBIIPBMDLCH_.size(); i++) {
+        for (int i = 0; i < mLHFBAFCKIP_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(cBIIPBMDLCH_.getInt(i));
+            .computeUInt32SizeNoTag(mLHFBAFCKIP_.getInt(i));
         }
         size += dataSize;
-        if (!getCBIIPBMDLCHList().isEmpty()) {
+        if (!getMLHFBAFCKIPList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
-        cBIIPBMDLCHMemoizedSerializedSize = dataSize;
+        mLHFBAFCKIPMemoizedSerializedSize = dataSize;
       }
-      if (dMDCNMGJPAN_ != null) {
+      if (lackingResourcesInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getDMDCNMGJPAN());
+          .computeMessageSize(13, getLackingResourcesInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -726,12 +721,12 @@ public final class QuestOuterClass {
           .equals(other.getFinishProgressListList())) return false;
       if (!getFailProgressListList()
           .equals(other.getFailProgressListList())) return false;
-      if (!getCBIIPBMDLCHList()
-          .equals(other.getCBIIPBMDLCHList())) return false;
-      if (hasDMDCNMGJPAN() != other.hasDMDCNMGJPAN()) return false;
-      if (hasDMDCNMGJPAN()) {
-        if (!getDMDCNMGJPAN()
-            .equals(other.getDMDCNMGJPAN())) return false;
+      if (!getMLHFBAFCKIPList()
+          .equals(other.getMLHFBAFCKIPList())) return false;
+      if (hasLackingResourcesInfo() != other.hasLackingResourcesInfo()) return false;
+      if (hasLackingResourcesInfo()) {
+        if (!getLackingResourcesInfo()
+            .equals(other.getLackingResourcesInfo())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -769,13 +764,13 @@ public final class QuestOuterClass {
         hash = (37 * hash) + FAIL_PROGRESS_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFailProgressListList().hashCode();
       }
-      if (getCBIIPBMDLCHCount() > 0) {
-        hash = (37 * hash) + CBIIPBMDLCH_FIELD_NUMBER;
-        hash = (53 * hash) + getCBIIPBMDLCHList().hashCode();
+      if (getMLHFBAFCKIPCount() > 0) {
+        hash = (37 * hash) + MLHFBAFCKIP_FIELD_NUMBER;
+        hash = (53 * hash) + getMLHFBAFCKIPList().hashCode();
       }
-      if (hasDMDCNMGJPAN()) {
-        hash = (37 * hash) + DMDCNMGJPAN_FIELD_NUMBER;
-        hash = (53 * hash) + getDMDCNMGJPAN().hashCode();
+      if (hasLackingResourcesInfo()) {
+        hash = (37 * hash) + LACKING_RESOURCES_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getLackingResourcesInfo().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -873,11 +868,6 @@ public final class QuestOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Version: 4.6.0
-     * Obfs: DNMAECDIBPD
-     * </pre>
-     *
      * Protobuf type {@code Quest}
      */
     public static final class Builder extends
@@ -935,13 +925,13 @@ public final class QuestOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         failProgressList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        cBIIPBMDLCH_ = emptyIntList();
+        mLHFBAFCKIP_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (dMDCNMGJPANBuilder_ == null) {
-          dMDCNMGJPAN_ = null;
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = null;
         } else {
-          dMDCNMGJPAN_ = null;
-          dMDCNMGJPANBuilder_ = null;
+          lackingResourcesInfo_ = null;
+          lackingResourcesInfoBuilder_ = null;
         }
         return this;
       }
@@ -989,14 +979,14 @@ public final class QuestOuterClass {
         }
         result.failProgressList_ = failProgressList_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          cBIIPBMDLCH_.makeImmutable();
+          mLHFBAFCKIP_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.cBIIPBMDLCH_ = cBIIPBMDLCH_;
-        if (dMDCNMGJPANBuilder_ == null) {
-          result.dMDCNMGJPAN_ = dMDCNMGJPAN_;
+        result.mLHFBAFCKIP_ = mLHFBAFCKIP_;
+        if (lackingResourcesInfoBuilder_ == null) {
+          result.lackingResourcesInfo_ = lackingResourcesInfo_;
         } else {
-          result.dMDCNMGJPAN_ = dMDCNMGJPANBuilder_.build();
+          result.lackingResourcesInfo_ = lackingResourcesInfoBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1090,18 +1080,18 @@ public final class QuestOuterClass {
           }
           onChanged();
         }
-        if (!other.cBIIPBMDLCH_.isEmpty()) {
-          if (cBIIPBMDLCH_.isEmpty()) {
-            cBIIPBMDLCH_ = other.cBIIPBMDLCH_;
+        if (!other.mLHFBAFCKIP_.isEmpty()) {
+          if (mLHFBAFCKIP_.isEmpty()) {
+            mLHFBAFCKIP_ = other.mLHFBAFCKIP_;
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensureCBIIPBMDLCHIsMutable();
-            cBIIPBMDLCH_.addAll(other.cBIIPBMDLCH_);
+            ensureMLHFBAFCKIPIsMutable();
+            mLHFBAFCKIP_.addAll(other.mLHFBAFCKIP_);
           }
           onChanged();
         }
-        if (other.hasDMDCNMGJPAN()) {
-          mergeDMDCNMGJPAN(other.getDMDCNMGJPAN());
+        if (other.hasLackingResourcesInfo()) {
+          mergeLackingResourcesInfo(other.getLackingResourcesInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1539,202 +1529,202 @@ public final class QuestOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList cBIIPBMDLCH_ = emptyIntList();
-      private void ensureCBIIPBMDLCHIsMutable() {
+      private com.google.protobuf.Internal.IntList mLHFBAFCKIP_ = emptyIntList();
+      private void ensureMLHFBAFCKIPIsMutable() {
         if (!((bitField0_ & 0x00000004) != 0)) {
-          cBIIPBMDLCH_ = mutableCopy(cBIIPBMDLCH_);
+          mLHFBAFCKIP_ = mutableCopy(mLHFBAFCKIP_);
           bitField0_ |= 0x00000004;
          }
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-       * @return A list containing the cBIIPBMDLCH.
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+       * @return A list containing the mLHFBAFCKIP.
        */
       public java.util.List<java.lang.Integer>
-          getCBIIPBMDLCHList() {
+          getMLHFBAFCKIPList() {
         return ((bitField0_ & 0x00000004) != 0) ?
-                 java.util.Collections.unmodifiableList(cBIIPBMDLCH_) : cBIIPBMDLCH_;
+                 java.util.Collections.unmodifiableList(mLHFBAFCKIP_) : mLHFBAFCKIP_;
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-       * @return The count of cBIIPBMDLCH.
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+       * @return The count of mLHFBAFCKIP.
        */
-      public int getCBIIPBMDLCHCount() {
-        return cBIIPBMDLCH_.size();
+      public int getMLHFBAFCKIPCount() {
+        return mLHFBAFCKIP_.size();
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
        * @param index The index of the element to return.
-       * @return The cBIIPBMDLCH at the given index.
+       * @return The mLHFBAFCKIP at the given index.
        */
-      public int getCBIIPBMDLCH(int index) {
-        return cBIIPBMDLCH_.getInt(index);
+      public int getMLHFBAFCKIP(int index) {
+        return mLHFBAFCKIP_.getInt(index);
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
        * @param index The index to set the value at.
-       * @param value The cBIIPBMDLCH to set.
+       * @param value The mLHFBAFCKIP to set.
        * @return This builder for chaining.
        */
-      public Builder setCBIIPBMDLCH(
+      public Builder setMLHFBAFCKIP(
           int index, int value) {
-        ensureCBIIPBMDLCHIsMutable();
-        cBIIPBMDLCH_.setInt(index, value);
+        ensureMLHFBAFCKIPIsMutable();
+        mLHFBAFCKIP_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-       * @param value The cBIIPBMDLCH to add.
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+       * @param value The mLHFBAFCKIP to add.
        * @return This builder for chaining.
        */
-      public Builder addCBIIPBMDLCH(int value) {
-        ensureCBIIPBMDLCHIsMutable();
-        cBIIPBMDLCH_.addInt(value);
+      public Builder addMLHFBAFCKIP(int value) {
+        ensureMLHFBAFCKIPIsMutable();
+        mLHFBAFCKIP_.addInt(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
-       * @param values The cBIIPBMDLCH to add.
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
+       * @param values The mLHFBAFCKIP to add.
        * @return This builder for chaining.
        */
-      public Builder addAllCBIIPBMDLCH(
+      public Builder addAllMLHFBAFCKIP(
           java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureCBIIPBMDLCHIsMutable();
+        ensureMLHFBAFCKIPIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, cBIIPBMDLCH_);
+            values, mLHFBAFCKIP_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 CBIIPBMDLCH = 12;</code>
+       * <code>repeated uint32 MLHFBAFCKIP = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCBIIPBMDLCH() {
-        cBIIPBMDLCH_ = emptyIntList();
+      public Builder clearMLHFBAFCKIP() {
+        mLHFBAFCKIP_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
 
-      private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo dMDCNMGJPAN_;
+      private emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo lackingResourcesInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> dMDCNMGJPANBuilder_;
+          emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> lackingResourcesInfoBuilder_;
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-       * @return Whether the dMDCNMGJPAN field is set.
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+       * @return Whether the lackingResourcesInfo field is set.
        */
-      public boolean hasDMDCNMGJPAN() {
-        return dMDCNMGJPANBuilder_ != null || dMDCNMGJPAN_ != null;
+      public boolean hasLackingResourcesInfo() {
+        return lackingResourcesInfoBuilder_ != null || lackingResourcesInfo_ != null;
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
-       * @return The dMDCNMGJPAN.
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
+       * @return The lackingResourcesInfo.
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getDMDCNMGJPAN() {
-        if (dMDCNMGJPANBuilder_ == null) {
-          return dMDCNMGJPAN_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : dMDCNMGJPAN_;
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo getLackingResourcesInfo() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          return lackingResourcesInfo_ == null ? emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
         } else {
-          return dMDCNMGJPANBuilder_.getMessage();
+          return lackingResourcesInfoBuilder_.getMessage();
         }
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder setDMDCNMGJPAN(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
-        if (dMDCNMGJPANBuilder_ == null) {
+      public Builder setLackingResourcesInfo(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
+        if (lackingResourcesInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          dMDCNMGJPAN_ = value;
+          lackingResourcesInfo_ = value;
           onChanged();
         } else {
-          dMDCNMGJPANBuilder_.setMessage(value);
+          lackingResourcesInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder setDMDCNMGJPAN(
+      public Builder setLackingResourcesInfo(
           emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder builderForValue) {
-        if (dMDCNMGJPANBuilder_ == null) {
-          dMDCNMGJPAN_ = builderForValue.build();
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = builderForValue.build();
           onChanged();
         } else {
-          dMDCNMGJPANBuilder_.setMessage(builderForValue.build());
+          lackingResourcesInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder mergeDMDCNMGJPAN(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
-        if (dMDCNMGJPANBuilder_ == null) {
-          if (dMDCNMGJPAN_ != null) {
-            dMDCNMGJPAN_ =
-              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.newBuilder(dMDCNMGJPAN_).mergeFrom(value).buildPartial();
+      public Builder mergeLackingResourcesInfo(emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo value) {
+        if (lackingResourcesInfoBuilder_ == null) {
+          if (lackingResourcesInfo_ != null) {
+            lackingResourcesInfo_ =
+              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.newBuilder(lackingResourcesInfo_).mergeFrom(value).buildPartial();
           } else {
-            dMDCNMGJPAN_ = value;
+            lackingResourcesInfo_ = value;
           }
           onChanged();
         } else {
-          dMDCNMGJPANBuilder_.mergeFrom(value);
+          lackingResourcesInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public Builder clearDMDCNMGJPAN() {
-        if (dMDCNMGJPANBuilder_ == null) {
-          dMDCNMGJPAN_ = null;
+      public Builder clearLackingResourcesInfo() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfo_ = null;
           onChanged();
         } else {
-          dMDCNMGJPAN_ = null;
-          dMDCNMGJPANBuilder_ = null;
+          lackingResourcesInfo_ = null;
+          lackingResourcesInfoBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder getDMDCNMGJPANBuilder() {
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder getLackingResourcesInfoBuilder() {
         
         onChanged();
-        return getDMDCNMGJPANFieldBuilder().getBuilder();
+        return getLackingResourcesInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
-      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getDMDCNMGJPANOrBuilder() {
-        if (dMDCNMGJPANBuilder_ != null) {
-          return dMDCNMGJPANBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder getLackingResourcesInfoOrBuilder() {
+        if (lackingResourcesInfoBuilder_ != null) {
+          return lackingResourcesInfoBuilder_.getMessageOrBuilder();
         } else {
-          return dMDCNMGJPAN_ == null ?
-              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : dMDCNMGJPAN_;
+          return lackingResourcesInfo_ == null ?
+              emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.getDefaultInstance() : lackingResourcesInfo_;
         }
       }
       /**
-       * <code>.LackingResourceInfo DMDCNMGJPAN = 13;</code>
+       * <code>.LackingResourceInfo lacking_resources_info = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder> 
-          getDMDCNMGJPANFieldBuilder() {
-        if (dMDCNMGJPANBuilder_ == null) {
-          dMDCNMGJPANBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getLackingResourcesInfoFieldBuilder() {
+        if (lackingResourcesInfoBuilder_ == null) {
+          lackingResourcesInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfo.Builder, emu.grasscutter.net.proto.LackingResourceInfoOuterClass.LackingResourceInfoOrBuilder>(
-                  getDMDCNMGJPAN(),
+                  getLackingResourcesInfo(),
                   getParentForChildren(),
                   isClean());
-          dMDCNMGJPAN_ = null;
+          lackingResourcesInfo_ = null;
         }
-        return dMDCNMGJPANBuilder_;
+        return lackingResourcesInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1804,15 +1794,15 @@ public final class QuestOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Quest.proto\032\031LackingResourceInfo.proto" +
-      "\"\251\002\n\005Quest\022\020\n\010quest_id\030\001 \001(\r\022\r\n\005state\030\002 " +
+      "\"\264\002\n\005Quest\022\020\n\010quest_id\030\001 \001(\r\022\r\n\005state\030\002 " +
       "\001(\r\022\022\n\nstart_time\030\004 \001(\r\022\021\n\tis_random\030\005 \001" +
       "(\010\022\027\n\017parent_quest_id\030\006 \001(\r\022\027\n\017quest_con" +
       "fig_id\030\007 \001(\r\022\027\n\017start_game_time\030\010 \001(\r\022\023\n" +
       "\013accept_time\030\t \001(\r\022\034\n\024finish_progress_li" +
       "st\030\n \003(\r\022\032\n\022fail_progress_list\030\013 \003(\r\022\023\n\013" +
-      "CBIIPBMDLCH\030\014 \003(\r\022)\n\013DMDCNMGJPAN\030\r \001(\0132\024" +
-      ".LackingResourceInfoB\033\n\031emu.grasscutter." +
-      "net.protob\006proto3"
+      "MLHFBAFCKIP\030\014 \003(\r\0224\n\026lacking_resources_i" +
+      "nfo\030\r \001(\0132\024.LackingResourceInfoB\033\n\031emu.g" +
+      "rasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1824,7 +1814,7 @@ public final class QuestOuterClass {
     internal_static_Quest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Quest_descriptor,
-        new java.lang.String[] { "QuestId", "State", "StartTime", "IsRandom", "ParentQuestId", "QuestConfigId", "StartGameTime", "AcceptTime", "FinishProgressList", "FailProgressList", "CBIIPBMDLCH", "DMDCNMGJPAN", });
+        new java.lang.String[] { "QuestId", "State", "StartTime", "IsRandom", "ParentQuestId", "QuestConfigId", "StartGameTime", "AcceptTime", "FinishProgressList", "FailProgressList", "MLHFBAFCKIP", "LackingResourcesInfo", });
     emu.grasscutter.net.proto.LackingResourceInfoOuterClass.getDescriptor();
   }
 

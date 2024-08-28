@@ -31,10 +31,6 @@ public final class MapAreaInfoOuterClass {
     boolean getIsOpen();
   }
   /**
-   * <pre>
-   * Obf: NOPIOICPEHD
-   * </pre>
-   *
    * Protobuf type {@code MapAreaInfo}
    */
   public static final class MapAreaInfo extends
@@ -311,10 +307,6 @@ public final class MapAreaInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: NOPIOICPEHD
-     * </pre>
-     *
      * Protobuf type {@code MapAreaInfo}
      */
     public static final class Builder extends

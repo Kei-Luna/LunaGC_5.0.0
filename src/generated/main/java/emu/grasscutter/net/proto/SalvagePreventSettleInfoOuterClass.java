@@ -19,17 +19,17 @@ public final class SalvagePreventSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      * @return Whether the settleInfo field is set.
      */
     boolean hasSettleInfo();
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      * @return The settleInfo.
      */
     emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo getSettleInfo();
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      */
     emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfoOrBuilder getSettleInfoOrBuilder();
 
@@ -40,10 +40,6 @@ public final class SalvagePreventSettleInfoOuterClass {
     boolean getIsNewRecord();
   }
   /**
-   * <pre>
-   * Obf: CJHIMPDDGKJ
-   * </pre>
-   *
    * Protobuf type {@code SalvagePreventSettleInfo}
    */
   public static final class SalvagePreventSettleInfo extends
@@ -88,12 +84,7 @@ public final class SalvagePreventSettleInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 112: {
-
-              isNewRecord_ = input.readBool();
-              break;
-            }
-            case 122: {
+            case 66: {
               emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.Builder subBuilder = null;
               if (settleInfo_ != null) {
                 subBuilder = settleInfo_.toBuilder();
@@ -104,6 +95,11 @@ public final class SalvagePreventSettleInfoOuterClass {
                 settleInfo_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 112: {
+
+              isNewRecord_ = input.readBool();
               break;
             }
             default: {
@@ -138,10 +134,10 @@ public final class SalvagePreventSettleInfoOuterClass {
               emu.grasscutter.net.proto.SalvagePreventSettleInfoOuterClass.SalvagePreventSettleInfo.class, emu.grasscutter.net.proto.SalvagePreventSettleInfoOuterClass.SalvagePreventSettleInfo.Builder.class);
     }
 
-    public static final int SETTLE_INFO_FIELD_NUMBER = 15;
+    public static final int SETTLE_INFO_FIELD_NUMBER = 8;
     private emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo settleInfo_;
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      * @return Whether the settleInfo field is set.
      */
     @java.lang.Override
@@ -149,7 +145,7 @@ public final class SalvagePreventSettleInfoOuterClass {
       return settleInfo_ != null;
     }
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      * @return The settleInfo.
      */
     @java.lang.Override
@@ -157,7 +153,7 @@ public final class SalvagePreventSettleInfoOuterClass {
       return settleInfo_ == null ? emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.getDefaultInstance() : settleInfo_;
     }
     /**
-     * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+     * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfoOrBuilder getSettleInfoOrBuilder() {
@@ -189,11 +185,11 @@ public final class SalvagePreventSettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (settleInfo_ != null) {
+        output.writeMessage(8, getSettleInfo());
+      }
       if (isNewRecord_ != false) {
         output.writeBool(14, isNewRecord_);
-      }
-      if (settleInfo_ != null) {
-        output.writeMessage(15, getSettleInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -204,13 +200,13 @@ public final class SalvagePreventSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (settleInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getSettleInfo());
+      }
       if (isNewRecord_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, isNewRecord_);
-      }
-      if (settleInfo_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getSettleInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -348,10 +344,6 @@ public final class SalvagePreventSettleInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: CJHIMPDDGKJ
-     * </pre>
-     *
      * Protobuf type {@code SalvagePreventSettleInfo}
      */
     public static final class Builder extends
@@ -516,14 +508,14 @@ public final class SalvagePreventSettleInfoOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo, emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.Builder, emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfoOrBuilder> settleInfoBuilder_;
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        * @return Whether the settleInfo field is set.
        */
       public boolean hasSettleInfo() {
         return settleInfoBuilder_ != null || settleInfo_ != null;
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        * @return The settleInfo.
        */
       public emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo getSettleInfo() {
@@ -534,7 +526,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         }
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public Builder setSettleInfo(emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo value) {
         if (settleInfoBuilder_ == null) {
@@ -550,7 +542,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public Builder setSettleInfo(
           emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.Builder builderForValue) {
@@ -564,7 +556,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public Builder mergeSettleInfo(emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo value) {
         if (settleInfoBuilder_ == null) {
@@ -582,7 +574,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public Builder clearSettleInfo() {
         if (settleInfoBuilder_ == null) {
@@ -596,7 +588,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.Builder getSettleInfoBuilder() {
         
@@ -604,7 +596,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         return getSettleInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       public emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfoOrBuilder getSettleInfoOrBuilder() {
         if (settleInfoBuilder_ != null) {
@@ -615,7 +607,7 @@ public final class SalvagePreventSettleInfoOuterClass {
         }
       }
       /**
-       * <code>.SalvagePreventGallerySettleInfo settle_info = 15;</code>
+       * <code>.SalvagePreventGallerySettleInfo settle_info = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo, emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfo.Builder, emu.grasscutter.net.proto.SalvagePreventGallerySettleInfoOuterClass.SalvagePreventGallerySettleInfoOrBuilder> 
@@ -730,7 +722,7 @@ public final class SalvagePreventSettleInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036SalvagePreventSettleInfo.proto\032%Salvag" +
       "ePreventGallerySettleInfo.proto\"h\n\030Salva" +
-      "gePreventSettleInfo\0225\n\013settle_info\030\017 \001(\013" +
+      "gePreventSettleInfo\0225\n\013settle_info\030\010 \001(\013" +
       "2 .SalvagePreventGallerySettleInfo\022\025\n\ris" +
       "_new_record\030\016 \001(\010B\033\n\031emu.grasscutter.net" +
       ".protob\006proto3"

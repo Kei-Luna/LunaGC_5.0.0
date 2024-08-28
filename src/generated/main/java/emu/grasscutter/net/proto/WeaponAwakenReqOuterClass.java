@@ -19,57 +19,35 @@ public final class WeaponAwakenReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 target_weapon_guid = 2;</code>
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @return A list containing the affixLevelList.
+     */
+    java.util.List<java.lang.Long> getAffixLevelListList();
+    /**
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @return The count of affixLevelList.
+     */
+    int getAffixLevelListCount();
+    /**
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @param index The index of the element to return.
+     * @return The affixLevelList at the given index.
+     */
+    long getAffixLevelList(int index);
+
+    /**
+     * <code>uint32 item_guid = 13;</code>
+     * @return The itemGuid.
+     */
+    int getItemGuid();
+
+    /**
+     * <code>uint64 target_weapon_guid = 15;</code>
      * @return The targetWeaponGuid.
      */
     long getTargetWeaponGuid();
-
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    int getAffixLevelMapCount();
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    boolean containsAffixLevelMap(
-        int key);
-    /**
-     * Use {@link #getAffixLevelMapMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getAffixLevelMap();
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    java.util.Map<java.lang.Integer, java.lang.Integer>
-    getAffixLevelMapMap();
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-
-    int getAffixLevelMapOrDefault(
-        int key,
-        int defaultValue);
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-
-    int getAffixLevelMapOrThrow(
-        int key);
-
-    /**
-     * <code>uint64 item_guid = 15;</code>
-     * @return The itemGuid.
-     */
-    long getItemGuid();
   }
   /**
-   * <pre>
-   * CmdId: 23146
-   * Obf: AFPFPKMLIPD
-   * </pre>
-   *
    * Protobuf type {@code WeaponAwakenReq}
    */
   public static final class WeaponAwakenReq extends
@@ -82,6 +60,7 @@ public final class WeaponAwakenReqOuterClass {
       super(builder);
     }
     private WeaponAwakenReq() {
+      affixLevelList_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -115,27 +94,35 @@ public final class WeaponAwakenReqOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              targetWeaponGuid_ = input.readUInt64();
-              break;
-            }
-            case 34: {
+            case 24: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                affixLevelMap_ = com.google.protobuf.MapField.newMapField(
-                    AffixLevelMapDefaultEntryHolder.defaultEntry);
+                affixLevelList_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-              affixLevelMap__ = input.readMessage(
-                  AffixLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              affixLevelMap_.getMutableMap().put(
-                  affixLevelMap__.getKey(), affixLevelMap__.getValue());
+              affixLevelList_.addLong(input.readUInt64());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                affixLevelList_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                affixLevelList_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 104: {
+
+              itemGuid_ = input.readUInt32();
               break;
             }
             case 120: {
 
-              itemGuid_ = input.readUInt64();
+              targetWeaponGuid_ = input.readUInt64();
               break;
             }
             default: {
@@ -153,6 +140,9 @@ public final class WeaponAwakenReqOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          affixLevelList_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -162,18 +152,6 @@ public final class WeaponAwakenReqOuterClass {
       return emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.internal_static_WeaponAwakenReq_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetAffixLevelMap();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -182,107 +160,54 @@ public final class WeaponAwakenReqOuterClass {
               emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq.class, emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq.Builder.class);
     }
 
-    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 2;
+    public static final int AFFIX_LEVEL_LIST_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.LongList affixLevelList_;
+    /**
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @return A list containing the affixLevelList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getAffixLevelListList() {
+      return affixLevelList_;
+    }
+    /**
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @return The count of affixLevelList.
+     */
+    public int getAffixLevelListCount() {
+      return affixLevelList_.size();
+    }
+    /**
+     * <code>repeated uint64 affix_level_list = 3;</code>
+     * @param index The index of the element to return.
+     * @return The affixLevelList at the given index.
+     */
+    public long getAffixLevelList(int index) {
+      return affixLevelList_.getLong(index);
+    }
+    private int affixLevelListMemoizedSerializedSize = -1;
+
+    public static final int ITEM_GUID_FIELD_NUMBER = 13;
+    private int itemGuid_;
+    /**
+     * <code>uint32 item_guid = 13;</code>
+     * @return The itemGuid.
+     */
+    @java.lang.Override
+    public int getItemGuid() {
+      return itemGuid_;
+    }
+
+    public static final int TARGET_WEAPON_GUID_FIELD_NUMBER = 15;
     private long targetWeaponGuid_;
     /**
-     * <code>uint64 target_weapon_guid = 2;</code>
+     * <code>uint64 target_weapon_guid = 15;</code>
      * @return The targetWeaponGuid.
      */
     @java.lang.Override
     public long getTargetWeaponGuid() {
       return targetWeaponGuid_;
-    }
-
-    public static final int AFFIX_LEVEL_MAP_FIELD_NUMBER = 4;
-    private static final class AffixLevelMapDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, java.lang.Integer> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, java.lang.Integer>newDefaultInstance(
-                  emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.internal_static_WeaponAwakenReq_AffixLevelMapEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, java.lang.Integer> affixLevelMap_;
-    private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-    internalGetAffixLevelMap() {
-      if (affixLevelMap_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            AffixLevelMapDefaultEntryHolder.defaultEntry);
-      }
-      return affixLevelMap_;
-    }
-
-    public int getAffixLevelMapCount() {
-      return internalGetAffixLevelMap().getMap().size();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsAffixLevelMap(
-        int key) {
-      
-      return internalGetAffixLevelMap().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getAffixLevelMapMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getAffixLevelMap() {
-      return getAffixLevelMapMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.Integer, java.lang.Integer> getAffixLevelMapMap() {
-      return internalGetAffixLevelMap().getMap();
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    @java.lang.Override
-
-    public int getAffixLevelMapOrDefault(
-        int key,
-        int defaultValue) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetAffixLevelMap().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-     */
-    @java.lang.Override
-
-    public int getAffixLevelMapOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, java.lang.Integer> map =
-          internalGetAffixLevelMap().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int ITEM_GUID_FIELD_NUMBER = 15;
-    private long itemGuid_;
-    /**
-     * <code>uint64 item_guid = 15;</code>
-     * @return The itemGuid.
-     */
-    @java.lang.Override
-    public long getItemGuid() {
-      return itemGuid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -299,17 +224,19 @@ public final class WeaponAwakenReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (targetWeaponGuid_ != 0L) {
-        output.writeUInt64(2, targetWeaponGuid_);
+      getSerializedSize();
+      if (getAffixLevelListList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(affixLevelListMemoizedSerializedSize);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeIntegerMapTo(
-          output,
-          internalGetAffixLevelMap(),
-          AffixLevelMapDefaultEntryHolder.defaultEntry,
-          4);
-      if (itemGuid_ != 0L) {
-        output.writeUInt64(15, itemGuid_);
+      for (int i = 0; i < affixLevelList_.size(); i++) {
+        output.writeUInt64NoTag(affixLevelList_.getLong(i));
+      }
+      if (itemGuid_ != 0) {
+        output.writeUInt32(13, itemGuid_);
+      }
+      if (targetWeaponGuid_ != 0L) {
+        output.writeUInt64(15, targetWeaponGuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -320,23 +247,27 @@ public final class WeaponAwakenReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < affixLevelList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(affixLevelList_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAffixLevelListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        affixLevelListMemoizedSerializedSize = dataSize;
+      }
+      if (itemGuid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, itemGuid_);
+      }
       if (targetWeaponGuid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, targetWeaponGuid_);
-      }
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.Integer> entry
-           : internalGetAffixLevelMap().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Integer>
-        affixLevelMap__ = AffixLevelMapDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, affixLevelMap__);
-      }
-      if (itemGuid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(15, itemGuid_);
+          .computeUInt64Size(15, targetWeaponGuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -353,12 +284,12 @@ public final class WeaponAwakenReqOuterClass {
       }
       emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq other = (emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq) obj;
 
-      if (getTargetWeaponGuid()
-          != other.getTargetWeaponGuid()) return false;
-      if (!internalGetAffixLevelMap().equals(
-          other.internalGetAffixLevelMap())) return false;
+      if (!getAffixLevelListList()
+          .equals(other.getAffixLevelListList())) return false;
       if (getItemGuid()
           != other.getItemGuid()) return false;
+      if (getTargetWeaponGuid()
+          != other.getTargetWeaponGuid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -370,16 +301,15 @@ public final class WeaponAwakenReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAffixLevelListCount() > 0) {
+        hash = (37 * hash) + AFFIX_LEVEL_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAffixLevelListList().hashCode();
+      }
+      hash = (37 * hash) + ITEM_GUID_FIELD_NUMBER;
+      hash = (53 * hash) + getItemGuid();
       hash = (37 * hash) + TARGET_WEAPON_GUID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTargetWeaponGuid());
-      if (!internalGetAffixLevelMap().getMap().isEmpty()) {
-        hash = (37 * hash) + AFFIX_LEVEL_MAP_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetAffixLevelMap().hashCode();
-      }
-      hash = (37 * hash) + ITEM_GUID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getItemGuid());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -476,11 +406,6 @@ public final class WeaponAwakenReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 23146
-     * Obf: AFPFPKMLIPD
-     * </pre>
-     *
      * Protobuf type {@code WeaponAwakenReq}
      */
     public static final class Builder extends
@@ -492,28 +417,6 @@ public final class WeaponAwakenReqOuterClass {
         return emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.internal_static_WeaponAwakenReq_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetAffixLevelMap();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetMutableAffixLevelMap();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -540,10 +443,11 @@ public final class WeaponAwakenReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        targetWeaponGuid_ = 0L;
+        affixLevelList_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        itemGuid_ = 0;
 
-        internalGetMutableAffixLevelMap().clear();
-        itemGuid_ = 0L;
+        targetWeaponGuid_ = 0L;
 
         return this;
       }
@@ -572,10 +476,13 @@ public final class WeaponAwakenReqOuterClass {
       public emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq buildPartial() {
         emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq result = new emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq(this);
         int from_bitField0_ = bitField0_;
-        result.targetWeaponGuid_ = targetWeaponGuid_;
-        result.affixLevelMap_ = internalGetAffixLevelMap();
-        result.affixLevelMap_.makeImmutable();
+        if (((bitField0_ & 0x00000001) != 0)) {
+          affixLevelList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.affixLevelList_ = affixLevelList_;
         result.itemGuid_ = itemGuid_;
+        result.targetWeaponGuid_ = targetWeaponGuid_;
         onBuilt();
         return result;
       }
@@ -624,13 +531,21 @@ public final class WeaponAwakenReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq other) {
         if (other == emu.grasscutter.net.proto.WeaponAwakenReqOuterClass.WeaponAwakenReq.getDefaultInstance()) return this;
+        if (!other.affixLevelList_.isEmpty()) {
+          if (affixLevelList_.isEmpty()) {
+            affixLevelList_ = other.affixLevelList_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAffixLevelListIsMutable();
+            affixLevelList_.addAll(other.affixLevelList_);
+          }
+          onChanged();
+        }
+        if (other.getItemGuid() != 0) {
+          setItemGuid(other.getItemGuid());
+        }
         if (other.getTargetWeaponGuid() != 0L) {
           setTargetWeaponGuid(other.getTargetWeaponGuid());
-        }
-        internalGetMutableAffixLevelMap().mergeFrom(
-            other.internalGetAffixLevelMap());
-        if (other.getItemGuid() != 0L) {
-          setItemGuid(other.getItemGuid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -662,9 +577,119 @@ public final class WeaponAwakenReqOuterClass {
       }
       private int bitField0_;
 
+      private com.google.protobuf.Internal.LongList affixLevelList_ = emptyLongList();
+      private void ensureAffixLevelListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          affixLevelList_ = mutableCopy(affixLevelList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @return A list containing the affixLevelList.
+       */
+      public java.util.List<java.lang.Long>
+          getAffixLevelListList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(affixLevelList_) : affixLevelList_;
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @return The count of affixLevelList.
+       */
+      public int getAffixLevelListCount() {
+        return affixLevelList_.size();
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @param index The index of the element to return.
+       * @return The affixLevelList at the given index.
+       */
+      public long getAffixLevelList(int index) {
+        return affixLevelList_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The affixLevelList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAffixLevelList(
+          int index, long value) {
+        ensureAffixLevelListIsMutable();
+        affixLevelList_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @param value The affixLevelList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAffixLevelList(long value) {
+        ensureAffixLevelListIsMutable();
+        affixLevelList_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @param values The affixLevelList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAffixLevelList(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureAffixLevelListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, affixLevelList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 affix_level_list = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAffixLevelList() {
+        affixLevelList_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int itemGuid_ ;
+      /**
+       * <code>uint32 item_guid = 13;</code>
+       * @return The itemGuid.
+       */
+      @java.lang.Override
+      public int getItemGuid() {
+        return itemGuid_;
+      }
+      /**
+       * <code>uint32 item_guid = 13;</code>
+       * @param value The itemGuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemGuid(int value) {
+        
+        itemGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 item_guid = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemGuid() {
+        
+        itemGuid_ = 0;
+        onChanged();
+        return this;
+      }
+
       private long targetWeaponGuid_ ;
       /**
-       * <code>uint64 target_weapon_guid = 2;</code>
+       * <code>uint64 target_weapon_guid = 15;</code>
        * @return The targetWeaponGuid.
        */
       @java.lang.Override
@@ -672,7 +697,7 @@ public final class WeaponAwakenReqOuterClass {
         return targetWeaponGuid_;
       }
       /**
-       * <code>uint64 target_weapon_guid = 2;</code>
+       * <code>uint64 target_weapon_guid = 15;</code>
        * @param value The targetWeaponGuid to set.
        * @return This builder for chaining.
        */
@@ -683,171 +708,12 @@ public final class WeaponAwakenReqOuterClass {
         return this;
       }
       /**
-       * <code>uint64 target_weapon_guid = 2;</code>
+       * <code>uint64 target_weapon_guid = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetWeaponGuid() {
         
         targetWeaponGuid_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.Integer, java.lang.Integer> affixLevelMap_;
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetAffixLevelMap() {
-        if (affixLevelMap_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              AffixLevelMapDefaultEntryHolder.defaultEntry);
-        }
-        return affixLevelMap_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, java.lang.Integer>
-      internalGetMutableAffixLevelMap() {
-        onChanged();;
-        if (affixLevelMap_ == null) {
-          affixLevelMap_ = com.google.protobuf.MapField.newMapField(
-              AffixLevelMapDefaultEntryHolder.defaultEntry);
-        }
-        if (!affixLevelMap_.isMutable()) {
-          affixLevelMap_ = affixLevelMap_.copy();
-        }
-        return affixLevelMap_;
-      }
-
-      public int getAffixLevelMapCount() {
-        return internalGetAffixLevelMap().getMap().size();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsAffixLevelMap(
-          int key) {
-        
-        return internalGetAffixLevelMap().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getAffixLevelMapMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getAffixLevelMap() {
-        return getAffixLevelMapMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, java.lang.Integer> getAffixLevelMapMap() {
-        return internalGetAffixLevelMap().getMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-      @java.lang.Override
-
-      public int getAffixLevelMapOrDefault(
-          int key,
-          int defaultValue) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetAffixLevelMap().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-      @java.lang.Override
-
-      public int getAffixLevelMapOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, java.lang.Integer> map =
-            internalGetAffixLevelMap().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearAffixLevelMap() {
-        internalGetMutableAffixLevelMap().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-
-      public Builder removeAffixLevelMap(
-          int key) {
-        
-        internalGetMutableAffixLevelMap().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, java.lang.Integer>
-      getMutableAffixLevelMap() {
-        return internalGetMutableAffixLevelMap().getMutableMap();
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-      public Builder putAffixLevelMap(
-          int key,
-          int value) {
-        
-        
-        internalGetMutableAffixLevelMap().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;uint32, uint32&gt; affix_level_map = 4;</code>
-       */
-
-      public Builder putAllAffixLevelMap(
-          java.util.Map<java.lang.Integer, java.lang.Integer> values) {
-        internalGetMutableAffixLevelMap().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private long itemGuid_ ;
-      /**
-       * <code>uint64 item_guid = 15;</code>
-       * @return The itemGuid.
-       */
-      @java.lang.Override
-      public long getItemGuid() {
-        return itemGuid_;
-      }
-      /**
-       * <code>uint64 item_guid = 15;</code>
-       * @param value The itemGuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setItemGuid(long value) {
-        
-        itemGuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint64 item_guid = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearItemGuid() {
-        
-        itemGuid_ = 0L;
         onChanged();
         return this;
       }
@@ -909,11 +775,6 @@ public final class WeaponAwakenReqOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_WeaponAwakenReq_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_WeaponAwakenReq_AffixLevelMapEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_WeaponAwakenReq_AffixLevelMapEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -923,13 +784,10 @@ public final class WeaponAwakenReqOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025WeaponAwakenReq.proto\"\264\001\n\017WeaponAwaken" +
-      "Req\022\032\n\022target_weapon_guid\030\002 \001(\004\022<\n\017affix" +
-      "_level_map\030\004 \003(\0132#.WeaponAwakenReq.Affix" +
-      "LevelMapEntry\022\021\n\titem_guid\030\017 \001(\004\0324\n\022Affi" +
-      "xLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001" +
-      "(\r:\0028\001B\033\n\031emu.grasscutter.net.protob\006pro" +
-      "to3"
+      "\n\025WeaponAwakenReq.proto\"Z\n\017WeaponAwakenR" +
+      "eq\022\030\n\020affix_level_list\030\003 \003(\004\022\021\n\titem_gui" +
+      "d\030\r \001(\r\022\032\n\022target_weapon_guid\030\017 \001(\004B\033\n\031e" +
+      "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -940,13 +798,7 @@ public final class WeaponAwakenReqOuterClass {
     internal_static_WeaponAwakenReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WeaponAwakenReq_descriptor,
-        new java.lang.String[] { "TargetWeaponGuid", "AffixLevelMap", "ItemGuid", });
-    internal_static_WeaponAwakenReq_AffixLevelMapEntry_descriptor =
-      internal_static_WeaponAwakenReq_descriptor.getNestedTypes().get(0);
-    internal_static_WeaponAwakenReq_AffixLevelMapEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_WeaponAwakenReq_AffixLevelMapEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "AffixLevelList", "ItemGuid", "TargetWeaponGuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -19,34 +19,30 @@ public final class WorldRoutineInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_finished = 5;</code>
-     * @return The isFinished.
-     */
-    boolean getIsFinished();
-
-    /**
-     * <code>uint32 finish_progress = 10;</code>
+     * <code>uint32 finish_progress = 4;</code>
      * @return The finishProgress.
      */
     int getFinishProgress();
 
     /**
-     * <code>uint32 progress = 13;</code>
-     * @return The progress.
-     */
-    int getProgress();
-
-    /**
-     * <code>uint32 routine_id = 2;</code>
+     * <code>uint32 routine_id = 8;</code>
      * @return The routineId.
      */
     int getRoutineId();
+
+    /**
+     * <code>bool is_finished = 11;</code>
+     * @return The isFinished.
+     */
+    boolean getIsFinished();
+
+    /**
+     * <code>uint32 progress = 15;</code>
+     * @return The progress.
+     */
+    int getProgress();
   }
   /**
-   * <pre>
-   * Obf: FHLNAHHBMIK
-   * </pre>
-   *
    * Protobuf type {@code WorldRoutineInfo}
    */
   public static final class WorldRoutineInfo extends
@@ -91,22 +87,22 @@ public final class WorldRoutineInfoOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              routineId_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              isFinished_ = input.readBool();
-              break;
-            }
-            case 80: {
+            case 32: {
 
               finishProgress_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 64: {
+
+              routineId_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 120: {
 
               progress_ = input.readUInt32();
               break;
@@ -143,21 +139,10 @@ public final class WorldRoutineInfoOuterClass {
               emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo.class, emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo.Builder.class);
     }
 
-    public static final int IS_FINISHED_FIELD_NUMBER = 5;
-    private boolean isFinished_;
-    /**
-     * <code>bool is_finished = 5;</code>
-     * @return The isFinished.
-     */
-    @java.lang.Override
-    public boolean getIsFinished() {
-      return isFinished_;
-    }
-
-    public static final int FINISH_PROGRESS_FIELD_NUMBER = 10;
+    public static final int FINISH_PROGRESS_FIELD_NUMBER = 4;
     private int finishProgress_;
     /**
-     * <code>uint32 finish_progress = 10;</code>
+     * <code>uint32 finish_progress = 4;</code>
      * @return The finishProgress.
      */
     @java.lang.Override
@@ -165,26 +150,37 @@ public final class WorldRoutineInfoOuterClass {
       return finishProgress_;
     }
 
-    public static final int PROGRESS_FIELD_NUMBER = 13;
-    private int progress_;
-    /**
-     * <code>uint32 progress = 13;</code>
-     * @return The progress.
-     */
-    @java.lang.Override
-    public int getProgress() {
-      return progress_;
-    }
-
-    public static final int ROUTINE_ID_FIELD_NUMBER = 2;
+    public static final int ROUTINE_ID_FIELD_NUMBER = 8;
     private int routineId_;
     /**
-     * <code>uint32 routine_id = 2;</code>
+     * <code>uint32 routine_id = 8;</code>
      * @return The routineId.
      */
     @java.lang.Override
     public int getRoutineId() {
       return routineId_;
+    }
+
+    public static final int IS_FINISHED_FIELD_NUMBER = 11;
+    private boolean isFinished_;
+    /**
+     * <code>bool is_finished = 11;</code>
+     * @return The isFinished.
+     */
+    @java.lang.Override
+    public boolean getIsFinished() {
+      return isFinished_;
+    }
+
+    public static final int PROGRESS_FIELD_NUMBER = 15;
+    private int progress_;
+    /**
+     * <code>uint32 progress = 15;</code>
+     * @return The progress.
+     */
+    @java.lang.Override
+    public int getProgress() {
+      return progress_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -201,17 +197,17 @@ public final class WorldRoutineInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (finishProgress_ != 0) {
+        output.writeUInt32(4, finishProgress_);
+      }
       if (routineId_ != 0) {
-        output.writeUInt32(2, routineId_);
+        output.writeUInt32(8, routineId_);
       }
       if (isFinished_ != false) {
-        output.writeBool(5, isFinished_);
-      }
-      if (finishProgress_ != 0) {
-        output.writeUInt32(10, finishProgress_);
+        output.writeBool(11, isFinished_);
       }
       if (progress_ != 0) {
-        output.writeUInt32(13, progress_);
+        output.writeUInt32(15, progress_);
       }
       unknownFields.writeTo(output);
     }
@@ -222,21 +218,21 @@ public final class WorldRoutineInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (finishProgress_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, finishProgress_);
+      }
       if (routineId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, routineId_);
+          .computeUInt32Size(8, routineId_);
       }
       if (isFinished_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isFinished_);
-      }
-      if (finishProgress_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, finishProgress_);
+          .computeBoolSize(11, isFinished_);
       }
       if (progress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, progress_);
+          .computeUInt32Size(15, progress_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -253,14 +249,14 @@ public final class WorldRoutineInfoOuterClass {
       }
       emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo other = (emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo) obj;
 
-      if (getIsFinished()
-          != other.getIsFinished()) return false;
       if (getFinishProgress()
           != other.getFinishProgress()) return false;
-      if (getProgress()
-          != other.getProgress()) return false;
       if (getRoutineId()
           != other.getRoutineId()) return false;
+      if (getIsFinished()
+          != other.getIsFinished()) return false;
+      if (getProgress()
+          != other.getProgress()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -272,15 +268,15 @@ public final class WorldRoutineInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FINISH_PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFinishProgress();
+      hash = (37 * hash) + ROUTINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRoutineId();
       hash = (37 * hash) + IS_FINISHED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFinished());
-      hash = (37 * hash) + FINISH_PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getFinishProgress();
       hash = (37 * hash) + PROGRESS_FIELD_NUMBER;
       hash = (53 * hash) + getProgress();
-      hash = (37 * hash) + ROUTINE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRoutineId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -377,10 +373,6 @@ public final class WorldRoutineInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: FHLNAHHBMIK
-     * </pre>
-     *
      * Protobuf type {@code WorldRoutineInfo}
      */
     public static final class Builder extends
@@ -418,13 +410,13 @@ public final class WorldRoutineInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        isFinished_ = false;
-
         finishProgress_ = 0;
 
-        progress_ = 0;
-
         routineId_ = 0;
+
+        isFinished_ = false;
+
+        progress_ = 0;
 
         return this;
       }
@@ -452,10 +444,10 @@ public final class WorldRoutineInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo buildPartial() {
         emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo result = new emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo(this);
-        result.isFinished_ = isFinished_;
         result.finishProgress_ = finishProgress_;
-        result.progress_ = progress_;
         result.routineId_ = routineId_;
+        result.isFinished_ = isFinished_;
+        result.progress_ = progress_;
         onBuilt();
         return result;
       }
@@ -504,17 +496,17 @@ public final class WorldRoutineInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo other) {
         if (other == emu.grasscutter.net.proto.WorldRoutineInfoOuterClass.WorldRoutineInfo.getDefaultInstance()) return this;
-        if (other.getIsFinished() != false) {
-          setIsFinished(other.getIsFinished());
-        }
         if (other.getFinishProgress() != 0) {
           setFinishProgress(other.getFinishProgress());
         }
-        if (other.getProgress() != 0) {
-          setProgress(other.getProgress());
-        }
         if (other.getRoutineId() != 0) {
           setRoutineId(other.getRoutineId());
+        }
+        if (other.getIsFinished() != false) {
+          setIsFinished(other.getIsFinished());
+        }
+        if (other.getProgress() != 0) {
+          setProgress(other.getProgress());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -545,40 +537,9 @@ public final class WorldRoutineInfoOuterClass {
         return this;
       }
 
-      private boolean isFinished_ ;
-      /**
-       * <code>bool is_finished = 5;</code>
-       * @return The isFinished.
-       */
-      @java.lang.Override
-      public boolean getIsFinished() {
-        return isFinished_;
-      }
-      /**
-       * <code>bool is_finished = 5;</code>
-       * @param value The isFinished to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFinished(boolean value) {
-        
-        isFinished_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_finished = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFinished() {
-        
-        isFinished_ = false;
-        onChanged();
-        return this;
-      }
-
       private int finishProgress_ ;
       /**
-       * <code>uint32 finish_progress = 10;</code>
+       * <code>uint32 finish_progress = 4;</code>
        * @return The finishProgress.
        */
       @java.lang.Override
@@ -586,7 +547,7 @@ public final class WorldRoutineInfoOuterClass {
         return finishProgress_;
       }
       /**
-       * <code>uint32 finish_progress = 10;</code>
+       * <code>uint32 finish_progress = 4;</code>
        * @param value The finishProgress to set.
        * @return This builder for chaining.
        */
@@ -597,7 +558,7 @@ public final class WorldRoutineInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 finish_progress = 10;</code>
+       * <code>uint32 finish_progress = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearFinishProgress() {
@@ -607,40 +568,9 @@ public final class WorldRoutineInfoOuterClass {
         return this;
       }
 
-      private int progress_ ;
-      /**
-       * <code>uint32 progress = 13;</code>
-       * @return The progress.
-       */
-      @java.lang.Override
-      public int getProgress() {
-        return progress_;
-      }
-      /**
-       * <code>uint32 progress = 13;</code>
-       * @param value The progress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProgress(int value) {
-        
-        progress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 progress = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProgress() {
-        
-        progress_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int routineId_ ;
       /**
-       * <code>uint32 routine_id = 2;</code>
+       * <code>uint32 routine_id = 8;</code>
        * @return The routineId.
        */
       @java.lang.Override
@@ -648,7 +578,7 @@ public final class WorldRoutineInfoOuterClass {
         return routineId_;
       }
       /**
-       * <code>uint32 routine_id = 2;</code>
+       * <code>uint32 routine_id = 8;</code>
        * @param value The routineId to set.
        * @return This builder for chaining.
        */
@@ -659,12 +589,74 @@ public final class WorldRoutineInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 routine_id = 2;</code>
+       * <code>uint32 routine_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearRoutineId() {
         
         routineId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFinished_ ;
+      /**
+       * <code>bool is_finished = 11;</code>
+       * @return The isFinished.
+       */
+      @java.lang.Override
+      public boolean getIsFinished() {
+        return isFinished_;
+      }
+      /**
+       * <code>bool is_finished = 11;</code>
+       * @param value The isFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFinished(boolean value) {
+        
+        isFinished_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_finished = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFinished() {
+        
+        isFinished_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int progress_ ;
+      /**
+       * <code>uint32 progress = 15;</code>
+       * @return The progress.
+       */
+      @java.lang.Override
+      public int getProgress() {
+        return progress_;
+      }
+      /**
+       * <code>uint32 progress = 15;</code>
+       * @param value The progress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgress(int value) {
+        
+        progress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 progress = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgress() {
+        
+        progress_ = 0;
         onChanged();
         return this;
       }
@@ -736,9 +728,9 @@ public final class WorldRoutineInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026WorldRoutineInfo.proto\"f\n\020WorldRoutine" +
-      "Info\022\023\n\013is_finished\030\005 \001(\010\022\027\n\017finish_prog" +
-      "ress\030\n \001(\r\022\020\n\010progress\030\r \001(\r\022\022\n\nroutine_" +
-      "id\030\002 \001(\rB\033\n\031emu.grasscutter.net.protob\006p" +
+      "Info\022\027\n\017finish_progress\030\004 \001(\r\022\022\n\nroutine" +
+      "_id\030\010 \001(\r\022\023\n\013is_finished\030\013 \001(\010\022\020\n\010progre" +
+      "ss\030\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006p" +
       "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -750,7 +742,7 @@ public final class WorldRoutineInfoOuterClass {
     internal_static_WorldRoutineInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WorldRoutineInfo_descriptor,
-        new java.lang.String[] { "IsFinished", "FinishProgress", "Progress", "RoutineId", });
+        new java.lang.String[] { "FinishProgress", "RoutineId", "IsFinished", "Progress", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -15,10 +15,6 @@ public final class LuaShellTypeOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: CILPGEMKHFH
-   * </pre>
-   *
    * Protobuf enum {@code LuaShellType}
    */
   public enum LuaShellType

@@ -43,11 +43,6 @@ public final class UnionCmdNotifyOuterClass {
         int index);
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 25659
-   * </pre>
-   *
    * Protobuf type {@code UnionCmdNotify}
    */
   public static final class UnionCmdNotify extends
@@ -336,11 +331,6 @@ public final class UnionCmdNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 25659
-     * </pre>
-     *
      * Protobuf type {@code UnionCmdNotify}
      */
     public static final class Builder extends

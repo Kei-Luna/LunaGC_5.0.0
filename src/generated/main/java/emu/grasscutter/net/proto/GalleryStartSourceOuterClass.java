@@ -15,10 +15,6 @@ public final class GalleryStartSourceOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: KENCCPDLDJG
-   * </pre>
-   *
    * Protobuf enum {@code GalleryStartSource}
    */
   public enum GalleryStartSource

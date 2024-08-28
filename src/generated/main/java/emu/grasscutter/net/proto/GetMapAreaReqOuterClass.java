@@ -19,11 +19,6 @@ public final class GetMapAreaReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 8758
-   * Obf: IIOCEMHKDEF
-   * </pre>
-   *
    * Protobuf type {@code GetMapAreaReq}
    */
   public static final class GetMapAreaReq extends
@@ -245,11 +240,6 @@ public final class GetMapAreaReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 8758
-     * Obf: IIOCEMHKDEF
-     * </pre>
-     *
      * Protobuf type {@code GetMapAreaReq}
      */
     public static final class Builder extends

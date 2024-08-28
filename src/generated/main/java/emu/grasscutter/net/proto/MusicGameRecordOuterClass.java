@@ -19,26 +19,26 @@ public final class MusicGameRecordOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 max_combo = 5;</code>
+     * <code>uint32 max_score = 4;</code>
+     * @return The maxScore.
+     */
+    int getMaxScore();
+
+    /**
+     * <code>uint32 max_combo = 9;</code>
      * @return The maxCombo.
      */
     int getMaxCombo();
 
     /**
-     * <code>bool is_unlock = 8;</code>
+     * <code>bool is_unlock = 14;</code>
      * @return The isUnlock.
      */
     boolean getIsUnlock();
-
-    /**
-     * <code>uint32 max_score = 1;</code>
-     * @return The maxScore.
-     */
-    int getMaxScore();
   }
   /**
    * <pre>
-   * Obf: GEKMKNGAIHD
+   * 5.0.0
    * </pre>
    *
    * Protobuf type {@code MusicGameRecord}
@@ -85,17 +85,17 @@ public final class MusicGameRecordOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 32: {
 
               maxScore_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 72: {
 
               maxCombo_ = input.readUInt32();
               break;
             }
-            case 64: {
+            case 112: {
 
               isUnlock_ = input.readBool();
               break;
@@ -132,10 +132,21 @@ public final class MusicGameRecordOuterClass {
               emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord.class, emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord.Builder.class);
     }
 
-    public static final int MAX_COMBO_FIELD_NUMBER = 5;
+    public static final int MAX_SCORE_FIELD_NUMBER = 4;
+    private int maxScore_;
+    /**
+     * <code>uint32 max_score = 4;</code>
+     * @return The maxScore.
+     */
+    @java.lang.Override
+    public int getMaxScore() {
+      return maxScore_;
+    }
+
+    public static final int MAX_COMBO_FIELD_NUMBER = 9;
     private int maxCombo_;
     /**
-     * <code>uint32 max_combo = 5;</code>
+     * <code>uint32 max_combo = 9;</code>
      * @return The maxCombo.
      */
     @java.lang.Override
@@ -143,26 +154,15 @@ public final class MusicGameRecordOuterClass {
       return maxCombo_;
     }
 
-    public static final int IS_UNLOCK_FIELD_NUMBER = 8;
+    public static final int IS_UNLOCK_FIELD_NUMBER = 14;
     private boolean isUnlock_;
     /**
-     * <code>bool is_unlock = 8;</code>
+     * <code>bool is_unlock = 14;</code>
      * @return The isUnlock.
      */
     @java.lang.Override
     public boolean getIsUnlock() {
       return isUnlock_;
-    }
-
-    public static final int MAX_SCORE_FIELD_NUMBER = 1;
-    private int maxScore_;
-    /**
-     * <code>uint32 max_score = 1;</code>
-     * @return The maxScore.
-     */
-    @java.lang.Override
-    public int getMaxScore() {
-      return maxScore_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -180,13 +180,13 @@ public final class MusicGameRecordOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (maxScore_ != 0) {
-        output.writeUInt32(1, maxScore_);
+        output.writeUInt32(4, maxScore_);
       }
       if (maxCombo_ != 0) {
-        output.writeUInt32(5, maxCombo_);
+        output.writeUInt32(9, maxCombo_);
       }
       if (isUnlock_ != false) {
-        output.writeBool(8, isUnlock_);
+        output.writeBool(14, isUnlock_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,15 +199,15 @@ public final class MusicGameRecordOuterClass {
       size = 0;
       if (maxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, maxScore_);
+          .computeUInt32Size(4, maxScore_);
       }
       if (maxCombo_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, maxCombo_);
+          .computeUInt32Size(9, maxCombo_);
       }
       if (isUnlock_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isUnlock_);
+          .computeBoolSize(14, isUnlock_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -224,12 +224,12 @@ public final class MusicGameRecordOuterClass {
       }
       emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord other = (emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord) obj;
 
+      if (getMaxScore()
+          != other.getMaxScore()) return false;
       if (getMaxCombo()
           != other.getMaxCombo()) return false;
       if (getIsUnlock()
           != other.getIsUnlock()) return false;
-      if (getMaxScore()
-          != other.getMaxScore()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -241,13 +241,13 @@ public final class MusicGameRecordOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxScore();
       hash = (37 * hash) + MAX_COMBO_FIELD_NUMBER;
       hash = (53 * hash) + getMaxCombo();
       hash = (37 * hash) + IS_UNLOCK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsUnlock());
-      hash = (37 * hash) + MAX_SCORE_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxScore();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -345,7 +345,7 @@ public final class MusicGameRecordOuterClass {
     }
     /**
      * <pre>
-     * Obf: GEKMKNGAIHD
+     * 5.0.0
      * </pre>
      *
      * Protobuf type {@code MusicGameRecord}
@@ -385,11 +385,11 @@ public final class MusicGameRecordOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        maxScore_ = 0;
+
         maxCombo_ = 0;
 
         isUnlock_ = false;
-
-        maxScore_ = 0;
 
         return this;
       }
@@ -417,9 +417,9 @@ public final class MusicGameRecordOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord buildPartial() {
         emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord result = new emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord(this);
+        result.maxScore_ = maxScore_;
         result.maxCombo_ = maxCombo_;
         result.isUnlock_ = isUnlock_;
-        result.maxScore_ = maxScore_;
         onBuilt();
         return result;
       }
@@ -468,14 +468,14 @@ public final class MusicGameRecordOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord other) {
         if (other == emu.grasscutter.net.proto.MusicGameRecordOuterClass.MusicGameRecord.getDefaultInstance()) return this;
+        if (other.getMaxScore() != 0) {
+          setMaxScore(other.getMaxScore());
+        }
         if (other.getMaxCombo() != 0) {
           setMaxCombo(other.getMaxCombo());
         }
         if (other.getIsUnlock() != false) {
           setIsUnlock(other.getIsUnlock());
-        }
-        if (other.getMaxScore() != 0) {
-          setMaxScore(other.getMaxScore());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -506,9 +506,40 @@ public final class MusicGameRecordOuterClass {
         return this;
       }
 
+      private int maxScore_ ;
+      /**
+       * <code>uint32 max_score = 4;</code>
+       * @return The maxScore.
+       */
+      @java.lang.Override
+      public int getMaxScore() {
+        return maxScore_;
+      }
+      /**
+       * <code>uint32 max_score = 4;</code>
+       * @param value The maxScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxScore(int value) {
+        
+        maxScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 max_score = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxScore() {
+        
+        maxScore_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int maxCombo_ ;
       /**
-       * <code>uint32 max_combo = 5;</code>
+       * <code>uint32 max_combo = 9;</code>
        * @return The maxCombo.
        */
       @java.lang.Override
@@ -516,7 +547,7 @@ public final class MusicGameRecordOuterClass {
         return maxCombo_;
       }
       /**
-       * <code>uint32 max_combo = 5;</code>
+       * <code>uint32 max_combo = 9;</code>
        * @param value The maxCombo to set.
        * @return This builder for chaining.
        */
@@ -527,7 +558,7 @@ public final class MusicGameRecordOuterClass {
         return this;
       }
       /**
-       * <code>uint32 max_combo = 5;</code>
+       * <code>uint32 max_combo = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxCombo() {
@@ -539,7 +570,7 @@ public final class MusicGameRecordOuterClass {
 
       private boolean isUnlock_ ;
       /**
-       * <code>bool is_unlock = 8;</code>
+       * <code>bool is_unlock = 14;</code>
        * @return The isUnlock.
        */
       @java.lang.Override
@@ -547,7 +578,7 @@ public final class MusicGameRecordOuterClass {
         return isUnlock_;
       }
       /**
-       * <code>bool is_unlock = 8;</code>
+       * <code>bool is_unlock = 14;</code>
        * @param value The isUnlock to set.
        * @return This builder for chaining.
        */
@@ -558,43 +589,12 @@ public final class MusicGameRecordOuterClass {
         return this;
       }
       /**
-       * <code>bool is_unlock = 8;</code>
+       * <code>bool is_unlock = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsUnlock() {
         
         isUnlock_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int maxScore_ ;
-      /**
-       * <code>uint32 max_score = 1;</code>
-       * @return The maxScore.
-       */
-      @java.lang.Override
-      public int getMaxScore() {
-        return maxScore_;
-      }
-      /**
-       * <code>uint32 max_score = 1;</code>
-       * @param value The maxScore to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxScore(int value) {
-        
-        maxScore_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 max_score = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxScore() {
-        
-        maxScore_ = 0;
         onChanged();
         return this;
       }
@@ -666,8 +666,8 @@ public final class MusicGameRecordOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025MusicGameRecord.proto\"J\n\017MusicGameReco" +
-      "rd\022\021\n\tmax_combo\030\005 \001(\r\022\021\n\tis_unlock\030\010 \001(\010" +
-      "\022\021\n\tmax_score\030\001 \001(\rB\033\n\031emu.grasscutter.n" +
+      "rd\022\021\n\tmax_score\030\004 \001(\r\022\021\n\tmax_combo\030\t \001(\r" +
+      "\022\021\n\tis_unlock\030\016 \001(\010B\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -679,7 +679,7 @@ public final class MusicGameRecordOuterClass {
     internal_static_MusicGameRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MusicGameRecord_descriptor,
-        new java.lang.String[] { "MaxCombo", "IsUnlock", "MaxScore", });
+        new java.lang.String[] { "MaxScore", "MaxCombo", "IsUnlock", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

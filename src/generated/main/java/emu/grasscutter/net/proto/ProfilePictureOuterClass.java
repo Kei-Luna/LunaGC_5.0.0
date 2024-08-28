@@ -37,10 +37,6 @@ public final class ProfilePictureOuterClass {
     int getHeadImageId();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * </pre>
-   *
    * Protobuf type {@code ProfilePicture}
    */
   public static final class ProfilePicture extends
@@ -343,10 +339,6 @@ public final class ProfilePictureOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * </pre>
-     *
      * Protobuf type {@code ProfilePicture}
      */
     public static final class Builder extends

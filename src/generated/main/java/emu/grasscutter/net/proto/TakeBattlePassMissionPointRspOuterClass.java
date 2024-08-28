@@ -19,35 +19,29 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 7;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @return A list containing the missionIdList.
      */
     java.util.List<java.lang.Integer> getMissionIdListList();
     /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @return The count of missionIdList.
      */
     int getMissionIdListCount();
     /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The missionIdList at the given index.
      */
     int getMissionIdList(int index);
+
+    /**
+     * <code>int32 retcode = 8;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
   }
   /**
-   * <pre>
-   * CmdId: 5756
-   * Version: 4.6.0
-   * Obfs: CGAMLKOBIKD
-   * </pre>
-   *
    * Protobuf type {@code TakeBattlePassMissionPointRsp}
    */
   public static final class TakeBattlePassMissionPointRsp extends
@@ -94,12 +88,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
-
-              retcode_ = input.readInt32();
-              break;
-            }
-            case 96: {
+            case 40: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 missionIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -107,7 +96,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
               missionIdList_.addInt(input.readUInt32());
               break;
             }
-            case 98: {
+            case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -118,6 +107,11 @@ public final class TakeBattlePassMissionPointRspOuterClass {
                 missionIdList_.addInt(input.readUInt32());
               }
               input.popLimit(limit);
+              break;
+            }
+            case 64: {
+
+              retcode_ = input.readInt32();
               break;
             }
             default: {
@@ -155,21 +149,10 @@ public final class TakeBattlePassMissionPointRspOuterClass {
               emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp.class, emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 7;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int MISSION_ID_LIST_FIELD_NUMBER = 12;
+    public static final int MISSION_ID_LIST_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.IntList missionIdList_;
     /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @return A list containing the missionIdList.
      */
     @java.lang.Override
@@ -178,14 +161,14 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       return missionIdList_;
     }
     /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @return The count of missionIdList.
      */
     public int getMissionIdListCount() {
       return missionIdList_.size();
     }
     /**
-     * <code>repeated uint32 mission_id_list = 12;</code>
+     * <code>repeated uint32 mission_id_list = 5;</code>
      * @param index The index of the element to return.
      * @return The missionIdList at the given index.
      */
@@ -193,6 +176,17 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       return missionIdList_.getInt(index);
     }
     private int missionIdListMemoizedSerializedSize = -1;
+
+    public static final int RETCODE_FIELD_NUMBER = 8;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 8;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -209,15 +203,15 @@ public final class TakeBattlePassMissionPointRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
-      }
       if (getMissionIdListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(missionIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < missionIdList_.size(); i++) {
         output.writeUInt32NoTag(missionIdList_.getInt(i));
+      }
+      if (retcode_ != 0) {
+        output.writeInt32(8, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -228,10 +222,6 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < missionIdList_.size(); i++) {
@@ -245,6 +235,10 @@ public final class TakeBattlePassMissionPointRspOuterClass {
               .computeInt32SizeNoTag(dataSize);
         }
         missionIdListMemoizedSerializedSize = dataSize;
+      }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -261,10 +255,10 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       }
       emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp other = (emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (!getMissionIdListList()
           .equals(other.getMissionIdListList())) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -276,12 +270,12 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       if (getMissionIdListCount() > 0) {
         hash = (37 * hash) + MISSION_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getMissionIdListList().hashCode();
       }
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -378,12 +372,6 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 5756
-     * Version: 4.6.0
-     * Obfs: CGAMLKOBIKD
-     * </pre>
-     *
      * Protobuf type {@code TakeBattlePassMissionPointRsp}
      */
     public static final class Builder extends
@@ -421,10 +409,10 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         missionIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        retcode_ = 0;
+
         return this;
       }
 
@@ -452,12 +440,12 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       public emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp buildPartial() {
         emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp result = new emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
         if (((bitField0_ & 0x00000001) != 0)) {
           missionIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.missionIdList_ = missionIdList_;
+        result.retcode_ = retcode_;
         onBuilt();
         return result;
       }
@@ -506,9 +494,6 @@ public final class TakeBattlePassMissionPointRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp other) {
         if (other == emu.grasscutter.net.proto.TakeBattlePassMissionPointRspOuterClass.TakeBattlePassMissionPointRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (!other.missionIdList_.isEmpty()) {
           if (missionIdList_.isEmpty()) {
             missionIdList_ = other.missionIdList_;
@@ -518,6 +503,9 @@ public final class TakeBattlePassMissionPointRspOuterClass {
             missionIdList_.addAll(other.missionIdList_);
           }
           onChanged();
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -549,37 +537,6 @@ public final class TakeBattlePassMissionPointRspOuterClass {
       }
       private int bitField0_;
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 7;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 7;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.Internal.IntList missionIdList_ = emptyIntList();
       private void ensureMissionIdListIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
@@ -588,7 +545,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @return A list containing the missionIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -597,14 +554,14 @@ public final class TakeBattlePassMissionPointRspOuterClass {
                  java.util.Collections.unmodifiableList(missionIdList_) : missionIdList_;
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @return The count of missionIdList.
        */
       public int getMissionIdListCount() {
         return missionIdList_.size();
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @param index The index of the element to return.
        * @return The missionIdList at the given index.
        */
@@ -612,7 +569,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
         return missionIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @param index The index to set the value at.
        * @param value The missionIdList to set.
        * @return This builder for chaining.
@@ -625,7 +582,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @param value The missionIdList to add.
        * @return This builder for chaining.
        */
@@ -636,7 +593,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @param values The missionIdList to add.
        * @return This builder for chaining.
        */
@@ -649,12 +606,43 @@ public final class TakeBattlePassMissionPointRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 mission_id_list = 12;</code>
+       * <code>repeated uint32 mission_id_list = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearMissionIdList() {
         missionIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
         onChanged();
         return this;
       }
@@ -726,8 +714,8 @@ public final class TakeBattlePassMissionPointRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#TakeBattlePassMissionPointRsp.proto\"I\n" +
-      "\035TakeBattlePassMissionPointRsp\022\017\n\007retcod" +
-      "e\030\007 \001(\005\022\027\n\017mission_id_list\030\014 \003(\rB\033\n\031emu." +
+      "\035TakeBattlePassMissionPointRsp\022\027\n\017missio" +
+      "n_id_list\030\005 \003(\r\022\017\n\007retcode\030\010 \001(\005B\033\n\031emu." +
       "grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -739,7 +727,7 @@ public final class TakeBattlePassMissionPointRspOuterClass {
     internal_static_TakeBattlePassMissionPointRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TakeBattlePassMissionPointRsp_descriptor,
-        new java.lang.String[] { "Retcode", "MissionIdList", });
+        new java.lang.String[] { "MissionIdList", "Retcode", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

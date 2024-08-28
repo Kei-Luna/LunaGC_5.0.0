@@ -19,23 +19,18 @@ public final class EnterWorldAreaReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 area_id = 4;</code>
-     * @return The areaId.
-     */
-    int getAreaId();
-
-    /**
-     * <code>uint32 area_type = 13;</code>
+     * <code>uint32 area_type = 8;</code>
      * @return The areaType.
      */
     int getAreaType();
+
+    /**
+     * <code>uint32 area_id = 2;</code>
+     * @return The areaId.
+     */
+    int getAreaId();
   }
   /**
-   * <pre>
-   * 4.6.0
-   * CmdId: 28567
-   * </pre>
-   *
    * Protobuf type {@code EnterWorldAreaReq}
    */
   public static final class EnterWorldAreaReq extends
@@ -80,12 +75,12 @@ public final class EnterWorldAreaReqOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 16: {
 
               areaId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 64: {
 
               areaType_ = input.readUInt32();
               break;
@@ -122,26 +117,26 @@ public final class EnterWorldAreaReqOuterClass {
               emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq.class, emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq.Builder.class);
     }
 
-    public static final int AREA_ID_FIELD_NUMBER = 4;
-    private int areaId_;
-    /**
-     * <code>uint32 area_id = 4;</code>
-     * @return The areaId.
-     */
-    @java.lang.Override
-    public int getAreaId() {
-      return areaId_;
-    }
-
-    public static final int AREA_TYPE_FIELD_NUMBER = 13;
+    public static final int AREA_TYPE_FIELD_NUMBER = 8;
     private int areaType_;
     /**
-     * <code>uint32 area_type = 13;</code>
+     * <code>uint32 area_type = 8;</code>
      * @return The areaType.
      */
     @java.lang.Override
     public int getAreaType() {
       return areaType_;
+    }
+
+    public static final int AREA_ID_FIELD_NUMBER = 2;
+    private int areaId_;
+    /**
+     * <code>uint32 area_id = 2;</code>
+     * @return The areaId.
+     */
+    @java.lang.Override
+    public int getAreaId() {
+      return areaId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -159,10 +154,10 @@ public final class EnterWorldAreaReqOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (areaId_ != 0) {
-        output.writeUInt32(4, areaId_);
+        output.writeUInt32(2, areaId_);
       }
       if (areaType_ != 0) {
-        output.writeUInt32(13, areaType_);
+        output.writeUInt32(8, areaType_);
       }
       unknownFields.writeTo(output);
     }
@@ -175,11 +170,11 @@ public final class EnterWorldAreaReqOuterClass {
       size = 0;
       if (areaId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, areaId_);
+          .computeUInt32Size(2, areaId_);
       }
       if (areaType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, areaType_);
+          .computeUInt32Size(8, areaType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -196,10 +191,10 @@ public final class EnterWorldAreaReqOuterClass {
       }
       emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq other = (emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq) obj;
 
-      if (getAreaId()
-          != other.getAreaId()) return false;
       if (getAreaType()
           != other.getAreaType()) return false;
+      if (getAreaId()
+          != other.getAreaId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -211,10 +206,10 @@ public final class EnterWorldAreaReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AREA_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAreaId();
       hash = (37 * hash) + AREA_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getAreaType();
+      hash = (37 * hash) + AREA_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAreaId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -311,11 +306,6 @@ public final class EnterWorldAreaReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.6.0
-     * CmdId: 28567
-     * </pre>
-     *
      * Protobuf type {@code EnterWorldAreaReq}
      */
     public static final class Builder extends
@@ -353,9 +343,9 @@ public final class EnterWorldAreaReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        areaId_ = 0;
-
         areaType_ = 0;
+
+        areaId_ = 0;
 
         return this;
       }
@@ -383,8 +373,8 @@ public final class EnterWorldAreaReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq buildPartial() {
         emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq result = new emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq(this);
-        result.areaId_ = areaId_;
         result.areaType_ = areaType_;
+        result.areaId_ = areaId_;
         onBuilt();
         return result;
       }
@@ -433,11 +423,11 @@ public final class EnterWorldAreaReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq other) {
         if (other == emu.grasscutter.net.proto.EnterWorldAreaReqOuterClass.EnterWorldAreaReq.getDefaultInstance()) return this;
-        if (other.getAreaId() != 0) {
-          setAreaId(other.getAreaId());
-        }
         if (other.getAreaType() != 0) {
           setAreaType(other.getAreaType());
+        }
+        if (other.getAreaId() != 0) {
+          setAreaId(other.getAreaId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -468,40 +458,9 @@ public final class EnterWorldAreaReqOuterClass {
         return this;
       }
 
-      private int areaId_ ;
-      /**
-       * <code>uint32 area_id = 4;</code>
-       * @return The areaId.
-       */
-      @java.lang.Override
-      public int getAreaId() {
-        return areaId_;
-      }
-      /**
-       * <code>uint32 area_id = 4;</code>
-       * @param value The areaId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAreaId(int value) {
-        
-        areaId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 area_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAreaId() {
-        
-        areaId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int areaType_ ;
       /**
-       * <code>uint32 area_type = 13;</code>
+       * <code>uint32 area_type = 8;</code>
        * @return The areaType.
        */
       @java.lang.Override
@@ -509,7 +468,7 @@ public final class EnterWorldAreaReqOuterClass {
         return areaType_;
       }
       /**
-       * <code>uint32 area_type = 13;</code>
+       * <code>uint32 area_type = 8;</code>
        * @param value The areaType to set.
        * @return This builder for chaining.
        */
@@ -520,12 +479,43 @@ public final class EnterWorldAreaReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 area_type = 13;</code>
+       * <code>uint32 area_type = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearAreaType() {
         
         areaType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int areaId_ ;
+      /**
+       * <code>uint32 area_id = 2;</code>
+       * @return The areaId.
+       */
+      @java.lang.Override
+      public int getAreaId() {
+        return areaId_;
+      }
+      /**
+       * <code>uint32 area_id = 2;</code>
+       * @param value The areaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAreaId(int value) {
+        
+        areaId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 area_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAreaId() {
+        
+        areaId_ = 0;
         onChanged();
         return this;
       }
@@ -597,7 +587,7 @@ public final class EnterWorldAreaReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027EnterWorldAreaReq.proto\"7\n\021EnterWorldA" +
-      "reaReq\022\017\n\007area_id\030\004 \001(\r\022\021\n\tarea_type\030\r \001" +
+      "reaReq\022\021\n\tarea_type\030\010 \001(\r\022\017\n\007area_id\030\002 \001" +
       "(\rB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -609,7 +599,7 @@ public final class EnterWorldAreaReqOuterClass {
     internal_static_EnterWorldAreaReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EnterWorldAreaReq_descriptor,
-        new java.lang.String[] { "AreaId", "AreaType", });
+        new java.lang.String[] { "AreaType", "AreaId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

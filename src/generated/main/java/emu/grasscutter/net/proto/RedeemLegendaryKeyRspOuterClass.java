@@ -19,23 +19,18 @@ public final class RedeemLegendaryKeyRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 11;</code>
      * @return The retcode.
      */
     int getRetcode();
 
     /**
-     * <code>uint32 legendary_key_count = 2;</code>
+     * <code>uint32 legendary_key_count = 12;</code>
      * @return The legendaryKeyCount.
      */
     int getLegendaryKeyCount();
   }
   /**
-   * <pre>
-   * CmdId: 7270
-   * Obf: DDNNDBFNHKE
-   * </pre>
-   *
    * Protobuf type {@code RedeemLegendaryKeyRsp}
    */
   public static final class RedeemLegendaryKeyRsp extends
@@ -80,14 +75,14 @@ public final class RedeemLegendaryKeyRspOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
-
-              legendaryKeyCount_ = input.readUInt32();
-              break;
-            }
-            case 120: {
+            case 88: {
 
               retcode_ = input.readInt32();
+              break;
+            }
+            case 96: {
+
+              legendaryKeyCount_ = input.readUInt32();
               break;
             }
             default: {
@@ -122,10 +117,10 @@ public final class RedeemLegendaryKeyRspOuterClass {
               emu.grasscutter.net.proto.RedeemLegendaryKeyRspOuterClass.RedeemLegendaryKeyRsp.class, emu.grasscutter.net.proto.RedeemLegendaryKeyRspOuterClass.RedeemLegendaryKeyRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 15;
+    public static final int RETCODE_FIELD_NUMBER = 11;
     private int retcode_;
     /**
-     * <code>int32 retcode = 15;</code>
+     * <code>int32 retcode = 11;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -133,10 +128,10 @@ public final class RedeemLegendaryKeyRspOuterClass {
       return retcode_;
     }
 
-    public static final int LEGENDARY_KEY_COUNT_FIELD_NUMBER = 2;
+    public static final int LEGENDARY_KEY_COUNT_FIELD_NUMBER = 12;
     private int legendaryKeyCount_;
     /**
-     * <code>uint32 legendary_key_count = 2;</code>
+     * <code>uint32 legendary_key_count = 12;</code>
      * @return The legendaryKeyCount.
      */
     @java.lang.Override
@@ -158,11 +153,11 @@ public final class RedeemLegendaryKeyRspOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (legendaryKeyCount_ != 0) {
-        output.writeUInt32(2, legendaryKeyCount_);
-      }
       if (retcode_ != 0) {
-        output.writeInt32(15, retcode_);
+        output.writeInt32(11, retcode_);
+      }
+      if (legendaryKeyCount_ != 0) {
+        output.writeUInt32(12, legendaryKeyCount_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +168,13 @@ public final class RedeemLegendaryKeyRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (legendaryKeyCount_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, legendaryKeyCount_);
-      }
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(15, retcode_);
+          .computeInt32Size(11, retcode_);
+      }
+      if (legendaryKeyCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, legendaryKeyCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -311,11 +306,6 @@ public final class RedeemLegendaryKeyRspOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 7270
-     * Obf: DDNNDBFNHKE
-     * </pre>
-     *
      * Protobuf type {@code RedeemLegendaryKeyRsp}
      */
     public static final class Builder extends
@@ -470,7 +460,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 11;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -478,7 +468,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 11;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -489,7 +479,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
         return this;
       }
       /**
-       * <code>int32 retcode = 15;</code>
+       * <code>int32 retcode = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -501,7 +491,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
 
       private int legendaryKeyCount_ ;
       /**
-       * <code>uint32 legendary_key_count = 2;</code>
+       * <code>uint32 legendary_key_count = 12;</code>
        * @return The legendaryKeyCount.
        */
       @java.lang.Override
@@ -509,7 +499,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
         return legendaryKeyCount_;
       }
       /**
-       * <code>uint32 legendary_key_count = 2;</code>
+       * <code>uint32 legendary_key_count = 12;</code>
        * @param value The legendaryKeyCount to set.
        * @return This builder for chaining.
        */
@@ -520,7 +510,7 @@ public final class RedeemLegendaryKeyRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 legendary_key_count = 2;</code>
+       * <code>uint32 legendary_key_count = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearLegendaryKeyCount() {
@@ -597,8 +587,8 @@ public final class RedeemLegendaryKeyRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033RedeemLegendaryKeyRsp.proto\"E\n\025RedeemL" +
-      "egendaryKeyRsp\022\017\n\007retcode\030\017 \001(\005\022\033\n\023legen" +
-      "dary_key_count\030\002 \001(\rB\033\n\031emu.grasscutter." +
+      "egendaryKeyRsp\022\017\n\007retcode\030\013 \001(\005\022\033\n\023legen" +
+      "dary_key_count\030\014 \001(\rB\033\n\031emu.grasscutter." +
       "net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

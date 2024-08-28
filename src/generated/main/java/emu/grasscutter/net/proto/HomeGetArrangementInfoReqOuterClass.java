@@ -19,27 +19,23 @@ public final class HomeGetArrangementInfoReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @return A list containing the sceneIdList.
      */
     java.util.List<java.lang.Integer> getSceneIdListList();
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @return The count of sceneIdList.
      */
     int getSceneIdListCount();
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @param index The index of the element to return.
      * @return The sceneIdList at the given index.
      */
     int getSceneIdList(int index);
   }
   /**
-   * <pre>
-   * CmdId: 25934
-   * </pre>
-   *
    * Protobuf type {@code HomeGetArrangementInfoReq}
    */
   public static final class HomeGetArrangementInfoReq extends
@@ -86,7 +82,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
             case 0:
               done = true;
               break;
-            case 24: {
+            case 72: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sceneIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -94,7 +90,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
               sceneIdList_.addInt(input.readUInt32());
               break;
             }
-            case 26: {
+            case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -142,10 +138,10 @@ public final class HomeGetArrangementInfoReqOuterClass {
               emu.grasscutter.net.proto.HomeGetArrangementInfoReqOuterClass.HomeGetArrangementInfoReq.class, emu.grasscutter.net.proto.HomeGetArrangementInfoReqOuterClass.HomeGetArrangementInfoReq.Builder.class);
     }
 
-    public static final int SCENE_ID_LIST_FIELD_NUMBER = 3;
+    public static final int SCENE_ID_LIST_FIELD_NUMBER = 9;
     private com.google.protobuf.Internal.IntList sceneIdList_;
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @return A list containing the sceneIdList.
      */
     @java.lang.Override
@@ -154,14 +150,14 @@ public final class HomeGetArrangementInfoReqOuterClass {
       return sceneIdList_;
     }
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @return The count of sceneIdList.
      */
     public int getSceneIdListCount() {
       return sceneIdList_.size();
     }
     /**
-     * <code>repeated uint32 scene_id_list = 3;</code>
+     * <code>repeated uint32 scene_id_list = 9;</code>
      * @param index The index of the element to return.
      * @return The sceneIdList at the given index.
      */
@@ -186,7 +182,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
                         throws java.io.IOException {
       getSerializedSize();
       if (getSceneIdListList().size() > 0) {
-        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(74);
         output.writeUInt32NoTag(sceneIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < sceneIdList_.size(); i++) {
@@ -343,10 +339,6 @@ public final class HomeGetArrangementInfoReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25934
-     * </pre>
-     *
      * Protobuf type {@code HomeGetArrangementInfoReq}
      */
     public static final class Builder extends
@@ -514,7 +506,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @return A list containing the sceneIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -523,14 +515,14 @@ public final class HomeGetArrangementInfoReqOuterClass {
                  java.util.Collections.unmodifiableList(sceneIdList_) : sceneIdList_;
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @return The count of sceneIdList.
        */
       public int getSceneIdListCount() {
         return sceneIdList_.size();
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @param index The index of the element to return.
        * @return The sceneIdList at the given index.
        */
@@ -538,7 +530,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
         return sceneIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @param index The index to set the value at.
        * @param value The sceneIdList to set.
        * @return This builder for chaining.
@@ -551,7 +543,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @param value The sceneIdList to add.
        * @return This builder for chaining.
        */
@@ -562,7 +554,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @param values The sceneIdList to add.
        * @return This builder for chaining.
        */
@@ -575,7 +567,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 scene_id_list = 3;</code>
+       * <code>repeated uint32 scene_id_list = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearSceneIdList() {
@@ -653,7 +645,7 @@ public final class HomeGetArrangementInfoReqOuterClass {
     java.lang.String[] descriptorData = {
       "\n\037HomeGetArrangementInfoReq.proto\"2\n\031Hom" +
       "eGetArrangementInfoReq\022\025\n\rscene_id_list\030" +
-      "\003 \003(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "\t \003(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

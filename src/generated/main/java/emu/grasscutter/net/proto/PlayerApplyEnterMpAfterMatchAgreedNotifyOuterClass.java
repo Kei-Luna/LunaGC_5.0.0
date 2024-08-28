@@ -19,43 +19,38 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 matchserver_id = 15;</code>
+     * <code>uint32 matchserver_id = 3;</code>
      * @return The matchserverId.
      */
     int getMatchserverId();
 
     /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
-     * @return Whether the srcPlayerInfo field is set.
-     */
-    boolean hasSrcPlayerInfo();
-    /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
-     * @return The srcPlayerInfo.
-     */
-    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo getSrcPlayerInfo();
-    /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
-     */
-    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder getSrcPlayerInfoOrBuilder();
-
-    /**
-     * <code>.MatchType match_type = 2;</code>
+     * <code>.MatchType match_type = 5;</code>
      * @return The enum numeric value on the wire for matchType.
      */
     int getMatchTypeValue();
     /**
-     * <code>.MatchType match_type = 2;</code>
+     * <code>.MatchType match_type = 5;</code>
      * @return The matchType.
      */
     emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType();
+
+    /**
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
+     * @return Whether the srcPlayerInfo field is set.
+     */
+    boolean hasSrcPlayerInfo();
+    /**
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
+     * @return The srcPlayerInfo.
+     */
+    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo getSrcPlayerInfo();
+    /**
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
+     */
+    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder getSrcPlayerInfoOrBuilder();
   }
   /**
-   * <pre>
-   * CmdId: 9475
-   * Obf: DHNJCDLKIOF
-   * </pre>
-   *
    * Protobuf type {@code PlayerApplyEnterMpAfterMatchAgreedNotify}
    */
   public static final class PlayerApplyEnterMpAfterMatchAgreedNotify extends
@@ -101,13 +96,18 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 16: {
+            case 24: {
+
+              matchserverId_ = input.readUInt32();
+              break;
+            }
+            case 40: {
               int rawValue = input.readEnum();
 
               matchType_ = rawValue;
               break;
             }
-            case 114: {
+            case 106: {
               emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder subBuilder = null;
               if (srcPlayerInfo_ != null) {
                 subBuilder = srcPlayerInfo_.toBuilder();
@@ -118,11 +118,6 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
                 srcPlayerInfo_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 120: {
-
-              matchserverId_ = input.readUInt32();
               break;
             }
             default: {
@@ -157,10 +152,10 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
               emu.grasscutter.net.proto.PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass.PlayerApplyEnterMpAfterMatchAgreedNotify.class, emu.grasscutter.net.proto.PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass.PlayerApplyEnterMpAfterMatchAgreedNotify.Builder.class);
     }
 
-    public static final int MATCHSERVER_ID_FIELD_NUMBER = 15;
+    public static final int MATCHSERVER_ID_FIELD_NUMBER = 3;
     private int matchserverId_;
     /**
-     * <code>uint32 matchserver_id = 15;</code>
+     * <code>uint32 matchserver_id = 3;</code>
      * @return The matchserverId.
      */
     @java.lang.Override
@@ -168,10 +163,29 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       return matchserverId_;
     }
 
-    public static final int SRC_PLAYER_INFO_FIELD_NUMBER = 14;
+    public static final int MATCH_TYPE_FIELD_NUMBER = 5;
+    private int matchType_;
+    /**
+     * <code>.MatchType match_type = 5;</code>
+     * @return The enum numeric value on the wire for matchType.
+     */
+    @java.lang.Override public int getMatchTypeValue() {
+      return matchType_;
+    }
+    /**
+     * <code>.MatchType match_type = 5;</code>
+     * @return The matchType.
+     */
+    @java.lang.Override public emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType() {
+      @SuppressWarnings("deprecation")
+      emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType result = emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.valueOf(matchType_);
+      return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
+    }
+
+    public static final int SRC_PLAYER_INFO_FIELD_NUMBER = 13;
     private emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo srcPlayerInfo_;
     /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
      * @return Whether the srcPlayerInfo field is set.
      */
     @java.lang.Override
@@ -179,7 +193,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       return srcPlayerInfo_ != null;
     }
     /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
      * @return The srcPlayerInfo.
      */
     @java.lang.Override
@@ -187,30 +201,11 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       return srcPlayerInfo_ == null ? emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.getDefaultInstance() : srcPlayerInfo_;
     }
     /**
-     * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+     * <code>.OnlinePlayerInfo src_player_info = 13;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder getSrcPlayerInfoOrBuilder() {
       return getSrcPlayerInfo();
-    }
-
-    public static final int MATCH_TYPE_FIELD_NUMBER = 2;
-    private int matchType_;
-    /**
-     * <code>.MatchType match_type = 2;</code>
-     * @return The enum numeric value on the wire for matchType.
-     */
-    @java.lang.Override public int getMatchTypeValue() {
-      return matchType_;
-    }
-    /**
-     * <code>.MatchType match_type = 2;</code>
-     * @return The matchType.
-     */
-    @java.lang.Override public emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType() {
-      @SuppressWarnings("deprecation")
-      emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType result = emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.valueOf(matchType_);
-      return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -227,14 +222,14 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (matchserverId_ != 0) {
+        output.writeUInt32(3, matchserverId_);
+      }
       if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
-        output.writeEnum(2, matchType_);
+        output.writeEnum(5, matchType_);
       }
       if (srcPlayerInfo_ != null) {
-        output.writeMessage(14, getSrcPlayerInfo());
-      }
-      if (matchserverId_ != 0) {
-        output.writeUInt32(15, matchserverId_);
+        output.writeMessage(13, getSrcPlayerInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -245,17 +240,17 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (matchserverId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, matchserverId_);
+      }
       if (matchType_ != emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.MATCH_TYPE_NONE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, matchType_);
+          .computeEnumSize(5, matchType_);
       }
       if (srcPlayerInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getSrcPlayerInfo());
-      }
-      if (matchserverId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, matchserverId_);
+          .computeMessageSize(13, getSrcPlayerInfo());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -274,12 +269,12 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
 
       if (getMatchserverId()
           != other.getMatchserverId()) return false;
+      if (matchType_ != other.matchType_) return false;
       if (hasSrcPlayerInfo() != other.hasSrcPlayerInfo()) return false;
       if (hasSrcPlayerInfo()) {
         if (!getSrcPlayerInfo()
             .equals(other.getSrcPlayerInfo())) return false;
       }
-      if (matchType_ != other.matchType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -293,12 +288,12 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MATCHSERVER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMatchserverId();
+      hash = (37 * hash) + MATCH_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + matchType_;
       if (hasSrcPlayerInfo()) {
         hash = (37 * hash) + SRC_PLAYER_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getSrcPlayerInfo().hashCode();
       }
-      hash = (37 * hash) + MATCH_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + matchType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -395,11 +390,6 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 9475
-     * Obf: DHNJCDLKIOF
-     * </pre>
-     *
      * Protobuf type {@code PlayerApplyEnterMpAfterMatchAgreedNotify}
      */
     public static final class Builder extends
@@ -439,14 +429,14 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         super.clear();
         matchserverId_ = 0;
 
+        matchType_ = 0;
+
         if (srcPlayerInfoBuilder_ == null) {
           srcPlayerInfo_ = null;
         } else {
           srcPlayerInfo_ = null;
           srcPlayerInfoBuilder_ = null;
         }
-        matchType_ = 0;
-
         return this;
       }
 
@@ -474,12 +464,12 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
       public emu.grasscutter.net.proto.PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass.PlayerApplyEnterMpAfterMatchAgreedNotify buildPartial() {
         emu.grasscutter.net.proto.PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass.PlayerApplyEnterMpAfterMatchAgreedNotify result = new emu.grasscutter.net.proto.PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass.PlayerApplyEnterMpAfterMatchAgreedNotify(this);
         result.matchserverId_ = matchserverId_;
+        result.matchType_ = matchType_;
         if (srcPlayerInfoBuilder_ == null) {
           result.srcPlayerInfo_ = srcPlayerInfo_;
         } else {
           result.srcPlayerInfo_ = srcPlayerInfoBuilder_.build();
         }
-        result.matchType_ = matchType_;
         onBuilt();
         return result;
       }
@@ -531,11 +521,11 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         if (other.getMatchserverId() != 0) {
           setMatchserverId(other.getMatchserverId());
         }
-        if (other.hasSrcPlayerInfo()) {
-          mergeSrcPlayerInfo(other.getSrcPlayerInfo());
-        }
         if (other.matchType_ != 0) {
           setMatchTypeValue(other.getMatchTypeValue());
+        }
+        if (other.hasSrcPlayerInfo()) {
+          mergeSrcPlayerInfo(other.getSrcPlayerInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -568,7 +558,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
 
       private int matchserverId_ ;
       /**
-       * <code>uint32 matchserver_id = 15;</code>
+       * <code>uint32 matchserver_id = 3;</code>
        * @return The matchserverId.
        */
       @java.lang.Override
@@ -576,7 +566,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return matchserverId_;
       }
       /**
-       * <code>uint32 matchserver_id = 15;</code>
+       * <code>uint32 matchserver_id = 3;</code>
        * @param value The matchserverId to set.
        * @return This builder for chaining.
        */
@@ -587,7 +577,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 matchserver_id = 15;</code>
+       * <code>uint32 matchserver_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearMatchserverId() {
@@ -597,18 +587,72 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
 
+      private int matchType_ = 0;
+      /**
+       * <code>.MatchType match_type = 5;</code>
+       * @return The enum numeric value on the wire for matchType.
+       */
+      @java.lang.Override public int getMatchTypeValue() {
+        return matchType_;
+      }
+      /**
+       * <code>.MatchType match_type = 5;</code>
+       * @param value The enum numeric value on the wire for matchType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchTypeValue(int value) {
+        
+        matchType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MatchType match_type = 5;</code>
+       * @return The matchType.
+       */
+      @java.lang.Override
+      public emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType() {
+        @SuppressWarnings("deprecation")
+        emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType result = emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.valueOf(matchType_);
+        return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.MatchType match_type = 5;</code>
+       * @param value The matchType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchType(emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        matchType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.MatchType match_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatchType() {
+        
+        matchType_ = 0;
+        onChanged();
+        return this;
+      }
+
       private emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo srcPlayerInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo, emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder, emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder> srcPlayerInfoBuilder_;
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        * @return Whether the srcPlayerInfo field is set.
        */
       public boolean hasSrcPlayerInfo() {
         return srcPlayerInfoBuilder_ != null || srcPlayerInfo_ != null;
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        * @return The srcPlayerInfo.
        */
       public emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo getSrcPlayerInfo() {
@@ -619,7 +663,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         }
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public Builder setSrcPlayerInfo(emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo value) {
         if (srcPlayerInfoBuilder_ == null) {
@@ -635,7 +679,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public Builder setSrcPlayerInfo(
           emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder builderForValue) {
@@ -649,7 +693,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public Builder mergeSrcPlayerInfo(emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo value) {
         if (srcPlayerInfoBuilder_ == null) {
@@ -667,7 +711,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public Builder clearSrcPlayerInfo() {
         if (srcPlayerInfoBuilder_ == null) {
@@ -681,7 +725,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return this;
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder getSrcPlayerInfoBuilder() {
         
@@ -689,7 +733,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         return getSrcPlayerInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       public emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder getSrcPlayerInfoOrBuilder() {
         if (srcPlayerInfoBuilder_ != null) {
@@ -700,7 +744,7 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
         }
       }
       /**
-       * <code>.OnlinePlayerInfo src_player_info = 14;</code>
+       * <code>.OnlinePlayerInfo src_player_info = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo, emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfo.Builder, emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.OnlinePlayerInfoOrBuilder> 
@@ -714,60 +758,6 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
           srcPlayerInfo_ = null;
         }
         return srcPlayerInfoBuilder_;
-      }
-
-      private int matchType_ = 0;
-      /**
-       * <code>.MatchType match_type = 2;</code>
-       * @return The enum numeric value on the wire for matchType.
-       */
-      @java.lang.Override public int getMatchTypeValue() {
-        return matchType_;
-      }
-      /**
-       * <code>.MatchType match_type = 2;</code>
-       * @param value The enum numeric value on the wire for matchType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMatchTypeValue(int value) {
-        
-        matchType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MatchType match_type = 2;</code>
-       * @return The matchType.
-       */
-      @java.lang.Override
-      public emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType getMatchType() {
-        @SuppressWarnings("deprecation")
-        emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType result = emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.valueOf(matchType_);
-        return result == null ? emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.MatchType match_type = 2;</code>
-       * @param value The matchType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMatchType(emu.grasscutter.net.proto.MatchTypeOuterClass.MatchType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        matchType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MatchType match_type = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMatchType() {
-        
-        matchType_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -837,27 +827,27 @@ public final class PlayerApplyEnterMpAfterMatchAgreedNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n.PlayerApplyEnterMpAfterMatchAgreedNoti" +
-      "fy.proto\032\026OnlinePlayerInfo.proto\032\017MatchT" +
-      "ype.proto\"\216\001\n(PlayerApplyEnterMpAfterMat" +
-      "chAgreedNotify\022\026\n\016matchserver_id\030\017 \001(\r\022*" +
-      "\n\017src_player_info\030\016 \001(\0132\021.OnlinePlayerIn" +
-      "fo\022\036\n\nmatch_type\030\002 \001(\0162\n.MatchTypeB\033\n\031em" +
+      "fy.proto\032\017MatchType.proto\032\026OnlinePlayerI" +
+      "nfo.proto\"\216\001\n(PlayerApplyEnterMpAfterMat" +
+      "chAgreedNotify\022\026\n\016matchserver_id\030\003 \001(\r\022\036" +
+      "\n\nmatch_type\030\005 \001(\0162\n.MatchType\022*\n\017src_pl" +
+      "ayer_info\030\r \001(\0132\021.OnlinePlayerInfoB\033\n\031em" +
       "u.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.getDescriptor(),
           emu.grasscutter.net.proto.MatchTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.getDescriptor(),
         });
     internal_static_PlayerApplyEnterMpAfterMatchAgreedNotify_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_PlayerApplyEnterMpAfterMatchAgreedNotify_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerApplyEnterMpAfterMatchAgreedNotify_descriptor,
-        new java.lang.String[] { "MatchserverId", "SrcPlayerInfo", "MatchType", });
-    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.getDescriptor();
+        new java.lang.String[] { "MatchserverId", "MatchType", "SrcPlayerInfo", });
     emu.grasscutter.net.proto.MatchTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.OnlinePlayerInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

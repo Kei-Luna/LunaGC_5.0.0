@@ -43,11 +43,6 @@ public final class SetPlayerPropReqOuterClass {
         int index);
   }
   /**
-   * <pre>
-   * CmdId: 25174
-   * Obf: FNNAEOMEFBL
-   * </pre>
-   *
    * Protobuf type {@code SetPlayerPropReq}
    */
   public static final class SetPlayerPropReq extends
@@ -336,11 +331,6 @@ public final class SetPlayerPropReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 25174
-     * Obf: FNNAEOMEFBL
-     * </pre>
-     *
      * Protobuf type {@code SetPlayerPropReq}
      */
     public static final class Builder extends
