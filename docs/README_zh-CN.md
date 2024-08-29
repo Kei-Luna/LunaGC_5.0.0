@@ -50,8 +50,7 @@
 - 解决反作弊弹窗以及补丁重命名问题
 - 私服补丁使用教程
 - 把mhypbase.dll和version.dll放到游戏本地根目录下
-- 把mihoyonet.dll放到 GenshinImpact_Data/Plugins/mihoyonet.dll 目录中并进行替换
-- 下载 [资源](https://gi2.pmagickline.xyz/other/game-data/4.7/resources.zip)，在下载的LunaGC文件夹中创建一个名为resources的新文件夹，然后在新文件夹中解压资源。
+- 下载 [资源](https://github.com/Kei-Luna/LunaGC_Resources_5.0.0)，在下载的LunaGC文件夹中创建一个名为resources的新文件夹，然后在新文件夹中解压资源。
 - 将useEncryption、Questing和useInRouting设置为false（默认情况下应该是false，如果不是则更改）。
 - 启动服务器和游戏，确保在LunaGC控制台中创建一个账户！
 - 玩得开心
