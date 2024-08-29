@@ -13,7 +13,7 @@ However, if you need a more detailed guide and help with the server please refer
 
 
 ## You'll need a proxy to connect to the server.
-- This tutorial uses fiddler, check this [video tutorial](https://gi2.pmagickline.xyz/other/tutorials/EN/fiddler.mp4) to set it up if you don't know how.
+- This tutorial uses fiddler, check this [video tutorial](https://tutorials.freespyware.store/api/public/dl/viOvXvPH) to set it up if you don't know how.
 - The script can be found in the docs folder, or by [this link](https://github.com/Kei-Luna/LunaGC_5.0.0/blob/main/docs/fiddlerscript.txt).
 
 ## Read the handbook (found at the end of the file)
@@ -61,8 +61,15 @@ However, if you need a more detailed guide and help with the server please refer
 - Start the server and the game, make sure to also create an account in the LunaGC console!
 - Have fun
 
-## Important!
-- If you use cultivation and you know what you are doing please disable the automatically patch RSA option in settings! (I recommend to use NotThorny's Cultivation modification if you really want to use Cultivation) Cultivation will automatically patch the game either with a 4.0 or 4.6 patch which is not good because LunaGC is 4.7. So, uncheck automatically patch RSA in settings and then place the rsa patch dll again in the game folder if Cultivation has gotten rid of it.
+### Getting started
+
+- Clone the repository (install [Git](https://git-scm.com) first )
+```
+git clone https://github.com/Kei-Luna/LunaGC_5.0.0.git
+```
+
+- Now you can continue with the steps below.
+
 
 ### Compile the actual Server
 
