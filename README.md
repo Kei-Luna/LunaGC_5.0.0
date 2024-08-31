@@ -185,3 +185,7 @@ Method 2:
 - Weapon refinement
 - Registration in-game using the box when logging in for first time (use console to make account instead)
 ### Even more
+
+## Credit
+
+Repository containing the original Proto [XilonenImpact](https://git.xeondev.com/reversedrooms/XilonenImpact/src/commit/92c687cae20ba2dda20ceabe338d6e4125b19f7e/hk4e_proto/out/cmd.rs)
