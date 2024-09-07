@@ -162,7 +162,7 @@ public final class PacketOpcodes {
     public static final int GetAllUnlockNameCardReq = 5009;
     public static final int GetAllUnlockNameCardRsp = 2632;
     public static final int SetPlayerBirthdayReq = 26726;
-    public static final int SetPlayerBirthdayRsp = 9150; 
+    public static final int SetPlayerBirthdayRsp = 9150;
     public static final int GalleryWillStartCountdownNotify = 2443;
     public static final int GetWidgetSlotRsp = 5441;
     public static final int AvatarExpeditionDataNotify = 22907;
@@ -423,9 +423,9 @@ public final class PacketOpcodes {
     public static final int WeaponAwakenRsp = 24076;
     public static final int WeaponPromoteReq = 3230;
     public static final int WeaponPromoteRsp = 25392;
-    public static final int WeaponUpgradeReq = 7713;
+    public static final int WeaponUpgradeReq = 20908;
     public static final int WeaponUpgradeRsp = 22661;
-    public static final int CalcWeaponUpgradeReturnItemsReq = 20908;
+    public static final int CalcWeaponUpgradeReturnItemsReq = 7713;
     public static final int CalcWeaponUpgradeReturnItemsRsp = 6706;
     public static final int SetEquipLockStateReq = 5750;
     public static final int SetEquipLockStateRsp = 26633;
