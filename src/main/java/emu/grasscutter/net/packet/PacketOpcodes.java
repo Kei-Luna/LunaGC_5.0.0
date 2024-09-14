@@ -441,6 +441,7 @@ public final class PacketOpcodes {
     public static final int UnlockTransPointReq = 3518;
     public static final int UnlockTransPointRsp = 23546;
     public static final int ChooseCurAvatarTeamReq = 29682;
+    public static final int ChooseCurAvatarTeamRsp = 5985;
 
 
 
@@ -746,7 +747,6 @@ public final class PacketOpcodes {
     public static final int ChessPickCardRsp = 1;
     public static final int ChessPlayerInfoNotify = 1;
     public static final int ChessSelectedCardsNotify = 1;
-    public static final int ChooseCurAvatarTeamRsp = 1;
     public static final int CityReputationDataNotify = 1;
     public static final int CityReputationLevelupNotify = 1;
     public static final int ClearRoguelikeCurseNotify = 1;
