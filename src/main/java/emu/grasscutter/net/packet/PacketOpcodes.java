@@ -442,6 +442,10 @@ public final class PacketOpcodes {
     public static final int UnlockTransPointRsp = 23546;
     public static final int ChooseCurAvatarTeamReq = 29682;
     public static final int ChooseCurAvatarTeamRsp = 5985;
+    public static final int AddBackupAvatarTeamReq = 23418;
+    public static final int AddBackupAvatarTeamRsp = 7660;
+    public static final int DelBackupAvatarTeamReq = 8721;
+    public static final int DelBackupAvatarTeamRsp = 7408;
 
 
 
@@ -509,8 +513,6 @@ public final class PacketOpcodes {
     public static final int ActivityTakeWatcherRewardRsp = 1;
     public static final int ActivityUpdateWatcherNotify = 1;
     public static final int AddAranaraCollectionNotify = 1;
-    public static final int AddBackupAvatarTeamReq = 1;
-    public static final int AddBackupAvatarTeamRsp = 1;
     public static final int AddBlacklistReq = 1;
     public static final int AddBlacklistRsp = 1;
     public static final int AddNewUgcDungeonReq = 1;
@@ -820,8 +822,6 @@ public final class PacketOpcodes {
     public static final int DailyTaskScoreRewardNotify = 1;
     public static final int DailyTaskUnlockedCitiesNotify = 1;
     public static final int DeathZoneObserveNotify = 1;
-    public static final int DelBackupAvatarTeamReq = 1;
-    public static final int DelBackupAvatarTeamRsp = 1;
     public static final int DelScenePlayTeamEntityNotify = 1;
     public static final int DelTeamEntityNotify = 1;
     public static final int DelUgcDungeonReq = 1;

@@ -20,8 +20,7 @@ public final class AddBackupAvatarTeamReqOuterClass {
   }
   /**
    * <pre>
-   * CmdId: 22689
-   * 4.7.0
+   * CmdId: 23418
    * </pre>
    *
    * Protobuf type {@code AddBackupAvatarTeamReq}
@@ -246,8 +245,7 @@ public final class AddBackupAvatarTeamReqOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 22689
-     * 4.7.0
+     * CmdId: 23418
      * </pre>
      *
      * Protobuf type {@code AddBackupAvatarTeamReq}
