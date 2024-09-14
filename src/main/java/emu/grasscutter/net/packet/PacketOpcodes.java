@@ -446,6 +446,10 @@ public final class PacketOpcodes {
     public static final int AddBackupAvatarTeamRsp = 7660;
     public static final int DelBackupAvatarTeamReq = 8721;
     public static final int DelBackupAvatarTeamRsp = 7408;
+    public static final int TakePlayerLevelRewardReq = 9556;
+    public static final int TakePlayerLevelRewardRsp = 21700;
+    public static final int AvatarFetterLevelRewardReq = 7455;
+    public static final int AvatarFetterLevelRewardRsp = 21750;
 
 
 
@@ -585,8 +589,6 @@ public final class PacketOpcodes {
     public static final int AvatarExpeditionGetRewardRsp = 1;
     public static final int AvatarExpeditionStartReq = 1;
     public static final int AvatarExpeditionStartRsp = 1;
-    public static final int AvatarFetterLevelRewardReq = 1;
-    public static final int AvatarFetterLevelRewardRsp = 1;
     public static final int AvatarFightPropNotify = 1;
     public static final int AvatarFightPropUpdateNotify = 1;
     public static final int AvatarFollowRouteNotify = 1;
@@ -2215,8 +2217,6 @@ public final class PacketOpcodes {
     public static final int TakeInvestigationTargetRewardRsp = 1;
     public static final int TakeMaterialDeleteReturnReq = 1;
     public static final int TakeMaterialDeleteReturnRsp = 1;
-    public static final int TakePlayerLevelRewardReq = 1;
-    public static final int TakePlayerLevelRewardRsp = 1;
     public static final int TakeRegionSearchRewardReq = 1;
     public static final int TakeRegionSearchRewardRsp = 1;
     public static final int TakeResinCardDailyRewardReq = 1;

@@ -35,7 +35,7 @@ public final class ActionAddHPDebts extends AbilityActionHandler {
                 if (newDebt == 0) {
                     target.getWorld().broadcastPacket(new PacketEntityFightPropChangeReasonNotify(target, FightProperty.FIGHT_PROP_CUR_HP_DEBTS, changeDebt, PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_ABILITY, ChangeHpDebtsOuterClass.ChangeHpDebts.CHANGE_HP_DEBTS_PAYFINISH));
                 } else if (changeDebt > 0) {
-                    target.getWorld().broadcastPacket(new PacketEntityFightPropChangeReasonNotify(target, FightProperty.FIGHT_PROP_CUR_HP_DEBTS, changeDebt, PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_ABILITY, ChangeHpDebtsOuterClass.ChangeHpDebts.CHANGE_HP_DEBTS_ADDABILiTY));
+                    target.getWorld().broadcastPacket(new PacketEntityFightPropChangeReasonNotify(target, FightProperty.FIGHT_PROP_CUR_HP_DEBTS, changeDebt, PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_ABILITY, ChangeHpDebtsOuterClass.ChangeHpDebts.CHANGE_HP_DEBTS_ADDABILITY));
                 } else if (changeDebt < 0) {
                     target.getWorld().broadcastPacket(new PacketEntityFightPropChangeReasonNotify(target, FightProperty.FIGHT_PROP_CUR_HP_DEBTS, changeDebt, PropChangeReasonOuterClass.PropChangeReason.PROP_CHANGE_REASON_ABILITY, ChangeHpDebtsOuterClass.ChangeHpDebts.CHANGE_HP_DEBTS_PAY));
                 }
