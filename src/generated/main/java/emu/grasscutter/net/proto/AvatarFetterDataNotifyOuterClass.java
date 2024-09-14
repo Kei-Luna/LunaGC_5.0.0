@@ -53,6 +53,10 @@ public final class AvatarFetterDataNotifyOuterClass {
         long key);
   }
   /**
+   * <pre>
+   * CmdId: 4274
+   * </pre>
+   *
    * Protobuf type {@code AvatarFetterDataNotify}
    */
   public static final class AvatarFetterDataNotify extends
@@ -403,6 +407,10 @@ public final class AvatarFetterDataNotifyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * CmdId: 4274
+     * </pre>
+     *
      * Protobuf type {@code AvatarFetterDataNotify}
      */
     public static final class Builder extends
