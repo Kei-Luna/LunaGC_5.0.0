@@ -40,11 +40,6 @@ public final class AvatarAddNotifyOuterClass {
     emu.grasscutter.net.proto.AvatarInfoOuterClass.AvatarInfoOrBuilder getAvatarOrBuilder();
   }
   /**
-   * <pre>
-   * 4.7.0
-   * CmdId: 1694
-   * </pre>
-   *
    * Protobuf type {@code AvatarAddNotify}
    */
   public static final class AvatarAddNotify extends
@@ -349,11 +344,6 @@ public final class AvatarAddNotifyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * 4.7.0
-     * CmdId: 1694
-     * </pre>
-     *
      * Protobuf type {@code AvatarAddNotify}
      */
     public static final class Builder extends
