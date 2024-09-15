@@ -340,6 +340,7 @@ public final class PacketOpcodes {
     public static final int GetOnlinePlayerListRsp = 9049;
     public static final int SetPlayerPropReq = 23363;
     public static final int GetShopmallDataReq = 21348;
+    public static final int GetShopmallDataRsp = 25192;
     public static final int GetActivityShopSheetInfoReq = 21652;
     public static final int GetActivityShopSheetInfoRsp = 23513;
     public static final int ServerAnnounceNotify = 25165;
@@ -450,8 +451,11 @@ public final class PacketOpcodes {
     public static final int TakePlayerLevelRewardRsp = 21700;
     public static final int AvatarFetterLevelRewardReq = 7455;
     public static final int AvatarFetterLevelRewardRsp = 21750;
-
-
+    public static final int BuyGoodsReq = 4523;
+    public static final int BuyGoodsRsp = 21;
+    public static final int AddNoGachaAvatarCardNotify = 28082;
+    public static final int StoreItemDelNotify = 9567;
+    public static final int AvatarAddNotify = 4216;
 
 
 
@@ -464,7 +468,6 @@ public final class PacketOpcodes {
     public static final int PlayerEnterMapLayerNotify = 1;
     public static final int SkipPlayerGameTimeReq = 1;
     public static final int GetOnlinePlayerInfoReq = 1;
-    public static final int GetShopmallDataRsp = 1;
     public static final int ServerAnnounceRevokeNotify = 1;
     public static final int HomeSaveBlueprintToSlotReq = 1;
     public static final int HomeCreateBlueprintReq = 1;
@@ -521,7 +524,6 @@ public final class PacketOpcodes {
     public static final int AddBlacklistRsp = 1;
     public static final int AddNewUgcDungeonReq = 1;
     public static final int AddNewUgcDungeonRsp = 1;
-    public static final int AddNoGachaAvatarCardNotify = 1;
     public static final int AddRandTaskInfoNotify = 1;
     public static final int AddReunionReportedTypeReq = 1;
     public static final int AddReunionReportedTypeRsp = 1;
@@ -569,7 +571,6 @@ public final class PacketOpcodes {
     public static final int AsterMidInfoNotify = 1;
     public static final int AsterMiscInfoNotify = 1;
     public static final int AsterProgressInfoNotify = 1;
-    public static final int AvatarAddNotify = 1;
     public static final int AvatarBuffAddNotify = 1;
     public static final int AvatarBuffDelNotify = 1;
     public static final int AvatarCardChangeReq = 1;
@@ -676,8 +677,6 @@ public final class PacketOpcodes {
     public static final int BuoyantCombatSettleNotify = 1;
     public static final int BuyBattlePassLevelReq = 1;
     public static final int BuyBattlePassLevelRsp = 1;
-    public static final int BuyGoodsReq = 1;
-    public static final int BuyGoodsRsp = 1;
     public static final int BuyResinReq = 1;
     public static final int BuyResinRsp = 1;
     public static final int CanUseSkillNotify = 1;
@@ -2153,7 +2152,6 @@ public final class PacketOpcodes {
     public static final int StopReminderNotify = 1;
     public static final int StoreCustomDungeonReq = 1;
     public static final int StoreCustomDungeonRsp = 1;
-    public static final int StoreItemDelNotify = 1;
     public static final int SubmitInferenceWordReq = 1;
     public static final int SubmitInferenceWordRsp = 1;
     public static final int SummerTimeFloatSignalPositionNotify = 1;
