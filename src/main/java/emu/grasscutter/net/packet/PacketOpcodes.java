@@ -340,6 +340,7 @@ public final class PacketOpcodes {
     public static final int GetOnlinePlayerListRsp = 9049;
     public static final int SetPlayerPropReq = 23363;
     public static final int GetShopmallDataReq = 21348;
+    public static final int GetShopmallDataRsp = 25192;
     public static final int GetActivityShopSheetInfoReq = 21652;
     public static final int GetActivityShopSheetInfoRsp = 23513;
     public static final int ServerAnnounceNotify = 25165;
@@ -464,7 +465,6 @@ public final class PacketOpcodes {
     public static final int PlayerEnterMapLayerNotify = 1;
     public static final int SkipPlayerGameTimeReq = 1;
     public static final int GetOnlinePlayerInfoReq = 1;
-    public static final int GetShopmallDataRsp = 1;
     public static final int ServerAnnounceRevokeNotify = 1;
     public static final int HomeSaveBlueprintToSlotReq = 1;
     public static final int HomeCreateBlueprintReq = 1;
