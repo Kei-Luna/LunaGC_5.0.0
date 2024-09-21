@@ -456,7 +456,8 @@ public final class PacketOpcodes {
     public static final int AddNoGachaAvatarCardNotify = 28082;
     public static final int StoreItemDelNotify = 9567;
     public static final int AvatarAddNotify = 4216;
-
+    public static final int UnlockAvatarTalentReq = 6454;
+    public static final int UnlockAvatarTalentRsp = 23185;
 
 
 
@@ -2346,8 +2347,6 @@ public final class PacketOpcodes {
     public static final int UgcShopGadgetInfoNotify = 1;
     public static final int UgcTowerBoughtSuccNotify = 1;
     public static final int UgcTowerLevelUpNotify = 1;
-    public static final int UnlockAvatarTalentReq = 1;
-    public static final int UnlockAvatarTalentRsp = 1;
     public static final int UnlockCoopChapterReq = 1;
     public static final int UnlockCoopChapterRsp = 1;
     public static final int UnlockNameCardNotify = 1;
