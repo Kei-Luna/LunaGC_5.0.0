@@ -307,7 +307,7 @@ public class ConfigContainer {
 
         public static class ResinOptions {
             public boolean resinUsage = false;
-            public int cap = 160;
+            public int cap = 200;
             public int rechargeTime = 480;
         }
 
