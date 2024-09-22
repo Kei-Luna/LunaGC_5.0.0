@@ -13,9 +13,10 @@ public class HandlerSetPlayerHeadImageReq extends PacketHandler {
 
         int id = req.getAvatarId();
 
-        if (session.getPlayer().getAvatars().hasAvatar(id)) {
-            session.getPlayer().setHeadImage(id);
-            session.send(new PacketSetPlayerHeadImageRsp(session.getPlayer()));
-        }
+        // TODO: Fix check. But the id isn't the avatar ID but the head ID.
+        // Excuse for laziness by not changing the 'getAvatarId'.
+
+        session.getPlayer().setHeadImage(id);
+        session.send(new PacketSetPlayerHeadImageRsp(session.getPlayer()));
     }
 }

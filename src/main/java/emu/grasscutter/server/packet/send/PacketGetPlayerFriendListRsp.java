@@ -23,7 +23,7 @@ public class PacketGetPlayerFriendListRsp extends BasePacket {
                         .setUid(GameConstants.SERVER_CONSOLE_UID)
                         .setNickname(serverAccount.nickName)
                         .setLevel(serverAccount.adventureRank)
-                        .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(serverAccount.avatarId))
+                        .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(serverAccount.avatarId))
                         .setWorldLevel(serverAccount.worldLevel)
                         .setSignature(serverAccount.signature)
                         .setLastActiveTime((int) (System.currentTimeMillis() / 1000f))
