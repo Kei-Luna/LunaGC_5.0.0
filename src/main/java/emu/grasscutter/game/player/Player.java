@@ -447,6 +447,7 @@ public class Player implements PlayerHook, FieldFetch {
     public void setHeadImage(int picture) {
         this.headImage = picture;
         this.updateProfile();
+        this.save();
     }
 
     public void setSignature(String signature) {
@@ -1070,7 +1071,7 @@ public class Player implements PlayerHook, FieldFetch {
             .setMpSettingType(this.getMpSetting())
             .setNameCardId(this.getNameCardId())
             .setSignature(this.getSignature())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()));
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()));
 
         if (this.getWorld() != null) {
             onlineInfo.setCurPlayerNumInWorld(getWorld().getPlayerCount());
@@ -1125,7 +1126,7 @@ public class Player implements PlayerHook, FieldFetch {
 
         return SocialDetail.newBuilder()
             .setUid(this.getUid())
-            .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(this.getHeadImage()))
+            .setProfilePicture(ProfilePicture.newBuilder().setHeadImageId(this.getHeadImage()))
             .setNickname(this.getNickname())
             .setSignature(this.getSignature())
             .setLevel(this.getLevel())

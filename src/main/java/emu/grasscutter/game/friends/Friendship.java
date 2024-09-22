@@ -94,7 +94,7 @@ public class Friendship {
                 .setNickname(getFriendProfile().getName())
                 .setLevel(getFriendProfile().getPlayerLevel())
                 .setProfilePicture(
-                        ProfilePicture.newBuilder().setAvatarId(getFriendProfile().getAvatarId()))
+                        ProfilePicture.newBuilder().setHeadImageId(getFriendProfile().getAvatarId()))
                 .setWorldLevel(getFriendProfile().getWorldLevel())
                 .setSignature(getFriendProfile().getSignature())
                 .setOnlineState(
