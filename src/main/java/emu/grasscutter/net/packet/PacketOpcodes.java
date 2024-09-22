@@ -460,16 +460,16 @@ public final class PacketOpcodes {
     public static final int UnlockAvatarTalentRsp = 23185;
     public static final int ChangeMpTeamAvatarReq = 28747;
     public static final int ChangeMpTeamAvatarRsp = 28252;
+    public static final int SkipPlayerGameTimeReq = 29432;
+    public static final int SkipPlayerGameTimeRsp = 338;
 
 
 
 
     // Names
     public static final int PersonalLineAllDataRsp = 1;
-    public static final int SkipPlayerGameTimeRsp = 1;
     public static final int PlayerEnterChildMapLayerNotify = 1;
     public static final int PlayerEnterMapLayerNotify = 1;
-    public static final int SkipPlayerGameTimeReq = 1;
     public static final int GetOnlinePlayerInfoReq = 1;
     public static final int ServerAnnounceRevokeNotify = 1;
     public static final int HomeSaveBlueprintToSlotReq = 1;
