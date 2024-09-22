@@ -458,6 +458,8 @@ public final class PacketOpcodes {
     public static final int AvatarAddNotify = 4216;
     public static final int UnlockAvatarTalentReq = 6454;
     public static final int UnlockAvatarTalentRsp = 23185;
+    public static final int ChangeMpTeamAvatarReq = 28747;
+    public static final int ChangeMpTeamAvatarRsp = 28252;
 
 
 
@@ -694,8 +696,6 @@ public final class PacketOpcodes {
     public static final int ChangeCustomDungeonRoomRsp = 1;
     public static final int ChangeGameTimeReq = 1;
     public static final int ChangeGameTimeRsp = 1;
-    public static final int ChangeMpTeamAvatarReq = 1;
-    public static final int ChangeMpTeamAvatarRsp = 1;
     public static final int ChangePublishedUgcDungeonSettingReq = 1;
     public static final int ChangePublishedUgcDungeonSettingRsp = 1;
     public static final int ChangeServerGlobalValueNotify = 1;
