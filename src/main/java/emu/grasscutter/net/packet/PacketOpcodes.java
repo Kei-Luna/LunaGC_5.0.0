@@ -469,12 +469,14 @@ public final class PacketOpcodes {
     public static final int AvatarSkillMaxChargeCountNotify = 28497;
     public static final int AvatarPropChangeReasonNotify = 24920;
     public static final int AvatarSkillInfoNotify = 25299;
+    public static final int GachaWishReq = 25407;
 
 
 
 
     // Names
     public static final int PersonalLineAllDataRsp = 1;
+    public static final int GachaWishRsp = 1;
     public static final int PlayerEnterChildMapLayerNotify = 1;
     public static final int PlayerEnterMapLayerNotify = 1;
     public static final int GetOnlinePlayerInfoReq = 1;
@@ -1278,8 +1280,6 @@ public final class PacketOpcodes {
     public static final int GachaActivityUpdateElemNotify = 1;
     public static final int GachaOpenWishNotify = 1;
     public static final int GachaSimpleInfoNotify = 1;
-    public static final int GachaWishReq = 1;
-    public static final int GachaWishRsp = 1;
     public static final int GadgetAutoPickDropInfoNotify = 1;
     public static final int GadgetChainLevelChangeNotify = 1;
     public static final int GadgetChainLevelUpdateNotify = 1;
