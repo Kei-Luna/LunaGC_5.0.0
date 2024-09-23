@@ -458,16 +458,25 @@ public final class PacketOpcodes {
     public static final int AvatarAddNotify = 4216;
     public static final int UnlockAvatarTalentReq = 6454;
     public static final int UnlockAvatarTalentRsp = 23185;
+    public static final int ChangeMpTeamAvatarReq = 28747;
+    public static final int ChangeMpTeamAvatarRsp = 28252;
+    public static final int SkipPlayerGameTimeReq = 29432;
+    public static final int SkipPlayerGameTimeRsp = 338;
+    public static final int AvatarFightPropNotify = 287;
+    public static final int AvatarFightPropUpdateNotify = 20328;
+    public static final int AvatarSkillChangeNotify = 4410;
+    public static final int AvatarSkillDepotChangeNotify = 25309;
+    public static final int AvatarSkillMaxChargeCountNotify = 28497;
+    public static final int AvatarPropChangeReasonNotify = 24920;
+    public static final int AvatarSkillInfoNotify = 25299;
 
 
 
 
     // Names
     public static final int PersonalLineAllDataRsp = 1;
-    public static final int SkipPlayerGameTimeRsp = 1;
     public static final int PlayerEnterChildMapLayerNotify = 1;
     public static final int PlayerEnterMapLayerNotify = 1;
-    public static final int SkipPlayerGameTimeReq = 1;
     public static final int GetOnlinePlayerInfoReq = 1;
     public static final int ServerAnnounceRevokeNotify = 1;
     public static final int HomeSaveBlueprintToSlotReq = 1;
@@ -591,19 +600,12 @@ public final class PacketOpcodes {
     public static final int AvatarExpeditionGetRewardRsp = 1;
     public static final int AvatarExpeditionStartReq = 1;
     public static final int AvatarExpeditionStartRsp = 1;
-    public static final int AvatarFightPropNotify = 1;
-    public static final int AvatarFightPropUpdateNotify = 1;
     public static final int AvatarFollowRouteNotify = 1;
     public static final int AvatarPromoteGetRewardReq = 1;
     public static final int AvatarPromoteReq = 1;
     public static final int AvatarPromoteRsp = 1;
-    public static final int AvatarPropChangeReasonNotify = 1;
     public static final int AvatarRenameInfoNotify = 1;
     public static final int AvatarSatiationDataNotify = 1;
-    public static final int AvatarSkillChangeNotify = 1;
-    public static final int AvatarSkillDepotChangeNotify = 1;
-    public static final int AvatarSkillInfoNotify = 1;
-    public static final int AvatarSkillMaxChargeCountNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
     public static final int BackPlayCustomDungeonOfficialRsp = 1;
     public static final int BackRebornGalleryReq = 1;
@@ -694,8 +696,6 @@ public final class PacketOpcodes {
     public static final int ChangeCustomDungeonRoomRsp = 1;
     public static final int ChangeGameTimeReq = 1;
     public static final int ChangeGameTimeRsp = 1;
-    public static final int ChangeMpTeamAvatarReq = 1;
-    public static final int ChangeMpTeamAvatarRsp = 1;
     public static final int ChangePublishedUgcDungeonSettingReq = 1;
     public static final int ChangePublishedUgcDungeonSettingRsp = 1;
     public static final int ChangeServerGlobalValueNotify = 1;
