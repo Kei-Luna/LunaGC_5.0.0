@@ -467,6 +467,8 @@ public final class PacketOpcodes {
     public static final int AvatarSkillChangeNotify = 4410;
     public static final int AvatarSkillDepotChangeNotify = 25309;
     public static final int AvatarSkillMaxChargeCountNotify = 28497;
+    public static final int AvatarPropChangeReasonNotify = 24920;
+    public static final int AvatarSkillInfoNotify = 25299;
 
 
 
@@ -602,10 +604,8 @@ public final class PacketOpcodes {
     public static final int AvatarPromoteGetRewardReq = 1;
     public static final int AvatarPromoteReq = 1;
     public static final int AvatarPromoteRsp = 1;
-    public static final int AvatarPropChangeReasonNotify = 1;
     public static final int AvatarRenameInfoNotify = 1;
     public static final int AvatarSatiationDataNotify = 1;
-    public static final int AvatarSkillInfoNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
     public static final int BackPlayCustomDungeonOfficialRsp = 1;
     public static final int BackRebornGalleryReq = 1;
