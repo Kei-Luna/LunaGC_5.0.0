@@ -462,6 +462,8 @@ public final class PacketOpcodes {
     public static final int ChangeMpTeamAvatarRsp = 28252;
     public static final int SkipPlayerGameTimeReq = 29432;
     public static final int SkipPlayerGameTimeRsp = 338;
+    public static final int AvatarFightPropNotify = 287;
+    public static final int AvatarFightPropUpdateNotify = 20328;
 
 
 
@@ -593,8 +595,6 @@ public final class PacketOpcodes {
     public static final int AvatarExpeditionGetRewardRsp = 1;
     public static final int AvatarExpeditionStartReq = 1;
     public static final int AvatarExpeditionStartRsp = 1;
-    public static final int AvatarFightPropNotify = 1;
-    public static final int AvatarFightPropUpdateNotify = 1;
     public static final int AvatarFollowRouteNotify = 1;
     public static final int AvatarPromoteGetRewardReq = 1;
     public static final int AvatarPromoteReq = 1;
