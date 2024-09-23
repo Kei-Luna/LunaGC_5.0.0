@@ -464,6 +464,9 @@ public final class PacketOpcodes {
     public static final int SkipPlayerGameTimeRsp = 338;
     public static final int AvatarFightPropNotify = 287;
     public static final int AvatarFightPropUpdateNotify = 20328;
+    public static final int AvatarSkillChangeNotify = 4410;
+    public static final int AvatarSkillDepotChangeNotify = 25309;
+    public static final int AvatarSkillMaxChargeCountNotify = 28497;
 
 
 
@@ -602,10 +605,7 @@ public final class PacketOpcodes {
     public static final int AvatarPropChangeReasonNotify = 1;
     public static final int AvatarRenameInfoNotify = 1;
     public static final int AvatarSatiationDataNotify = 1;
-    public static final int AvatarSkillChangeNotify = 1;
-    public static final int AvatarSkillDepotChangeNotify = 1;
     public static final int AvatarSkillInfoNotify = 1;
-    public static final int AvatarSkillMaxChargeCountNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
     public static final int BackPlayCustomDungeonOfficialRsp = 1;
     public static final int BackRebornGalleryReq = 1;
