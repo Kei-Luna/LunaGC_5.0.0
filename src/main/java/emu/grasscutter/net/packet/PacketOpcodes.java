@@ -457,7 +457,7 @@ public final class PacketOpcodes {
     public static final int StoreItemDelNotify = 9567;
     public static final int AvatarAddNotify = 4216;
     public static final int UnlockAvatarTalentReq = 6454;
-    public static final int UnlockAvatarTalentRsp = 23185;
+    public static final int UnlockAvatarTalentRsp = 23185; 
     public static final int ChangeMpTeamAvatarReq = 28747;
     public static final int ChangeMpTeamAvatarRsp = 28252;
     public static final int SkipPlayerGameTimeReq = 29432;
@@ -469,7 +469,12 @@ public final class PacketOpcodes {
     public static final int AvatarSkillMaxChargeCountNotify = 28497;
     public static final int AvatarPropChangeReasonNotify = 24920;
     public static final int AvatarSkillInfoNotify = 25299;
+    public static final int AvatarSatiationDataNotify = 4982;
+    public static final int AvatarEnterElementViewNotify = 88;
+    public static final int AbilityInvocationFailNotify = 9225;
+    public static final int AvatarEquipAffixStartNotify = 8492;
     public static final int GachaWishReq = 25407;
+
 
 
 
@@ -485,12 +490,13 @@ public final class PacketOpcodes {
     public static final int HomeCreateBlueprintReq = 1;
     public static final int GetHomeExchangeWoodInfoRsp = 1;
     public static final int PlayerChatRsp = 1;
+    public static final int AvatarBuffAddNotify = 1;
+    public static final int AvatarBuffDelNotify = 1;
+    public static final int AbilityInvocationFixedNotify = 1;
     public static final int GetWidgetQuickSlotListRsp = 1;
     public static final int TowerAllDataRsp = 1;
     public static final int GetAllSceneGalleryInfoRsp = 1;
     public static final int FurnitureMakeRsp = 1;
-    public static final int AbilityInvocationFailNotify = 1;
-    public static final int AbilityInvocationFixedNotify = 1;
     public static final int AcceptCityReputationRequestReq = 1;
     public static final int AcceptCityReputationRequestRsp = 1;
     public static final int AchievementUpdateNotify = 1;
@@ -583,8 +589,6 @@ public final class PacketOpcodes {
     public static final int AsterMidInfoNotify = 1;
     public static final int AsterMiscInfoNotify = 1;
     public static final int AsterProgressInfoNotify = 1;
-    public static final int AvatarBuffAddNotify = 1;
-    public static final int AvatarBuffDelNotify = 1;
     public static final int AvatarCardChangeReq = 1;
     public static final int AvatarCardChangeRsp = 1;
     public static final int AvatarChangeAnimHashReq = 1;
@@ -592,8 +596,6 @@ public final class PacketOpcodes {
     public static final int AvatarChangeElementTypeReq = 1;
     public static final int AvatarChangeElementTypeRsp = 1;
     public static final int AvatarDelNotify = 1;
-    public static final int AvatarEnterElementViewNotify = 1;
-    public static final int AvatarEquipAffixStartNotify = 1;
     public static final int AvatarExpeditionAllDataReq = 1;
     public static final int AvatarExpeditionAllDataRsp = 1;
     public static final int AvatarExpeditionCallBackReq = 1;
@@ -607,7 +609,6 @@ public final class PacketOpcodes {
     public static final int AvatarPromoteReq = 1;
     public static final int AvatarPromoteRsp = 1;
     public static final int AvatarRenameInfoNotify = 1;
-    public static final int AvatarSatiationDataNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
     public static final int BackPlayCustomDungeonOfficialRsp = 1;
     public static final int BackRebornGalleryReq = 1;
