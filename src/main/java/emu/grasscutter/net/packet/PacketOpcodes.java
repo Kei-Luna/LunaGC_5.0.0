@@ -469,8 +469,10 @@ public final class PacketOpcodes {
     public static final int AvatarSkillMaxChargeCountNotify = 28497;
     public static final int AvatarPropChangeReasonNotify = 24920;
     public static final int AvatarSkillInfoNotify = 25299;
-
-
+    public static final int AvatarPromoteReq = 21972;
+    public static final int AvatarPromoteRsp = 1987;
+    public static final int ProudSkillChangeNotify = 29262;
+    public static final int ProudSkillExtraLevelNotify = 28513;
 
 
     // Names
@@ -602,8 +604,6 @@ public final class PacketOpcodes {
     public static final int AvatarExpeditionStartRsp = 1;
     public static final int AvatarFollowRouteNotify = 1;
     public static final int AvatarPromoteGetRewardReq = 1;
-    public static final int AvatarPromoteReq = 1;
-    public static final int AvatarPromoteRsp = 1;
     public static final int AvatarRenameInfoNotify = 1;
     public static final int AvatarSatiationDataNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
@@ -1853,8 +1853,6 @@ public final class PacketOpcodes {
     public static final int ProfilePictureChangeNotify = 1;
     public static final int ProjectorOptionReq = 1;
     public static final int ProjectorOptionRsp = 1;
-    public static final int ProudSkillChangeNotify = 1;
-    public static final int ProudSkillExtraLevelNotify = 1;
     public static final int ProudSkillUpgradeReq = 1;
     public static final int ProudSkillUpgradeRsp = 1;
     public static final int PublishCustomDungeonReq = 1;
