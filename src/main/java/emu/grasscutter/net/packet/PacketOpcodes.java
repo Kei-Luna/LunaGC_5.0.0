@@ -483,6 +483,7 @@ public final class PacketOpcodes {
     public static final int EvtEntityStartDieEndNotify = 5095;
     public static final int AvatarRenameInfoNotify = 6549;
     public static final int EvtAvatarSitDownNotify = 22638;
+    public static final int EvtCostStaminaNotify = 1514;
 
 
 
@@ -1014,7 +1015,6 @@ public final class PacketOpcodes {
     public static final int EvtBeingHealedNotify = 1;
     public static final int EvtBulletDeactiveNotify = 1;
     public static final int EvtBulletMoveNotify = 1;
-    public static final int EvtCostStaminaNotify = 1;
     public static final int EvtDestroyServerGadgetNotify = 1;
     public static final int EvtFaceToDirNotify = 1;
     public static final int EvtFaceToEntityNotify = 1;
