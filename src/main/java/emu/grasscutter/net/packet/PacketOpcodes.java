@@ -486,7 +486,11 @@ public final class PacketOpcodes {
     public static final int EvtCostStaminaNotify = 1514;
     public static final int ClientLoadingCostumeVerificationNotify = 6382;
     public static final int PlayerForceExitReq = 26372;
-
+    public static final int DropHintNotify = 3881;
+    public static final int SelectAsterMidDifficultyRsp = 25063;
+    public static final int SelectAsterMidDifficultyReq = 9382;
+    public static final int SelectEffigyChallengeConditionReq = 26519;
+    public static final int SelectEffigyChallengeConditionRsp = 2737;
 
 
     // Names
@@ -868,7 +872,6 @@ public final class PacketOpcodes {
     public static final int DragonSpineChapterOpenNotify = 1;
     public static final int DragonSpineChapterProgressChangeNotify = 1;
     public static final int DragonSpineCoinChangeNotify = 1;
-    public static final int DropHintNotify = 1;
     public static final int DuelHeartCgEndNotify = 1;
     public static final int DuelHeartEnterDungeonReq = 1;
     public static final int DuelHeartEnterDungeonRsp = 1;
@@ -2065,10 +2068,6 @@ public final class PacketOpcodes {
     public static final int SearchCustomDungeonRsp = 1;
     public static final int SeeMonsterReq = 1;
     public static final int SeeMonsterRsp = 1;
-    public static final int SelectAsterMidDifficultyReq = 1;
-    public static final int SelectAsterMidDifficultyRsp = 1;
-    public static final int SelectEffigyChallengeConditionReq = 1;
-    public static final int SelectEffigyChallengeConditionRsp = 1;
     public static final int SelectRoguelikeDungeonCardReq = 1;
     public static final int SelectRoguelikeDungeonCardRsp = 1;
     public static final int ServerCombatEndNotify = 1;
