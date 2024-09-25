@@ -21,7 +21,7 @@ public final class DropSystem extends BaseGameSystem {
     private final Random rand;
 
     // TODO: don't know how to determine boss level.Have to hard-code the data from wiki.
-    private final int[] bossLevel = {36, 37, 41, 50, 62, 72, 83, 91, 93};
+    private final int[] bossLevel = {36, 37, 41, 50, 62, 72, 83, 91, 93, 103};
 
     public DropSystem(GameServer server) {
         super(server);

@@ -118,7 +118,7 @@ public class BlossomManager {
 
     public void notifyIcon() {
         final int wl = getWorldLevel();
-        final int worldLevel = (wl < 0) ? 0 : ((wl > 8) ? 8 : wl);
+        final int worldLevel = (wl < 0) ? 0 : ((wl > 9) ? 9 : wl);
         final var worldLevelData = GameData.getWorldLevelDataMap().get(worldLevel);
         final int monsterLevel = (worldLevelData != null) ? worldLevelData.getMonsterLevel() : 1;
         List<BlossomBriefInfoOuterClass.BlossomBriefInfo> blossoms = new ArrayList<>();
