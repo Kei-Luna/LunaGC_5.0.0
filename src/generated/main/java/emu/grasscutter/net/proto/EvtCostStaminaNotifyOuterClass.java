@@ -19,21 +19,20 @@ public final class EvtCostStaminaNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>float cost_stamina = 11;</code>
+     * <code>float cost_stamina = 1;</code>
      * @return The costStamina.
      */
     float getCostStamina();
 
     /**
-     * <code>uint32 skill_id = 4;</code>
+     * <code>uint32 skill_id = 7;</code>
      * @return The skillId.
      */
     int getSkillId();
   }
   /**
    * <pre>
-   * CmdId: 810
-   * Obf: FPOPCBIOAAA
+   * CmdId: 1514
    * </pre>
    *
    * Protobuf type {@code EvtCostStaminaNotify}
@@ -80,14 +79,14 @@ public final class EvtCostStaminaNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 32: {
-
-              skillId_ = input.readUInt32();
-              break;
-            }
-            case 93: {
+            case 13: {
 
               costStamina_ = input.readFloat();
+              break;
+            }
+            case 56: {
+
+              skillId_ = input.readUInt32();
               break;
             }
             default: {
@@ -122,10 +121,10 @@ public final class EvtCostStaminaNotifyOuterClass {
               emu.grasscutter.net.proto.EvtCostStaminaNotifyOuterClass.EvtCostStaminaNotify.class, emu.grasscutter.net.proto.EvtCostStaminaNotifyOuterClass.EvtCostStaminaNotify.Builder.class);
     }
 
-    public static final int COST_STAMINA_FIELD_NUMBER = 11;
+    public static final int COST_STAMINA_FIELD_NUMBER = 1;
     private float costStamina_;
     /**
-     * <code>float cost_stamina = 11;</code>
+     * <code>float cost_stamina = 1;</code>
      * @return The costStamina.
      */
     @java.lang.Override
@@ -133,10 +132,10 @@ public final class EvtCostStaminaNotifyOuterClass {
       return costStamina_;
     }
 
-    public static final int SKILL_ID_FIELD_NUMBER = 4;
+    public static final int SKILL_ID_FIELD_NUMBER = 7;
     private int skillId_;
     /**
-     * <code>uint32 skill_id = 4;</code>
+     * <code>uint32 skill_id = 7;</code>
      * @return The skillId.
      */
     @java.lang.Override
@@ -158,11 +157,11 @@ public final class EvtCostStaminaNotifyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (skillId_ != 0) {
-        output.writeUInt32(4, skillId_);
-      }
       if (costStamina_ != 0F) {
-        output.writeFloat(11, costStamina_);
+        output.writeFloat(1, costStamina_);
+      }
+      if (skillId_ != 0) {
+        output.writeUInt32(7, skillId_);
       }
       unknownFields.writeTo(output);
     }
@@ -173,13 +172,13 @@ public final class EvtCostStaminaNotifyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (skillId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, skillId_);
-      }
       if (costStamina_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(11, costStamina_);
+          .computeFloatSize(1, costStamina_);
+      }
+      if (skillId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, skillId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -314,8 +313,7 @@ public final class EvtCostStaminaNotifyOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 810
-     * Obf: FPOPCBIOAAA
+     * CmdId: 1514
      * </pre>
      *
      * Protobuf type {@code EvtCostStaminaNotify}
@@ -472,7 +470,7 @@ public final class EvtCostStaminaNotifyOuterClass {
 
       private float costStamina_ ;
       /**
-       * <code>float cost_stamina = 11;</code>
+       * <code>float cost_stamina = 1;</code>
        * @return The costStamina.
        */
       @java.lang.Override
@@ -480,7 +478,7 @@ public final class EvtCostStaminaNotifyOuterClass {
         return costStamina_;
       }
       /**
-       * <code>float cost_stamina = 11;</code>
+       * <code>float cost_stamina = 1;</code>
        * @param value The costStamina to set.
        * @return This builder for chaining.
        */
@@ -491,7 +489,7 @@ public final class EvtCostStaminaNotifyOuterClass {
         return this;
       }
       /**
-       * <code>float cost_stamina = 11;</code>
+       * <code>float cost_stamina = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCostStamina() {
@@ -503,7 +501,7 @@ public final class EvtCostStaminaNotifyOuterClass {
 
       private int skillId_ ;
       /**
-       * <code>uint32 skill_id = 4;</code>
+       * <code>uint32 skill_id = 7;</code>
        * @return The skillId.
        */
       @java.lang.Override
@@ -511,7 +509,7 @@ public final class EvtCostStaminaNotifyOuterClass {
         return skillId_;
       }
       /**
-       * <code>uint32 skill_id = 4;</code>
+       * <code>uint32 skill_id = 7;</code>
        * @param value The skillId to set.
        * @return This builder for chaining.
        */
@@ -522,7 +520,7 @@ public final class EvtCostStaminaNotifyOuterClass {
         return this;
       }
       /**
-       * <code>uint32 skill_id = 4;</code>
+       * <code>uint32 skill_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearSkillId() {
@@ -599,8 +597,8 @@ public final class EvtCostStaminaNotifyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032EvtCostStaminaNotify.proto\">\n\024EvtCostS" +
-      "taminaNotify\022\024\n\014cost_stamina\030\013 \001(\002\022\020\n\010sk" +
-      "ill_id\030\004 \001(\rB\033\n\031emu.grasscutter.net.prot" +
+      "taminaNotify\022\024\n\014cost_stamina\030\001 \001(\002\022\020\n\010sk" +
+      "ill_id\030\007 \001(\rB\033\n\031emu.grasscutter.net.prot" +
       "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -484,6 +484,8 @@ public final class PacketOpcodes {
     public static final int AvatarRenameInfoNotify = 6549;
     public static final int EvtAvatarSitDownNotify = 22638;
     public static final int EvtCostStaminaNotify = 1514;
+    public static final int ClientLoadingCostumeVerificationNotify = 6382;
+    public static final int PlayerForceExitReq = 26372;
 
 
 
@@ -767,7 +769,6 @@ public final class PacketOpcodes {
     public static final int ClientBulletCreateNotify = 1;
     public static final int ClientCollectorDataNotify = 1;
     public static final int ClientHashDebugNotify = 1;
-    public static final int ClientLoadingCostumeVerificationNotify = 1;
     public static final int ClientLockGameTimeNotify = 1;
     public static final int ClientNewMailNotify = 1;
     public static final int ClientPauseNotify = 1;
@@ -1805,7 +1806,6 @@ public final class PacketOpcodes {
     public static final int PlayerDeathZoneNotify = 1;
     public static final int PlayerEyePointStateNotify = 1;
     public static final int PlayerFishingDataNotify = 1;
-    public static final int PlayerForceExitReq = 1;
     public static final int PlayerForceExitRsp = 1;
     public static final int PlayerGCGMatchConfirmNotify = 1;
     public static final int PlayerGCGMatchDismissNotify = 1;
