@@ -478,6 +478,14 @@ public final class PacketOpcodes {
     public static final int AbilityInvocationFailNotify = 9225;
     public static final int AvatarEquipAffixStartNotify = 8492;
     public static final int GachaWishReq = 25407;
+    public static final int AdjustWorldLevelRsp = 29530;
+    public static final int EvtEntityRenderersChangedNotify = 7358;
+    public static final int EvtEntityStartDieEndNotify = 5095;
+    public static final int AvatarRenameInfoNotify = 6549;
+    public static final int EvtAvatarSitDownNotify = 22638;
+    public static final int EvtCostStaminaNotify = 1514;
+    public static final int ClientLoadingCostumeVerificationNotify = 6382;
+    public static final int PlayerForceExitReq = 26372;
 
 
 
@@ -550,7 +558,6 @@ public final class PacketOpcodes {
     public static final int AddSeenMonsterNotify = 1;
     public static final int AdjustGachaTimesNotify = 1;
     public static final int AdjustWorldLevelReq = 1;
-    public static final int AdjustWorldLevelRsp = 1;
     public static final int AkaFesArchitectDungeonRecoverNotify = 1;
     public static final int AkaFesArchitectSuccNotify = 1;
     public static final int AkaFesAstrolabeFinishLevelReq = 1;
@@ -608,7 +615,6 @@ public final class PacketOpcodes {
     public static final int AvatarExpeditionStartRsp = 1;
     public static final int AvatarFollowRouteNotify = 1;
     public static final int AvatarPromoteGetRewardReq = 1;
-    public static final int AvatarRenameInfoNotify = 1;
     public static final int BackPlayCustomDungeonOfficialReq = 1;
     public static final int BackPlayCustomDungeonOfficialRsp = 1;
     public static final int BackRebornGalleryReq = 1;
@@ -763,7 +769,6 @@ public final class PacketOpcodes {
     public static final int ClientBulletCreateNotify = 1;
     public static final int ClientCollectorDataNotify = 1;
     public static final int ClientHashDebugNotify = 1;
-    public static final int ClientLoadingCostumeVerificationNotify = 1;
     public static final int ClientLockGameTimeNotify = 1;
     public static final int ClientNewMailNotify = 1;
     public static final int ClientPauseNotify = 1;
@@ -1007,15 +1012,11 @@ public final class PacketOpcodes {
     public static final int EvtAnimatorStateChangedNotify = 1;
     public static final int EvtAvatarEnterFocusNotify = 1;
     public static final int EvtAvatarExitFocusNotify = 1;
-    public static final int EvtAvatarSitDownNotify = 1;
     public static final int EvtAvatarUpdateFocusNotify = 1;
     public static final int EvtBeingHealedNotify = 1;
     public static final int EvtBulletDeactiveNotify = 1;
     public static final int EvtBulletMoveNotify = 1;
-    public static final int EvtCostStaminaNotify = 1;
     public static final int EvtDestroyServerGadgetNotify = 1;
-    public static final int EvtEntityRenderersChangedNotify = 1;
-    public static final int EvtEntityStartDieEndNotify = 1;
     public static final int EvtFaceToDirNotify = 1;
     public static final int EvtFaceToEntityNotify = 1;
     public static final int EvtLocalGadgetOwnerLeaveSceneNotify = 1;
@@ -1805,7 +1806,6 @@ public final class PacketOpcodes {
     public static final int PlayerDeathZoneNotify = 1;
     public static final int PlayerEyePointStateNotify = 1;
     public static final int PlayerFishingDataNotify = 1;
-    public static final int PlayerForceExitReq = 1;
     public static final int PlayerForceExitRsp = 1;
     public static final int PlayerGCGMatchConfirmNotify = 1;
     public static final int PlayerGCGMatchDismissNotify = 1;

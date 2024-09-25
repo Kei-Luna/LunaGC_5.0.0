@@ -19,33 +19,32 @@ public final class AvatarRenameInfoNotifyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> 
         getAvatarRenameListList();
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index);
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     int getAvatarRenameListCount();
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
         getAvatarRenameListOrBuilderList();
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * 4.6.0
-   * CmdId: 24403
+   * CmdId: 6549
    * </pre>
    *
    * Protobuf type {@code AvatarRenameInfoNotify}
@@ -94,7 +93,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
             case 0:
               done = true;
               break;
-            case 66: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 avatarRenameList_ = new java.util.ArrayList<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo>();
                 mutable_bitField0_ |= 0x00000001;
@@ -138,17 +137,17 @@ public final class AvatarRenameInfoNotifyOuterClass {
               emu.grasscutter.net.proto.AvatarRenameInfoNotifyOuterClass.AvatarRenameInfoNotify.class, emu.grasscutter.net.proto.AvatarRenameInfoNotifyOuterClass.AvatarRenameInfoNotify.Builder.class);
     }
 
-    public static final int AVATAR_RENAME_LIST_FIELD_NUMBER = 8;
+    public static final int AVATAR_RENAME_LIST_FIELD_NUMBER = 2;
     private java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> avatarRenameList_;
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
       return avatarRenameList_;
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
@@ -156,21 +155,21 @@ public final class AvatarRenameInfoNotifyOuterClass {
       return avatarRenameList_;
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     @java.lang.Override
     public int getAvatarRenameListCount() {
       return avatarRenameList_.size();
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
       return avatarRenameList_.get(index);
     }
     /**
-     * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+     * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
@@ -193,7 +192,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < avatarRenameList_.size(); i++) {
-        output.writeMessage(8, avatarRenameList_.get(i));
+        output.writeMessage(2, avatarRenameList_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -206,7 +205,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
       size = 0;
       for (int i = 0; i < avatarRenameList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, avatarRenameList_.get(i));
+          .computeMessageSize(2, avatarRenameList_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -337,8 +336,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
     }
     /**
      * <pre>
-     * 4.6.0
-     * CmdId: 24403
+     * CmdId: 6549
      * </pre>
      *
      * Protobuf type {@code AvatarRenameInfoNotify}
@@ -538,7 +536,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
           emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> avatarRenameListBuilder_;
 
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> getAvatarRenameListList() {
         if (avatarRenameListBuilder_ == null) {
@@ -548,7 +546,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public int getAvatarRenameListCount() {
         if (avatarRenameListBuilder_ == null) {
@@ -558,7 +556,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo getAvatarRenameList(int index) {
         if (avatarRenameListBuilder_ == null) {
@@ -568,7 +566,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder setAvatarRenameList(
           int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
@@ -585,7 +583,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder setAvatarRenameList(
           int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
@@ -599,7 +597,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder addAvatarRenameList(emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
         if (avatarRenameListBuilder_ == null) {
@@ -615,7 +613,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder addAvatarRenameList(
           int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo value) {
@@ -632,7 +630,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder addAvatarRenameList(
           emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
@@ -646,7 +644,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder addAvatarRenameList(
           int index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder builderForValue) {
@@ -660,7 +658,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder addAllAvatarRenameList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo> values) {
@@ -675,7 +673,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder clearAvatarRenameList() {
         if (avatarRenameListBuilder_ == null) {
@@ -688,7 +686,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public Builder removeAvatarRenameList(int index) {
         if (avatarRenameListBuilder_ == null) {
@@ -701,14 +699,14 @@ public final class AvatarRenameInfoNotifyOuterClass {
         return this;
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder getAvatarRenameListBuilder(
           int index) {
         return getAvatarRenameListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder getAvatarRenameListOrBuilder(
           int index) {
@@ -718,7 +716,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfoOrBuilder> 
            getAvatarRenameListOrBuilderList() {
@@ -729,14 +727,14 @@ public final class AvatarRenameInfoNotifyOuterClass {
         }
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder() {
         return getAvatarRenameListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder addAvatarRenameListBuilder(
           int index) {
@@ -744,7 +742,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
             index, emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .AvatarRenameInfo avatar_rename_list = 8;</code>
+       * <code>repeated .AvatarRenameInfo avatar_rename_list = 2;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo.Builder> 
            getAvatarRenameListBuilderList() {
@@ -833,7 +831,7 @@ public final class AvatarRenameInfoNotifyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034AvatarRenameInfoNotify.proto\032\026AvatarRe" +
       "nameInfo.proto\"G\n\026AvatarRenameInfoNotify" +
-      "\022-\n\022avatar_rename_list\030\010 \003(\0132\021.AvatarRen" +
+      "\022-\n\022avatar_rename_list\030\002 \003(\0132\021.AvatarRen" +
       "ameInfoB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
