@@ -473,6 +473,11 @@ public final class PacketOpcodes {
     public static final int AvatarPromoteRsp = 1987;
     public static final int ProudSkillChangeNotify = 29262;
     public static final int ProudSkillExtraLevelNotify = 28513;
+    public static final int AvatarSatiationDataNotify = 4982;
+    public static final int AvatarEnterElementViewNotify = 88;
+    public static final int AbilityInvocationFailNotify = 9225;
+    public static final int AvatarEquipAffixStartNotify = 8492;
+    public static final int GachaWishReq = 25407;
 
 
 
