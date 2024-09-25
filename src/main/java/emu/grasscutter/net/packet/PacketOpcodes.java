@@ -469,11 +469,6 @@ public final class PacketOpcodes {
     public static final int AvatarSkillMaxChargeCountNotify = 28497;
     public static final int AvatarPropChangeReasonNotify = 24920;
     public static final int AvatarSkillInfoNotify = 25299;
-    public static final int AvatarSatiationDataNotify = 4982;
-    public static final int AvatarEnterElementViewNotify = 88;
-    public static final int AbilityInvocationFailNotify = 9225;
-    public static final int AvatarEquipAffixStartNotify = 8492;
-    public static final int GachaWishReq = 25407;
 
 
 
