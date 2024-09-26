@@ -491,6 +491,7 @@ public final class PacketOpcodes {
     public static final int SelectAsterMidDifficultyReq = 9382;
     public static final int SelectEffigyChallengeConditionReq = 26519;
     public static final int SelectEffigyChallengeConditionRsp = 2737;
+    public static final int HitClientTrivialNotify = 25759;
 
 
     // Names
@@ -1429,7 +1430,6 @@ public final class PacketOpcodes {
     public static final int HideAndSeekSetReadyReq = 1;
     public static final int HideAndSeekSetReadyRsp = 1;
     public static final int HideAndSeekSettleNotify = 1;
-    public static final int HitClientTrivialNotify = 1;
     public static final int HomeAvatarSummonEventRsp = 1;
     public static final int HomeAvatarSummonFinishReq = 1;
     public static final int HomeAvatarSummonFinishRsp = 1;
