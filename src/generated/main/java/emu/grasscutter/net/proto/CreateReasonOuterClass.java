@@ -15,10 +15,6 @@ public final class CreateReasonOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * <pre>
-   * Obf: DDPMPGDLDEN
-   * </pre>
-   *
    * Protobuf enum {@code CreateReason}
    */
   public enum CreateReason

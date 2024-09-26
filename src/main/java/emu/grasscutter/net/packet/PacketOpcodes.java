@@ -492,6 +492,9 @@ public final class PacketOpcodes {
     public static final int SelectEffigyChallengeConditionReq = 26519;
     public static final int SelectEffigyChallengeConditionRsp = 2737;
     public static final int HitClientTrivialNotify = 25759;
+    public static final int SceneCreateEntityReq = 8882;
+    public static final int SceneCreateEntityRsp = 7039;
+    public static final int SceneEntityUpdateNotify = 1936;
 
 
     // Names
@@ -2011,8 +2014,6 @@ public final class PacketOpcodes {
     public static final int SceneAudioNotify = 1;
     public static final int SceneAvatarStaminaStepReq = 1;
     public static final int SceneAvatarStaminaStepRsp = 1;
-    public static final int SceneCreateEntityReq = 1;
-    public static final int SceneCreateEntityRsp = 1;
     public static final int SceneDestroyEntityReq = 1;
     public static final int SceneDestroyEntityRsp = 1;
     public static final int SceneEntitiesMoveCombineNotify = 1;
@@ -2021,7 +2022,6 @@ public final class PacketOpcodes {
     public static final int SceneEntityMoveNotify = 1;
     public static final int SceneEntityMoveReq = 1;
     public static final int SceneEntityMoveRsp = 1;
-    public static final int SceneEntityUpdateNotify = 1;
     public static final int SceneForceLockNotify = 1;
     public static final int SceneGalleryInfoNotify = 1;
     public static final int SceneGalleryVintageHuntingSettleNotify = 1;

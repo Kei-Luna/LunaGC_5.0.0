@@ -30,25 +30,21 @@ public final class CreateGadgetInfoOuterClass {
     emu.grasscutter.net.proto.GadgetBornTypeOuterClass.GadgetBornType getBornType();
 
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      * @return Whether the chest field is set.
      */
     boolean hasChest();
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      * @return The chest.
      */
-    emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getChest();
+    emu.grasscutter.net.proto.ChestOuterClass.Chest getChest();
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      */
-    emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder getChestOrBuilder();
+    emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder getChestOrBuilder();
   }
   /**
-   * <pre>
-   * Obf: NDJJNLJIAKO
-   * </pre>
-   *
    * Protobuf type {@code CreateGadgetInfo}
    */
   public static final class CreateGadgetInfo extends
@@ -101,11 +97,11 @@ public final class CreateGadgetInfoOuterClass {
               break;
             }
             case 18: {
-              emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder subBuilder = null;
+              emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder subBuilder = null;
               if (chest_ != null) {
                 subBuilder = chest_.toBuilder();
               }
-              chest_ = input.readMessage(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.parser(), extensionRegistry);
+              chest_ = input.readMessage(emu.grasscutter.net.proto.ChestOuterClass.Chest.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(chest_);
                 chest_ = subBuilder.buildPartial();
@@ -145,573 +141,6 @@ public final class CreateGadgetInfoOuterClass {
               emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.class, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Builder.class);
     }
 
-    public interface ChestOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:CreateGadgetInfo.Chest)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>uint32 chest_drop_id = 1;</code>
-       * @return The chestDropId.
-       */
-      int getChestDropId();
-
-      /**
-       * <code>bool is_show_cutscene = 2;</code>
-       * @return The isShowCutscene.
-       */
-      boolean getIsShowCutscene();
-    }
-    /**
-     * <pre>
-     * Obf: FGAGBNDOGCB
-     * </pre>
-     *
-     * Protobuf type {@code CreateGadgetInfo.Chest}
-     */
-    public static final class Chest extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:CreateGadgetInfo.Chest)
-        ChestOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Chest.newBuilder() to construct.
-      private Chest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Chest() {
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Chest();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Chest(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-
-                chestDropId_ = input.readUInt32();
-                break;
-              }
-              case 16: {
-
-                isShowCutscene_ = input.readBool();
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.internal_static_CreateGadgetInfo_Chest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.internal_static_CreateGadgetInfo_Chest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.class, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder.class);
-      }
-
-      public static final int CHEST_DROP_ID_FIELD_NUMBER = 1;
-      private int chestDropId_;
-      /**
-       * <code>uint32 chest_drop_id = 1;</code>
-       * @return The chestDropId.
-       */
-      @java.lang.Override
-      public int getChestDropId() {
-        return chestDropId_;
-      }
-
-      public static final int IS_SHOW_CUTSCENE_FIELD_NUMBER = 2;
-      private boolean isShowCutscene_;
-      /**
-       * <code>bool is_show_cutscene = 2;</code>
-       * @return The isShowCutscene.
-       */
-      @java.lang.Override
-      public boolean getIsShowCutscene() {
-        return isShowCutscene_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (chestDropId_ != 0) {
-          output.writeUInt32(1, chestDropId_);
-        }
-        if (isShowCutscene_ != false) {
-          output.writeBool(2, isShowCutscene_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (chestDropId_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(1, chestDropId_);
-        }
-        if (isShowCutscene_ != false) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(2, isShowCutscene_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest)) {
-          return super.equals(obj);
-        }
-        emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest other = (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest) obj;
-
-        if (getChestDropId()
-            != other.getChestDropId()) return false;
-        if (getIsShowCutscene()
-            != other.getIsShowCutscene()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + CHEST_DROP_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getChestDropId();
-        hash = (37 * hash) + IS_SHOW_CUTSCENE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIsShowCutscene());
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Obf: FGAGBNDOGCB
-       * </pre>
-       *
-       * Protobuf type {@code CreateGadgetInfo.Chest}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:CreateGadgetInfo.Chest)
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.internal_static_CreateGadgetInfo_Chest_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.internal_static_CreateGadgetInfo_Chest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.class, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder.class);
-        }
-
-        // Construct using emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          chestDropId_ = 0;
-
-          isShowCutscene_ = false;
-
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.internal_static_CreateGadgetInfo_Chest_descriptor;
-        }
-
-        @java.lang.Override
-        public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getDefaultInstanceForType() {
-          return emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest build() {
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest buildPartial() {
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest result = new emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest(this);
-          result.chestDropId_ = chestDropId_;
-          result.isShowCutscene_ = isShowCutscene_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest) {
-            return mergeFrom((emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest other) {
-          if (other == emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.getDefaultInstance()) return this;
-          if (other.getChestDropId() != 0) {
-            setChestDropId(other.getChestDropId());
-          }
-          if (other.getIsShowCutscene() != false) {
-            setIsShowCutscene(other.getIsShowCutscene());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private int chestDropId_ ;
-        /**
-         * <code>uint32 chest_drop_id = 1;</code>
-         * @return The chestDropId.
-         */
-        @java.lang.Override
-        public int getChestDropId() {
-          return chestDropId_;
-        }
-        /**
-         * <code>uint32 chest_drop_id = 1;</code>
-         * @param value The chestDropId to set.
-         * @return This builder for chaining.
-         */
-        public Builder setChestDropId(int value) {
-          
-          chestDropId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>uint32 chest_drop_id = 1;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearChestDropId() {
-          
-          chestDropId_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private boolean isShowCutscene_ ;
-        /**
-         * <code>bool is_show_cutscene = 2;</code>
-         * @return The isShowCutscene.
-         */
-        @java.lang.Override
-        public boolean getIsShowCutscene() {
-          return isShowCutscene_;
-        }
-        /**
-         * <code>bool is_show_cutscene = 2;</code>
-         * @param value The isShowCutscene to set.
-         * @return This builder for chaining.
-         */
-        public Builder setIsShowCutscene(boolean value) {
-          
-          isShowCutscene_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>bool is_show_cutscene = 2;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearIsShowCutscene() {
-          
-          isShowCutscene_ = false;
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:CreateGadgetInfo.Chest)
-      }
-
-      // @@protoc_insertion_point(class_scope:CreateGadgetInfo.Chest)
-      private static final emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest();
-      }
-
-      public static emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Chest>
-          PARSER = new com.google.protobuf.AbstractParser<Chest>() {
-        @java.lang.Override
-        public Chest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Chest(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Chest> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Chest> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     public static final int BORN_TYPE_FIELD_NUMBER = 1;
     private int bornType_;
     /**
@@ -732,9 +161,9 @@ public final class CreateGadgetInfoOuterClass {
     }
 
     public static final int CHEST_FIELD_NUMBER = 2;
-    private emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest chest_;
+    private emu.grasscutter.net.proto.ChestOuterClass.Chest chest_;
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      * @return Whether the chest field is set.
      */
     @java.lang.Override
@@ -742,18 +171,18 @@ public final class CreateGadgetInfoOuterClass {
       return chest_ != null;
     }
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      * @return The chest.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getChest() {
-      return chest_ == null ? emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.getDefaultInstance() : chest_;
+    public emu.grasscutter.net.proto.ChestOuterClass.Chest getChest() {
+      return chest_ == null ? emu.grasscutter.net.proto.ChestOuterClass.Chest.getDefaultInstance() : chest_;
     }
     /**
-     * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+     * <code>.Chest chest = 2;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder getChestOrBuilder() {
+    public emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder getChestOrBuilder() {
       return getChest();
     }
 
@@ -928,10 +357,6 @@ public final class CreateGadgetInfoOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Obf: NDJJNLJIAKO
-     * </pre>
-     *
      * Protobuf type {@code CreateGadgetInfo}
      */
     public static final class Builder extends
@@ -1146,31 +571,31 @@ public final class CreateGadgetInfoOuterClass {
         return this;
       }
 
-      private emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest chest_;
+      private emu.grasscutter.net.proto.ChestOuterClass.Chest chest_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder> chestBuilder_;
+          emu.grasscutter.net.proto.ChestOuterClass.Chest, emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder, emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder> chestBuilder_;
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        * @return Whether the chest field is set.
        */
       public boolean hasChest() {
         return chestBuilder_ != null || chest_ != null;
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        * @return The chest.
        */
-      public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest getChest() {
+      public emu.grasscutter.net.proto.ChestOuterClass.Chest getChest() {
         if (chestBuilder_ == null) {
-          return chest_ == null ? emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.getDefaultInstance() : chest_;
+          return chest_ == null ? emu.grasscutter.net.proto.ChestOuterClass.Chest.getDefaultInstance() : chest_;
         } else {
           return chestBuilder_.getMessage();
         }
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
-      public Builder setChest(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest value) {
+      public Builder setChest(emu.grasscutter.net.proto.ChestOuterClass.Chest value) {
         if (chestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1184,10 +609,10 @@ public final class CreateGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
       public Builder setChest(
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder builderForValue) {
+          emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder builderForValue) {
         if (chestBuilder_ == null) {
           chest_ = builderForValue.build();
           onChanged();
@@ -1198,13 +623,13 @@ public final class CreateGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
-      public Builder mergeChest(emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest value) {
+      public Builder mergeChest(emu.grasscutter.net.proto.ChestOuterClass.Chest value) {
         if (chestBuilder_ == null) {
           if (chest_ != null) {
             chest_ =
-              emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.newBuilder(chest_).mergeFrom(value).buildPartial();
+              emu.grasscutter.net.proto.ChestOuterClass.Chest.newBuilder(chest_).mergeFrom(value).buildPartial();
           } else {
             chest_ = value;
           }
@@ -1216,7 +641,7 @@ public final class CreateGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
       public Builder clearChest() {
         if (chestBuilder_ == null) {
@@ -1230,33 +655,33 @@ public final class CreateGadgetInfoOuterClass {
         return this;
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
-      public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder getChestBuilder() {
+      public emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder getChestBuilder() {
         
         onChanged();
         return getChestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
-      public emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder getChestOrBuilder() {
+      public emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder getChestOrBuilder() {
         if (chestBuilder_ != null) {
           return chestBuilder_.getMessageOrBuilder();
         } else {
           return chest_ == null ?
-              emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.getDefaultInstance() : chest_;
+              emu.grasscutter.net.proto.ChestOuterClass.Chest.getDefaultInstance() : chest_;
         }
       }
       /**
-       * <code>.CreateGadgetInfo.Chest chest = 2;</code>
+       * <code>.Chest chest = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder> 
+          emu.grasscutter.net.proto.ChestOuterClass.Chest, emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder, emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder> 
           getChestFieldBuilder() {
         if (chestBuilder_ == null) {
           chestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.Chest.Builder, emu.grasscutter.net.proto.CreateGadgetInfoOuterClass.CreateGadgetInfo.ChestOrBuilder>(
+              emu.grasscutter.net.proto.ChestOuterClass.Chest, emu.grasscutter.net.proto.ChestOuterClass.Chest.Builder, emu.grasscutter.net.proto.ChestOuterClass.ChestOrBuilder>(
                   getChest(),
                   getParentForChildren(),
                   isClean());
@@ -1322,11 +747,6 @@ public final class CreateGadgetInfoOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_CreateGadgetInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CreateGadgetInfo_Chest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_CreateGadgetInfo_Chest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1337,16 +757,16 @@ public final class CreateGadgetInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026CreateGadgetInfo.proto\032\024GadgetBornType" +
-      ".proto\"\230\001\n\020CreateGadgetInfo\022\"\n\tborn_type" +
-      "\030\001 \001(\0162\017.GadgetBornType\022&\n\005chest\030\002 \001(\0132\027" +
-      ".CreateGadgetInfo.Chest\0328\n\005Chest\022\025\n\rches" +
-      "t_drop_id\030\001 \001(\r\022\030\n\020is_show_cutscene\030\002 \001(" +
-      "\010B\033\n\031emu.grasscutter.net.protob\006proto3"
+      ".proto\032\013Chest.proto\"M\n\020CreateGadgetInfo\022" +
+      "\"\n\tborn_type\030\001 \001(\0162\017.GadgetBornType\022\025\n\005c" +
+      "hest\030\002 \001(\0132\006.ChestB\033\n\031emu.grasscutter.ne" +
+      "t.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.ChestOuterClass.getDescriptor(),
         });
     internal_static_CreateGadgetInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1354,13 +774,8 @@ public final class CreateGadgetInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CreateGadgetInfo_descriptor,
         new java.lang.String[] { "BornType", "Chest", });
-    internal_static_CreateGadgetInfo_Chest_descriptor =
-      internal_static_CreateGadgetInfo_descriptor.getNestedTypes().get(0);
-    internal_static_CreateGadgetInfo_Chest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_CreateGadgetInfo_Chest_descriptor,
-        new java.lang.String[] { "ChestDropId", "IsShowCutscene", });
     emu.grasscutter.net.proto.GadgetBornTypeOuterClass.getDescriptor();
+    emu.grasscutter.net.proto.ChestOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
