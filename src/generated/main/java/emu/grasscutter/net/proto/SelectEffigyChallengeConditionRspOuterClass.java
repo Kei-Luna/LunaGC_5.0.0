@@ -19,44 +19,43 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 1;</code>
-     * @return The retcode.
-     */
-    int getRetcode();
-
-    /**
-     * <code>uint32 challenge_id = 12;</code>
+     * <code>uint32 challenge_id = 1;</code>
      * @return The challengeId.
      */
     int getChallengeId();
 
     /**
-     * <code>uint32 difficulty_id = 9;</code>
-     * @return The difficultyId.
-     */
-    int getDifficultyId();
-
-    /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @return A list containing the conditionIdList.
      */
     java.util.List<java.lang.Integer> getConditionIdListList();
     /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @return The count of conditionIdList.
      */
     int getConditionIdListCount();
     /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @param index The index of the element to return.
      * @return The conditionIdList at the given index.
      */
     int getConditionIdList(int index);
+
+    /**
+     * <code>int32 retcode = 13;</code>
+     * @return The retcode.
+     */
+    int getRetcode();
+
+    /**
+     * <code>uint32 difficulty_id = 15;</code>
+     * @return The difficultyId.
+     */
+    int getDifficultyId();
   }
   /**
    * <pre>
-   * CmdId: 3284
-   * Obf: HLKDIBKJBIN
+   * CmdId: 2737
    * </pre>
    *
    * Protobuf type {@code SelectEffigyChallengeConditionRsp}
@@ -107,10 +106,10 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
               break;
             case 8: {
 
-              retcode_ = input.readInt32();
+              challengeId_ = input.readUInt32();
               break;
             }
-            case 24: {
+            case 32: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 conditionIdList_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -118,7 +117,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
               conditionIdList_.addInt(input.readUInt32());
               break;
             }
-            case 26: {
+            case 34: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -131,14 +130,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
               input.popLimit(limit);
               break;
             }
-            case 72: {
+            case 104: {
 
-              difficultyId_ = input.readUInt32();
+              retcode_ = input.readInt32();
               break;
             }
-            case 96: {
+            case 120: {
 
-              challengeId_ = input.readUInt32();
+              difficultyId_ = input.readUInt32();
               break;
             }
             default: {
@@ -176,21 +175,10 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
               emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp.class, emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 1;
-    private int retcode_;
-    /**
-     * <code>int32 retcode = 1;</code>
-     * @return The retcode.
-     */
-    @java.lang.Override
-    public int getRetcode() {
-      return retcode_;
-    }
-
-    public static final int CHALLENGE_ID_FIELD_NUMBER = 12;
+    public static final int CHALLENGE_ID_FIELD_NUMBER = 1;
     private int challengeId_;
     /**
-     * <code>uint32 challenge_id = 12;</code>
+     * <code>uint32 challenge_id = 1;</code>
      * @return The challengeId.
      */
     @java.lang.Override
@@ -198,21 +186,10 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       return challengeId_;
     }
 
-    public static final int DIFFICULTY_ID_FIELD_NUMBER = 9;
-    private int difficultyId_;
-    /**
-     * <code>uint32 difficulty_id = 9;</code>
-     * @return The difficultyId.
-     */
-    @java.lang.Override
-    public int getDifficultyId() {
-      return difficultyId_;
-    }
-
-    public static final int CONDITION_ID_LIST_FIELD_NUMBER = 3;
+    public static final int CONDITION_ID_LIST_FIELD_NUMBER = 4;
     private com.google.protobuf.Internal.IntList conditionIdList_;
     /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @return A list containing the conditionIdList.
      */
     @java.lang.Override
@@ -221,14 +198,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       return conditionIdList_;
     }
     /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @return The count of conditionIdList.
      */
     public int getConditionIdListCount() {
       return conditionIdList_.size();
     }
     /**
-     * <code>repeated uint32 condition_id_list = 3;</code>
+     * <code>repeated uint32 condition_id_list = 4;</code>
      * @param index The index of the element to return.
      * @return The conditionIdList at the given index.
      */
@@ -236,6 +213,28 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       return conditionIdList_.getInt(index);
     }
     private int conditionIdListMemoizedSerializedSize = -1;
+
+    public static final int RETCODE_FIELD_NUMBER = 13;
+    private int retcode_;
+    /**
+     * <code>int32 retcode = 13;</code>
+     * @return The retcode.
+     */
+    @java.lang.Override
+    public int getRetcode() {
+      return retcode_;
+    }
+
+    public static final int DIFFICULTY_ID_FIELD_NUMBER = 15;
+    private int difficultyId_;
+    /**
+     * <code>uint32 difficulty_id = 15;</code>
+     * @return The difficultyId.
+     */
+    @java.lang.Override
+    public int getDifficultyId() {
+      return difficultyId_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -252,21 +251,21 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (retcode_ != 0) {
-        output.writeInt32(1, retcode_);
+      if (challengeId_ != 0) {
+        output.writeUInt32(1, challengeId_);
       }
       if (getConditionIdListList().size() > 0) {
-        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(34);
         output.writeUInt32NoTag(conditionIdListMemoizedSerializedSize);
       }
       for (int i = 0; i < conditionIdList_.size(); i++) {
         output.writeUInt32NoTag(conditionIdList_.getInt(i));
       }
-      if (difficultyId_ != 0) {
-        output.writeUInt32(9, difficultyId_);
+      if (retcode_ != 0) {
+        output.writeInt32(13, retcode_);
       }
-      if (challengeId_ != 0) {
-        output.writeUInt32(12, challengeId_);
+      if (difficultyId_ != 0) {
+        output.writeUInt32(15, difficultyId_);
       }
       unknownFields.writeTo(output);
     }
@@ -277,9 +276,9 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (retcode_ != 0) {
+      if (challengeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, retcode_);
+          .computeUInt32Size(1, challengeId_);
       }
       {
         int dataSize = 0;
@@ -295,13 +294,13 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         }
         conditionIdListMemoizedSerializedSize = dataSize;
       }
+      if (retcode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(13, retcode_);
+      }
       if (difficultyId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, difficultyId_);
-      }
-      if (challengeId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, challengeId_);
+          .computeUInt32Size(15, difficultyId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -318,14 +317,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       }
       emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp other = (emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp) obj;
 
-      if (getRetcode()
-          != other.getRetcode()) return false;
       if (getChallengeId()
           != other.getChallengeId()) return false;
-      if (getDifficultyId()
-          != other.getDifficultyId()) return false;
       if (!getConditionIdListList()
           .equals(other.getConditionIdListList())) return false;
+      if (getRetcode()
+          != other.getRetcode()) return false;
+      if (getDifficultyId()
+          != other.getDifficultyId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -337,16 +336,16 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
-      hash = (53 * hash) + getRetcode();
       hash = (37 * hash) + CHALLENGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getChallengeId();
-      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDifficultyId();
       if (getConditionIdListCount() > 0) {
         hash = (37 * hash) + CONDITION_ID_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getConditionIdListList().hashCode();
       }
+      hash = (37 * hash) + RETCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRetcode();
+      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDifficultyId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -444,8 +443,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
     }
     /**
      * <pre>
-     * CmdId: 3284
-     * Obf: HLKDIBKJBIN
+     * CmdId: 2737
      * </pre>
      *
      * Protobuf type {@code SelectEffigyChallengeConditionRsp}
@@ -485,14 +483,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        retcode_ = 0;
-
         challengeId_ = 0;
-
-        difficultyId_ = 0;
 
         conditionIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        retcode_ = 0;
+
+        difficultyId_ = 0;
+
         return this;
       }
 
@@ -520,14 +518,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       public emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp buildPartial() {
         emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp result = new emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp(this);
         int from_bitField0_ = bitField0_;
-        result.retcode_ = retcode_;
         result.challengeId_ = challengeId_;
-        result.difficultyId_ = difficultyId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           conditionIdList_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.conditionIdList_ = conditionIdList_;
+        result.retcode_ = retcode_;
+        result.difficultyId_ = difficultyId_;
         onBuilt();
         return result;
       }
@@ -576,14 +574,8 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp other) {
         if (other == emu.grasscutter.net.proto.SelectEffigyChallengeConditionRspOuterClass.SelectEffigyChallengeConditionRsp.getDefaultInstance()) return this;
-        if (other.getRetcode() != 0) {
-          setRetcode(other.getRetcode());
-        }
         if (other.getChallengeId() != 0) {
           setChallengeId(other.getChallengeId());
-        }
-        if (other.getDifficultyId() != 0) {
-          setDifficultyId(other.getDifficultyId());
         }
         if (!other.conditionIdList_.isEmpty()) {
           if (conditionIdList_.isEmpty()) {
@@ -594,6 +586,12 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
             conditionIdList_.addAll(other.conditionIdList_);
           }
           onChanged();
+        }
+        if (other.getRetcode() != 0) {
+          setRetcode(other.getRetcode());
+        }
+        if (other.getDifficultyId() != 0) {
+          setDifficultyId(other.getDifficultyId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -625,40 +623,9 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
       }
       private int bitField0_;
 
-      private int retcode_ ;
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @return The retcode.
-       */
-      @java.lang.Override
-      public int getRetcode() {
-        return retcode_;
-      }
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @param value The retcode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRetcode(int value) {
-        
-        retcode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 retcode = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRetcode() {
-        
-        retcode_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int challengeId_ ;
       /**
-       * <code>uint32 challenge_id = 12;</code>
+       * <code>uint32 challenge_id = 1;</code>
        * @return The challengeId.
        */
       @java.lang.Override
@@ -666,7 +633,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return challengeId_;
       }
       /**
-       * <code>uint32 challenge_id = 12;</code>
+       * <code>uint32 challenge_id = 1;</code>
        * @param value The challengeId to set.
        * @return This builder for chaining.
        */
@@ -677,43 +644,12 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return this;
       }
       /**
-       * <code>uint32 challenge_id = 12;</code>
+       * <code>uint32 challenge_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearChallengeId() {
         
         challengeId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int difficultyId_ ;
-      /**
-       * <code>uint32 difficulty_id = 9;</code>
-       * @return The difficultyId.
-       */
-      @java.lang.Override
-      public int getDifficultyId() {
-        return difficultyId_;
-      }
-      /**
-       * <code>uint32 difficulty_id = 9;</code>
-       * @param value The difficultyId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDifficultyId(int value) {
-        
-        difficultyId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 difficulty_id = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDifficultyId() {
-        
-        difficultyId_ = 0;
         onChanged();
         return this;
       }
@@ -726,7 +662,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @return A list containing the conditionIdList.
        */
       public java.util.List<java.lang.Integer>
@@ -735,14 +671,14 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
                  java.util.Collections.unmodifiableList(conditionIdList_) : conditionIdList_;
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @return The count of conditionIdList.
        */
       public int getConditionIdListCount() {
         return conditionIdList_.size();
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @param index The index of the element to return.
        * @return The conditionIdList at the given index.
        */
@@ -750,7 +686,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return conditionIdList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @param index The index to set the value at.
        * @param value The conditionIdList to set.
        * @return This builder for chaining.
@@ -763,7 +699,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @param value The conditionIdList to add.
        * @return This builder for chaining.
        */
@@ -774,7 +710,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @param values The conditionIdList to add.
        * @return This builder for chaining.
        */
@@ -787,12 +723,74 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 condition_id_list = 3;</code>
+       * <code>repeated uint32 condition_id_list = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearConditionIdList() {
         conditionIdList_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private int retcode_ ;
+      /**
+       * <code>int32 retcode = 13;</code>
+       * @return The retcode.
+       */
+      @java.lang.Override
+      public int getRetcode() {
+        return retcode_;
+      }
+      /**
+       * <code>int32 retcode = 13;</code>
+       * @param value The retcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRetcode(int value) {
+        
+        retcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 retcode = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRetcode() {
+        
+        retcode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int difficultyId_ ;
+      /**
+       * <code>uint32 difficulty_id = 15;</code>
+       * @return The difficultyId.
+       */
+      @java.lang.Override
+      public int getDifficultyId() {
+        return difficultyId_;
+      }
+      /**
+       * <code>uint32 difficulty_id = 15;</code>
+       * @param value The difficultyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDifficultyId(int value) {
+        
+        difficultyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 difficulty_id = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDifficultyId() {
+        
+        difficultyId_ = 0;
         onChanged();
         return this;
       }
@@ -864,10 +862,10 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'SelectEffigyChallengeConditionRsp.prot" +
-      "o\"|\n!SelectEffigyChallengeConditionRsp\022\017" +
-      "\n\007retcode\030\001 \001(\005\022\024\n\014challenge_id\030\014 \001(\r\022\025\n" +
-      "\rdifficulty_id\030\t \001(\r\022\031\n\021condition_id_lis" +
-      "t\030\003 \003(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
+      "o\"|\n!SelectEffigyChallengeConditionRsp\022\024" +
+      "\n\014challenge_id\030\001 \001(\r\022\031\n\021condition_id_lis" +
+      "t\030\004 \003(\r\022\017\n\007retcode\030\r \001(\005\022\025\n\rdifficulty_i" +
+      "d\030\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -879,7 +877,7 @@ public final class SelectEffigyChallengeConditionRspOuterClass {
     internal_static_SelectEffigyChallengeConditionRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SelectEffigyChallengeConditionRsp_descriptor,
-        new java.lang.String[] { "Retcode", "ChallengeId", "DifficultyId", "ConditionIdList", });
+        new java.lang.String[] { "ChallengeId", "ConditionIdList", "Retcode", "DifficultyId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

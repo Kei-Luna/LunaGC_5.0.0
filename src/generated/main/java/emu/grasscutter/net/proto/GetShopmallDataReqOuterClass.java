@@ -19,12 +19,6 @@ public final class GetShopmallDataReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * <pre>
-   * CmdId: 9573
-   * Version: 4.6.0
-   * Obfs: HPDHEEIPNLP
-   * </pre>
-   *
    * Protobuf type {@code GetShopmallDataReq}
    */
   public static final class GetShopmallDataReq extends
@@ -246,12 +240,6 @@ public final class GetShopmallDataReqOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * CmdId: 9573
-     * Version: 4.6.0
-     * Obfs: HPDHEEIPNLP
-     * </pre>
-     *
      * Protobuf type {@code GetShopmallDataReq}
      */
     public static final class Builder extends
