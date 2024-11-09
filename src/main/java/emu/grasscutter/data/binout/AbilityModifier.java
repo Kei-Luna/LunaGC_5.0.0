@@ -346,9 +346,10 @@ public class AbilityModifier implements Serializable {
         public DynamicFloat valueRangeMax;
         public String overrideMapKey;
 
-        public int param1;
-        public int param2;
-        public int param3;
+        public int paramNum;
+        public DynamicFloat param1 = DynamicFloat.ZERO,
+                param2 = DynamicFloat.ZERO,
+                param3 = DynamicFloat.ZERO;
 
         public String funcName;
         public LuaCallType luaCallType;
@@ -359,12 +360,18 @@ public class AbilityModifier implements Serializable {
         public String content;
 
         public enum LuaCallType {
+            Gadget,
+            @SerializedName(value = "OwnerGadegt", alternate = "OwnerGadget")
+            OwnerGadget,
             FromGroup,
-            CurGalleryControlGroup,
-            CurChallengeGroup,
+            OwnerFromGroup,
             SpecificGroup,
+            CurScenePlay,
+            CurChallengeGroup,
+            CurRogueBossGroup,
+            CurGalleryControlGroup,
             AbilityGroupSourceGroup,
-            CurScenePlay
+            LevelBankZoneContainsGroup
         }
 
         public enum DropType {

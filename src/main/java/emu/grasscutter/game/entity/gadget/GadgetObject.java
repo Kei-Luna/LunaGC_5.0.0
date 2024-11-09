@@ -10,9 +10,11 @@ import emu.grasscutter.net.proto.*;
 import emu.grasscutter.scripts.constants.EventType;
 import emu.grasscutter.scripts.data.ScriptArgs;
 import emu.grasscutter.server.packet.send.PacketGadgetInteractRsp;
+import java.util.Arrays;
 
 public class GadgetObject extends GadgetContent {
     private int itemId;
+    private boolean isItem;
 
     public GadgetObject(EntityGadget gadget) {
         super(gadget);
@@ -20,6 +22,7 @@ public class GadgetObject extends GadgetContent {
         if (gatherData != null) {
             this.itemId = gatherData.getItemId();
         }
+        this.isItem = !GameData.getGadgetMappingMap().containsKey(gadget.getGadgetId()) && Arrays.stream(gadget.getGadgetData().getTags()).anyMatch("item"::equals);
     }
 
     @Override
@@ -27,7 +30,7 @@ public class GadgetObject extends GadgetContent {
         // This is a workaround until a proper gadget interaction system can be put in place.
         ItemData itemData = GameData.getItemDataMap().get(this.itemId);
         if (itemData == null) {
-            return false;
+            return this.isItem;
         }
 
         GameItem item = new GameItem(itemData, 1);

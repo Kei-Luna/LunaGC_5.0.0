@@ -4,6 +4,7 @@ import emu.grasscutter.command.*;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.world.Position;
 import java.util.List;
+import java.util.Set;
 
 @Command(
         label = "position",
@@ -14,6 +15,11 @@ public final class PositionCommand implements CommandHandler {
     public void execute(Player sender, Player targetPlayer, List<String> args) {
         Position pos = targetPlayer.getPosition();
         Position rot = targetPlayer.getRotation();
+        int regionId = targetPlayer.getRegionId();
+        var region = targetPlayer.getScene().getScriptManager().getRegionById(regionId);
+        List<Integer> blocks = targetPlayer.getScene().getPlayerActiveBlocks(targetPlayer)
+            .stream().map(b -> b.id).toList();
+        Set<Integer> groups = region == null ? targetPlayer.getScene().getPlayerActiveGroups(targetPlayer) : Set.of(region.getGroupId());
         CommandHandler.sendTranslatedMessage(
                 sender,
                 "commands.position.success",
@@ -23,6 +29,10 @@ public final class PositionCommand implements CommandHandler {
                 rot.getX(),
                 rot.getY(),
                 rot.getZ(),
-                targetPlayer.getSceneId());
+                targetPlayer.getSceneId(),
+                regionId,
+                targetPlayer.getAreaId(),
+                blocks,
+                groups);
     }
 }

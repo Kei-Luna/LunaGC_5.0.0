@@ -158,6 +158,7 @@
       "displays": "Usunięto displaye gracza %s.",
       "virtuals": "Usunięto virtuale gracza %s.",
       "everything": "Usunięto wszystkie niewyposażone przedmioty gracza %s.",
+      "item": "Wyczyszczono %1 z %2 %3.",
       "description": "Usuń niewyposażone przedmioty wskazanego gracza."
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "Dodaj lub usuń uprawnienia podanego gracza."
     },
     "position": {
-      "success": "Koordynaty: (%s, %s, %s).\nKrążyć：%s, %s, %s\nID sceny: %s.",
+      "success": "Koordynaty: (%s, %s, %s).\nKrążyć: %s, %s, %s\nID sceny: %s, ID regionu: %s, ID obszaru: %s\nBloki: %s\nGrupy: %s",
       "description": "Pobiera informacje o pozycji i obrocie"
     },
     "quest": {

@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.lang.ref.SoftReference;
 import java.nio.file.*;
 import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.script.*;
@@ -24,7 +26,8 @@ import org.luaj.vm2.script.*;
 
 public class ScriptLoader {
     private static ScriptEngineManager sm;
-    @Getter private static LuaScriptEngine engine;
+    private static Bindings globalBindings;
+    private static final int SCOPE = ScriptContext.ENGINE_SCOPE;
     @Getter private static Serializer serializer;
     @Getter private static ScriptLib scriptLib;
     @Getter private static LuaValue scriptLibLua;
@@ -35,9 +38,10 @@ public class ScriptLoader {
             new ConcurrentHashMap<>();
     /** sceneId - SceneMeta */
     private static Map<Integer, SoftReference<SceneMeta>> sceneMetaCache = new ConcurrentHashMap<>();
-
-    private static final AtomicReference<Bindings> currentBindings = new AtomicReference<>(null);
-    private static final AtomicReference<ScriptContext> currentContext = new AtomicReference<>(null);
+    private static Pattern regexLocal = Pattern.compile("^local\\s+", Pattern.MULTILINE);
+    private static Pattern regexRequire = Pattern.compile("^require(\s*[^'\"]*('|\"))([^'\"]+)(.*)$", Pattern.MULTILINE);
+    private static Set<String> slowRequire = Set.of();
+    private static CompiledScript NullScript;
 
     /** Initializes the script engine. */
     public static synchronized void init() throws Exception {
@@ -45,44 +49,31 @@ public class ScriptLoader {
             throw new Exception("Script loader already initialized");
         }
 
-        // Create script engine
         ScriptLoader.sm = new ScriptEngineManager();
-        var engine = ScriptLoader.engine = (LuaScriptEngine) sm.getEngineByName("luaj");
         ScriptLoader.serializer = new LuaSerializer();
+        ScriptLoader.globalBindings = sm.getBindings();
 
-        // Set the Lua context.
-        var ctx = new LuajContext(true, false);
-        ctx.setBindings(engine.createBindings(), ScriptContext.ENGINE_SCOPE);
-        engine.setContext(ctx);
+        addEnumByIntValue(EntityType.values(), "EntityType");
+        addEnumByIntValue(QuestState.values(), "QuestState");
+        addEnumByIntValue(ElementType.values(), "ElementType");
 
-        // Set the 'require' function handler.
-        ctx.globals.set("require", new RequireFunction());
+        addEnumByOrdinal(GroupKillPolicy.values(), "GroupKillPolicy");
+        addEnumByOrdinal(SealBattleType.values(), "SealBattleType");
+        addEnumByOrdinal(FatherChallengeProperty.values(), "FatherChallengeProperty");
+        addEnumByOrdinal(ChallengeEventMarkType.values(), "ChallengeEventMarkType");
+        addEnumByOrdinal(VisionLevelType.values(), "VisionLevelType");
 
-        addEnumByIntValue(ctx, EntityType.values(), "EntityType");
-        addEnumByIntValue(ctx, QuestState.values(), "QuestState");
-        addEnumByIntValue(ctx, ElementType.values(), "ElementType");
-
-        addEnumByOrdinal(ctx, GroupKillPolicy.values(), "GroupKillPolicy");
-        addEnumByOrdinal(ctx, SealBattleType.values(), "SealBattleType");
-        addEnumByOrdinal(ctx, FatherChallengeProperty.values(), "FatherChallengeProperty");
-        addEnumByOrdinal(ctx, ChallengeEventMarkType.values(), "ChallengeEventMarkType");
-        addEnumByOrdinal(ctx, VisionLevelType.values(), "VisionLevelType");
-
-        ctx.globals.set(
-                "EventType",
-                CoerceJavaToLua.coerce(
-                        new EventType())); // TODO - make static class to avoid instantiating a new class every
-        // scene
-        ctx.globals.set("GadgetState", CoerceJavaToLua.coerce(new ScriptGadgetState()));
-        ctx.globals.set("RegionShape", CoerceJavaToLua.coerce(new ScriptRegionShape()));
+        globalBindings.put("EventType", CoerceJavaToLua.coerce(new EventType()));
+        globalBindings.put("GadgetState", CoerceJavaToLua.coerce(new ScriptGadgetState()));
+        globalBindings.put("RegionShape", CoerceJavaToLua.coerce(new ScriptRegionShape()));
 
         scriptLib = new ScriptLib();
         scriptLibLua = CoerceJavaToLua.coerce(scriptLib);
-        ctx.globals.set("ScriptLib", scriptLibLua);
+        globalBindings.put("ScriptLib", scriptLibLua);
+        ScriptLoader.NullScript = newScript("groups = {}", false);
     }
 
-    private static <T extends Enum<T>> void addEnumByOrdinal(
-            LuajContext ctx, T[] enumArray, String name) {
+    private static <T extends Enum<T>> void addEnumByOrdinal(T[] enumArray, String name) {
         LuaTable table = new LuaTable();
         Arrays.stream(enumArray)
                 .forEach(
@@ -90,11 +81,10 @@ public class ScriptLoader {
                             table.set(e.name(), e.ordinal());
                             table.set(e.name().toUpperCase(), e.ordinal());
                         });
-        ctx.globals.set(name, table);
+        globalBindings.put(name, table);
     }
 
-    private static <T extends Enum<T> & IntValueEnum> void addEnumByIntValue(
-            LuajContext ctx, T[] enumArray, String name) {
+    private static <T extends Enum<T> & IntValueEnum> void addEnumByIntValue(T[] enumArray, String name) {
         LuaTable table = new LuaTable();
         Arrays.stream(enumArray)
                 .forEach(
@@ -102,7 +92,7 @@ public class ScriptLoader {
                             table.set(e.name(), e.getValue());
                             table.set(e.name().toUpperCase(), e.getValue());
                         });
-        ctx.globals.set(name, table);
+        globalBindings.put(name, table);
     }
 
     public static <T> Optional<T> tryGet(SoftReference<T> softReference) {
@@ -121,17 +111,18 @@ public class ScriptLoader {
      * @return The result of the evaluation.
      */
     public static Object eval(CompiledScript script, Bindings bindings) throws ScriptException {
-        // Set the current bindings.
-        currentBindings.set(bindings);
+        bindings.putAll(globalBindings);
+        script.getEngine().setBindings(bindings, SCOPE);
         // Evaluate the script.
-        var result = script.eval(bindings);
-        // Clear the current bindings.
-        currentBindings.set(null);
-
-        return result;
+        return script.eval();
     }
 
     static final class RequireFunction extends OneArgFunction {
+        private ScriptContext ctx;
+        public RequireFunction(ScriptContext ctx) {
+            super();
+            this.ctx = ctx;
+        }
         @Override
         public LuaValue call(LuaValue arg) {
             // Resolve the script path.
@@ -146,13 +137,7 @@ public class ScriptLoader {
 
             // Append the script to the context.
             try {
-                var bindings = currentBindings.get();
-
-                if (bindings != null) {
-                    ScriptLoader.eval(script, bindings);
-                } else {
-                    script.eval();
-                }
+                script.eval(ctx.getBindings(SCOPE));
             } catch (Exception exception) {
                 if (DebugConstants.LOG_MISSING_LUA_SCRIPTS) {
                     Grasscutter.getLogger()
@@ -208,6 +193,21 @@ public class ScriptLoader {
         }
     }
 
+    private static CompiledScript newScript(String source, boolean fastRequire) {
+        try {
+            var engine = (LuaScriptEngine) sm.getEngineByName("luaj");
+            // Set the Lua context.
+            var ctx = new LuajContext(false, true);
+            engine.setContext(ctx);
+            // Set the 'require' function handler.
+            if (fastRequire) ctx.globals.set("require", new RequireFunction(ctx));
+            return engine.compile(source);
+        } catch (Exception e) {
+            Grasscutter.getLogger().error("Loading script failed! - {}", e.getLocalizedMessage());
+            return NullScript;
+        }
+    }
+
     /**
      * Fetches a script and compiles it, or uses the cached varient.
      *
@@ -232,60 +232,33 @@ public class ScriptLoader {
             return sc.get();
         }
 
-        try {
-            CompiledScript script;
-            if (Configuration.FAST_REQUIRE) {
-                // Attempt to load the script.
-                var scriptPath = useAbsPath ? Paths.get(path) : FileUtils.getScriptPath(path);
-                if (!Files.exists(scriptPath)) {
-                    Grasscutter.getLogger().error("Could not find script at path {}", path);
-                    return null;
+        // Load the script source.
+        String source = ScriptLoader.readScript(path, useAbsPath);
+        if (source == null) return NullScript;
+        // Check to see if the script references other scripts. Assuming every script in Common folder doesn't require again.
+        boolean fastRequire = false;
+        if (source.contains("require")) {
+            fastRequire = true;
+            for (Matcher matcher = regexRequire.matcher(source); matcher.find() && (fastRequire &= !slowRequire.contains(matcher.group(3))););
+            // Assuming every local declaration has indent respect to its scope.
+            if (fastRequire)
+                source = regexLocal.matcher(source).replaceAll("");
+            else {
+                StringBuffer sb = new StringBuffer();
+                Matcher m = regexRequire.matcher(source);
+                while (m.find()) {
+                    var scriptPath = "Common/" + m.group(3) + ".lua";
+                    var scriptSource = ScriptLoader.readScript(scriptPath, false);
+                    if (scriptSource == null) scriptSource = "";
+                    m.appendReplacement(sb, scriptSource.replaceAll("$", "\\$"));
                 }
-
-                // Compile the script from the file.
-                var source = Files.newBufferedReader(scriptPath);
-                script = ScriptLoader.getEngine().compile(source);
-            } else {
-                // Load the script sources.
-                var sources = ScriptLoader.readScript(path, useAbsPath);
-                if (sources == null) return null;
-
-                // Check to see if the script references other scripts.
-                if (sources.contains("require")) {
-                    var lines = sources.split("\n");
-                    var output = new StringBuilder();
-                    for (var line : lines) {
-                        // Skip non-require lines.
-                        if (!line.startsWith("require")) {
-                            output.append(line).append("\n");
-                            continue;
-                        }
-
-                        // Extract the script name.
-                        var scriptName = line.substring(9, line.length() - 1);
-                        // Resolve the script path.
-                        var scriptPath = "Common/" + scriptName + ".lua";
-                        var scriptSource = ScriptLoader.readScript(scriptPath, useAbsPath);
-                        if (scriptSource == null) continue;
-
-                        // Append the script source.
-                        output.append(scriptSource).append("\n");
-                    }
-                    sources = output.toString();
-                }
-
-                // Compile the script & cache it in memory.
-                script = ScriptLoader.getEngine().compile(sources);
+                m.appendTail(sb);
+                source = sb.toString();
             }
-
-            // Cache the script.
-            ScriptLoader.scriptsCache.put(path, new SoftReference<>(script));
-            return script;
-        } catch (Exception e) {
-            Grasscutter.getLogger()
-                    .error("Loading script {} failed! - {}", path, e.getLocalizedMessage());
-            return null;
         }
+        CompiledScript script = newScript(source, fastRequire);
+        ScriptLoader.scriptsCache.put(path, new SoftReference<>(script));
+        return script;
     }
 
     public static SceneMeta getSceneMeta(int sceneId) {

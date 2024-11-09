@@ -20,7 +20,7 @@ public final class ServerTask implements Runnable {
     public ServerTask(Runnable runnable, int taskId, int period, int delay) {
         this.runnable = runnable;
         this.taskId = taskId;
-        this.period = period;
+        this.period = period == 0 ? -1 : period;
         this.delay = delay;
     }
 

@@ -48,6 +48,7 @@ public class EntityAvatar extends GameEntity {
 
         this.avatar = avatar;
         this.avatar.setCurrentEnergy();
+        this.setLimbo(-1.0f);
 
         if (scene != null) {
             var world = scene.getWorld();

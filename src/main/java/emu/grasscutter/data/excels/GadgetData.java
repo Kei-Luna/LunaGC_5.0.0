@@ -2,6 +2,7 @@ package emu.grasscutter.data.excels;
 
 import emu.grasscutter.data.*;
 import emu.grasscutter.game.props.EntityType;
+import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 
 @ResourceType(name = "GadgetExcelConfigData.json")
@@ -16,6 +17,7 @@ public final class GadgetData extends GameResource {
     private String[] tags;
     private String itemJsonName;
     private long nameTextMapHash;
+    @SerializedName(value = "campID")
     private int campId;
     private String visionLevel;
 }

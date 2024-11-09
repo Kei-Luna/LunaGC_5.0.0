@@ -109,7 +109,7 @@ public class Account {
             return email;
         } else {
             // As of game version 3.5+, only the email is displayed to a user.
-            return this.getUsername() + "@grasscutter.io";
+            return this.getUsername() + "@" + ACCOUNT.playerEmail;
         }
     }
 

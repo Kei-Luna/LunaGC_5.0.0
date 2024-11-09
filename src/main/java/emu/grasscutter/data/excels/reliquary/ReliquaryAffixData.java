@@ -18,6 +18,6 @@ public class ReliquaryAffixData extends GameResource {
     private FightProperty fightProp;
 
     private float propValue;
-    private int weight;
-    private int upgradeWeight;
+    private int weight = 1;
+    private int upgradeWeight = 0;
 }

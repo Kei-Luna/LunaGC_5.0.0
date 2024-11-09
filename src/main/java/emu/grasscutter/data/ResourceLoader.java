@@ -765,7 +765,6 @@ public final class ResourceLoader {
         val pattern = Pattern.compile("Q(.+?)\\ShareConfig.lua");
 
         try {
-            var bindings = ScriptLoader.getEngine().createBindings();
             var stream =
                     Files.newDirectoryStream(getResourcePath("Scripts/Quest/Share/"), "Q*ShareConfig.lua");
             stream.forEach(
@@ -775,6 +774,7 @@ public final class ResourceLoader {
 
                         var cs = ScriptLoader.getScript("Quest/Share/" + path.getFileName().toString());
                         if (cs == null) return;
+                        var bindings = cs.getEngine().createBindings();
 
                         try {
                             ScriptLoader.eval(cs, bindings);
@@ -952,13 +952,13 @@ public final class ResourceLoader {
     }
 
     private static void loadGroupReplacements() {
-        Bindings bindings = ScriptLoader.getEngine().createBindings();
 
         CompiledScript cs = ScriptLoader.getScript("Scene/groups_replacement.lua");
         if (cs == null) {
             Grasscutter.getLogger().error("Error while loading Group Replacements: file not found");
             return;
         }
+        Bindings bindings = cs.getEngine().createBindings();
 
         try {
             ScriptLoader.eval(cs, bindings);

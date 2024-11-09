@@ -158,6 +158,7 @@
       "displays": "Cleared displays for %s.",
       "virtuals": "Cleared virtuals for %s.",
       "everything": "Cleared everything for %s.",
+      "item": "Cleared %s's %s %s.",
       "description": "Deletes unequipped unlocked items from your inventory. Defaults to 4* level 1 refinement 1 or lower, but can be set higher."
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "Grants or removes a permission for a user"
     },
     "position": {
-      "success": "Coordinates: %s, %s, %s\nRotation：%s, %s, %s\nScene ID: %s",
+      "success": "Coordinates: %s, %s, %s\nRotation: %s, %s, %s\nScene ID: %s, Region ID: %s, Area ID: %s\nBlocks: %s\nGroups: %s",
       "description": "Gets position and rotation information"
     },
     "quest": {

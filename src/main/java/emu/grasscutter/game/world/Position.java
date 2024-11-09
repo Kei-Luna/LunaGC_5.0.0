@@ -157,6 +157,17 @@ public class Position implements Serializable {
         return getX() == other.getX() && getY() == other.getY() && getZ() == other.getZ();
     }
 
+    public float sqDist(Position b) {
+        float dx = this.x - b.x;
+        float dy = this.y - b.y;
+        float dz = this.z - b.z;
+        return dx * dx + dy * dy + dz * dz;
+    }
+
+    public int bucket(int rank) {
+        return ((int)this.x >> rank) ^ ((int)this.y >> rank) ^ ((int)this.z >> rank);
+    }
+
     public double computeDistance(Position b) {
         double detX = getX() - b.getX();
         double detY = getY() - b.getY();

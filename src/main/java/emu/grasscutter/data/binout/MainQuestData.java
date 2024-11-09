@@ -18,7 +18,7 @@ public class MainQuestData {
 
     private SubQuestData[] subQuests;
     private List<TalkData> talks;
-    private long[] preloadLuaList;
+    // private long[] preloadLuaList;
 
     public int getId() {
         return id;

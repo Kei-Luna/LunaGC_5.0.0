@@ -30,7 +30,7 @@ public class GenerateActivityConditions extends DefaultTask {
     private static final String ACTIVITY_CONDITIONS_SRC = "/src/main/java/emu/grasscutter/game/activity/condition/ActivityConditions.java";
 
     private static final String activityClassStart = """
-        package emu.grasscutter.game.activity;
+        package emu.grasscutter.game.activity.condition;
 
         public enum ActivityConditions {
                     """;

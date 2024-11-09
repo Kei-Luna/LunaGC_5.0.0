@@ -158,6 +158,7 @@
       "displays": "Eliminadas las vistas para %s.",
       "virtuals": "Eliminados los virtuales para %s.",
       "everything": "Eliminado todo para %s.",
+      "item": "Se han eliminado %1 de %2 %3.",
       "description": "Elimina objetos desbloqueados no equipados, incluyendo objetos de rareza dorada, de tu inventario"
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "Da o quita un permiso a un jugador"
     },
     "position": {
-      "success": "Coordenadas: %s, %s, %s\nRotación: %s, %s, %s\nID del escenario: %s",
+      "success": "Coordenadas: %s, %s, %s\nRotación: %s, %s, %s\nID del escenario: %s, ID de región: %s, ID de área: %s\nBloques: %s\nGrupos: %s",
       "description": "Obtener información sobre ubicación y rotación"
     },
     "quest": {

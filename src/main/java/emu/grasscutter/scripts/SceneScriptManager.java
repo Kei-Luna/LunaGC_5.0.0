@@ -53,7 +53,6 @@ public class SceneScriptManager {
     private final Map<Integer, EntityRegion> regions; // <EntityId-Region>
     private final Map<Integer, SceneGroup> sceneGroups;
     private final Map<Integer, SceneGroupInstance> sceneGroupsInstances;
-    private final Map<Integer, SceneGroupInstance> cachedSceneGroupsInstances;
     private ScriptMonsterTideService scriptMonsterTideService;
     private ScriptMonsterSpawnService scriptMonsterSpawnService;
     /** blockid - loaded groupSet */
@@ -86,7 +85,6 @@ public class SceneScriptManager {
         this.variables = new ConcurrentHashMap<>();
         this.sceneGroups = new ConcurrentHashMap<>();
         this.sceneGroupsInstances = new ConcurrentHashMap<>();
-        this.cachedSceneGroupsInstances = new ConcurrentHashMap<>();
         this.scriptMonsterSpawnService = new ScriptMonsterSpawnService(this);
         this.loadedGroupSetPerBlock = new ConcurrentHashMap<>();
 
@@ -119,8 +117,8 @@ public class SceneScriptManager {
     }
 
     @Nullable public Map<String, Integer> getVariables(int group_id) {
-        if (this.getCachedGroupInstanceById(group_id) == null) return Collections.emptyMap();
-        return getCachedGroupInstanceById(group_id).getCachedVariables();
+        if (this.getGroupInstanceById(group_id) == null) return Collections.emptyMap();
+        return getGroupInstanceById(group_id).getCachedVariables();
     }
 
     public Set<SceneTrigger> getTriggersByEvent(int eventId) {
@@ -408,26 +406,26 @@ public class SceneScriptManager {
         return null;
     }
 
-    public SceneGroupInstance getGroupInstanceById(int groupId) {
-        return sceneGroupsInstances.getOrDefault(groupId, null);
-    }
-
     public Map<Integer, SceneGroupInstance> getCachedGroupInstances() {
-        return cachedSceneGroupsInstances;
+        return sceneGroupsInstances;
     }
 
-    public SceneGroupInstance getCachedGroupInstanceById(int groupId) {
-        var instance = cachedSceneGroupsInstances.getOrDefault(groupId, null);
-        if (instance == null) {
+    public SceneGroupInstance getGroupInstanceById(int groupId, boolean load) {
+        var instance = sceneGroupsInstances.getOrDefault(groupId, null);
+        if (instance == null && load) {
             instance = DatabaseHelper.loadGroupInstance(groupId, scene.getWorld().getHost());
             if (instance != null) {
-                cachedSceneGroupsInstances.put(groupId, instance);
-                this.cachedSceneGroupsInstances.get(groupId).setCached(false);
-                this.cachedSceneGroupsInstances.get(groupId).setLuaGroup(getGroupById(groupId));
+                instance.setCached(false);
+                instance.setLuaGroup(getGroupById(groupId));
+                sceneGroupsInstances.put(groupId, instance);
             }
         }
 
         return instance;
+    }
+
+    public SceneGroupInstance getGroupInstanceById(int groupId) {
+        return getGroupInstanceById(groupId, true);
     }
 
     private static void addGridPositionToMap(
@@ -646,18 +644,13 @@ public class SceneScriptManager {
         group.load(getScene().getId());
 
         this.sceneGroups.put(group.id, group);
-        if (this.getCachedGroupInstanceById(group.id) != null) {
-            this.sceneGroupsInstances.put(group.id, this.cachedSceneGroupsInstances.get(group.id));
-            this.cachedSceneGroupsInstances.get(group.id).setCached(false);
-            this.cachedSceneGroupsInstances.get(group.id).setLuaGroup(group);
-        } else {
-            var instance = new SceneGroupInstance(group, getScene().getWorld().getHost());
+        var instance = this.getGroupInstanceById(group.id, false);
+        if (instance == null) {
+            instance = new SceneGroupInstance(group, getScene().getWorld().getHost());
             this.sceneGroupsInstances.put(group.id, instance);
-            this.cachedSceneGroupsInstances.put(group.id, instance);
-            this.cachedSceneGroupsInstances.get(group.id).setCached(false);
-            this.cachedSceneGroupsInstances.get(group.id).setLuaGroup(group);
-            instance.save(); // Save the instance
         }
+        instance.setCached(false); // Save the instance
+        instance.setLuaGroup(group);
 
         if (group.variables != null) {
             group.variables.forEach(
@@ -671,10 +664,10 @@ public class SceneScriptManager {
 
     public void unregisterGroup(SceneGroup group) {
         this.sceneGroups.remove(group.id);
-        this.sceneGroupsInstances.values().removeIf(i -> i.getLuaGroup().equals(group));
-        this.cachedSceneGroupsInstances.values().stream()
+        this.sceneGroupsInstances.values().stream()
                 .filter(i -> i.getLuaGroup().equals(group))
                 .forEach(s -> s.setCached(true));
+        this.sceneGroupsInstances.values().removeIf(i -> i.getLuaGroup().equals(group));
     }
 
     public void checkRegions() {
@@ -896,7 +889,7 @@ public class SceneScriptManager {
 
     private boolean handleEventForTrigger(ScriptArgs params, SceneTrigger trigger) {
         Grasscutter.getLogger()
-                .trace("checking trigger {} for event {}", trigger.getName(), params.type);
+                .trace("checking trigger {} for event {}", trigger, params.type);
         try {
             // setup execution
             ScriptLoader.getScriptLib().setCurrentGroup(trigger.currentGroup);
@@ -940,7 +933,7 @@ public class SceneScriptManager {
         var ret = this.callScriptFunc(trigger.getAction(), trigger.currentGroup, params);
         var invocationsCounter = triggerInvocations.get(trigger.getName());
         var invocations = invocationsCounter.incrementAndGet();
-        Grasscutter.getLogger().trace("Call Action Trigger {}", trigger.getAction());
+        Grasscutter.getLogger().trace("Call Action Trigger {} {}", trigger.getAction(), trigger.getEvent());
 
         var activeChallenge = scene.getChallenge();
         if (activeChallenge != null) {
@@ -980,9 +973,9 @@ public class SceneScriptManager {
     }
 
     private LuaValue callScriptFunc(String funcName, SceneGroup group, ScriptArgs params) {
-        LuaValue funcLua = null;
+        LuaClosure funcLua = null;
         if (funcName != null && !funcName.isEmpty()) {
-            funcLua = (LuaValue) group.getBindings().get(funcName);
+            funcLua = (LuaClosure) group.getBindings().get(funcName);
         }
 
         LuaValue ret = LuaValue.TRUE;
@@ -999,7 +992,7 @@ public class SceneScriptManager {
         return ret;
     }
 
-    public LuaValue safetyCall(String name, LuaValue func, LuaValue args, SceneGroup group) {
+    public LuaValue safetyCall(String name, LuaClosure func, LuaValue args, SceneGroup group) {
         try {
             return func.call(ScriptLoader.getScriptLibLua(), args);
         } catch (LuaError error) {
