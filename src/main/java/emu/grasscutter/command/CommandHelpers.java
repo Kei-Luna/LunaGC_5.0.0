@@ -117,16 +117,15 @@ public class CommandHelpers {
     public static Position calculateOffset(Position pos, Position rot, Position offset) {
         // Degrees to radians
         float angleZ = (float) Math.toRadians(rot.getY());
-        float angleX = (float) Math.toRadians(rot.getY() + 90);
 
         // Calculate offset based on current position and rotation
         return new Position(
                 pos.getX()
                         + offset.getZ() * (float) Math.sin(angleZ)
-                        + offset.getX() * (float) Math.sin(angleX),
+                        + offset.getX() * (float) Math.cos(angleZ),
                 pos.getY() + offset.getY(),
                 pos.getZ()
                         + offset.getZ() * (float) Math.cos(angleZ)
-                        + offset.getX() * (float) Math.cos(angleX));
+                        - offset.getX() * (float) Math.sin(angleZ));
     }
 }

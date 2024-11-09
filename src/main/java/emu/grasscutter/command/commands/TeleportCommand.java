@@ -11,7 +11,7 @@ import java.util.List;
 @Command(
         label = "teleport",
         aliases = {"tp"},
-        usage = {"<x> <y> <z> [sceneId]"},
+        usage = {"<x> <y> <z> [sceneId]", "<distance> [slope=0.5]"},
         permission = "player.teleport",
         permissionTargeted = "player.teleport.others")
 public final class TeleportCommand implements CommandHandler {
@@ -21,6 +21,7 @@ public final class TeleportCommand implements CommandHandler {
         Position pos = new Position(targetPlayer.getPosition());
         Position rot = new Position(targetPlayer.getRotation());
         int sceneId = targetPlayer.getSceneId();
+        float slope = .5f;
 
         switch (args.size()) {
             case 4:
@@ -37,6 +38,16 @@ public final class TeleportCommand implements CommandHandler {
                     CommandHandler.sendMessage(
                             sender, translate(sender, "commands.teleport.invalid_position"));
                 }
+                break;
+            case 2:
+                slope = Float.parseFloat(args.get(1));
+            case 1:
+                float dist = Float.parseFloat(args.get(0));
+                float angle = (float) Math.toRadians(rot.getY());
+                float dx = dist * (float) Math.sin(angle);
+                float dz = dist * (float) Math.cos(angle);
+                float dy = dist * slope;
+                pos = pos.add(new Position(dx, dy, dz));
                 break;
             default:
                 this.sendUsageMessage(sender);

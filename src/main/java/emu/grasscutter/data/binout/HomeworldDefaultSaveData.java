@@ -12,7 +12,7 @@ public class HomeworldDefaultSaveData {
 
     @SerializedName(
             value = "homeBlockLists",
-            alternate = {"PKACPHDGGEI", "AKOLOBLHDFK", "KFHBFNPDJBE"})
+            alternate = {"PKACPHDGGEI", "AKOLOBLHDFK", "KFHBFNPDJBE", "blockArrangementInfoList"})
     List<HomeBlock> homeBlockLists;
 
     @SerializedName(
@@ -31,9 +31,9 @@ public class HomeworldDefaultSaveData {
     Position djinPos;
 
     @SerializedName(
-            value = "mainhouse",
+            value = "mainHouse",
             alternate = {"AMDNOHPGKMI", "KNHCJKHCOAN"})
-    HomeFurniture mainhouse;
+    HomeFurniture mainHouse;
 
     @SerializedName(
             value = "doorLists",
@@ -56,7 +56,7 @@ public class HomeworldDefaultSaveData {
 
         @SerializedName(
                 value = "furnitures",
-                alternate = {"NCIMIKKFLOH", "BEAPOFELABD"})
+                alternate = {"NCIMIKKFLOH", "BEAPOFELABD", "deployFurniureList"})
         List<HomeFurniture> furnitures;
 
         @SerializedName(
@@ -71,17 +71,17 @@ public class HomeworldDefaultSaveData {
 
         @SerializedName(
                 value = "id",
-                alternate = {"KMAAJJHPNBA", "FFLCGFGGGND", "ENHNGKJBJAB"})
+                alternate = {"KMAAJJHPNBA", "FFLCGFGGGND", "ENHNGKJBJAB", "furnitureId"})
         int id;
 
         @SerializedName(
                 value = "pos",
-                alternate = {"JFKAHNCPDME", "BPCGGBKIAMG", "NGIEEIOLPPO"})
+                alternate = {"JFKAHNCPDME", "BPCGGBKIAMG", "NGIEEIOLPPO", "spawnPos"})
         Position pos;
 
         @SerializedName(
                 value = "rot",
-                alternate = {"LKCKOOGFDBM", "HEOCEHKEBFM"})
+                alternate = {"LKCKOOGFDBM", "HEOCEHKEBFM", "spawnRot"})
         Position rot;
     }
 }

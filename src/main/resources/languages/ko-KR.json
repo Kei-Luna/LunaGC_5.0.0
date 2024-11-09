@@ -158,6 +158,7 @@
       "displays": "%s의 Display를 초기화했습니다.",
       "virtuals": "%s의 Virtuals를 초기화했습니다.",
       "everything": "%s의 모든 아이템을 초기화했습니다.",
+      "item": "%1의 %2개의 %3을(를) 제거했습니다.",
       "description": "인벤토레에서 잠금된 물건을 제외한 항목을 삭제합니다. 기본적으로 4성, 1레벨, 1재련보다 낮은것만을 기준으로 하지만, 더 높게 설정할 수 있습니다."
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "사용자에게 권한을 부여하거나 제거합니다."
     },
     "position": {
-      "success": "좌표: %s, %s, %s\n회전：%s, %s, %s\nScene ID: %s",
+      "success": "좌표: %s, %s, %s\n회전: %s, %s, %s\nScene ID: %s, Region ID: %s, Area ID: %s\n블록들: %s\n그룹들: %s",
       "description": "위치 및 회전 정보를 가져옵니다"
     },
     "quest": {

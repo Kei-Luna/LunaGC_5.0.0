@@ -158,6 +158,7 @@
       "displays": "Afișaje șterse pentru %s.",
       "virtuals": "Virtuali șterși pentru %s.",
       "everything": "Totul a fost șters pentru %s.",
+      "item": "S-au șters %1 din %2 %3.",
       "description": "Șterge obiectele deblocate neechipate, inlusiv cele cu raritate galbenă din inventarul tău."
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "Acordă sau elimină o permisiune de la un utilizator."
     },
     "position": {
-      "success": "Coordonate: %s, %s, %s\nGravitează：%s, %s, %s\nScene ID: %s",
+      "success": "Coordonate: %s, %s, %s\nGravitează: %s, %s, %s\nScene ID: %s, ID regiune: %s, ID zonă: %s\nBlocuri: %s\nGrupuri: %s",
       "description": "Obține informații despre poziție și rotație"
     },
     "quest": {

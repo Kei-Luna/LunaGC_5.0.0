@@ -158,6 +158,7 @@
       "displays": "Display rimossi da %s.",
       "virtuals": "Virtuali rimossi da %s.",
       "everything": "Rimosso tutto da %s.",
+      "item": "Cancellati %1 di %2 %3.",
       "description": "Rimuove gli oggetti sbloccati non equipaggiati dal tuo inventario. Il valore predefinito è 4* livello 1 raffinamento 1 o inferiore, ma è possibile impostarlo su un livello superiore."
     },
     "coop": {
@@ -230,7 +231,7 @@
       "description": "Concede o rimuove un'autorizzazione di un utente"
     },
     "position": {
-      "success": "Coordinate: %s, %s, %s\nRotazione:%s, %s, %s\nID scena: %a",
+      "success": "Coordinate: %s, %s, %s\nRotazione: %s, %s, %s\nID scena: %s, ID della regione: %s, ID dell'area: %s\nBlocchi: %s\nGruppi: %s",
       "description": "Ottiene informazioni sulla posizione e sulla rotazione attuale del giocatore"
     },
     "quest": {

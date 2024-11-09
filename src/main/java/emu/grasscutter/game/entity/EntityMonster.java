@@ -74,6 +74,7 @@ public class EntityMonster extends GameEntity {
         this.summonTagMap = new HashMap<>();
         this.summonedTag = 0;
         this.ownerEntityId = 0;
+        this.setLimbo(-1.0f);
 
         if (GameData.getMonsterMappingMap().containsKey(this.getMonsterId())) {
             this.configEntityMonster =

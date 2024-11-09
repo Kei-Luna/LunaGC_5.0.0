@@ -112,7 +112,13 @@ public final class DefaultAuthenticators {
                                 cipher.doFinal(Utils.base64Decode(request.getPasswordRequest().password)),
                                 StandardCharsets.UTF_8);
             } catch (Exception ignored) {
-                decryptedPassword = request.getPasswordRequest().password;
+                if (requestData.is_crypto) {
+                    response.retcode = -201;
+                    response.message = translate("messages.dispatch.account.password_crypto_error");
+                    return response;
+                } else {
+                    decryptedPassword = request.getPasswordRequest().password;
+                }
             }
 
             if (decryptedPassword == null) {

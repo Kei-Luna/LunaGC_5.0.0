@@ -26,8 +26,8 @@ public class EntityControllerScriptManager {
 
                         val controllerName = fileName.substring(0, fileName.length() - 4);
                         var cs = ScriptLoader.getScript("Gadget/" + fileName);
-                        var bindings = ScriptLoader.getEngine().createBindings();
                         if (cs == null) return;
+                        var bindings = cs.getEngine().createBindings();
 
                         try {
                             ScriptLoader.eval(cs, bindings);

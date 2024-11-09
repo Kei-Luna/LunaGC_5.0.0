@@ -1,6 +1,8 @@
 package emu.grasscutter.scripts.data.controller;
 
 import emu.grasscutter.*;
+import emu.grasscutter.data.binout.AbilityModifier.AbilityModifierAction;
+import emu.grasscutter.game.ability.Ability;
 import emu.grasscutter.game.entity.GameEntity;
 import emu.grasscutter.game.props.ElementType;
 import emu.grasscutter.scripts.*;
@@ -56,6 +58,30 @@ public class EntityController {
         if (value.isint() && value.toint() == 1) return 1;
 
         return 0;
+    }
+
+    /**
+     * Invoked from {@link emu.grasscutter.game.ability.actions.ActionServerLuaCall} to call an entity
+     * controller function.
+     *
+     * @param entity The entity which called the function.
+     * @param funcName The name of the function to call.
+     * @param ability The ability that is calling the function.
+     * @param action The action that is calling the function.
+     * @return The return value of the function.
+     */
+    public LuaValue callControllerScriptFunc(
+            GameEntity entity, String funcName, Ability ability, AbilityModifierAction action) {
+        var lParam1 = LuaValue.valueOf(action.param1.getInt(ability));
+        var lParam2 = LuaValue.valueOf(action.param2.getInt(ability));
+        var lParam3 = LuaValue.valueOf(action.param3.getInt(ability));
+
+        return switch (action.paramNum) {
+            case 1 -> this.callControllerScriptFunc(entity, funcName, lParam1);
+            case 2 -> this.callControllerScriptFunc(entity, funcName, lParam1, lParam2);
+            case 3 -> this.callControllerScriptFunc(entity, funcName, lParam1, lParam2, lParam3);
+            default -> this.callControllerScriptFunc(entity, funcName, LuaValue.NIL);
+        };
     }
 
     // TODO actual execution should probably be handle by EntityControllerScriptManager

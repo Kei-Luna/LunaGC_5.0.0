@@ -18,6 +18,7 @@ import emu.grasscutter.game.dungeons.challenge.WorldChallenge;
 import emu.grasscutter.game.dungeons.enums.DungeonPassConditionType;
 import emu.grasscutter.game.entity.*;
 import emu.grasscutter.game.entity.gadget.GadgetWorktop;
+import emu.grasscutter.game.entity.gadget.GadgetObject;
 import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.game.managers.blossom.BlossomManager;
 import emu.grasscutter.game.player.Player;
@@ -341,6 +342,13 @@ public class Scene {
         teamManager.getActiveTeam().stream()
                 .map(EntityAvatar::getAvatar)
                 .forEach(Avatar::sendSkillExtraChargeMap);
+    }
+
+    public void interactByTouch(Player player, Position position) {
+        this.scriptManager.eventExecutor.submit(() -> this.entities.values().stream()
+            .filter(e -> e.getPosition().sqDist(position) < 3f)
+            .filter(e -> e instanceof EntityGadget gadget && gadget.isInteractEnabled() && gadget.getContent() != null && gadget.getContent() instanceof GadgetObject)
+            .forEach(e -> ((EntityGadget) e).onInteract(player, null)));
     }
 
     private void addEntityDirectly(GameEntity entity) {
@@ -1061,10 +1069,10 @@ public class Scene {
         if (groups == null || groups.isEmpty()) {
             return;
         }
+        groups = groups.stream().distinct().filter(group -> !loadedGroups.contains(group)).toList();
 
         for (var group : groups) {
-            if (this.loadedGroups.contains(group)) continue;
-
+            this.loadedGroups.add(group);
             // We load the script files for the groups here
             this.getScriptManager().loadGroupFromScript(group);
             if (!this.scriptManager.getLoadedGroupSetPerBlock().containsKey(group.block_id))
@@ -1076,30 +1084,24 @@ public class Scene {
         // TODO
         var entities = new ArrayList<GameEntity>();
         for (var group : groups) {
-            if (this.loadedGroups.contains(group)) continue;
-
             if (group.init_config == null) {
                 continue;
             }
 
             var groupInstance = this.getScriptManager().getGroupInstanceById(group.id);
-            var cachedInstance = this.getScriptManager().getCachedGroupInstanceById(group.id);
-            if (cachedInstance != null) {
-                cachedInstance.setLuaGroup(group);
-                groupInstance = cachedInstance;
-            }
 
             // Load suites
             // int suite = group.findInitSuiteIndex(0);
             this.getScriptManager()
                     .refreshGroup(groupInstance, 0, false); // This is what the official server does
 
-            this.loadedGroups.add(group);
         }
 
         this.scriptManager.meetEntities(entities);
         groups.forEach(
-                g -> scriptManager.callEvent(new ScriptArgs(g.id, EventType.EVENT_GROUP_LOAD, g.id)));
+            g -> {
+                scriptManager.callEvent(new ScriptArgs(g.id, EventType.EVENT_GROUP_LOAD, g.id));
+                });
 
         Grasscutter.getLogger().trace("Scene {} loaded {} group(s)", this.getId(), groups.size());
     }

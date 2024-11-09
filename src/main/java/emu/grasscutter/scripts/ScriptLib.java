@@ -469,7 +469,12 @@ public class ScriptLib {
     // TODO: ChangeToTargetLevelTagWithParamTable
     // TODO: CharAmusementMultistagePlaySwitchTeam
     // TODO: CharAmusementUpdateScore
-    // TODO: CheckIsInGroup
+
+    public boolean CheckIsInGroup(int groupId, int configId) {
+        logger.debug("[LUA] Call CheckIsInGroup");
+        var entity = getSceneScriptManager().getScene().getEntityByConfigId(configId, groupId);
+        return entity != null;
+    }
 
     public boolean CheckIsInMpMode() {
         logger.debug("[LUA] Call CheckIsInMpMode");
@@ -581,8 +586,23 @@ public class ScriptLib {
         return 0;
     }
 
-    // TODO: CreateMonsterByConfigIdByPos
-
+    public int CreateMonsterByConfigIdByPos(int monster_id, LuaTable pos, LuaTable rot) {
+        var scene = getSceneScriptManager().getScene();
+        int level = 1;
+        for (var p: scene.getPlayers())
+            if (p.getLevel() > level) level = p.getLevel();
+        var monsterData = GameData.getMonsterDataMap().get(monster_id);
+        Position position = new Position(pos.get("x").tofloat(), pos.get("y").tofloat(), pos.get("z").tofloat());
+        Position rotation = new Position(rot.get("x").tofloat(), rot.get("y").tofloat(), rot.get("z").tofloat());
+        var entity = new EntityMonster(scene, monsterData, position, rotation, level);
+        scene.addEntity(entity);
+        if (!getCurrentGroup().isEmpty()) {
+            var group = getCurrentGroup().get();
+            entity.setGroupId(group.id);
+            entity.setBlockId(group.block_id);
+        }
+        return 0;
+    }
     public int CreateMonsterFaceAvatar(LuaTable var1) {
         logger.warn("[LUA] Call unimplemented CreateMonsterFaceAvatar with {}", printTable(var1));
         // TODO implement var1 contains int entity_id, int[] monsters (cfgIds), int[] ranges, int angle
@@ -788,7 +808,11 @@ public class ScriptLib {
 
     // TODO: GetCustomDungeonCoinNum
     // TODO: GetCustomDungeonOpenRoomVec
-    // TODO: GetDeathZoneStatus
+    public int GetDeathZoneStatus(final int Unk) {
+        logger.warn("[LUA] Call unimplemented GetDeathZoneStatus");
+        // TODO implement
+        return -1;
+    }
     // TODO: GetDungeonTeamPlayerNum
     // TODO: GetDungeonTransaction
     // TODO: GetEffigyChallengeLimitTime

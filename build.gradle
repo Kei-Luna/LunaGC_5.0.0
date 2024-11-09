@@ -14,16 +14,16 @@ buildscript {
         maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.4'
     }
 }
 
 plugins {
-    id 'java' // Apply the java plugin to add support for Java
+    id 'java'
     id 'java-library' // Apply the java-library plugin for API and implementation separation.
     id 'application' // Apply the application plugin to add support for building a CLI application
-    id 'com.google.protobuf' version '0.8.18' // Apply the protobuf auto generator
-    id 'com.diffplug.spotless' version '6.11.0' // Apply the Spotless linter plugin.
+    id 'com.google.protobuf' version '0.9.4' // Apply the protobuf auto generator
+    id 'com.diffplug.spotless' version '6.25.0' // Apply the Spotless linter plugin.
 
     id 'eclipse' // Eclipse Support
     id 'idea' // IntelliJ Support
@@ -31,7 +31,7 @@ plugins {
     id 'maven-publish' // Support for publishing to Maven repositories.
     id 'signing' // Support for signing build artifacts.
 
-    id 'io.freefair.lombok' version '6.6.1' // Lombok for delombok'ification
+    id 'io.freefair.lombok' version '8.10.2' // Lombok for delombok'ification
 }
 
 spotless {
@@ -61,13 +61,12 @@ compileJava {
 
 compileTestJava.options.encoding = 'UTF-8'
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
-
 group = 'io.grasscutter'
 version = '5.0.0'
 
 java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
     withJavadocJar()
     withSourcesJar()
 }
@@ -80,32 +79,32 @@ dependencies {
     // Additional JAR libraries.
     implementation fileTree(dir: 'lib', include: ['*.jar'])
 
-    implementation group: 'it.unimi.dsi', name: 'fastutil', version: '8.5.8'
+    implementation group: 'it.unimi.dsi', name: 'fastutil', version: '8.5.15'
 
     // Logging libraries.
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.7'
-    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.4.7'
-    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.7'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.16'
+    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.5.12'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.12'
 
     // Line reading libraries.
-    implementation group: 'org.jline', name: 'jline', version: '3.21.0'
-    implementation group: 'org.jline', name: 'jline-terminal-jna', version: '3.21.0'
-    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.10.0'
+    implementation group: 'org.jline', name: 'jline', version: '3.27.1'
+    implementation group: 'org.jline', name: 'jline-terminal-jna', version: '3.27.1'
+    implementation group: 'net.java.dev.jna', name: 'jna', version: '5.15.0'
 
     // Java Netty for networking.
-    implementation group: 'io.netty', name: 'netty-common', version: '4.1.86.Final'
-    implementation group: 'io.netty', name: 'netty-handler', version: '4.1.86.Final'
-    implementation group: 'io.netty', name: 'netty-transport-native-epoll', version: '4.1.86.Final'
-    implementation group: 'io.netty', name: 'netty-transport-native-kqueue', version: '4.1.86.Final'
+    implementation group: 'io.netty', name: 'netty-common', version: '4.1.114.Final'
+    implementation group: 'io.netty', name: 'netty-handler', version: '4.1.114.Final'
+    implementation group: 'io.netty', name: 'netty-transport-native-epoll', version: '4.1.114.Final'
+    implementation group: 'io.netty', name: 'netty-transport-native-kqueue', version: '4.1.114.Final'
 
     // Serialization.
-    implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
-    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.19.6'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.25.5'
     implementation group: 'com.github.os72', name: 'protobuf-dynamic', version: '1.0.1'
 
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
-    implementation platform('com.fasterxml.jackson:jackson-bom:2.14.0')
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.18.1'
+    implementation platform('com.fasterxml.jackson:jackson-bom:2.18.1')
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.18.1'
 
     // Reflections libraries.
     implementation group: 'org.reflections', name: 'reflections', version: '0.10.2'
@@ -113,7 +112,7 @@ dependencies {
     implementation group: 'com.github.davidmoten', name: 'rtree-multi', version: '0.1'
 
     // MongoDB object mapper.
-    implementation group: 'dev.morphia.morphia', name: 'morphia-core', version: '2.2.7'
+    implementation group: 'dev.morphia.morphia', name: 'morphia-core', version: '2.2.10'
 
     // Utility libraries.
     implementation group: 'org.greenrobot', name: 'eventbus-java', version: '3.3.1'
@@ -123,34 +122,33 @@ dependencies {
     implementation group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.2'
     implementation group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.3.2'
 
-    // Lua script engine library.
-    implementation group: 'org.luaj', name: 'luaj-jse', version: '3.0.1'
-
     // Java HTTP server library.
-    implementation group: 'io.javalin', name: 'javalin', version: '5.5.0'
+    implementation group: 'io.javalin', name: 'javalin', version: '5.6.5'
     // Java WebSocket server & client library.
-    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.2'
-    
+    implementation group: 'org.java-websocket', name: 'Java-WebSocket', version: '1.5.7'
+
     // Xxhash
     implementation group: 'net.openhft', name: 'zero-allocation-hashing', version: '0.26ea0'
+
+    implementation group: 'org.apache.bcel', name: 'bcel', version: '6.10.0'
 
     // Google Protocol Buffer definitions.
     // These are the raw '.proto' files.
     protobuf files('proto/')
 
     // Testing libraries.
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.8.2'
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.11.3'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.11.3'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.11.3'
 
     // HTTP client library for testing.
-    testImplementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.10.0'
+    testImplementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.12.0'
 
     // Lombok.
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
 }
 
 configurations.configureEach {
@@ -272,7 +270,7 @@ clean {
 protobuf {
     protoc {
         // The artifact spec for the Protobuf Compiler
-        artifact = 'com.google.protobuf:protoc:3.18.1'
+        artifact = 'com.google.protobuf:protoc:3.25.5'
     }
 
     generatedFilesBaseDir = "$projectDir/src/generated/"
@@ -324,6 +322,9 @@ javadoc {
     exclude '**/*.md'
     exclude 'src/handbook/**/*.*'
     exclude 'src/generated/**/*.*'
+}
+
+tasks.register('generateActivityConditions', emu.grasscutter.gen.GenerateActivityConditions) {
 }
 
 tasks.register('injectGitHash') {

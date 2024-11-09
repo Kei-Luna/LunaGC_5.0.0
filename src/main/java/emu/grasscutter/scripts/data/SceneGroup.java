@@ -68,7 +68,7 @@ public final class SceneGroup {
         return this.script;
     }
 
-    public SceneSuite getSuiteByIndex(int index) {
+    public SceneSuite getSuiteByIndex(int index){
         if (index < 1 || index > suites.size()) {
             return null;
         }
@@ -85,8 +85,6 @@ public final class SceneGroup {
         }
         // Set flag here so if there is no script, we don't call this function over and over again.
         this.setLoaded(true);
-        // Create the bindings.
-        this.bindings = ScriptLoader.getEngine().createBindings();
 
         CompiledScript cs;
         if (overrideScriptPath != null && !overrideScriptPath.equals("")) {
@@ -100,6 +98,8 @@ public final class SceneGroup {
         if (cs == null) {
             return this;
         }
+        // Create the bindings.
+        this.bindings = cs.getEngine().createBindings();
 
         this.script = cs;
 

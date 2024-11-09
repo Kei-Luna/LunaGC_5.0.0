@@ -16,5 +16,5 @@ public class ReliquaryMainPropData extends GameResource {
     @SerializedName("propType")
     private FightProperty fightProp;
 
-    private int weight;
+    private int weight = 1;
 }
