@@ -9,7 +9,7 @@
       "SceneObj_EssenceChest_Default_Lv1",
       "SceneObj_EssenceChest_Locked_Lv1"
     ],
-    "advExp": 10,
+    "advExp": 50,
     "resin": 0,
     "mora": 257,
     "sigil": 1,
@@ -25,6 +25,26 @@
     ],
     "randomCount": 4,
     "randomContent": [
+      {
+        "itemId": 106,
+        "count": 5
+      },
+      {
+        "itemId": 201,
+        "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
+      },
       {
         "itemId": 11101,
         "count": 1
@@ -74,7 +94,7 @@
       "SceneObj_Chest_Bramble_Lv2",
       "SceneObj_Chest_Frozen_Lv2"
     ],
-    "advExp": 20,
+    "advExp": 100,
     "resin": 2,
     "mora": 756,
     "sigil": 2,
@@ -90,6 +110,26 @@
     ],
     "randomCount": 4,
     "randomContent": [
+      {
+        "itemId": 106,
+        "count": 24
+      },
+      {
+        "itemId": 201,
+        "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
+      },
       {
         "itemId": 11201,
         "count": 1
@@ -139,7 +179,7 @@
       "SceneObj_Chest_Bramble_Lv3",
       "SceneObj_Chest_Frozen_Lv3"
     ],
-    "advExp": 30,
+    "advExp": 150,
     "resin": 20,
     "mora": 1433,
     "sigil": 20,
@@ -159,6 +199,26 @@
     ],
     "randomCount": 4,
     "randomContent": [
+      {
+        "itemId": 106,
+        "count": 25
+      },
+      {
+        "itemId": 201,
+        "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
+      },
       {
         "itemId": 11509,
         "count": 1
@@ -208,7 +268,7 @@
       "SceneObj_Chest_Bramble_Lv4",
       "SceneObj_Chest_Frozen_Lv4"
     ],
-    "advExp": 30,
+    "advExp": 150,
     "resin": 2,
     "mora": 8888,
     "sigil": 2,
@@ -228,6 +288,26 @@
     ],
     "randomCount": 4,
     "randomContent": [
+      {
+        "itemId": 106,
+        "count": 40
+      },
+      {
+        "itemId": 201,
+        "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
+      },
       {
         "itemId": 13501,
         "count": 1
@@ -277,7 +357,7 @@
       "SceneObj_Chest_Bramble_Lv5",
       "SceneObj_Chest_Frozen_Lv5"
     ],
-    "advExp": 60,
+    "advExp": 300,
     "resin": 2,
     "mora": 88888,
     "sigil": 2,
@@ -297,6 +377,22 @@
     ],
     "randomCount": 5,
     "randomContent": [
+      {
+        "itemId": 201,
+        "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
+      },
       {
         "itemId": 13501,
         "count": 1
@@ -401,6 +497,30 @@
       {
         "itemId": 15301,
         "count": 1
+      },
+      {
+        "itemId": 115012,
+        "count": 1
+      },
+      {
+        "itemId": 115019,
+        "count": 1
+      },
+      {
+        "itemId": 115020,
+        "count": 1
+      },
+      {
+        "itemId": 115021,
+        "count": 1
+      },
+      {
+        "itemId": 115022,
+        "count": 1
+      },
+      {
+        "itemId": 115023,
+        "count": 1
       }
     ]
   },
@@ -411,12 +531,27 @@
       "SearchPoint",
       "SearchPoint_OnWater"
     ],
-    "mora": 1,
-    "content": [
+    "advExp": 50,
+    "randomCount": 1,
+    "randomContent": [
       {
         "itemId": 201,
         "count": 114
+      },
+      {
+        "itemId": 202,
+        "count": 1140
+      },
+      {
+        "itemId": 203,
+        "count": 14
+      },
+      {
+        "itemId": 204,
+        "count": 114
       }
-    ]
+    ],
+    "mora": 1,
+    "content": []
   }
 ]

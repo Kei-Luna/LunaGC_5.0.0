@@ -144,6 +144,7 @@ public class AbilityModifier implements Serializable {
             GetFightProperty,
             GetInteractIdToGlobalValue,
             GetPos,
+            @SerializedName(value = "HealHP", alternate = "KFPABDEBDHB")
             HealHP,
             HideUIBillBoard,
             IgnoreMoveColToRockCol,
@@ -275,7 +276,7 @@ public class AbilityModifier implements Serializable {
 
         @SerializedName(
                 value = "amount",
-                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ", "LKDJMGOJHAH", "GHINLKIEMFA"})
+                alternate = {"LNFMOCKIAGK", "PDLLIFICICJ", "LKDJMGOJHAH", "GHINLKIEMFA", "JNLAKCOAEOD"})
         public DynamicFloat amount = DynamicFloat.ZERO;
 
         @SerializedName(
@@ -296,7 +297,7 @@ public class AbilityModifier implements Serializable {
         @SerializedName(value = "amountByTargetMaxHPRatio")
         public DynamicFloat amountByTargetCurrentHPRatio = DynamicFloat.ZERO;
 
-        @SerializedName(value = "unknown1", alternate = "GGLMMJHNGMO")
+        @SerializedName(value = "unknown1", alternate = {"GGLMMJHNGMO", "CFNADFMJIOO"})
         public DynamicFloat amountByTargetMaxHPRatio = DynamicFloat.ZERO;
 
         public DynamicFloat limboByTargetMaxHPRatio = DynamicFloat.ZERO;

@@ -3,9 +3,15 @@ package emu.grasscutter.game.ability.actions;
 import com.google.protobuf.ByteString;
 import emu.grasscutter.data.binout.AbilityModifier.AbilityModifierAction;
 import emu.grasscutter.game.ability.Ability;
+import emu.grasscutter.game.ability.AbilityManager;
 import emu.grasscutter.game.entity.GameEntity;
 
 public abstract class AbilityActionHandler {
+    protected AbilityManager abilityManager;
+    public AbilityActionHandler setManager(AbilityManager mgr) {
+        this.abilityManager = mgr;
+        return this;
+    }
     public abstract boolean execute(
             Ability ability, AbilityModifierAction action, ByteString abilityData, GameEntity target);
 

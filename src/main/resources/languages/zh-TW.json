@@ -150,6 +150,11 @@
       "not_found": "找不到公告 %s。",
       "description": "傳送公告給所有線上玩家，或者是更改伺服器的公告。"
     },
+    "buff": {
+      "info": "現有 %s 條buff。",
+      "add_buff": "添加 %s。",
+      "remove_buff": "移除buff %s。"
+    },
     "clear": {
       "weapons": "已將 %s 的武器清空。",
       "artifacts": "已將 %s 的聖遺物清空。",

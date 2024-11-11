@@ -7,6 +7,7 @@ import emu.grasscutter.net.proto.VectorOuterClass.Vector;
 import emu.grasscutter.utils.Utils;
 import java.io.Serializable;
 import java.util.List;
+import org.luaj.vm2.LuaTable;
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -81,6 +82,10 @@ public class Position implements Serializable {
 
     public Position(Position pos) {
         this.set(pos);
+    }
+
+    public Position(LuaTable pos) {
+        this.set(pos.get("x").tofloat(), pos.get("y").tofloat(), pos.get("z").tofloat());
     }
 
     public Position set(float x, float y) {
