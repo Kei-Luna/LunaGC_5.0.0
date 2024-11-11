@@ -150,6 +150,11 @@
       "not_found": "Nie znaleziono ogłoszenia %s.",
       "description": "Wysyłaj i zarządzaj ogłoszeniami."
     },
+    "buff": {
+      "info": "Teraz jest %s buffs.",
+      "add_buff": "Dodano %s.",
+      "remove_buff": "Usunięto buff %s."
+    },
     "clear": {
       "weapons": "Usunięto bronie gracza %s.",
       "artifacts": "Usunięto artefakty gracza %s.",

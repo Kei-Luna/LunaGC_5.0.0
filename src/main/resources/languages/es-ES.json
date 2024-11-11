@@ -150,6 +150,11 @@
       "not_found": "No se pudo encontrar el anuncio %s.",
       "description": "Envía un anuncio a todos los jugadores activos, o gestiona anuncios del server"
     },
+    "buff": {
+      "info": "Hay ahora %s buffs.",
+      "add_buff": "Añadido %s.",
+      "remove_buff": "Eliminado buff %s."
+    },
     "clear": {
       "weapons": "Eliminadas las armas para %s.",
       "artifacts": "Eliminados los artefactos para %s.",

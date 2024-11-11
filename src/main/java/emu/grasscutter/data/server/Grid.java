@@ -35,6 +35,8 @@ public class Grid {
 
         int width = Grasscutter.getConfig().server.game.visionOptions[vision_level].gridWidth;
         int vision_range = Grasscutter.getConfig().server.game.visionOptions[vision_level].visionRange;
+        if (vision_range < Grasscutter.getConfig().server.game.loadEntitiesForPlayerRange)
+            vision_range = Grasscutter.getConfig().server.game.loadEntitiesForPlayerRange;
         int vision_range_grid = vision_range / width;
 
         GridPosition pos = new GridPosition(position, width);

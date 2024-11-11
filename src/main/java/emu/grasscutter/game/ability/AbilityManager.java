@@ -44,7 +44,6 @@ public final class AbilityManager extends BasePlayerManager {
                         FastThreadLocalThread::new,
                         new ThreadPoolExecutor.AbortPolicy());
 
-        registerHandlers();
     }
 
     @Getter private boolean abilityInvulnerable = false;
@@ -54,6 +53,7 @@ public final class AbilityManager extends BasePlayerManager {
     public AbilityManager(Player player) {
         super(player);
         removePendingEnergyClear();
+        registerHandlers();
     }
 
     public void removePendingEnergyClear() {
@@ -108,14 +108,14 @@ public final class AbilityManager extends BasePlayerManager {
         }
     }
 
-    public static void registerHandlers() {
+    public void registerHandlers() {
         var handlerClassesAction = Grasscutter.reflector.getSubTypesOf(AbilityActionHandler.class);
 
         for (var obj : handlerClassesAction) {
             try {
                 if (obj.isAnnotationPresent(AbilityAction.class)) {
                     AbilityModifierAction.Type abilityAction = obj.getAnnotation(AbilityAction.class).value();
-                    actionHandlers.put(abilityAction, obj.getDeclaredConstructor().newInstance());
+                    actionHandlers.put(abilityAction, obj.getDeclaredConstructor().newInstance().setManager(this));
                 } else {
                     return;
                 }
@@ -155,7 +155,7 @@ public final class AbilityManager extends BasePlayerManager {
                 () -> {
                     if (!handler.execute(ability, action, abilityData, target)) {
                         Grasscutter.getLogger()
-                                .debug("Ability execute action failed for {} at {}.", action.type, ability);
+                                .warn("Ability execute action failed for {} at {}.", action.type, ability);
                     }
                 });
     }
@@ -172,7 +172,7 @@ public final class AbilityManager extends BasePlayerManager {
                 () -> {
                     if (!handler.execute(ability, mixinData, abilityData)) {
                         Grasscutter.getLogger()
-                                .error("Ability execute action failed for {} at {}.", mixinData.type, ability);
+                                .warn("Ability execute action failed for {} at {}.", mixinData.type, ability);
                     }
                 });
     }

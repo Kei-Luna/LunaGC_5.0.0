@@ -150,6 +150,11 @@
       "not_found": "Could not found announcement %s.",
       "description": "Send announcement to all online players, or manage server's announcement"
     },
+    "buff": {
+      "info": "There are now %s buffs.",
+      "add_buff": "Added %s.",
+      "remove_buff": "Removed buff %s."
+    },
     "clear": {
       "weapons": "Cleared weapons for %s.",
       "artifacts": "Cleared artifacts for %s.",

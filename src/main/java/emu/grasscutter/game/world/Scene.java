@@ -960,8 +960,10 @@ public class Scene {
                         .filter(Objects::nonNull)
                         .toList();
 
-        this.onLoadGroup(toLoad);
-        if (!toLoad.isEmpty()) this.onRegisterGroups();
+        if (!toLoad.isEmpty()) {
+            this.onLoadGroup(toLoad);
+            this.onRegisterGroups();
+        }
     }
 
     public void onLoadBlock(SceneBlock block, List<Player> players) {
@@ -1042,7 +1044,7 @@ public class Scene {
                                                                 <= sceneGroupReplacement.is_replaceable.version)
                                                 || sceneGroup.is_replaceable.new_bin_only)) {
                                     this.unloadGroup(
-                                            scriptManager.getBlocks().get(sceneGroup.block_id), replace_group);
+                                        scriptManager.getBlocks().get(sceneGroup.block_id), replace_group);
                                     it.remove();
                                     Grasscutter.getLogger().debug("Graph ordering: unloaded {}", replace_group);
                                 }
@@ -1066,9 +1068,6 @@ public class Scene {
     }
 
     public void onLoadGroup(List<SceneGroup> groups) {
-        if (groups == null || groups.isEmpty()) {
-            return;
-        }
         groups = groups.stream().distinct().filter(group -> !loadedGroups.contains(group)).toList();
 
         for (var group : groups) {
@@ -1129,8 +1128,10 @@ public class Scene {
             challenge.fail();
         }
 
-        scriptManager.getLoadedGroupSetPerBlock().get(block.id).remove(group);
-        this.loadedGroups.remove(group);
+        if (loadedGroups.contains(group)) {
+            scriptManager.getLoadedGroupSetPerBlock().get(block.id).remove(group);
+            this.loadedGroups.remove(group);
+        }
 
         if (this.scriptManager.getLoadedGroupSetPerBlock().get(block.id).isEmpty()) {
             this.scriptManager.getLoadedGroupSetPerBlock().remove(block.id);

@@ -150,6 +150,11 @@
       "not_found": "🇺🇸Could not found announcement %s.",
       "description": "🇺🇸Send announcement to all online players, or manage server's announcement"
     },
+    "buff": {
+      "info": "Acum există %s buffs.",
+      "add_buff": "Adăugat %s.",
+      "remove_buff": "Buff %s eliminat."
+    },
     "clear": {
       "weapons": "Arme șterse pentru %s.",
       "artifacts": "Artefacte șterse pentru %s.",

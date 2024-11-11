@@ -586,21 +586,20 @@ public class ScriptLib {
         return 0;
     }
 
-    public int CreateMonsterByConfigIdByPos(int monster_id, LuaTable pos, LuaTable rot) {
+    public int CreateMonsterByConfigIdByPos(int configId, LuaTable pos, LuaTable rot) {
         var scene = getSceneScriptManager().getScene();
-        int level = 1;
-        for (var p: scene.getPlayers())
-            if (p.getLevel() > level) level = p.getLevel();
-        var monsterData = GameData.getMonsterDataMap().get(monster_id);
-        Position position = new Position(pos.get("x").tofloat(), pos.get("y").tofloat(), pos.get("z").tofloat());
-        Position rotation = new Position(rot.get("x").tofloat(), rot.get("y").tofloat(), rot.get("z").tofloat());
-        var entity = new EntityMonster(scene, monsterData, position, rotation, level);
-        scene.addEntity(entity);
-        if (!getCurrentGroup().isEmpty()) {
-            var group = getCurrentGroup().get();
-            entity.setGroupId(group.id);
-            entity.setBlockId(group.block_id);
-        }
+        var group = getCurrentGroup().get();
+        if (group == null) return 1;
+        var entity = scene.getEntityByConfigId(configId, group.id);
+        if (entity != null && entity.getGroupId() == group.id) return 1;
+        var monster = group.monsters.get(configId);
+        var monsterData = GameData.getMonsterDataMap().get(monster.monster_id);
+        var m = new EntityMonster(scene, monsterData, new Position(pos), new Position(rot), monster.level);
+        scene.addEntity(m);
+        m.setGroupId(group.id);
+        m.setBlockId(group.block_id);
+        m.setConfigId(configId);
+        m.setMetaMonster(monster);
         return 0;
     }
     public int CreateMonsterFaceAvatar(LuaTable var1) {
