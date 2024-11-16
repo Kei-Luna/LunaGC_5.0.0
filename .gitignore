@@ -75,7 +75,7 @@ mongod.exe
 
 gacha-mapping.js
 mappings.js
-BuildConfig.java
+# BuildConfig.java
 data/hk4e/announcement/
 
 # lombok
