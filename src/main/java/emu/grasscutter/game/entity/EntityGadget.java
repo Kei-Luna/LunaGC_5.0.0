@@ -230,7 +230,6 @@ public class EntityGadget extends EntityBaseGadget {
         if (interactReq == null)
             interactReq = GadgetInteractReq.newBuilder().setGadgetId(this.gadgetId).build();
         boolean shouldDelete = this.getContent().onInteract(player, interactReq);
-        Grasscutter.getLogger().info("{} id {} onInteract shouldDelete={}", this.gadgetId, this.id, shouldDelete);
 
         if (shouldDelete) {
             this.getScene().killEntity(this);

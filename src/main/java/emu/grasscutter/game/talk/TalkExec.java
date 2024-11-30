@@ -21,7 +21,9 @@ public enum TalkExec {
     TALK_EXEC_INC_QUEST_GLOBAL_VAR(11),
     TALK_EXEC_DEC_QUEST_GLOBAL_VAR(12),
     TALK_EXEC_TRANS_SCENE_DUMMY_POINT(13),
-    TALK_EXEC_SAVE_TALK_ID(14);
+    TALK_EXEC_SAVE_TALK_ID(14),
+    TALK_EXEC_UNLOCK_EVENTS_ITEM(15),
+    TALK_EXEC_CHANGE_WEAPON_MODE(16);
 
     private static final Int2ObjectMap<TalkExec> execMap = new Int2ObjectOpenHashMap<>();
     private static final Map<String, TalkExec> execStringMap = new HashMap<>();

@@ -6,11 +6,18 @@ import java.io.Serializable;
 
 public class TalentData implements Serializable {
     public enum Type {
+        @SerializedName(value = "AddAbility", alternate = "PMNMNAJPAJM")
         AddAbility,
+        @SerializedName(value = "ModifySkillCD", alternate = "IMHHAILMJOL")
         ModifySkillCD,
+        @SerializedName(value = "UnlockTalentParam", alternate = "ENOOJEEGFMJ")
         UnlockTalentParam,
+        @SerializedName(value = "AddTalentExtraLevel", alternate = "FLJFCBKMDLH")
         AddTalentExtraLevel,
-        ModifyAbility;
+        @SerializedName(value = "ModifyAbility", alternate = "MLKFNEPHHND")
+        ModifyAbility,
+        CPAFGCPBJKB,
+        GICDBMMHIGO;
     }
 
     @SerializedName("$type")

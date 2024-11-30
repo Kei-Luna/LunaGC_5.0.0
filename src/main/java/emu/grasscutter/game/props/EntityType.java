@@ -73,6 +73,12 @@ public enum EntityType implements IntValueEnum {
     Screen(64),
     EchoShell(65),
     UIInteractGadget(66),
+    CurveMoveGadget(67),
+    DeshretObeliskGadget(68),
+    JourneyGearOperatorGadget(69),
+    CoinCollectLevelGadget(70),
+    UgcSpecialGadget(71),
+    UgcTowerLevelUpGadget(72),
     Region(98),
     PlaceHolder(99);
 

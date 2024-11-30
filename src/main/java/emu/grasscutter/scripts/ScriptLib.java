@@ -53,8 +53,10 @@ public class ScriptLib {
     }
 
     public SceneScriptManager getSceneScriptManager() {
-        // normally not null
-        return Optional.of(sceneScriptManager.get()).get();
+        var ret = sceneScriptManager.get();
+        if (ret == null && currentEntity.get() != null)
+            ret = currentEntity.get().getScene().getScriptManager();
+        return Optional.of(ret).get();
     }
 
     private String printTable(LuaTable table) {
@@ -869,10 +871,12 @@ public class ScriptLib {
         return getSceneScriptManager().getScene().getWorld().getGameTimeHours();
     }
 
-    // TODO: GetGameTimePassed
+    public long GetGameTimePassed() {
+        return getSceneScriptManager().getScene().getWorld().getTotalGameTimeMinutes();
+    }
     // TODO: GetGivingItemList
     // TODO: GetGroupAliveMonsterList
-    // TODO: GetGroupLogicStateValue
+    public int GetGroupLogicStateValue(String var) { return GetGroupVariableValue(var); }
 
     public int GetGroupMonsterCount() {
         int returnValue = (int) getSceneScriptManager().getScene().getEntities().values().stream()
@@ -1451,7 +1455,7 @@ public class ScriptLib {
         return 0;
     }
 
-    // TODO: SetGroupLogicStateValue
+    public int SetGroupLogicStateValue(String var, int value) { return SetGroupVariableValue(var, value); }
 
     public int SetGroupReplaceable(int groupId, boolean value) {
         logger.warn("[LUA] Call unchecked SetGroupReplaceable with {} {}", groupId, value);

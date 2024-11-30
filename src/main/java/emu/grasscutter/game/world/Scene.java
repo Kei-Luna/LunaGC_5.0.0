@@ -924,7 +924,7 @@ public class Scene {
         return activeGroups;
     }
 
-    public boolean loadBlock(SceneBlock block) {
+    public synchronized boolean loadBlock(SceneBlock block) {
         if (this.loadedBlocks.contains(block)) return false;
 
         this.onLoadBlock(block, this.players);

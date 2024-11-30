@@ -10,7 +10,8 @@ public enum MonsterType {
     MONSTER_BOSS(2),
     MONSTER_ENV_ANIMAL(3),
     MONSTER_LITTLE_MONSTER(4),
-    MONSTER_FISH(5);
+    MONSTER_FISH(5),
+    MONSTER_PARTNER(6);
 
     private static final Int2ObjectMap<MonsterType> map = new Int2ObjectOpenHashMap<>();
     private static final Map<String, MonsterType> stringMap = new HashMap<>();
