@@ -8,6 +8,7 @@ import emu.grasscutter.net.packet.*;
 import emu.grasscutter.server.event.game.ReceivePacketEvent;
 import emu.grasscutter.server.game.GameSession.SessionState;
 import it.unimi.dsi.fastutil.ints.*;
+import java.util.Set;
 
 public final class GameServerPacketHandler {
     private final Int2ObjectMap<PacketHandler> handlers;
@@ -44,8 +45,11 @@ public final class GameServerPacketHandler {
                 .debug("Registered " + this.handlers.size() + " " + handlerClass.getSimpleName() + "s");
     }
 
+    public static Set<Integer> ignoreOps = Set.of(4844, 5253, 5306, 6447, 7358, 8189, 9762, 23449, 27339, 28413);
     public void handle(GameSession session, int opcode, byte[] header, byte[] payload) {
         PacketHandler handler = this.handlers.get(opcode);
+        // if (!ignoreOps.contains(opcode))
+        //     Grasscutter.getLogger().info("handle ({}) {}", opcode, PacketOpcodesUtils.getOpcodeName(opcode));
 
         if (handler != null) {
             try {
