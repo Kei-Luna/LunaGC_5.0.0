@@ -254,7 +254,7 @@ public final class PacketOpcodes {
     public static final int HomeBasicInfoNotify = 20840;
     public static final int HomeLimitedShopInfoNotify = 23361;
     public static final int PlayerQuitFromHomeNotify = 3135;
-    public static final int BackMyWorldReq = 20062;
+    public static final int BackMyWorldReq = 29558;
     public static final int BackMyWorldRsp = 23771;
     public static final int AllMarkPointNotify = 24780;
     public static final int BatchDelMapMarkReq = 7369;
@@ -457,7 +457,7 @@ public final class PacketOpcodes {
     public static final int StoreItemDelNotify = 9567;
     public static final int AvatarAddNotify = 4216;
     public static final int UnlockAvatarTalentReq = 6454;
-    public static final int UnlockAvatarTalentRsp = 23185;
+    public static final int UnlockAvatarTalentRsp = 23185; 
     public static final int ChangeMpTeamAvatarReq = 28747;
     public static final int ChangeMpTeamAvatarRsp = 28252;
     public static final int SkipPlayerGameTimeReq = 29432;
