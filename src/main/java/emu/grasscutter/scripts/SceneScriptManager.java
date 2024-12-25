@@ -776,16 +776,7 @@ public class SceneScriptManager {
     }
 
     public void refreshGroupSuite(SceneGroupInstance groupInstance, SceneSuite suite) {
-        // we added trigger first
-        registerTrigger(suite.sceneTriggers);
-
-        var group = groupInstance.getLuaGroup();
-        var toCreate = new ArrayList<GameEntity>();
-        toCreate.addAll(getGadgetsInGroupSuite(groupInstance, suite));
-        toCreate.addAll(getMonstersInGroupSuite(groupInstance, suite));
-        addEntities(toCreate);
-
-        registerRegionInGroupSuite(group, suite);
+        this.addGroupSuite(groupInstance, suite, null);
     }
 
     public void removeGroupSuite(SceneGroup group, SceneSuite suite) {
@@ -941,19 +932,15 @@ public class SceneScriptManager {
         }
 
         if (trigger.getEvent() == EventType.EVENT_ENTER_REGION) {
-            var region =
-                    this.regions.values().stream()
-                            .filter(p -> p.getConfigId() == params.param1)
-                            .toList()
-                            .get(0);
-            this.getScene().getPlayers().forEach(p -> p.onEnterRegion(region.getMetaRegion()));
+            this.regions.values().stream()
+            .filter(p -> p.getConfigId() == params.param1)
+            .findFirst()
+            .ifPresent(region -> this.getScene().getPlayers().forEach(p -> p.onEnterRegion(region.getMetaRegion())));
         } else if (trigger.getEvent() == EventType.EVENT_LEAVE_REGION) {
-            var region =
-                    this.regions.values().stream()
-                            .filter(p -> p.getConfigId() == params.param1)
-                            .toList()
-                            .get(0);
-            this.getScene().getPlayers().forEach(p -> p.onLeaveRegion(region.getMetaRegion()));
+            this.regions.values().stream()
+            .filter(p -> p.getConfigId() == params.param1)
+            .findFirst()
+            .ifPresent(region -> this.getScene().getPlayers().forEach(p -> p.onLeaveRegion(region.getMetaRegion())));
         }
 
         if (trigger.getEvent() == EVENT_TIMER_EVENT) {

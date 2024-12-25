@@ -19,10 +19,11 @@ public final class SceneTimeAxis {
 
     /** Schedules the task to run. */
     public void start() {
+        int delay = this.delay * 1000;
         if (this.loop) {
-            this.timer.scheduleAtFixedRate(new Task(), this.delay, this.delay);
+            this.timer.scheduleAtFixedRate(new Task(), delay, delay);
         } else {
-            this.timer.schedule(new Task(), this.delay);
+            this.timer.schedule(new Task(), delay);
         }
     }
 
