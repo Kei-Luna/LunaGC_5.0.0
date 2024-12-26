@@ -9,7 +9,8 @@ public enum RefreshType {
     REFRESH_INTERVAL(1),
     REFRESH_DAILY(2),
     REFRESH_WEEKlY(3),
-    REFRESH_DAYBEGIN_INTERVAL(4);
+    REFRESH_DAYBEGIN_INTERVAL(4),
+    REFRESH_DAY_FOUR_INTERVAL(5);
 
     private final int value;
     private static final Int2ObjectMap<RefreshType> map = new Int2ObjectOpenHashMap<>();

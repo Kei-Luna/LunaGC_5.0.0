@@ -11,9 +11,21 @@ public class AbilityMixinData implements Serializable {
 
     public enum Type {
         AttachToGadgetStateMixin,
+        @SerializedName(value = "AttachToStateIDMixin", alternate = {"KPLCEJNHNEE", "MoleMole.Config.AttachToStateIDMixin"})
         AttachToStateIDMixin,
+        @SerializedName(value = "ShieldBarMixin", alternate = "LIFBJIECEDK")
         ShieldBarMixin,
-        TileAttackManagerMixin;
+        TileAttackManagerMixin,
+        AttachToElementTypeMixin,
+        ReplaceEventPatternMixin,
+        @SerializedName(value = "AttachModifierToSelfGlobalValueMixin", alternate = {"KEEINDIIMIM", "MoleMole.Config.AttachModifierToSelfGlobalValueMixin"})
+        AttachModifierToSelfGlobalValueMixin,
+        @SerializedName(value = "InvisibleInTalkAndCSMixin", alternate = "MoleMole.Config.InvisibleInTalkAndCSMixin")
+        InvisibleInTalkAndCSMixin,
+        @SerializedName(value = "ModifyCameraAircraftParamMixin", alternate = "MoleMole.Config.ModifyCameraAircraftParamMixin")
+        ModifyCameraAircraftParamMixin,
+        @SerializedName(value = "TriggerPostProcessEffectMixin", alternate = "MoleMole.Config.TriggerPostProcessEffectMixin")
+        TriggerPostProcessEffectMixin;
     }
 
     @SerializedName("$type")

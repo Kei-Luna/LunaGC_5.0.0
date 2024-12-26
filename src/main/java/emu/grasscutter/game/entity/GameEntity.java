@@ -386,7 +386,7 @@ public abstract class GameEntity {
 
     @Override
     public String toString() {
-        return "Entity ID: %s; Group ID: %s; Config ID: %s"
-                .formatted(this.getId(), this.getGroupId(), this.getConfigId());
+        return "Entity: %s; ID: %s; Group ID: %s; Config ID: %s"
+                .formatted(this.getEntityTypeId(), this.getId(), this.getGroupId(), this.getConfigId());
     }
 }

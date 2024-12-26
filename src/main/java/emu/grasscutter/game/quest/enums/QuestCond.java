@@ -84,6 +84,7 @@ public enum QuestCond implements QuestTrigger {
     QUEST_COND_SCENE_POINT_UNLOCK(76), // missing, only NPC groups
     QUEST_COND_SCENE_LEVEL_TAG_EQ(77), // missing
     QUEST_COND_PLAYER_ENTER_REGION(78), // missing
+    QUEST_COND_UNKNOWN_80(80),
     QUEST_COND_UNKNOWN(9999);
 
     private final int value;
